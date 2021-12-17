@@ -10,7 +10,8 @@ package systemutvecklingsprojektet;
  */
 public class Systemutvecklingsprojektet {
     private String agent;
-    
+    private String alien;
+    private int alder;
 
     /**
      * @param args the command line arguments
