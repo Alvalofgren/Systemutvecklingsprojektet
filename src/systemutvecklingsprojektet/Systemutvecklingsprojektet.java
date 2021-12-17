@@ -9,6 +9,8 @@ package systemutvecklingsprojektet;
  * @author alval
  */
 public class Systemutvecklingsprojektet {
+    private String agent;
+    
 
     /**
      * @param args the command line arguments
