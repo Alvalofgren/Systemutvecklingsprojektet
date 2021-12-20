@@ -45,6 +45,11 @@ public class Fonster extends javax.swing.JFrame {
         });
 
         AlienButton.setText("Alien");
+        AlienButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AlienButtonActionPerformed(evt);
+            }
+        });
 
         AdministratorButton.setText("Administratör");
         AdministratorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -98,12 +103,16 @@ public class Fonster extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgentButtonActionPerformed
-        // TODO add your handling code here:
+         new AgentInlogg().setVisible(true);
     }//GEN-LAST:event_AgentButtonActionPerformed
 
     private void AdministratorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdministratorButtonActionPerformed
-        // TODO add your handling code here:
+        new AdministratorsInlogg().setVisible(true);
     }//GEN-LAST:event_AdministratorButtonActionPerformed
+
+    private void AlienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlienButtonActionPerformed
+        new AlienInlogg().setVisible(true);
+    }//GEN-LAST:event_AlienButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +139,9 @@ public class Fonster extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Fonster.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

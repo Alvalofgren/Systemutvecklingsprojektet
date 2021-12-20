@@ -6,14 +6,14 @@ package systemutvecklingsprojektet;
 
 /**
  *
- * @author Julius
+ * @author Julius // Första inmloggningsrutan där man kan välja mellan agent, alien och administratör.
  */
-public class AgentInlogg extends javax.swing.JFrame {
+public class AlienInlogg extends javax.swing.JFrame {
 
     /**
-     * Creates new form AgentInlogg
+     * Creates new form AlienInlogg
      */
-    public AgentInlogg() {
+    public AlienInlogg() {
         initComponents();
     }
 
@@ -26,18 +26,26 @@ public class AgentInlogg extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        RubrikLösenord = new javax.swing.JLabel();
+        LoggaInButton = new javax.swing.JButton();
         RubrikAgentLoggaIn = new javax.swing.JLabel();
         Användarnamn = new javax.swing.JTextField();
         Lösenord = new javax.swing.JTextField();
         RubrikAnvändarnamn = new javax.swing.JLabel();
-        RubrikLösenord = new javax.swing.JLabel();
-        LoggaInButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(400, 281));
+
+        RubrikLösenord.setText("Lösenord");
+
+        LoggaInButton.setText("Logga in");
+        LoggaInButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoggaInButtonActionPerformed(evt);
+            }
+        });
 
         RubrikAgentLoggaIn.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        RubrikAgentLoggaIn.setText("Agent");
+        RubrikAgentLoggaIn.setText("Alien");
 
         Användarnamn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,39 +61,34 @@ public class AgentInlogg extends javax.swing.JFrame {
 
         RubrikAnvändarnamn.setText("Användarnamn");
 
-        RubrikLösenord.setText("Lösenord");
-
-        LoggaInButton.setText("Logga in");
-        LoggaInButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoggaInButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(RubrikAgentLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(RubrikAnvändarnamn)
-                        .addComponent(Användarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Lösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(RubrikLösenord)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(LoggaInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(RubrikAgentLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Lösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Användarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RubrikLösenord)
+                            .addComponent(RubrikAnvändarnamn))))
+                .addContainerGap(132, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(LoggaInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addComponent(RubrikAgentLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(39, 39, 39)
                 .addComponent(RubrikAnvändarnamn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Användarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -101,6 +104,10 @@ public class AgentInlogg extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void LoggaInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoggaInButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoggaInButtonActionPerformed
+
     private void AnvändarnamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnvändarnamnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AnvändarnamnActionPerformed
@@ -108,10 +115,6 @@ public class AgentInlogg extends javax.swing.JFrame {
     private void LösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LösenordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LösenordActionPerformed
-
-    private void LoggaInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoggaInButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoggaInButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,20 +133,20 @@ public class AgentInlogg extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgentInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlienInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgentInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlienInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgentInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlienInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgentInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlienInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AgentInlogg().setVisible(true);
+                new AlienInlogg().setVisible(true);
             }
         });
     }
