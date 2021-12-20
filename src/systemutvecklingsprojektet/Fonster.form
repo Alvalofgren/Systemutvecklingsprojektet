@@ -28,15 +28,15 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton1" pref="400" max="32767" attributes="0"/>
-                          <Component id="jButton2" pref="400" max="32767" attributes="0"/>
-                          <Component id="jButton3" pref="400" max="32767" attributes="0"/>
-                          <Component id="jLabel1" alignment="1" min="-2" pref="385" max="-2" attributes="0"/>
+                          <Component id="AgentButton" pref="400" max="32767" attributes="0"/>
+                          <Component id="AlienButton" pref="400" max="32767" attributes="0"/>
+                          <Component id="AdministratorButton" pref="400" max="32767" attributes="0"/>
+                          <Component id="RubrikForFonster" alignment="1" min="-2" pref="385" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="117" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
+                      <Component id="LoggaIn" min="-2" pref="128" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
@@ -47,22 +47,22 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="53" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-              <Component id="jLabel2" pref="33" max="32767" attributes="0"/>
+              <Component id="RubrikForFonster" min="-2" pref="53" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="LoggaIn" min="-2" pref="33" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton1" pref="75" max="32767" attributes="0"/>
+              <Component id="AgentButton" pref="75" max="32767" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" pref="75" max="32767" attributes="0"/>
+              <Component id="AlienButton" pref="75" max="32767" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton3" pref="75" max="32767" attributes="0"/>
+              <Component id="AdministratorButton" pref="75" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="RubrikForFonster">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="24" style="1"/>
@@ -70,7 +70,7 @@
         <Property name="text" type="java.lang.String" value="    V&#xe4;lkommen till Men in Black"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="AgentButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Agent"/>
       </Properties>
@@ -78,10 +78,10 @@
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
       </AccessibilityProperties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AgentButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="AlienButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alien"/>
       </Properties>
@@ -89,7 +89,7 @@
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
       </AccessibilityProperties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="AdministratorButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Administrat&#xf6;r"/>
       </Properties>
@@ -97,10 +97,10 @@
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
       </AccessibilityProperties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AdministratorButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="LoggaIn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="18" style="0"/>
