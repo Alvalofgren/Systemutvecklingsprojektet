@@ -14,10 +14,12 @@ import oru.inf.InfException;
  */
 public class AgentInlogg extends javax.swing.JFrame {
 
-   private InfDB idb;
+   private static InfDB idb;
    
-    public AgentInlogg() {
+    public AgentInlogg(InfDB idb) {
         initComponents();
+        this.idb=idb;
+        
     }
 
     /**
@@ -114,7 +116,15 @@ public class AgentInlogg extends javax.swing.JFrame {
 
     private void LoggaInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoggaInButtonActionPerformed
         
-        String agentAnvändarnamn = "select namn from agent";
+       try {
+         
+        String query = "SELECT LOSENORD FORM AGENT WHERE NAMN = '"+Användarnamn.getText()+"'";
+        String losen =idb.fetchSingle(query);
+        if(losen.equals(Lösenord.getText())){
+        }
+        else{
+        JOptionPane.showMessageDialog(null,"Fel Lösenord");
+        }
         String agentLösenord = "select lösenord from agent";
         
         ArrayList<String> allaAgentAnvändarnamn;
@@ -122,88 +132,76 @@ public class AgentInlogg extends javax.swing.JFrame {
         
         allaAgentAnvändarnamn = new ArrayList<>();
         allaAgentLösenord = new ArrayList<>();
-        
-        //for(String anvandarnamn: allaAgentAnvändarnamn)
-        //{
-            allaAgentAnvändarnamn.add("Agent O");
-            allaAgentAnvändarnamn.add("Agent K");
-            allaAgentAnvändarnamn.add("Agent J");
-            allaAgentAnvändarnamn.add("Agent Z");
-        //}
-        
-         //for(String lösenord: allaAgentLösenord)
-        //{
-            allaAgentLösenord.add("planka");
-            allaAgentLösenord.add("gtYtyU");
-            allaAgentLösenord.add("solros");
-            allaAgentLösenord.add("jaja");
-           
-        //}
-       try
-        { 
-       int i = 0;
-       boolean matchning = false;
-       
-       while(i < allaAgentLösenord.size() && matchning == false)
-       {
-           String lösenordet = allaAgentLösenord.get(i);
-           if(Lösenord.getText().equals(lösenordet))
-           {
-              matchning = true;
-           }
-           else
-           {
-               i++;
-           }
-            
        }
-       if(matchning == true)
-       {
-           int i2 = 0;
-           boolean matchning2 = false;
-           
-           while(i2 < allaAgentAnvändarnamn.size() && matchning2 == false)
-           {
-               String användarnamnet = allaAgentAnvändarnamn.get(i2);
-               if(Användarnamn.getText().equals(användarnamnet))
-               {
-                   matchning2 = true;
-                   new HejAgent().setVisible(true);
-               }
-               else
-               {
-                   i2++;
-               }
-           }
-           
-           
-           
-           
-       }
-       
-       
-            
-            allaAgentAnvändarnamn = idb.fetchColumn(agentAnvändarnamn);
-            allaAgentLösenord = idb.fetchColumn(agentLösenord);
-            
-            if(Användarnamn.getText().equals(agentAnvändarnamn) && Lösenord.getText().equals(agentLösenord))
-            {
-            new HejAgent().setVisible(true);
-                
-            } 
-                
-       }
-        catch (Exception undantag){
+            catch(Exception undantag){
                     JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
                         System.out.println("Error" + undantag.getMessage());
                     }
+        
+           
+    
+       
+       // { 
+       //int i = 0;
+       //boolean matchning = false;
+       
+       //while(i < allaAgentLösenord.size() && matchning == false)
+       //{
+         //  String lösenordet = allaAgentLösenord.get(i);
+          // if(Lösenord.getText().equals(lösenordet))
+           //{
+          //    matchning = true;
+          // }
+          // else
+          // {
+            //   i++;
+           //}
+            
+       //}
+       //if(matchning == true)
+       //{
+        //   int i2 = 0;
+         //  boolean matchning2 = false;
+           
+         //  while(i2 < allaAgentAnvändarnamn.size() && matchning2 == false)
+          // {
+           //    String användarnamnet = allaAgentAnvändarnamn.get(i2);
+             //  if(Användarnamn.getText().equals(användarnamnet))
+             //  {
+             //      matchning2 = true;
+              //     new HejAgent().setVisible(true);
+              // }
+           //    else
+           //   {
+           //        i2++;
+            //   }
+           //}
+           
+           
+           
+           
+      // }
+       
+       
+            
+        //    allaAgentAnvändarnamn = idb.fetchColumn(agentAnvändarnamn);
+        //    allaAgentLösenord = idb.fetchColumn(agentLösenord);
+            
+         //   if(Användarnamn.getText().equals(agentAnvändarnamn) && Lösenord.getText().equals(agentLösenord))
+          //  {
+          //  new HejAgent().setVisible(true);
+                
+         //   } 
+        //}     
+       //}
+    
         
     }//GEN-LAST:event_LoggaInButtonActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    //public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -228,12 +226,12 @@ public class AgentInlogg extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AgentInlogg().setVisible(true);
-            }
-        });
-    }
+      //  java.awt.EventQueue.invokeLater(new Runnable() {
+       //     public void run() {
+     //           new AgentInlogg().setVisible(true);
+            
+       // });
+    //}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Användarnamn;
