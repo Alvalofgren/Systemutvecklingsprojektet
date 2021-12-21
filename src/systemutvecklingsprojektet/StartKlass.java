@@ -24,6 +24,8 @@ public class StartKlass {
                     JOptionPane.showMessageDialog(null, "något gick fel");
                     System.out.println("Felmeddelande" + felUppgifter.getMessage());
                 }
+       
+       new Fonster(idb).setVisible(true);
               
              
    
