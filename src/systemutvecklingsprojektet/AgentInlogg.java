@@ -14,9 +14,8 @@ import oru.inf.InfException;
  */
 public class AgentInlogg extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AgentInlogg
-     */
+   private InfDB idb;
+   
     public AgentInlogg() {
         initComponents();
     }
@@ -120,21 +119,84 @@ public class AgentInlogg extends javax.swing.JFrame {
         
         ArrayList<String> allaAgentAnvändarnamn;
         ArrayList<String> allaAgentLösenord;
-        try {
+        
+        allaAgentAnvändarnamn = new ArrayList<>();
+        allaAgentLösenord = new ArrayList<>();
+        
+        //for(String anvandarnamn: allaAgentAnvändarnamn)
+        //{
+            allaAgentAnvändarnamn.add("Agent O");
+            allaAgentAnvändarnamn.add("Agent K");
+            allaAgentAnvändarnamn.add("Agent J");
+            allaAgentAnvändarnamn.add("Agent Z");
+        //}
+        
+         //for(String lösenord: allaAgentLösenord)
+        //{
+            allaAgentLösenord.add("planka");
+            allaAgentLösenord.add("gtYtyU");
+            allaAgentLösenord.add("solros");
+            allaAgentLösenord.add("jaja");
+           
+        //}
+       try
+        { 
+       int i = 0;
+       boolean matchning = false;
+       
+       while(i < allaAgentLösenord.size() && matchning == false)
+       {
+           String lösenordet = allaAgentLösenord.get(i);
+           if(Lösenord.getText().equals(lösenordet))
+           {
+              matchning = true;
+           }
+           else
+           {
+               i++;
+           }
+            
+       }
+       if(matchning == true)
+       {
+           int i2 = 0;
+           boolean matchning2 = false;
+           
+           while(i2 < allaAgentAnvändarnamn.size() && matchning2 == false)
+           {
+               String användarnamnet = allaAgentAnvändarnamn.get(i2);
+               if(Användarnamn.getText().equals(användarnamnet))
+               {
+                   matchning2 = true;
+                   new HejAgent().setVisible(true);
+               }
+               else
+               {
+                   i2++;
+               }
+           }
+           
+           
+           
+           
+       }
+       
+       
             
             allaAgentAnvändarnamn = idb.fetchColumn(agentAnvändarnamn);
             allaAgentLösenord = idb.fetchColumn(agentLösenord);
             
-            if(javax.swing.JTextField Användarnamn.getText().equals(agentAnvändarnamn) && javax.swing.JTextField Lösenord.getText()
-                .equals(agentLösenord){
+            if(Användarnamn.getText().equals(agentAnvändarnamn) && Lösenord.getText().equals(agentLösenord))
+            {
             new HejAgent().setVisible(true);
                 
             } 
-                catch (InfException undantag){
-                    JOptionPane.showMessageDialog(null, "Databasfel");
+                
+       }
+        catch (Exception undantag){
+                    JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
                         System.out.println("Error" + undantag.getMessage());
                     }
-        }
         
     }//GEN-LAST:event_LoggaInButtonActionPerformed
 
