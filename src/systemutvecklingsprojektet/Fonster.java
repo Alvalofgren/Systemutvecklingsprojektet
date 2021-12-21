@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+import oru.inf.InfDB;
 
 /**
  *
@@ -10,11 +11,14 @@ package systemutvecklingsprojektet;
  */
 public class Fonster extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form Fonster
      */
     public Fonster() {
         initComponents();
+        this.idb=idb;
+        
     }
 
     /**
@@ -103,7 +107,7 @@ public class Fonster extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgentButtonActionPerformed
-         new AgentInlogg().setVisible(true);
+        new AgentInlogg().setVisible(true);
     }//GEN-LAST:event_AgentButtonActionPerformed
 
     private void AdministratorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdministratorButtonActionPerformed
