@@ -135,7 +135,7 @@ public class AgentInlogg extends javax.swing.JFrame {
        // allaAgentLösenord = new ArrayList<>();
        }
             
-       catch(Exception undantag){
+       catch(InfException undantag){
                     JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
                         System.out.println("Error" + undantag.getMessage());
                     }

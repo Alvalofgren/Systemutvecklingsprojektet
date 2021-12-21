@@ -15,7 +15,7 @@ public class Fonster extends javax.swing.JFrame {
     /**
      * Creates new form Fonster
      */
-    public Fonster() {
+    public Fonster(InfDB idb) {
         initComponents();
         this.idb=idb;
         
@@ -107,7 +107,7 @@ public class Fonster extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgentButtonActionPerformed
-        new AgentInlogg().setVisible(true);
+         
     }//GEN-LAST:event_AgentButtonActionPerformed
 
     private void AdministratorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdministratorButtonActionPerformed
@@ -151,7 +151,7 @@ public class Fonster extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Fonster().setVisible(true);
+                
             }
         });
     }
