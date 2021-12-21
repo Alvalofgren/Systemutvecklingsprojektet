@@ -121,19 +121,21 @@ public class AgentInlogg extends javax.swing.JFrame {
         String query = "SELECT LOSENORD FORM AGENT WHERE NAMN = '"+Användarnamn.getText()+"'";
         String losen =idb.fetchSingle(query);
         if(losen.equals(Lösenord.getText())){
+            new HejAgent().setVisible(true);
         }
         else{
         JOptionPane.showMessageDialog(null,"Fel Lösenord");
         }
         String agentLösenord = "select lösenord from agent";
         
-        ArrayList<String> allaAgentAnvändarnamn;
-        ArrayList<String> allaAgentLösenord;
+       // ArrayList<String> allaAgentAnvändarnamn;
+       // ArrayList<String> allaAgentLösenord;
         
-        allaAgentAnvändarnamn = new ArrayList<>();
-        allaAgentLösenord = new ArrayList<>();
+       // allaAgentAnvändarnamn = new ArrayList<>();
+       // allaAgentLösenord = new ArrayList<>();
        }
-            catch(Exception undantag){
+            
+       catch(Exception undantag){
                     JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
                         System.out.println("Error" + undantag.getMessage());
                     }
