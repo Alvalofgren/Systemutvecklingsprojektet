@@ -4,6 +4,10 @@
  */
 package systemutvecklingsprojektet;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
 /**
  *
  * @author Julius
@@ -110,7 +114,28 @@ public class AgentInlogg extends javax.swing.JFrame {
     }//GEN-LAST:event_LösenordActionPerformed
 
     private void LoggaInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoggaInButtonActionPerformed
-        // TODO add your handling code here:
+        
+        String agentAnvändarnamn = "select namn from agent";
+        String agentLösenord = "select lösenord from agent";
+        
+        ArrayList<String> allaAgentAnvändarnamn;
+        ArrayList<String> allaAgentLösenord;
+        try {
+            
+            allaAgentAnvändarnamn = idb.fetchColumn(agentAnvändarnamn);
+            allaAgentLösenord = idb.fetchColumn(agentLösenord);
+            
+            if(javax.swing.JTextField Användarnamn.getText().equals(agentAnvändarnamn) && javax.swing.JTextField Lösenord.getText()
+                .equals(agentLösenord){
+            new HejAgent().setVisible(true);
+                
+            } 
+                catch (InfException undantag){
+                    JOptionPane.showMessageDialog(null, "Databasfel");
+                        System.out.println("Error" + undantag.getMessage());
+                    }
+        }
+        
     }//GEN-LAST:event_LoggaInButtonActionPerformed
 
     /**
