@@ -26,28 +26,28 @@ public class AndraLosenord extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        rubrikÄndraLösenord = new javax.swing.JLabel();
+        fältNyttLösenord = new javax.swing.JTextField();
+        fältBekräftaLösenord = new javax.swing.JTextField();
+        knappBytLösenord = new javax.swing.JButton();
+        rubrikNyttLösenord = new javax.swing.JLabel();
+        rubrikBekräftaLösenord = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("Ändra lösenord");
+        rubrikÄndraLösenord.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        rubrikÄndraLösenord.setText("Ändra lösenord");
 
-        jButton1.setText("Byt lösenord");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        knappBytLösenord.setText("Byt lösenord");
+        knappBytLösenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                knappBytLösenordActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Nytt lösenord");
+        rubrikNyttLösenord.setText("Nytt lösenord");
 
-        jLabel3.setText("Bekräfta lösenord");
+        rubrikBekräftaLösenord.setText("Bekräfta lösenord");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,39 +56,45 @@ public class AndraLosenord extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(154, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rubrikNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(knappBytLösenord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                        .addComponent(fältNyttLösenord, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(fältBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(rubrikBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(84, 84, 84))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
-                .addComponent(jLabel1)
+                .addComponent(rubrikÄndraLösenord)
                 .addGap(30, 30, 30)
-                .addComponent(jLabel2)
+                .addComponent(rubrikNyttLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fältNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
-                .addComponent(jLabel3)
+                .addComponent(rubrikBekräftaLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fältBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(jButton1)
+                .addComponent(knappBytLösenord)
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void knappBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knappBytLösenordActionPerformed
+      if(fältNyttLösenord.getText().equals(fältBekräftaLösenord.getText()))
+      {
+          String ändring ="UPDATE LOSENORD SET " + fältNyttLösenord.getText() + "WHERE NAMN = " + AgentInlogg2.Användarnamn.getText();
+      }
+         
+        
         new lösenordÄndrat().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_knappBytLösenordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,11 +132,11 @@ public class AndraLosenord extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField fältBekräftaLösenord;
+    private javax.swing.JTextField fältNyttLösenord;
+    private javax.swing.JButton knappBytLösenord;
+    private javax.swing.JLabel rubrikBekräftaLösenord;
+    private javax.swing.JLabel rubrikNyttLösenord;
+    private javax.swing.JLabel rubrikÄndraLösenord;
     // End of variables declaration//GEN-END:variables
 }
