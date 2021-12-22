@@ -29,7 +29,7 @@
                   <Component id="rubrikÄndraLösenord" min="-2" pref="163" max="-2" attributes="0"/>
                   <Component id="rubrikNyttLösenord" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="knappBytLösenord" alignment="0" pref="106" max="32767" attributes="0"/>
+                      <Component id="knappBytLösenord" alignment="0" pref="0" max="32767" attributes="0"/>
                       <Component id="fältNyttLösenord" alignment="0" max="32767" attributes="0"/>
                       <Component id="fältBekräftaLösenord" alignment="0" max="32767" attributes="0"/>
                       <Component id="rubrikBekräftaLösenord" alignment="0" max="32767" attributes="0"/>

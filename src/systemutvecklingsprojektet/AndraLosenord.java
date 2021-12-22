@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
-
 /**
  *
  * @author Julius
@@ -15,6 +14,7 @@ public class AndraLosenord extends javax.swing.JFrame {
      */
     public AndraLosenord() {
         initComponents();
+        
     }
 
     /**
