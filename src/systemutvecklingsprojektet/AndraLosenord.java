@@ -94,6 +94,7 @@ public class AndraLosenord extends javax.swing.JFrame {
          
         
         new lösenordÄndrat().setVisible(true);
+        //Ska bara ske om ändringen går igenom!!
     }//GEN-LAST:event_knappBytLösenordActionPerformed
 
     /**

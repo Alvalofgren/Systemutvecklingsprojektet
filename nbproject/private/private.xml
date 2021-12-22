@@ -3,10 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/Fonster.form</file>
             <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/Fonster.java</file>
             <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AdministratorsInlogg.java</file>
             <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AlienInlogg.java</file>
@@ -15,18 +11,6 @@
             <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AgentInlogg2.java</file>
             <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/lösenordÄndrat.java</file>
             <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/StartKlass.java</file>
-=======
->>>>>>> Stashed changes
-            <file>file:/C:/Users/alval/OneDrive/Skrivbord/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AlienInlogg.java</file>
-            <file>file:/C:/Users/alval/OneDrive/Skrivbord/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/Fonster.java</file>
-            <file>file:/C:/Users/alval/OneDrive/Skrivbord/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/lösenordÄndrat.java</file>
-            <file>file:/C:/Users/alval/OneDrive/Skrivbord/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/HejAgent.java</file>
-            <file>file:/C:/Users/alval/OneDrive/Skrivbord/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AndraLosenord.java</file>
-            <file>file:/C:/Users/alval/OneDrive/Skrivbord/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AgentInlogg2.java</file>
-<<<<<<< Updated upstream
-=======
->>>>>>> 29db62624b708b5842ec203a7b3922929f0976df
->>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>
