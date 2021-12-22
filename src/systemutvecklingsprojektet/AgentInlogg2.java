@@ -4,17 +4,26 @@
  */
 package systemutvecklingsprojektet;
 
+
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
 /**
  *
  * @author alval
  */
 public class AgentInlogg2 extends javax.swing.JFrame {
 
+    private static InfDB idb;
+   
+   
+    
     /**
      * Creates new form AgentInlogg2
      */
     public AgentInlogg2() {
         initComponents();
+        this.idb=idb;
     }
 
     /**
@@ -26,12 +35,28 @@ public class AgentInlogg2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        RubrikAgent = new javax.swing.JLabel();
+        Användarnamn = new javax.swing.JTextField();
+        Lösenord = new javax.swing.JTextField();
+        Logga_in = new javax.swing.JButton();
+        RubrikAnvändarnamn = new javax.swing.JLabel();
+        RubrikLösenord = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Agent");
+        RubrikAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikAgent.setText("Agent");
+
+        Logga_in.setText("Logga in");
+        Logga_in.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Logga_inActionPerformed(evt);
+            }
+        });
+
+        RubrikAnvändarnamn.setText("Användarnamn");
+
+        RubrikLösenord.setText("Lösenord");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -39,19 +64,60 @@ public class AgentInlogg2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(165, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RubrikAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(102, 102, 102))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(112, 112, 112)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(Logga_in, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                        .addComponent(Användarnamn)
+                        .addComponent(RubrikLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Lösenord))
+                    .addComponent(RubrikAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addComponent(RubrikAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(RubrikAnvändarnamn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Användarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(RubrikLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Lösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Logga_in, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(40, 40, 40))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Logga_inActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logga_inActionPerformed
+
+        try {
+         
+        String query = "SELECT LOSENORD FORM AGENT WHERE NAMN = '"+Användarnamn.getText()+"'";
+        String losen =idb.fetchSingle(query);
+        if(losen.equals(Lösenord.getText())){
+            new HejAgent().setVisible(true);
+        }
+        else{
+        JOptionPane.showMessageDialog(null,"Fel Lösenord");
+        }
+        String agentLösenord = "select lösenord from agent";
+       }
+            
+       catch(InfException undantag){
+                    JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
+                        System.out.println("Error" + undantag.getMessage());
+                    }
+    }//GEN-LAST:event_Logga_inActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,9 +152,15 @@ public class AgentInlogg2 extends javax.swing.JFrame {
                 new AgentInlogg2().setVisible(true);
             }
         });
-    }
+        }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField Användarnamn;
+    private javax.swing.JButton Logga_in;
+    private javax.swing.JTextField Lösenord;
+    private javax.swing.JLabel RubrikAgent;
+    private javax.swing.JLabel RubrikAnvändarnamn;
+    private javax.swing.JLabel RubrikLösenord;
     // End of variables declaration//GEN-END:variables
+
 }
