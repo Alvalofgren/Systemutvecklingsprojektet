@@ -102,7 +102,7 @@ public class AgentInlogg2 extends javax.swing.JFrame {
 
         try {
          
-        String query = "SELECT LOSENORD FORM AGENT WHERE NAMN = '"+Användarnamn.getText()+"'";
+        String query = "SELECT LOSENORD FORM AGENT WHERE NAMN = '" + Användarnamn.getText()+"'";
         String losen =idb.fetchSingle(query);
         if(losen.equals(Lösenord.getText())){
             new HejAgent().setVisible(true);
