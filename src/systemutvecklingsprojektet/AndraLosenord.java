@@ -89,9 +89,10 @@ public class AndraLosenord extends javax.swing.JFrame {
     private void knappBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knappBytLösenordActionPerformed
       if(fältNyttLösenord.getText().equals(fältBekräftaLösenord.getText()))
       {
-          String ändring ="UPDATE LOSENORD SET " + fältNyttLösenord.getText() + "WHERE NAMN = " + AgentInlogg2.Användarnamn.getText();
+          String ändring = "UPDATE AGENT SET LOSENORD = " + fältNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg2.Användarnamn.getText();
       }
-         
+         //Vi kanske måste göra en bytaLösenord för varje klass (agent, alien, administratörberoende på att man 
+         //skriver tabellnamnet i SQL-frågan
         
         new lösenordÄndrat().setVisible(true);
         //Ska bara ske om ändringen går igenom!!
