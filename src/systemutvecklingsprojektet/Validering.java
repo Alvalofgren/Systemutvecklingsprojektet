@@ -4,6 +4,7 @@
  */
 package systemutvecklingsprojektet;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 /**
  *
@@ -11,10 +12,15 @@ import javax.swing.JTextField;
  */
 public class Validering {
     
-    public static boolean (JTextField rutaKontrolleras)
+    
+    public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
     {
-        boolean
+        boolean tom = false;
                 
-        if(rutaKontrolleras.
+        if(rutaKontrolleras.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Skriv in något i rutan!");
+            tom = true;
+        }    
+        return tom;
     }
 }
