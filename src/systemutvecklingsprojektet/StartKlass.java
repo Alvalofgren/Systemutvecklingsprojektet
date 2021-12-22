@@ -21,7 +21,7 @@ public class StartKlass {
 
         catch(InfException felUppgifter)
                 {
-                    JOptionPane.showMessageDialog(null, "något gick fel");
+                    
                     System.out.println("Felmeddelande" + felUppgifter.getMessage());
                 }
        
