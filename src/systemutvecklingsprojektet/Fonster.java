@@ -18,7 +18,6 @@ public class Fonster extends javax.swing.JFrame {
     public Fonster(InfDB idb) {
         initComponents();
         this.idb=idb;
-        
     }
 
     private Fonster() {
