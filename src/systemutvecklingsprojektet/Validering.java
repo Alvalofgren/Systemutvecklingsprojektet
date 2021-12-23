@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 /**
  *
+
  * @author Julius
  */
 public class Validering {
@@ -67,4 +68,19 @@ public class Validering {
    
    private javax.swing.JTextField fältBekräftaLösenord;
    private javax.swing.JTextField fältNyttLösenord;
-}
+
+ 
+public class Validering {
+    
+    
+    public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
+    {
+        boolean tom = false;
+                
+        if(rutaKontrolleras.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Skriv in något i rutan!");
+            tom = true;
+        }    
+        return tom;
+    }
+

@@ -18,6 +18,7 @@ public class AndraLosenord extends javax.swing.JFrame {
      */
     public AndraLosenord() {
         initComponents();
+        
     }
 
     /**
