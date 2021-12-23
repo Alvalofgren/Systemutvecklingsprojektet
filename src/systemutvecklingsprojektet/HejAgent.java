@@ -4,6 +4,8 @@
  */
 package systemutvecklingsprojektet;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Julius
@@ -15,6 +17,7 @@ public class HejAgent extends javax.swing.JFrame {
      */
     public HejAgent() {
         initComponents();
+
     }
 
     /**
@@ -57,8 +60,18 @@ public class HejAgent extends javax.swing.JFrame {
         jLabel2.setText("Information om alien");
 
         jButton3.setText("Plats");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Datum");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Sortera efter:");
 
@@ -116,6 +129,14 @@ public class HejAgent extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         new ListaAliensRas().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        new ListaAliensPlats().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        new ListaAliensDatum().setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
