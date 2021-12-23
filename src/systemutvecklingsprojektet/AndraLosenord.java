@@ -4,7 +4,6 @@
  */
 package systemutvecklingsprojektet;
 
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -91,26 +90,15 @@ public class AndraLosenord extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void knappBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knappBytLösenordActionPerformed
-    //if(fältNyttLösenord.getText().equals(fältBekräftaLösenord.getText()))
-     //Nånstans här ska rutornamatchar finnas (validering)!
      
-     if(Validering.rutornaMatchar(JTextField aktuellRuta))
-     { 
-        try
-        {
-         
-            {
-                String ändring = "UPDATE AGENT SET LOSENORD = " + fältNyttLösenord.getText() 
-                        + " WHERE NAMN = " + AgentInlogg2.Användarnamn.getText();
-            }
-        }
+        Validering.rutornaMatchar(JTextField aktuellRuta) 
+      {
+          String ändring = "UPDATE AGENT SET LOSENORD = " + fältNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg2.Användarnamn.getText();
+      }
          //Vi kanske måste göra en bytaLösenord för varje klass (agent, alien, administratörberoende på att man 
          //skriver tabellnamnet i SQL-frågan
-       catch(Exception undantag)
-               {
-                JOptionPane.showMessageDialog(null, "Rutornas värden matchar inte");
-               }
-       
+        
+        new lösenordÄndrat().setVisible(true);
         //Ska bara ske om ändringen går igenom!!
     }//GEN-LAST:event_knappBytLösenordActionPerformed
 

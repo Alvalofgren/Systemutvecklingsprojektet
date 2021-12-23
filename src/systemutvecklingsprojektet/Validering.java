@@ -12,21 +12,21 @@ import javax.swing.JTextField;
  * @author Julius
  */
 public class Validering {
-    
-   public static boolean finnsText(JTextField aktuellRuta)
-   {
-       boolean resultat = true;
-       if(aktuellRuta.getText().isEmpty())
-       {
-           JOptionPane.showMessageDialog(null, "Det finns ingen text i rutan!!!");
-           resultat = false;
-           aktuellRuta.requestFocus();
-           
-       }
-       return resultat;
-   }
-    
-   public static boolean harHeltal(JTextField aktuellRuta)
+  
+   
+public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
+    {
+        boolean tom = false;
+                
+        if(rutaKontrolleras.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Skriv in något i rutan!");
+            tom = true;
+        }    
+        return tom;
+    }
+  
+      
+ public static boolean harHeltal(JTextField aktuellRuta)
            {
                boolean resultat = true;
                try
@@ -44,7 +44,12 @@ public class Validering {
                return resultat;
            }
     
-   public boolean rutornaMatchar(JTextField aktuellRuta)
+    /**
+     *
+     * @param aktuellRuta
+     * @return
+     */
+    public boolean rutornaMatchar(JTextField aktuellRuta)
    {
        boolean matchar = true;
        
@@ -66,21 +71,10 @@ public class Validering {
     
     
    
-   private javax.swing.JTextField fältBekräftaLösenord;
-   private javax.swing.JTextField fältNyttLösenord;
+ 
 
  
-public class Validering {
-    
-    
-    public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
-    {
-        boolean tom = false;
-                
-        if(rutaKontrolleras.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Skriv in något i rutan!");
-            tom = true;
-        }    
-        return tom;
-    }
 
+  private javax.swing.JTextField fältBekräftaLösenord;
+   private javax.swing.JTextField fältNyttLösenord;
+}
