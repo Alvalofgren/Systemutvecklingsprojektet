@@ -44,25 +44,22 @@ public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
                return resultat;
            }
     
-    /**
+    /** 
      *
      * @param aktuellRuta
+     * @param aktuellRuta2
      * @return
      */
-    public boolean rutornaMatchar(JTextField aktuellRuta)
+    public static boolean rutornaMatchar(JTextField aktuellRuta, JTextField aktuellRuta2)
    {
-       boolean matchar = true;
+       boolean matchar = false;
        
-       try
-       {
-           if(fältNyttLösenord.getText().equals(fältBekräftaLösenord.getText()))
-           {
-                new lösenordÄndrat().setVisible(true);
+       if(aktuellRuta.getText().equals(aktuellRuta2.getText())){              
+           matchar = true;
            }
-       }  
-        catch(Exception undantag)
+       else 
                 {
-                    JOptionPane.showMessageDialog(null, "Rutorna matchar inte");
+                    JOptionPane.showMessageDialog(null, "Rutorna matchar inte");              
                 }
        return matchar;
        
@@ -76,5 +73,5 @@ public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
  
 
   private javax.swing.JTextField fältBekräftaLösenord;
-   private javax.swing.JTextField fältNyttLösenord;
+  private javax.swing.JTextField fältNyttLösenord;
 }

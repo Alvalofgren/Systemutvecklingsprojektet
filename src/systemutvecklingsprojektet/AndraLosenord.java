@@ -4,7 +4,9 @@
  */
 package systemutvecklingsprojektet;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import oru.inf.InfException;
 
 /**
  *
@@ -91,9 +93,10 @@ public class AndraLosenord extends javax.swing.JFrame {
 
     private void knappBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knappBytLösenordActionPerformed
      
-        Validering.rutornaMatchar(JTextField aktuellRuta) 
-      {
-          String ändring = "UPDATE AGENT SET LOSENORD = " + fältNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg2.Användarnamn.getText();
+        if (Validering.rutornaMatchar(fältNyttLösenord, fältBekräftaLösenord)) {
+            
+            String ändring = ("UPDATE AGENT SET LOSENORD = " + fältNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg2.Användarnamn.getText());
+      
       }
          //Vi kanske måste göra en bytaLösenord för varje klass (agent, alien, administratörberoende på att man 
          //skriver tabellnamnet i SQL-frågan
