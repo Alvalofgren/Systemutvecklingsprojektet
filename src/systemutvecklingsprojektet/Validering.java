@@ -64,14 +64,4 @@ public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
        return matchar;
        
    }
-    
-    
-    
-   
- 
-
- 
-
-  private javax.swing.JTextField fältBekräftaLösenord;
-  private javax.swing.JTextField fältNyttLösenord;
 }
