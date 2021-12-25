@@ -21,7 +21,7 @@ public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
         if(rutaKontrolleras.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Skriv in något i rutan!");
             tom = true;
-        }    
+        }
         return tom;
     }
   
