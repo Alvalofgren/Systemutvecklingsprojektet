@@ -77,6 +77,11 @@ public class HejAgent extends javax.swing.JFrame {
         jLabel3.setText("Sortera efter:");
 
         InformationOmEnAlien.setText("All information om en alien ");
+        InformationOmEnAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InformationOmEnAlienActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,6 +154,10 @@ public class HejAgent extends javax.swing.JFrame {
     private void ändraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ändraLösenordActionPerformed
         new AndraLosenord().setVisible(true);
     }//GEN-LAST:event_ändraLösenordActionPerformed
+
+    private void InformationOmEnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformationOmEnAlienActionPerformed
+        new AllInformationEnAlien().setVisible(true);
+    }//GEN-LAST:event_InformationOmEnAlienActionPerformed
 
     /**
      * @param args the command line arguments
