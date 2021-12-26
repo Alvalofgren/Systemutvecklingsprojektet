@@ -14,13 +14,14 @@ import javax.swing.JTextField;
 public class Validering {
   
    
-public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
+public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
     {
-        boolean tom = false;
+        boolean tom = true;
                 
-        if(rutaKontrolleras.getText().isEmpty()){
+        if(aktuellRuta.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Skriv in något i rutan!");
-            tom = true;
+            tom = false;
+            aktuellRuta.requestFocus();
         }
         return tom;
     }
