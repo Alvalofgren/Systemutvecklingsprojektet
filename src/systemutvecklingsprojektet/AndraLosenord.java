@@ -4,17 +4,23 @@
  */
 package systemutvecklingsprojektet;
 
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author Julius
  */
 public class AndraLosenord extends javax.swing.JFrame {
-
+    private static InfDB idb;
     /**
      * Creates new form AndraLosenord
      */
     public AndraLosenord() {
         initComponents();
+        this.idb = idb;
     }
 
     /**
@@ -87,13 +93,20 @@ public class AndraLosenord extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void knappBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knappBytLösenordActionPerformed
-      if(fältNyttLösenord.getText().equals(fältBekräftaLösenord.getText()))
-      {
-          String ändring ="UPDATE LOSENORD SET " + fältNyttLösenord.getText() + "WHERE NAMN = " + AgentInlogg2.Användarnamn.getText();
+     
+        if (Validering.rutornaMatchar(fältNyttLösenord, fältBekräftaLösenord)) {
+            
+            String ändring = ("UPDATE AGENT SET LOSENORD = " + fältNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg2.Användarnamn.getText());
+   
+            new lösenordÄndrat().setVisible(true);
+            //Ska bara ske om ändringen går igenom!!
       }
-         
-        
-        new lösenordÄndrat().setVisible(true);
+        else{
+            JOptionPane.showMessageDialog(null, "Lösenorden matchar inte");
+        }
+         //Vi kanske måste göra en bytaLösenord för varje klass (agent, alien, administratörberoende på att man 
+         //skriver tabellnamnet i SQL-frågan
+       
         //Ska bara ske om ändringen går igenom!!
     }//GEN-LAST:event_knappBytLösenordActionPerformed
 
