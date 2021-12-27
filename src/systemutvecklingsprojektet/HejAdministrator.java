@@ -226,7 +226,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonÄndraInfoAlienActionPerformed
 
     private void ButtonTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortAgentActionPerformed
-        // TODO add your handling code here:
+        new TaBortAgent().setVisible(true);
     }//GEN-LAST:event_ButtonTaBortAgentActionPerformed
 
     private void ButtonNyregistreraAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonNyregistreraAgentActionPerformed
