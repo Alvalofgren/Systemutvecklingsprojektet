@@ -14,14 +14,15 @@ import javax.swing.JTextField;
 public class Validering {
   
    
-public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
+public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
     {
-        boolean tom = false;
+        boolean tom = true;
                 
-        if(rutaKontrolleras.getText().isEmpty()){
+        if(aktuellRuta.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Skriv in något i rutan!");
-            tom = true;
-        }    
+            tom = false;
+            aktuellRuta.requestFocus();
+        }
         return tom;
     }
   
@@ -44,37 +45,24 @@ public static boolean kontrollTomtTextFält (JTextField rutaKontrolleras)
                return resultat;
            }
     
-    /**
+    /** 
      *
      * @param aktuellRuta
+     * @param aktuellRuta2
      * @return
      */
-    public boolean rutornaMatchar(JTextField aktuellRuta)
+    public static boolean rutornaMatchar(JTextField aktuellRuta, JTextField aktuellRuta2)
    {
-       boolean matchar = true;
+       boolean matchar = false;
        
-       try
-       {
-           if(fältNyttLösenord.getText().equals(fältBekräftaLösenord.getText()))
-           {
-                new lösenordÄndrat().setVisible(true);
+       if(aktuellRuta.getText().equals(aktuellRuta2.getText())){              
+           matchar = true;
            }
-       }  
-        catch(Exception undantag)
+       else 
                 {
-                    JOptionPane.showMessageDialog(null, "Rutorna matchar inte");
+                    JOptionPane.showMessageDialog(null, "Rutorna matchar inte");              
                 }
        return matchar;
        
    }
-    
-    
-    
-   
- 
-
- 
-
-  private javax.swing.JTextField fältBekräftaLösenord;
-   private javax.swing.JTextField fältNyttLösenord;
 }

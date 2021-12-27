@@ -15,7 +15,7 @@ public class StartKlass {
    {
        try
        {
-           idb = new InfDB("mibdba", "3306", "mibdb", "mibdba");
+           idb = new InfDB("mibdb", "3306", "mibdb", "mibdba");
            
        }
 
