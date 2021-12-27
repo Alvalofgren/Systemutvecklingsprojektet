@@ -66,6 +66,11 @@ public class HejAdministrator extends javax.swing.JFrame {
         });
 
         jButton3.setText("Nyregistrera agent");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Söka information om agent");
 
@@ -176,7 +181,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NyregistreraAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NyregistreraAgentActionPerformed
-        new NyregistreraAgentAlien().setVisible(true);
+        new NyregistreraAgent().setVisible(true);
     }//GEN-LAST:event_NyregistreraAgentActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -186,6 +191,10 @@ public class HejAdministrator extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        new NyregistreraAgent().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

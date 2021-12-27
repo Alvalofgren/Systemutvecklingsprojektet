@@ -109,7 +109,7 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
     }//GEN-LAST:event_LösenordActionPerformed
 
     private void LoggaInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoggaInButtonActionPerformed
-        // TODO add your handling code here:
+        new HejAdministrator().setVisible(true);
     }//GEN-LAST:event_LoggaInButtonActionPerformed
 
     /**
