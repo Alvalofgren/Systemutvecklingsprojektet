@@ -3,18 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
-
+//    import java.util.ArrayList;
 /**
  *
  * @author alval
  */
 public class ListaAliensPlats extends javax.swing.JFrame {
-
+//    
+//    private ArrayList<String> platsListan; 
+  
     /**
      * Creates new form ListaAliensPlats
      */
     public ListaAliensPlats() {
         initComponents();
+       
+    }
+    
+    private void fyllILista() {
+       
+        
     }
 
     /**
