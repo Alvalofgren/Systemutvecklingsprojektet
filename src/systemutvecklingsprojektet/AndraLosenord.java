@@ -97,7 +97,7 @@ public class AndraLosenord extends javax.swing.JFrame {
         if (Validering.rutornaMatchar(fältNyttLösenord, fältBekräftaLösenord)) {
             
             String ändring = ("UPDATE AGENT SET LOSENORD = " + fältNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg2.Användarnamn.getText());
-   
+   //Fixa nån slags getANvändarnamn-metod i stället!!
             new lösenordÄndrat().setVisible(true);
             //Ska bara ske om ändringen går igenom!!
       }
