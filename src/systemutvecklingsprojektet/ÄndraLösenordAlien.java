@@ -94,7 +94,9 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void KnappBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappBytLösenordActionPerformed
-        // TODO add your handling code here:
+        
+        
+        new lösenordÄndrat().setVisible(true);
     }//GEN-LAST:event_KnappBytLösenordActionPerformed
 
     /**
