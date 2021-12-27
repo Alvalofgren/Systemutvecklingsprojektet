@@ -4,17 +4,23 @@
  */
 package systemutvecklingsprojektet;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfException;
+import oru.inf.InfDB;
+
 /**
  *
  * @author almahedengren
  */
 public class TaBortAgent extends javax.swing.JFrame {
-
+        
+    private InfDB idb;
     /**
      * Creates new form TaBortAgent
      */
     public TaBortAgent() {
         initComponents();
+        this.idb = idb;
     }
 
     /**
@@ -41,6 +47,11 @@ public class TaBortAgent extends javax.swing.JFrame {
         ComboBoxVäljAgentID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         ButtonTaBort.setText("Ta bort");
+        ButtonTaBort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTaBortActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,6 +85,19 @@ public class TaBortAgent extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
+        try
+        {
+            String query = "delete from agent where Agent_ID = '" + ComboBoxVäljAgentID.getSelectedItem() + "'";
+            idb.delete(query);
+        }
+        
+        catch(InfException undantag)
+                    {
+                    JOptionPane.showMessageDialog(null, "");
+                    }
+    }//GEN-LAST:event_ButtonTaBortActionPerformed
 
     /**
      * @param args the command line arguments
