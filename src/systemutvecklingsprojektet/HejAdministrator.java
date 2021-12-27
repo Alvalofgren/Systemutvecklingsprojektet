@@ -78,10 +78,25 @@ public class HejAdministrator extends javax.swing.JFrame {
         });
 
         ButtonSökaInfoAgent.setText("Söka information om agent");
+        ButtonSökaInfoAgent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSökaInfoAgentActionPerformed(evt);
+            }
+        });
 
         ButtonGeAdminStatus.setText("Ge administratörstatus");
+        ButtonGeAdminStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonGeAdminStatusActionPerformed(evt);
+            }
+        });
 
         ButtonÄndraInfoAgent.setText("Ändra information om agent");
+        ButtonÄndraInfoAgent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonÄndraInfoAgentActionPerformed(evt);
+            }
+        });
 
         LabelAlien.setText("Alien");
 
@@ -103,6 +118,11 @@ public class HejAdministrator extends javax.swing.JFrame {
         LabelUtrustning.setText("Utrustning");
 
         ButtonTaBortUtrustning.setText("Ta bort utrustning");
+        ButtonTaBortUtrustning.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTaBortUtrustningActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -192,7 +212,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonNyregistreraAlienActionPerformed
 
     private void ButtonÄndraInfoAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraInfoAlienActionPerformed
-        // TODO add your handling code here:
+        new ÄndraInfoAlien().setVisible(true);
     }//GEN-LAST:event_ButtonÄndraInfoAlienActionPerformed
 
     private void ButtonTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortAgentActionPerformed
@@ -206,6 +226,22 @@ public class HejAdministrator extends javax.swing.JFrame {
     private void ButtonTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortAlienActionPerformed
         new TaBortAlien().setVisible(true);
     }//GEN-LAST:event_ButtonTaBortAlienActionPerformed
+
+    private void ButtonTaBortUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortUtrustningActionPerformed
+        new TaBortUtrustning().setVisible(true);
+    }//GEN-LAST:event_ButtonTaBortUtrustningActionPerformed
+
+    private void ButtonSökaInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSökaInfoAgentActionPerformed
+        new SökInfoOmAgent().setVisible(true);
+    }//GEN-LAST:event_ButtonSökaInfoAgentActionPerformed
+
+    private void ButtonGeAdminStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonGeAdminStatusActionPerformed
+        new GeAdministratörStatus().setVisible(true);
+    }//GEN-LAST:event_ButtonGeAdminStatusActionPerformed
+
+    private void ButtonÄndraInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraInfoAgentActionPerformed
+        new ÄndraInfoAgent().setVisible(true);
+    }//GEN-LAST:event_ButtonÄndraInfoAgentActionPerformed
 
     /**
      * @param args the command line arguments

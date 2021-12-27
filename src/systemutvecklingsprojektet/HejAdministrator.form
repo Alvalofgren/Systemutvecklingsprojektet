@@ -166,16 +166,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xf6;ka information om agent"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonS&#xf6;kaInfoAgentActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="ButtonGeAdminStatus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ge administrat&#xf6;rstatus"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonGeAdminStatusActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button&#xc4;ndraInfoAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information om agent"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraInfoAgentActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="LabelAlien">
       <Properties>
@@ -221,6 +230,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ta bort utrustning"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonTaBortUtrustningActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
