@@ -215,11 +215,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra omr&#xe5;deschef"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraOmr&#xe5;desChefActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button&#xc4;ndraKontorschef">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra kontorschef"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraKontorschefActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="LabelUtrustning">
       <Properties>

@@ -112,8 +112,18 @@ public class HejAdministrator extends javax.swing.JFrame {
         LabelChef.setText("Chef");
 
         ButtonÄndraOmrådesChef.setText("Ändra områdeschef");
+        ButtonÄndraOmrådesChef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonÄndraOmrådesChefActionPerformed(evt);
+            }
+        });
 
         ButtonÄndraKontorschef.setText("Ändra kontorschef");
+        ButtonÄndraKontorschef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonÄndraKontorschefActionPerformed(evt);
+            }
+        });
 
         LabelUtrustning.setText("Utrustning");
 
@@ -242,6 +252,14 @@ public class HejAdministrator extends javax.swing.JFrame {
     private void ButtonÄndraInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraInfoAgentActionPerformed
         new ÄndraInfoAgent().setVisible(true);
     }//GEN-LAST:event_ButtonÄndraInfoAgentActionPerformed
+
+    private void ButtonÄndraOmrådesChefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraOmrådesChefActionPerformed
+        new ÄndraOmrådeschef().setVisible(true);
+    }//GEN-LAST:event_ButtonÄndraOmrådesChefActionPerformed
+
+    private void ButtonÄndraKontorschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraKontorschefActionPerformed
+        new ÄndraKontorschef().setVisible(true);
+    }//GEN-LAST:event_ButtonÄndraKontorschefActionPerformed
 
     /**
      * @param args the command line arguments
