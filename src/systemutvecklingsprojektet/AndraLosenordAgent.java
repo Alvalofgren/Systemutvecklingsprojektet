@@ -100,7 +100,7 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
    //Fixa nån slags getANvändarnamn-metod i stället
             new lösenordÄndrat().setVisible(true);
             //Ska bara ske om ändringen går igenom!!
-      }
+         }
         else{
             JOptionPane.showMessageDialog(null, "Lösenorden matchar inte");
         }

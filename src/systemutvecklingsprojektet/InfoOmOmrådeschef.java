@@ -107,17 +107,17 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try
             {
-                String fråga = "SELECT Namn, agent.Agent_ID, Benamning FROM agent join omradeschef on agent.Omrade = omradeschef.Omrade join omrade on agent.Omrade = omrade.Omrades_ID where Benamning = " 
-                + ComboBoxVäljOmrådeschef.getSelectedItem();
+                String fråga = "SELECT Namn, agent.Agent_ID, Benamning FROM agent join omradeschef on agent.Omrade = omradeschef.Omrade join omrade on agent.Omrade = omrade.Omrades_ID where Benamning = '" 
+                + ComboBoxVäljOmrådeschef.getSelectedItem()+"'";
+               
                 idb.fetchSingle(fråga);
                 TextAreaResultat.setText(fråga);
             }
-        
         catch(InfException undantag)
-                    {
-                    JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
-                        System.out.println("Error" + undantag.getMessage());
-                    }
+                {
+                JOptionPane.showMessageDialog(null, "");
+                    System.out.println(undantag.getMessage());
+                }
                 
     }//GEN-LAST:event_jButton1ActionPerformed
 
