@@ -2,17 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
         <group>
-            <file>file:/Users/almahedengren/Desktop/hej/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/StartKlass.java</file>
-            <file>file:/Users/almahedengren/Desktop/hej/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AndraLosenord.java</file>
-            <file>file:/Users/almahedengren/Desktop/hej/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/HejAgent.java</file>
-            <file>file:/Users/almahedengren/Desktop/hej/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AlienInlogg.java</file>
-            <file>file:/Users/almahedengren/Desktop/hej/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/Fonster.java</file>
-            <file>file:/Users/almahedengren/Desktop/hej/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AgentInlogg2.java</file>
+            <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AdministratorsInlogg.java</file>
+            <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/Validering.java</file>
+            <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/AndraLosenord.java</file>
+            <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/HejAdministrator.java</file>
+            <file>file:/C:/Users/juliu/Desktop/Systemutvecklingsprojektet/src/systemutvecklingsprojektet/lösenordÄndrat.java</file>
         </group>
-=======
-        <group/>
->>>>>>> caae0e85704a16a140ba0204eca20ab6e910e9b4
     </open-files>
 </project-private>
