@@ -26,7 +26,7 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        LabelRubrik = new javax.swing.JLabel();
+        RubrikÄndraLösenord = new javax.swing.JLabel();
         KnappBytLösenord = new javax.swing.JToggleButton();
         TextFieldNyttLösenord = new javax.swing.JTextField();
         TextFieldBekräftaLösenord = new javax.swing.JTextField();
@@ -35,8 +35,8 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        LabelRubrik.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        LabelRubrik.setText("Ändra lösenord");
+        RubrikÄndraLösenord.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        RubrikÄndraLösenord.setText("Ändra lösenord");
 
         KnappBytLösenord.setText("Byt lösenord");
         KnappBytLösenord.addActionListener(new java.awt.event.ActionListener() {
@@ -60,10 +60,8 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(20, 20, 20)
-                            .addComponent(LabelRubrik, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(LabelBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(15, 15, 15)))
+                            .addComponent(RubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(LabelBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(TextFieldNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -76,7 +74,7 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(LabelRubrik, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(LabelNyttLösenord)
                 .addGap(2, 2, 2)
@@ -138,7 +136,7 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
     private javax.swing.JToggleButton KnappBytLösenord;
     private javax.swing.JLabel LabelBekräftaLösenord;
     private javax.swing.JLabel LabelNyttLösenord;
-    private javax.swing.JLabel LabelRubrik;
+    private javax.swing.JLabel RubrikÄndraLösenord;
     private javax.swing.JTextField TextFieldBekräftaLösenord;
     private javax.swing.JTextField TextFieldNyttLösenord;
     // End of variables declaration//GEN-END:variables

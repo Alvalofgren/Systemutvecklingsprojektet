@@ -26,15 +26,15 @@ public class lösenordÄndrat extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        RubrikLösenordÄndrats = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Ditt lösenord har ändrats!");
-        jLabel1.addAncestorListener(new javax.swing.event.AncestorListener() {
+        RubrikLösenordÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikLösenordÄndrats.setText("Ditt lösenord har ändrats!");
+        RubrikLösenordÄndrats.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jLabel1AncestorAdded(evt);
+                RubrikLösenordÄndratsAncestorAdded(evt);
             }
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -48,23 +48,23 @@ public class lösenordÄndrat extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+                .addComponent(RubrikLösenordÄndrats, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addComponent(RubrikLösenordÄndrats)
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel1AncestorAdded
+    private void RubrikLösenordÄndratsAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_RubrikLösenordÄndratsAncestorAdded
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel1AncestorAdded
+    }//GEN-LAST:event_RubrikLösenordÄndratsAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -102,6 +102,6 @@ public class lösenordÄndrat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel RubrikLösenordÄndrats;
     // End of variables declaration//GEN-END:variables
 }

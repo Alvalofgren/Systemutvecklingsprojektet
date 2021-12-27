@@ -32,14 +32,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="107" max="-2" attributes="0"/>
+              <Component id="LabelHejAlien" min="-2" pref="107" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="ÄndraLösenord" pref="257" max="32767" attributes="0"/>
-                  <Component id="VisaInfoOmrådeschef" max="32767" attributes="0"/>
+                  <Component id="ButtonÄndraLösenord" max="32767" attributes="0"/>
+                  <Component id="ButtonVisaInfoOmrådeschef" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="77" max="32767" attributes="0"/>
           </Group>
@@ -49,34 +49,34 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="28" max="-2" attributes="0"/>
+              <Component id="LabelHejAlien" min="-2" pref="28" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="ÄndraLösenord" min="-2" pref="41" max="-2" attributes="0"/>
+              <Component id="ButtonÄndraLösenord" min="-2" pref="41" max="-2" attributes="0"/>
               <EmptySpace pref="55" max="32767" attributes="0"/>
-              <Component id="VisaInfoOmrådeschef" min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="ButtonVisaInfoOmrådeschef" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="&#xc4;ndraL&#xf6;senord">
+    <Component class="javax.swing.JButton" name="Button&#xc4;ndraL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra l&#xf6;senord"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="&#xc4;ndraL&#xf6;senordActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraL&#xf6;senordActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="VisaInfoOmr&#xe5;deschef">
+    <Component class="javax.swing.JButton" name="ButtonVisaInfoOmr&#xe5;deschef">
       <Properties>
         <Property name="text" type="java.lang.String" value="Visa information om omr&#xe5;deschef"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VisaInfoOmr&#xe5;deschefActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonVisaInfoOmr&#xe5;deschefActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="LabelHejAlien">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>

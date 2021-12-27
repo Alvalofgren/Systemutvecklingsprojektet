@@ -35,39 +35,39 @@ public class Fonster extends javax.swing.JFrame {
     private void initComponents() {
 
         RubrikForFonster = new javax.swing.JLabel();
-        AgentButton = new javax.swing.JButton();
-        AlienButton = new javax.swing.JButton();
-        AdministratorButton = new javax.swing.JButton();
-        LoggaIn = new javax.swing.JLabel();
+        ButtonAgent = new javax.swing.JButton();
+        ButtonAlien = new javax.swing.JButton();
+        ButtonAdministratör = new javax.swing.JButton();
+        LabelLoggaIn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         RubrikForFonster.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikForFonster.setText("    Välkommen till Men in Black");
 
-        AgentButton.setText("Agent");
-        AgentButton.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAgent.setText("Agent");
+        ButtonAgent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AgentButtonActionPerformed(evt);
+                ButtonAgentActionPerformed(evt);
             }
         });
 
-        AlienButton.setText("Alien");
-        AlienButton.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAlien.setText("Alien");
+        ButtonAlien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AlienButtonActionPerformed(evt);
+                ButtonAlienActionPerformed(evt);
             }
         });
 
-        AdministratorButton.setText("Administratör");
-        AdministratorButton.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAdministratör.setText("Administratör");
+        ButtonAdministratör.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AdministratorButtonActionPerformed(evt);
+                ButtonAdministratörActionPerformed(evt);
             }
         });
 
-        LoggaIn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        LoggaIn.setText("Logga in");
+        LabelLoggaIn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        LabelLoggaIn.setText("Logga in");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,13 +78,13 @@ public class Fonster extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(AgentButton, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-                            .addComponent(AlienButton, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-                            .addComponent(AdministratorButton, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                            .addComponent(ButtonAgent, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                            .addComponent(ButtonAlien, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                            .addComponent(ButtonAdministratör, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
                             .addComponent(RubrikForFonster, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(214, 214, 214)
-                        .addComponent(LoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(LabelLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(67, 67, 67))
         );
         layout.setVerticalGroup(
@@ -93,34 +93,34 @@ public class Fonster extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(RubrikForFonster, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(LoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(AgentButton, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(ButtonAgent, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(AlienButton, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(ButtonAlien, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(AdministratorButton, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(ButtonAdministratör, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                 .addGap(50, 50, 50))
         );
 
-        AgentButton.getAccessibleContext().setAccessibleName("");
-        AlienButton.getAccessibleContext().setAccessibleName("");
-        AdministratorButton.getAccessibleContext().setAccessibleName("");
+        ButtonAgent.getAccessibleContext().setAccessibleName("");
+        ButtonAlien.getAccessibleContext().setAccessibleName("");
+        ButtonAdministratör.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgentButtonActionPerformed
+    private void ButtonAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgentActionPerformed
          new AgentInlogg().setVisible(true);
-    }//GEN-LAST:event_AgentButtonActionPerformed
+    }//GEN-LAST:event_ButtonAgentActionPerformed
 
-    private void AdministratorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdministratorButtonActionPerformed
+    private void ButtonAdministratörActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAdministratörActionPerformed
         new AdministratorsInlogg().setVisible(true);
-    }//GEN-LAST:event_AdministratorButtonActionPerformed
+    }//GEN-LAST:event_ButtonAdministratörActionPerformed
 
-    private void AlienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlienButtonActionPerformed
+    private void ButtonAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAlienActionPerformed
         new AlienInlogg().setVisible(true);
-    }//GEN-LAST:event_AlienButtonActionPerformed
+    }//GEN-LAST:event_ButtonAlienActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,10 +161,10 @@ public class Fonster extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AdministratorButton;
-    private javax.swing.JButton AgentButton;
-    private javax.swing.JButton AlienButton;
-    private javax.swing.JLabel LoggaIn;
+    private javax.swing.JButton ButtonAdministratör;
+    private javax.swing.JButton ButtonAgent;
+    private javax.swing.JButton ButtonAlien;
+    private javax.swing.JLabel LabelLoggaIn;
     private javax.swing.JLabel RubrikForFonster;
     // End of variables declaration//GEN-END:variables
 }

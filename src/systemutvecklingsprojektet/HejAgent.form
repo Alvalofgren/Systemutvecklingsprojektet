@@ -26,13 +26,13 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Datum" min="-2" pref="196" max="-2" attributes="0"/>
-                  <Component id="Plats" min="-2" pref="196" max="-2" attributes="0"/>
-                  <Component id="Ras" min="-2" pref="196" max="-2" attributes="0"/>
+                  <Component id="ButtonDatum" min="-2" pref="196" max="-2" attributes="0"/>
+                  <Component id="ButtonPlats" min="-2" pref="196" max="-2" attributes="0"/>
+                  <Component id="ButtonRas" min="-2" pref="196" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="InformationOmEnAlien" min="-2" max="-2" attributes="0"/>
+                      <Component id="ButtonAllInfoOmEnAlien" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel3" min="-2" pref="97" max="-2" attributes="0"/>
+                          <Component id="LabelSorteraEfter" min="-2" pref="97" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -43,13 +43,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="606" max="-2" attributes="0"/>
-                      <Component id="ändraLösenord" min="-2" max="-2" attributes="0"/>
+                      <Component id="ButtonÄndraLösenord" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="556" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" pref="280" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="211" max="-2" attributes="0"/>
+                          <Component id="LabelInfoAlien" min="-2" pref="280" max="-2" attributes="0"/>
+                          <Component id="LabelHejAgent" min="-2" pref="211" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -61,28 +61,28 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="LabelHejAgent" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
-              <Component id="ändraLösenord" min="-2" pref="40" max="-2" attributes="0"/>
+              <Component id="ButtonÄndraLösenord" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" pref="72" max="-2" attributes="0"/>
+              <Component id="LabelInfoAlien" min="-2" pref="72" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="InformationOmEnAlien" min="-2" max="-2" attributes="0"/>
+              <Component id="ButtonAllInfoOmEnAlien" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" pref="24" max="-2" attributes="0"/>
+              <Component id="LabelSorteraEfter" min="-2" pref="24" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="Ras" min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="ButtonRas" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="Plats" min="-2" pref="40" max="-2" attributes="0"/>
+              <Component id="ButtonPlats" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="Datum" min="-2" pref="42" max="-2" attributes="0"/>
+              <Component id="ButtonDatum" min="-2" pref="42" max="-2" attributes="0"/>
               <EmptySpace pref="239" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="LabelHejAgent">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="48" style="0"/>
@@ -90,7 +90,7 @@
         <Property name="text" type="java.lang.String" value="Hej Agent"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="LabelInfoAlien">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>
@@ -98,49 +98,49 @@
         <Property name="text" type="java.lang.String" value="Information om alien"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Ras">
+    <Component class="javax.swing.JButton" name="ButtonRas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ras"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RasActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonRasActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="&#xe4;ndraL&#xf6;senord">
+    <Component class="javax.swing.JButton" name="Button&#xc4;ndraL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra l&#xf6;senord"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="&#xe4;ndraL&#xf6;senordActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraL&#xf6;senordActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Plats">
+    <Component class="javax.swing.JButton" name="ButtonPlats">
       <Properties>
         <Property name="text" type="java.lang.String" value="Plats"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlatsActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonPlatsActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Datum">
+    <Component class="javax.swing.JButton" name="ButtonDatum">
       <Properties>
         <Property name="text" type="java.lang.String" value="Datum"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DatumActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonDatumActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="LabelSorteraEfter">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sortera efter:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="InformationOmEnAlien">
+    <Component class="javax.swing.JButton" name="ButtonAllInfoOmEnAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="All information om en alien "/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InformationOmEnAlienActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonAllInfoOmEnAlienActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>

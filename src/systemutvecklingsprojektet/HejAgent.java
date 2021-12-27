@@ -29,57 +29,57 @@ public class HejAgent extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        Ras = new javax.swing.JButton();
-        ändraLösenord = new javax.swing.JButton();
-        Plats = new javax.swing.JButton();
-        Datum = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        javax.swing.JButton InformationOmEnAlien = new javax.swing.JButton();
+        LabelHejAgent = new javax.swing.JLabel();
+        LabelInfoAlien = new javax.swing.JLabel();
+        ButtonRas = new javax.swing.JButton();
+        ButtonÄndraLösenord = new javax.swing.JButton();
+        ButtonPlats = new javax.swing.JButton();
+        ButtonDatum = new javax.swing.JButton();
+        LabelSorteraEfter = new javax.swing.JLabel();
+        javax.swing.JButton ButtonAllInfoOmEnAlien = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
-        jLabel1.setText("Hej Agent");
+        LabelHejAgent.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
+        LabelHejAgent.setText("Hej Agent");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setText("Information om alien");
+        LabelInfoAlien.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        LabelInfoAlien.setText("Information om alien");
 
-        Ras.setText("Ras");
-        Ras.addActionListener(new java.awt.event.ActionListener() {
+        ButtonRas.setText("Ras");
+        ButtonRas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RasActionPerformed(evt);
+                ButtonRasActionPerformed(evt);
             }
         });
 
-        ändraLösenord.setText("Ändra lösenord");
-        ändraLösenord.addActionListener(new java.awt.event.ActionListener() {
+        ButtonÄndraLösenord.setText("Ändra lösenord");
+        ButtonÄndraLösenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ändraLösenordActionPerformed(evt);
+                ButtonÄndraLösenordActionPerformed(evt);
             }
         });
 
-        Plats.setText("Plats");
-        Plats.addActionListener(new java.awt.event.ActionListener() {
+        ButtonPlats.setText("Plats");
+        ButtonPlats.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlatsActionPerformed(evt);
+                ButtonPlatsActionPerformed(evt);
             }
         });
 
-        Datum.setText("Datum");
-        Datum.addActionListener(new java.awt.event.ActionListener() {
+        ButtonDatum.setText("Datum");
+        ButtonDatum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DatumActionPerformed(evt);
+                ButtonDatumActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("Sortera efter:");
+        LabelSorteraEfter.setText("Sortera efter:");
 
-        InformationOmEnAlien.setText("All information om en alien ");
-        InformationOmEnAlien.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAllInfoOmEnAlien.setText("All information om en alien ");
+        ButtonAllInfoOmEnAlien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InformationOmEnAlienActionPerformed(evt);
+                ButtonAllInfoOmEnAlienActionPerformed(evt);
             }
         });
 
@@ -90,46 +90,46 @@ public class HejAgent extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Datum, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Plats, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ras, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonDatum, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonRas, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(InformationOmEnAlien)
+                        .addComponent(ButtonAllInfoOmEnAlien)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelSorteraEfter, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(43, 43, 43))))
                 .addGap(540, 540, 540))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(606, 606, 606)
-                        .addComponent(ändraLösenord))
+                        .addComponent(ButtonÄndraLösenord))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(556, 556, 556)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(LabelInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelHejAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(482, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jLabel1)
+                .addComponent(LabelHejAgent)
                 .addGap(105, 105, 105)
-                .addComponent(ändraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(InformationOmEnAlien)
+                .addComponent(ButtonAllInfoOmEnAlien)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelSorteraEfter, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ras, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonRas, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(Plats, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(Datum, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonDatum, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(239, Short.MAX_VALUE))
         );
 
@@ -137,25 +137,25 @@ public class HejAgent extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
-    private void RasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RasActionPerformed
+    private void ButtonRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRasActionPerformed
         new ListaAliensRas().setVisible(true);
-    }//GEN-LAST:event_RasActionPerformed
+    }//GEN-LAST:event_ButtonRasActionPerformed
 
-    private void PlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlatsActionPerformed
+    private void ButtonPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPlatsActionPerformed
         new ListaAliensPlats().setVisible(true);
-    }//GEN-LAST:event_PlatsActionPerformed
+    }//GEN-LAST:event_ButtonPlatsActionPerformed
 
-    private void DatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DatumActionPerformed
+    private void ButtonDatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDatumActionPerformed
         new ListaAliensDatum().setVisible(true);
-    }//GEN-LAST:event_DatumActionPerformed
+    }//GEN-LAST:event_ButtonDatumActionPerformed
 
-    private void ändraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ändraLösenordActionPerformed
+    private void ButtonÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraLösenordActionPerformed
         new AndraLosenordAgent().setVisible(true);
-    }//GEN-LAST:event_ändraLösenordActionPerformed
+    }//GEN-LAST:event_ButtonÄndraLösenordActionPerformed
 
-    private void InformationOmEnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformationOmEnAlienActionPerformed
+    private void ButtonAllInfoOmEnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAllInfoOmEnAlienActionPerformed
         new AllInformationEnAlien().setVisible(true);
-    }//GEN-LAST:event_InformationOmEnAlienActionPerformed
+    }//GEN-LAST:event_ButtonAllInfoOmEnAlienActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,12 +193,12 @@ public class HejAgent extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Datum;
-    private javax.swing.JButton Plats;
-    private javax.swing.JButton Ras;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JButton ändraLösenord;
+    private javax.swing.JButton ButtonDatum;
+    private javax.swing.JButton ButtonPlats;
+    private javax.swing.JButton ButtonRas;
+    private javax.swing.JButton ButtonÄndraLösenord;
+    private javax.swing.JLabel LabelHejAgent;
+    private javax.swing.JLabel LabelInfoAlien;
+    private javax.swing.JLabel LabelSorteraEfter;
     // End of variables declaration//GEN-END:variables
 }

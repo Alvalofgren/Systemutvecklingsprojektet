@@ -33,27 +33,27 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
     private void initComponents() {
 
         rubrikÄndraLösenord = new javax.swing.JLabel();
-        fältNyttLösenord = new javax.swing.JTextField();
-        fältBekräftaLösenord = new javax.swing.JTextField();
-        knappBytLösenord = new javax.swing.JButton();
-        rubrikNyttLösenord = new javax.swing.JLabel();
-        rubrikBekräftaLösenord = new javax.swing.JLabel();
+        TextFieldNyttLösenord = new javax.swing.JTextField();
+        TextFieldBekräftaLösenord = new javax.swing.JTextField();
+        ButtonBytLösenord = new javax.swing.JButton();
+        LabelNyttLösenord = new javax.swing.JLabel();
+        LabelBekräftaLösenord = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         rubrikÄndraLösenord.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         rubrikÄndraLösenord.setText("Ändra lösenord");
 
-        knappBytLösenord.setText("Byt lösenord");
-        knappBytLösenord.addActionListener(new java.awt.event.ActionListener() {
+        ButtonBytLösenord.setText("Byt lösenord");
+        ButtonBytLösenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                knappBytLösenordActionPerformed(evt);
+                ButtonBytLösenordActionPerformed(evt);
             }
         });
 
-        rubrikNyttLösenord.setText("Nytt lösenord");
+        LabelNyttLösenord.setText("Nytt lösenord");
 
-        rubrikBekräftaLösenord.setText("Bekräfta lösenord");
+        LabelBekräftaLösenord.setText("Bekräfta lösenord");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,12 +63,12 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
                 .addContainerGap(154, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rubrikNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(fältNyttLösenord, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(fältBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(rubrikBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(knappBytLösenord))
+                        .addComponent(TextFieldNyttLösenord, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TextFieldBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(LabelBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(ButtonBytLösenord))
                 .addGap(84, 84, 84))
         );
         layout.setVerticalGroup(
@@ -77,26 +77,26 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(rubrikÄndraLösenord)
                 .addGap(30, 30, 30)
-                .addComponent(rubrikNyttLösenord)
+                .addComponent(LabelNyttLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fältNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextFieldNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
-                .addComponent(rubrikBekräftaLösenord)
+                .addComponent(LabelBekräftaLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fältBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextFieldBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(knappBytLösenord)
+                .addComponent(ButtonBytLösenord)
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void knappBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knappBytLösenordActionPerformed
+    private void ButtonBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBytLösenordActionPerformed
      
-        if (Validering.rutornaMatchar(fältNyttLösenord, fältBekräftaLösenord)) {
+        if (Validering.rutornaMatchar(TextFieldNyttLösenord, TextFieldBekräftaLösenord)) {
             
-            String ändring = ("UPDATE AGENT SET LOSENORD = " + fältNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg.Användarnamn.getText());
+            String ändring = ("UPDATE AGENT SET LOSENORD = " + TextFieldNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg.Användarnamn.getText());
    //Fixa nån slags getANvändarnamn-metod i stället
             new lösenordÄndrat().setVisible(true);
             //Ska bara ske om ändringen går igenom!!
@@ -108,7 +108,7 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
          //skriver tabellnamnet i SQL-frågan
        
         //Ska bara ske om ändringen går igenom!!
-    }//GEN-LAST:event_knappBytLösenordActionPerformed
+    }//GEN-LAST:event_ButtonBytLösenordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,11 +147,11 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField fältBekräftaLösenord;
-    private javax.swing.JTextField fältNyttLösenord;
-    private javax.swing.JButton knappBytLösenord;
-    private javax.swing.JLabel rubrikBekräftaLösenord;
-    private javax.swing.JLabel rubrikNyttLösenord;
+    private javax.swing.JButton ButtonBytLösenord;
+    private javax.swing.JLabel LabelBekräftaLösenord;
+    private javax.swing.JLabel LabelNyttLösenord;
+    private javax.swing.JTextField TextFieldBekräftaLösenord;
+    private javax.swing.JTextField TextFieldNyttLösenord;
     private javax.swing.JLabel rubrikÄndraLösenord;
     // End of variables declaration//GEN-END:variables
 }

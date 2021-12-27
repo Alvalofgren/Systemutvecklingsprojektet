@@ -27,13 +27,13 @@
               <EmptySpace pref="154" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="rubrikÄndraLösenord" min="-2" pref="163" max="-2" attributes="0"/>
-                  <Component id="rubrikNyttLösenord" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
+                  <Component id="LabelNyttLösenord" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="fältNyttLösenord" alignment="0" max="32767" attributes="0"/>
-                      <Component id="fältBekräftaLösenord" alignment="0" max="32767" attributes="0"/>
-                      <Component id="rubrikBekräftaLösenord" alignment="0" max="32767" attributes="0"/>
+                      <Component id="TextFieldNyttLösenord" alignment="0" max="32767" attributes="0"/>
+                      <Component id="TextFieldBekräftaLösenord" alignment="0" max="32767" attributes="0"/>
+                      <Component id="LabelBekräftaLösenord" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="knappBytLösenord" min="-2" max="-2" attributes="0"/>
+                  <Component id="ButtonBytLösenord" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
           </Group>
@@ -45,15 +45,15 @@
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Component id="rubrikÄndraLösenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="rubrikNyttLösenord" min="-2" max="-2" attributes="0"/>
+              <Component id="LabelNyttLösenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="fältNyttLösenord" min="-2" max="-2" attributes="0"/>
+              <Component id="TextFieldNyttLösenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Component id="rubrikBekräftaLösenord" min="-2" max="-2" attributes="0"/>
+              <Component id="LabelBekräftaLösenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="fältBekräftaLösenord" min="-2" max="-2" attributes="0"/>
+              <Component id="TextFieldBekräftaLösenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Component id="knappBytLösenord" min="-2" max="-2" attributes="0"/>
+              <Component id="ButtonBytLösenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="49" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -68,24 +68,24 @@
         <Property name="text" type="java.lang.String" value="&#xc4;ndra l&#xf6;senord"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="f&#xe4;ltNyttL&#xf6;senord">
+    <Component class="javax.swing.JTextField" name="TextFieldNyttL&#xf6;senord">
     </Component>
-    <Component class="javax.swing.JTextField" name="f&#xe4;ltBekr&#xe4;ftaL&#xf6;senord">
+    <Component class="javax.swing.JTextField" name="TextFieldBekr&#xe4;ftaL&#xf6;senord">
     </Component>
-    <Component class="javax.swing.JButton" name="knappBytL&#xf6;senord">
+    <Component class="javax.swing.JButton" name="ButtonBytL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Byt l&#xf6;senord"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="knappBytL&#xf6;senordActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonBytL&#xf6;senordActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="rubrikNyttL&#xf6;senord">
+    <Component class="javax.swing.JLabel" name="LabelNyttL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nytt l&#xf6;senord"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="rubrikBekr&#xe4;ftaL&#xf6;senord">
+    <Component class="javax.swing.JLabel" name="LabelBekr&#xe4;ftaL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bekr&#xe4;fta l&#xf6;senord"/>
       </Properties>

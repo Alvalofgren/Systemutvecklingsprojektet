@@ -33,10 +33,10 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
 
         ComboBoxVäljOmrådeschef = new javax.swing.JComboBox<>();
         LabelVäljOmråde = new javax.swing.JLabel();
-        LabelRubrik = new javax.swing.JLabel();
+        RubrikInfoOmrådeschef = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TextAreaResultat = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        ButtonVisaInfo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,17 +50,17 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
         LabelVäljOmråde.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         LabelVäljOmråde.setText("Välj område:");
 
-        LabelRubrik.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        LabelRubrik.setText("Information om områdeschef");
+        RubrikInfoOmrådeschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikInfoOmrådeschef.setText("Information om områdeschef");
 
         TextAreaResultat.setColumns(20);
         TextAreaResultat.setRows(5);
         jScrollPane1.setViewportView(TextAreaResultat);
 
-        jButton1.setText("Visa info");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonVisaInfo.setText("Visa info");
+        ButtonVisaInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonVisaInfoActionPerformed(evt);
             }
         });
 
@@ -73,25 +73,25 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(LabelRubrik)
+                        .addComponent(RubrikInfoOmrådeschef)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(LabelVäljOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(ComboBoxVäljOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jButton1))))
+                            .addComponent(ButtonVisaInfo))))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(LabelRubrik, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RubrikInfoOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComboBoxVäljOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelVäljOmråde)
-                    .addComponent(jButton1))
+                    .addComponent(ButtonVisaInfo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -104,7 +104,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
         
     }//GEN-LAST:event_ComboBoxVäljOmrådeschefActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ButtonVisaInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaInfoActionPerformed
         try
             {
                 String fråga = "SELECT Namn, agent.Agent_ID, Benamning FROM agent join omradeschef on agent.Omrade = omradeschef.Omrade join omrade on agent.Omrade = omrade.Omrades_ID where Benamning = '" 
@@ -119,7 +119,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
                     System.out.println(undantag.getMessage());
                 }
                 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonVisaInfoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,11 +157,11 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonVisaInfo;
     private javax.swing.JComboBox<String> ComboBoxVäljOmrådeschef;
-    private javax.swing.JLabel LabelRubrik;
     private javax.swing.JLabel LabelVäljOmråde;
+    private javax.swing.JLabel RubrikInfoOmrådeschef;
     private javax.swing.JTextArea TextAreaResultat;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

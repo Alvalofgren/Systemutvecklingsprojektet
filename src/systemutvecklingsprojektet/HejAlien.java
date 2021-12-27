@@ -28,30 +28,30 @@ public class HejAlien extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        ÄndraLösenord = new javax.swing.JButton();
-        VisaInfoOmrådeschef = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        ButtonÄndraLösenord = new javax.swing.JButton();
+        ButtonVisaInfoOmrådeschef = new javax.swing.JButton();
+        LabelHejAlien = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ÄndraLösenord.setText("Ändra lösenord");
-        ÄndraLösenord.addActionListener(new java.awt.event.ActionListener() {
+        ButtonÄndraLösenord.setText("Ändra lösenord");
+        ButtonÄndraLösenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ÄndraLösenordActionPerformed(evt);
+                ButtonÄndraLösenordActionPerformed(evt);
             }
         });
 
-        VisaInfoOmrådeschef.setText("Visa information om områdeschef");
-        VisaInfoOmrådeschef.addActionListener(new java.awt.event.ActionListener() {
+        ButtonVisaInfoOmrådeschef.setText("Visa information om områdeschef");
+        ButtonVisaInfoOmrådeschef.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VisaInfoOmrådeschefActionPerformed(evt);
+                ButtonVisaInfoOmrådeschefActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setText("Hej alien");
+        LabelHejAlien.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        LabelHejAlien.setText("Hej alien");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -59,37 +59,37 @@ public class HejAlien extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelHejAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(145, 145, 145))
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ÄndraLösenord, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
-                    .addComponent(VisaInfoOmrådeschef, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ButtonVisaInfoOmrådeschef, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(77, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelHejAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(ÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(VisaInfoOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonVisaInfoOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ÄndraLösenordActionPerformed
+    private void ButtonÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraLösenordActionPerformed
        new ÄndraLösenordAlien().setVisible(true);
-    }//GEN-LAST:event_ÄndraLösenordActionPerformed
+    }//GEN-LAST:event_ButtonÄndraLösenordActionPerformed
 
-    private void VisaInfoOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VisaInfoOmrådeschefActionPerformed
+    private void ButtonVisaInfoOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaInfoOmrådeschefActionPerformed
         new InfoOmOmrådeschef().setVisible(true);
-    }//GEN-LAST:event_VisaInfoOmrådeschefActionPerformed
+    }//GEN-LAST:event_ButtonVisaInfoOmrådeschefActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,9 +127,9 @@ public class HejAlien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton VisaInfoOmrådeschef;
+    private javax.swing.JButton ButtonVisaInfoOmrådeschef;
+    private javax.swing.JButton ButtonÄndraLösenord;
+    private javax.swing.JLabel LabelHejAlien;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton ÄndraLösenord;
     // End of variables declaration//GEN-END:variables
 }

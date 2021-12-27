@@ -27,15 +27,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
-                      <Component id="RubrikAgentLoggaIn" min="-2" pref="96" max="-2" attributes="0"/>
+                      <Component id="RubrikAlienLoggaIn" min="-2" pref="96" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Lösenord" min="-2" pref="132" max="-2" attributes="0"/>
-                          <Component id="Användarnamn" min="-2" pref="132" max="-2" attributes="0"/>
-                          <Component id="RubrikLösenord" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="RubrikAnvändarnamn" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextFieldLösenord" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="TextFieldAnvändarnamn" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="LabelLösenord" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelAnvändarnamn" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -43,7 +43,7 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="LoggaInButton" min="-2" pref="92" max="-2" attributes="0"/>
+              <Component id="ButtonLoggaIn" min="-2" pref="92" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -52,37 +52,37 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Component id="RubrikAgentLoggaIn" min="-2" pref="53" max="-2" attributes="0"/>
+              <Component id="RubrikAlienLoggaIn" min="-2" pref="53" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="RubrikAnvändarnamn" min="-2" max="-2" attributes="0"/>
+              <Component id="LabelAnvändarnamn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="Användarnamn" min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="TextFieldAnvändarnamn" min="-2" pref="33" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="RubrikLösenord" min="-2" max="-2" attributes="0"/>
+              <Component id="LabelLösenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="Lösenord" min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="TextFieldLösenord" min="-2" pref="33" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="LoggaInButton" min="-2" max="-2" attributes="0"/>
+              <Component id="ButtonLoggaIn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="RubrikL&#xf6;senord">
+    <Component class="javax.swing.JLabel" name="LabelL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="L&#xf6;senord"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="LoggaInButton">
+    <Component class="javax.swing.JButton" name="ButtonLoggaIn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Logga in"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoggaInButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonLoggaInActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="RubrikAgentLoggaIn">
+    <Component class="javax.swing.JLabel" name="RubrikAlienLoggaIn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="24" style="1"/>
@@ -90,17 +90,17 @@
         <Property name="text" type="java.lang.String" value="Alien"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="Anv&#xe4;ndarnamn">
+    <Component class="javax.swing.JTextField" name="TextFieldAnv&#xe4;ndarnamn">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Anv&#xe4;ndarnamnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextFieldAnv&#xe4;ndarnamnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="L&#xf6;senord">
+    <Component class="javax.swing.JTextField" name="TextFieldL&#xf6;senord">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="L&#xf6;senordActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextFieldL&#xf6;senordActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="RubrikAnv&#xe4;ndarnamn">
+    <Component class="javax.swing.JLabel" name="LabelAnv&#xe4;ndarnamn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Anv&#xe4;ndarnamn"/>
       </Properties>

@@ -26,40 +26,40 @@ public class AlienInlogg extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        RubrikLösenord = new javax.swing.JLabel();
-        LoggaInButton = new javax.swing.JButton();
-        RubrikAgentLoggaIn = new javax.swing.JLabel();
-        Användarnamn = new javax.swing.JTextField();
-        Lösenord = new javax.swing.JTextField();
-        RubrikAnvändarnamn = new javax.swing.JLabel();
+        LabelLösenord = new javax.swing.JLabel();
+        ButtonLoggaIn = new javax.swing.JButton();
+        RubrikAlienLoggaIn = new javax.swing.JLabel();
+        TextFieldAnvändarnamn = new javax.swing.JTextField();
+        TextFieldLösenord = new javax.swing.JTextField();
+        LabelAnvändarnamn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikLösenord.setText("Lösenord");
+        LabelLösenord.setText("Lösenord");
 
-        LoggaInButton.setText("Logga in");
-        LoggaInButton.addActionListener(new java.awt.event.ActionListener() {
+        ButtonLoggaIn.setText("Logga in");
+        ButtonLoggaIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoggaInButtonActionPerformed(evt);
+                ButtonLoggaInActionPerformed(evt);
             }
         });
 
-        RubrikAgentLoggaIn.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        RubrikAgentLoggaIn.setText("Alien");
+        RubrikAlienLoggaIn.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikAlienLoggaIn.setText("Alien");
 
-        Användarnamn.addActionListener(new java.awt.event.ActionListener() {
+        TextFieldAnvändarnamn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AnvändarnamnActionPerformed(evt);
+                TextFieldAnvändarnamnActionPerformed(evt);
             }
         });
 
-        Lösenord.addActionListener(new java.awt.event.ActionListener() {
+        TextFieldLösenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LösenordActionPerformed(evt);
+                TextFieldLösenordActionPerformed(evt);
             }
         });
 
-        RubrikAnvändarnamn.setText("Användarnamn");
+        LabelAnvändarnamn.setText("Användarnamn");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,52 +69,52 @@ public class AlienInlogg extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(172, 172, 172)
-                        .addComponent(RubrikAgentLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(RubrikAlienLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Lösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Användarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RubrikLösenord)
-                            .addComponent(RubrikAnvändarnamn))))
+                            .addComponent(TextFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelLösenord)
+                            .addComponent(LabelAnvändarnamn))))
                 .addContainerGap(132, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(LoggaInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(150, 150, 150))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(RubrikAgentLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RubrikAlienLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
-                .addComponent(RubrikAnvändarnamn)
+                .addComponent(LabelAnvändarnamn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Användarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(RubrikLösenord)
+                .addComponent(LabelLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Lösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(LoggaInButton)
+                .addComponent(ButtonLoggaIn)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LoggaInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoggaInButtonActionPerformed
+    private void ButtonLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggaInActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LoggaInButtonActionPerformed
+    }//GEN-LAST:event_ButtonLoggaInActionPerformed
 
-    private void AnvändarnamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnvändarnamnActionPerformed
+    private void TextFieldAnvändarnamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldAnvändarnamnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AnvändarnamnActionPerformed
+    }//GEN-LAST:event_TextFieldAnvändarnamnActionPerformed
 
-    private void LösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LösenordActionPerformed
+    private void TextFieldLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldLösenordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LösenordActionPerformed
+    }//GEN-LAST:event_TextFieldLösenordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,11 +152,11 @@ public class AlienInlogg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Användarnamn;
-    private javax.swing.JButton LoggaInButton;
-    private javax.swing.JTextField Lösenord;
-    private javax.swing.JLabel RubrikAgentLoggaIn;
-    private javax.swing.JLabel RubrikAnvändarnamn;
-    private javax.swing.JLabel RubrikLösenord;
+    private javax.swing.JButton ButtonLoggaIn;
+    private javax.swing.JLabel LabelAnvändarnamn;
+    private javax.swing.JLabel LabelLösenord;
+    private javax.swing.JLabel RubrikAlienLoggaIn;
+    private javax.swing.JTextField TextFieldAnvändarnamn;
+    private javax.swing.JTextField TextFieldLösenord;
     // End of variables declaration//GEN-END:variables
 }

@@ -36,27 +36,27 @@ public class AgentInlogg extends javax.swing.JFrame {
     private void initComponents() {
 
         RubrikAgent = new javax.swing.JLabel();
-        Användarnamn = new javax.swing.JTextField();
-        Lösenord = new javax.swing.JTextField();
-        Logga_in = new javax.swing.JButton();
-        RubrikAnvändarnamn = new javax.swing.JLabel();
-        RubrikLösenord = new javax.swing.JLabel();
+        TextFieldAnvändarnamn = new javax.swing.JTextField();
+        TextFieldLösenord = new javax.swing.JTextField();
+        ButtonLoggain = new javax.swing.JButton();
+        LabelAnvändarnamn = new javax.swing.JLabel();
+        LabelLösenord = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         RubrikAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikAgent.setText("Agent");
 
-        Logga_in.setText("Logga in");
-        Logga_in.addActionListener(new java.awt.event.ActionListener() {
+        ButtonLoggain.setText("Logga in");
+        ButtonLoggain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Logga_inActionPerformed(evt);
+                ButtonLoggainActionPerformed(evt);
             }
         });
 
-        RubrikAnvändarnamn.setText("Användarnamn");
+        LabelAnvändarnamn.setText("Användarnamn");
 
-        RubrikLösenord.setText("Lösenord");
+        LabelLösenord.setText("Lösenord");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,11 +70,11 @@ public class AgentInlogg extends javax.swing.JFrame {
                 .addGap(112, 112, 112)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(Logga_in, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                        .addComponent(Användarnamn)
-                        .addComponent(RubrikLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Lösenord))
-                    .addComponent(RubrikAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ButtonLoggain, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                        .addComponent(TextFieldAnvändarnamn)
+                        .addComponent(LabelLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TextFieldLösenord))
+                    .addComponent(LabelAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -83,28 +83,28 @@ public class AgentInlogg extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(RubrikAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
-                .addComponent(RubrikAnvändarnamn)
+                .addComponent(LabelAnvändarnamn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Användarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                .addComponent(RubrikLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Lösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Logga_in, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ButtonLoggain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(40, 40, 40))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Logga_inActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logga_inActionPerformed
+    private void ButtonLoggainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggainActionPerformed
 
         try {
          
-        String query = "SELECT LOSENORD FORM AGENT WHERE NAMN = '" + Användarnamn.getText()+"'";
+        String query = "SELECT LOSENORD FORM AGENT WHERE NAMN = '" + TextFieldAnvändarnamn.getText()+"'";
         String losen =idb.fetchSingle(query);
-        if(losen.equals(Lösenord.getText())){
+        if(losen.equals(TextFieldLösenord.getText())){
             new HejAgent().setVisible(true);
         }
         else{
@@ -117,7 +117,7 @@ public class AgentInlogg extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
                         System.out.println("Error" + undantag.getMessage());
                     }
-    }//GEN-LAST:event_Logga_inActionPerformed
+    }//GEN-LAST:event_ButtonLoggainActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,12 +156,12 @@ public class AgentInlogg extends javax.swing.JFrame {
         }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Användarnamn;
-    private javax.swing.JButton Logga_in;
-    private javax.swing.JTextField Lösenord;
+    private javax.swing.JButton ButtonLoggain;
+    private javax.swing.JLabel LabelAnvändarnamn;
+    private javax.swing.JLabel LabelLösenord;
     private javax.swing.JLabel RubrikAgent;
-    private javax.swing.JLabel RubrikAnvändarnamn;
-    private javax.swing.JLabel RubrikLösenord;
+    private javax.swing.JTextField TextFieldAnvändarnamn;
+    private javax.swing.JTextField TextFieldLösenord;
     // End of variables declaration//GEN-END:variables
 
 }

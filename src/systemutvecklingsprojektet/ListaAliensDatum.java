@@ -35,7 +35,7 @@ public class ListaAliensDatum extends javax.swing.JFrame {
         TextVäljDatumTill = new javax.swing.JTextField();
         LabelDatumFrånTill = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -75,9 +75,9 @@ public class ListaAliensDatum extends javax.swing.JFrame {
 
         LabelDatumFrånTill.setText("Datum från-till (ÅÅÅÅ-MM-DD):");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        TextArea.setColumns(20);
+        TextArea.setRows(5);
+        jScrollPane2.setViewportView(TextArea);
 
         jLabel1.setText("-");
 
@@ -168,6 +168,7 @@ public class ListaAliensDatum extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelDatumFrånTill;
     private javax.swing.JLabel RubrikAlienMellanDatum;
+    private javax.swing.JTextArea TextArea;
     private javax.swing.JTextField TextVäljDatumFrån;
     private javax.swing.JTextField TextVäljDatumTill;
     private javax.swing.JDialog jDialog1;
@@ -176,6 +177,5 @@ public class ListaAliensDatum extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
