@@ -65,10 +65,10 @@ public class AndraLosenord extends javax.swing.JFrame {
                     .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rubrikNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(knappBytLösenord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
                         .addComponent(fältNyttLösenord, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(fältBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(rubrikBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(rubrikBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(knappBytLösenord))
                 .addGap(84, 84, 84))
         );
         layout.setVerticalGroup(
