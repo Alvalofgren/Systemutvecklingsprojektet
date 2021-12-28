@@ -2,6 +2,7 @@ package systemutvecklingsprojektet;
 
 import oru.inf.InfDB;
 import oru.inf.InfException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,6 +22,7 @@ public class StartKlass
         } 
         catch (InfException felUppgifter) 
         {
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
             System.out.println("Felmeddelande" + felUppgifter.getMessage());
         }
 
