@@ -146,7 +146,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="Knapp&#xc4;ndraInfoOmAlien">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc4;ndra information om alien??"/>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra information om alien"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Knapp&#xc4;ndraInfoOmAlienActionPerformed"/>
