@@ -96,7 +96,7 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
      
         if (Validering.rutornaMatchar(TextFieldNyttLösenord, TextFieldBekräftaLösenord)) {
             
-            String ändring = ("UPDATE AGENT SET LOSENORD = " + TextFieldNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg.Användarnamn.getText());
+//            String ändring = ("UPDATE AGENT SET LOSENORD = " + TextFieldNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg.Användarnamn.getText());
    //Fixa nån slags getANvändarnamn-metod i stället
             new lösenordÄndrat().setVisible(true);
             //Ska bara ske om ändringen går igenom!!
