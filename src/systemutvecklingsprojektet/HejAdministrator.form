@@ -58,14 +58,12 @@
                           <Component id="ButtonTaBortAgent" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="ButtonÄndraKontorschef" max="32767" attributes="0"/>
-                              <Component id="ButtonÄndraOmrådesChef" pref="0" max="32767" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="LabelChef" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="ButtonÄndraOmrådesChef" pref="147" max="32767" attributes="0"/>
+                          <Component id="ButtonÄndraKontorschef" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
