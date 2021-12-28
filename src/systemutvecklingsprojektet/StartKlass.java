@@ -12,7 +12,8 @@ public class StartKlass
 
     private static InfDB idb;
 
-    public static void main(String[] args) throws InfException {
+    public static void main(String[] args)
+    {
         try 
         {
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
