@@ -4,18 +4,32 @@
  */
 package systemutvecklingsprojektet;
 
-/**
- *
- * @author almahedengren
- */
+import oru.inf.InfDB;
+import oru.inf.InfException;
+import java.util.HashMap;
+
+// *
+// * @author almahedengren
+// */
+
+import javax.swing.JOptionPane;
 public class AllInformationEnAlien extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form AllInformationEnAlien
      */
-    public AllInformationEnAlien() {
+    public AllInformationEnAlien(InfDB idb) {
         initComponents();
+        this.idb=idb;
     }
+
+    
+    private AllInformationEnAlien() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,7 +48,8 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         LabelVäljAlien = new javax.swing.JLabel();
         ComboBoxVäljAlien = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
-        TextArea = new javax.swing.JTextArea();
+        TextAreaVisningsFönster = new javax.swing.JTextArea();
+        KnappVälj = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -52,10 +67,22 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         LabelVäljAlien.setText("Välj Alien:");
 
         ComboBoxVäljAlien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboBoxVäljAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBoxVäljAlienActionPerformed(evt);
+            }
+        });
 
-        TextArea.setColumns(20);
-        TextArea.setRows(5);
-        jScrollPane2.setViewportView(TextArea);
+        TextAreaVisningsFönster.setColumns(20);
+        TextAreaVisningsFönster.setRows(5);
+        jScrollPane2.setViewportView(TextAreaVisningsFönster);
+
+        KnappVälj.setText("Välj");
+        KnappVälj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KnappVäljActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,7 +95,9 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(LabelVäljAlien)
                         .addGap(18, 18, 18)
-                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(KnappVälj, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(144, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -86,7 +115,9 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 29, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(KnappVälj, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
@@ -99,6 +130,29 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ComboBoxVäljAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxVäljAlienActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBoxVäljAlienActionPerformed
+
+    private void KnappVäljActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappVäljActionPerformed
+        try
+        {
+            String query = "Select * from alien where Namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'"; 
+            HashMap<String, String> resultat = idb.fetchRow(query);
+            
+            for(String kolumn : resultat.keySet())
+            {
+                TextAreaVisningsFönster.setText(kolumn);
+            }
+        }
+        
+        catch(InfException abc)
+        {
+            JOptionPane.showMessageDialog(null, "Ange ett giltigt namn");
+            System.out.println("Error" + abc.getMessage());
+        }
+    }//GEN-LAST:event_KnappVäljActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,9 +191,10 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboBoxVäljAlien;
+    private javax.swing.JButton KnappVälj;
     private javax.swing.JLabel LabelVäljAlien;
     private javax.swing.JLabel RubrikVisaAllInfoAlien;
-    private javax.swing.JTextArea TextArea;
+    private javax.swing.JTextArea TextAreaVisningsFönster;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;

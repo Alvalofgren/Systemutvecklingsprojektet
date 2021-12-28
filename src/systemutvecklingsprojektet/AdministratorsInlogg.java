@@ -4,18 +4,30 @@
  */
 package systemutvecklingsprojektet;
 
+import oru.inf.InfDB;
+import oru.inf.InfException;
 /**
  *
  * @author Julius
  */
 public class AdministratorsInlogg extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form AdministratorsInlogg
      */
-    public AdministratorsInlogg() {
+    public AdministratorsInlogg(InfDB idb) {
         initComponents();
+        this.idb=idb;
     }
+
+    private AdministratorsInlogg() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+   
+
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -109,7 +121,7 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
     }//GEN-LAST:event_TextFieldLösenordActionPerformed
 
     private void ButtonLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggaInActionPerformed
-        new HejAdministrator().setVisible(true);
+        new HejAdministrator(idb).setVisible(true);
     }//GEN-LAST:event_ButtonLoggaInActionPerformed
 
     /**
