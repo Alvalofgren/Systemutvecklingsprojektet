@@ -30,34 +30,34 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel1" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="TextFieldAlien_ID" min="-2" pref="142" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
-                                  <Component id="TextFieldRegistreringsdatum" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikAlienID" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="TextrutaAlienID" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikRegistreringsdatum" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
+                                  <Component id="TextrutaRegistreringsdatum" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="46" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TextFieldPlats" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
-                                  <Component id="TextFieldTelefon" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="TextrutaPlats" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
+                                  <Component id="TextrutaTelefonAlien" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikTelefonFörAlien" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikPlats" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TextFieldLösenord" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" pref="86" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="TextFieldNamn" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="TextrutaLösenordAlien" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikLösenordFörAlien" min="-2" pref="86" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikNamnFörAlien" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="TextrutaNamnAlien" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="TextFieldAnsvarigAgent" min="-2" pref="114" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" min="-2" pref="83" max="-2" attributes="0"/>
+                                      <Component id="TextrutaAnsvarigAgent" min="-2" pref="114" max="-2" attributes="0"/>
+                                      <Component id="UnderRubrikAnsvarigAgent" min="-2" pref="83" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="ButtonRegistrera" min="-2" max="-2" attributes="0"/>
+                                      <Component id="RegistreringKnappAlien" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -82,45 +82,45 @@
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="UnderRubrikAlienID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="UnderRubrikTelefonFörAlien" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="TextFieldAlien_ID" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TextFieldTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextrutaAlienID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextrutaTelefonAlien" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="UnderRubrikRegistreringsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="UnderRubrikPlats" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TextFieldPlats" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextFieldRegistreringsdatum" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextrutaPlats" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextrutaRegistreringsdatum" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikAnsvarigAgent" min="-2" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikLösenordFörAlien" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TextFieldAnsvarigAgent" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextFieldLösenord" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextrutaAnsvarigAgent" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextrutaLösenordAlien" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <Component id="UnderRubrikNamnFörAlien" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="TextFieldNamn" min="-2" max="-2" attributes="0"/>
+                      <Component id="TextrutaNamnAlien" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="ButtonRegistrera" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="RegistreringKnappAlien" min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="45" max="32767" attributes="0"/>
@@ -137,77 +137,77 @@
         <Property name="text" type="java.lang.String" value="Nyregistrering av alien"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonRegistrera">
+    <Component class="javax.swing.JButton" name="RegistreringKnappAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrera"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldAlien_ID">
+    <Component class="javax.swing.JTextField" name="TextrutaAlienID">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldRegistreringsdatum">
-      <Properties>
-        <Property name="columns" type="int" value="9"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextFieldRegistreringsdatumActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldL&#xf6;senord">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextFieldL&#xf6;senordActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldNamn">
+    <Component class="javax.swing.JTextField" name="TextrutaRegistreringsdatum">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextFieldNamnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextrutaRegistreringsdatumActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldTelefon">
+    <Component class="javax.swing.JTextField" name="TextrutaL&#xf6;senordAlien">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextrutaL&#xf6;senordAlienActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TextrutaNamnAlien">
+      <Properties>
+        <Property name="columns" type="int" value="9"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextrutaNamnAlienActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TextrutaTelefonAlien">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldPlats">
+    <Component class="javax.swing.JTextField" name="TextrutaPlats">
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldAnsvarigAgent">
+    <Component class="javax.swing.JTextField" name="TextrutaAnsvarigAgent">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="UnderRubrikAlienID">
       <Properties>
         <Property name="text" type="java.lang.String" value="AlienID"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="UnderRubrikRegistreringsdatum">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registreringsdatum"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="UnderRubrikL&#xf6;senordF&#xf6;rAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="L&#xf6;senord"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="UnderRubrikNamnF&#xf6;rAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Namn"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="UnderRubrikTelefonF&#xf6;rAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Telefon"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="UnderRubrikPlats">
       <Properties>
         <Property name="text" type="java.lang.String" value="Plats"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
+    <Component class="javax.swing.JLabel" name="UnderRubrikAnsvarigAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ansvarig agent"/>
       </Properties>

@@ -86,6 +86,11 @@ public class HejAgent extends javax.swing.JFrame {
         });
 
         jButton1.setText("Ändra information om alien");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Ändra information");
 
@@ -173,6 +178,10 @@ public class HejAgent extends javax.swing.JFrame {
     private void ButtonAllInfoOmEnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAllInfoOmEnAlienActionPerformed
         new AllInformationEnAlien().setVisible(true);
     }//GEN-LAST:event_ButtonAllInfoOmEnAlienActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new ÄndraInfoAlien().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

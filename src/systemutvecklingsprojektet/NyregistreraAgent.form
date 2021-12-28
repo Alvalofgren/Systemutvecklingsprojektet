@@ -34,29 +34,29 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="TextFieldAnställningsdatum" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldTelefon" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldNamn" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldAgentID" alignment="0" max="32767" attributes="0"/>
+                              <Component id="TextrutaAnställningsdatum" alignment="0" max="32767" attributes="0"/>
+                              <Component id="TextRutaTelefon" alignment="0" max="32767" attributes="0"/>
+                              <Component id="TextRutaNamn" alignment="0" max="32767" attributes="0"/>
+                              <Component id="TextrutaAgentID" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jLabel1" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="UnderRubrikAgentID" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TextFieldAdministratör" min="-2" pref="113" max="-2" attributes="0"/>
-                                  <Component id="TextFieldLösenord" min="-2" pref="113" max="-2" attributes="0"/>
-                                  <Component id="TextFieldOmråde" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Component id="TextrutaAdministratör" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Component id="TextrutaLösenord" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Component id="TextrutaOmråde" min="-2" pref="113" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="ButtonRegistrera" min="-2" max="-2" attributes="0"/>
+                              <Component id="KnappFörRegistrering" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikAdministratör" min="-2" pref="104" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -64,17 +64,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel2" min="-2" pref="49" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikTelefon" min="-2" pref="49" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel6" min="-2" pref="66" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikLösenord" min="-2" pref="66" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel4" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikNamn" min="-2" pref="52" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel3" min="-2" pref="107" max="-2" attributes="0"/>
+                                      <Component id="UnderRubrikAnställningsdatum" min="-2" pref="107" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Component id="UnderRubrikOmråde" min="-2" pref="60" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
@@ -97,42 +97,42 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="UnderRubrikAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="UnderRubrikAdministratör" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="TextFieldAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TextFieldAdministratör" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextrutaAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextrutaAdministratör" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikTelefon" min="-2" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikLösenord" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TextFieldTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextFieldLösenord" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextRutaTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextrutaLösenord" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikAnställningsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikOmråde" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TextFieldAnställningsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextFieldOmråde" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextrutaAnställningsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextrutaOmråde" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <Component id="UnderRubrikNamn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TextFieldNamn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ButtonRegistrera" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextRutaNamn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="KnappFörRegistrering" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
           </Group>
@@ -148,78 +148,78 @@
         <Property name="text" type="java.lang.String" value="Nyregistrering av agent"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonRegistrera">
+    <Component class="javax.swing.JButton" name="KnappF&#xf6;rRegistrering">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrera"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonRegistreraActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappF&#xf6;rRegistreringActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldAgentID">
+    <Component class="javax.swing.JTextField" name="TextrutaAgentID">
       <Properties>
         <Property name="columns" type="int" value="9"/>
         <Property name="actionCommand" type="java.lang.String" value="&lt;Not Set&gt;"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextFieldAgentIDActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextrutaAgentIDActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldNamn">
+    <Component class="javax.swing.JTextField" name="TextRutaNamn">
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldTelefon">
+    <Component class="javax.swing.JTextField" name="TextRutaTelefon">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldAnst&#xe4;llningsdatum">
+    <Component class="javax.swing.JTextField" name="TextrutaAnst&#xe4;llningsdatum">
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldAdministrat&#xf6;r">
+    <Component class="javax.swing.JTextField" name="TextrutaAdministrat&#xf6;r">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldL&#xf6;senord">
+    <Component class="javax.swing.JTextField" name="TextrutaL&#xf6;senord">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldOmr&#xe5;de">
+    <Component class="javax.swing.JTextField" name="TextrutaOmr&#xe5;de">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="UnderRubrikAgentID">
       <Properties>
         <Property name="text" type="java.lang.String" value="AgentID"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="UnderRubrikTelefon">
       <Properties>
         <Property name="text" type="java.lang.String" value="Telefon"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="UnderRubrikAnst&#xe4;llningsdatum">
       <Properties>
         <Property name="text" type="java.lang.String" value="Anst&#xe4;llningsdatum"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="UnderRubrikNamn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Namn"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="UnderRubrikAdministrat&#xf6;r">
       <Properties>
         <Property name="text" type="java.lang.String" value="Administrat&#xf6;r"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="UnderRubrikL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="L&#xf6;senord"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
+    <Component class="javax.swing.JLabel" name="UnderRubrikOmr&#xe5;de">
       <Properties>
         <Property name="text" type="java.lang.String" value="Omr&#xe5;de"/>
       </Properties>

@@ -28,9 +28,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ButtonNyregistreraAlien" min="-2" pref="192" max="-2" attributes="0"/>
+                          <Component id="KnappNyregistreraAlien" min="-2" pref="192" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="LabelUtrustning" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikUtrustning" min="-2" pref="70" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
@@ -39,29 +39,29 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="LabelAlien" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
-                          <Component id="ButtonÄndraInfoAlien" alignment="1" pref="192" max="32767" attributes="0"/>
-                          <Component id="ButtonTaBortAlien" alignment="1" max="32767" attributes="0"/>
-                          <Component id="ButtonTaBortUtrustning" max="32767" attributes="0"/>
+                          <Component id="UnderRubrikAlien" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Component id="KnappÄndraInfoOmAlien" alignment="1" pref="192" max="32767" attributes="0"/>
+                          <Component id="KnappTaBortAlien" alignment="1" max="32767" attributes="0"/>
+                          <Component id="KnappTaBortUtrustning" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ButtonNyregistreraAgent" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ButtonSökaInfoAgent" alignment="0" max="32767" attributes="0"/>
-                          <Component id="LabelHejAdministratör" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ButtonGeAdminStatus" alignment="0" max="32767" attributes="0"/>
+                          <Component id="KnappNyregistreraAgent" alignment="0" max="32767" attributes="0"/>
+                          <Component id="KnappSökaInfoAgent" alignment="0" max="32767" attributes="0"/>
+                          <Component id="RubrikHejAdministratör" alignment="0" max="32767" attributes="0"/>
+                          <Component id="KnappGeAdminStatus" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="LabelAgent" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikAgent" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Component id="ButtonÄndraInfoAgent" max="32767" attributes="0"/>
-                          <Component id="ButtonTaBortAgent" alignment="1" max="32767" attributes="0"/>
+                          <Component id="KnappTaBortAgent" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="LabelChef" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="ButtonÄndraOmrådesChef" pref="147" max="32767" attributes="0"/>
-                          <Component id="ButtonÄndraKontorschef" alignment="0" max="32767" attributes="0"/>
+                          <Component id="UnderRubrikChef" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="KnappÄndraOmrådeschef" pref="147" max="32767" attributes="0"/>
+                          <Component id="KnappÄndraKontorschef" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                   </Group>
@@ -73,33 +73,33 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Component id="LabelHejAdministratör" min="-2" max="-2" attributes="0"/>
+              <Component id="RubrikHejAdministratör" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="LabelAlien" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="LabelAgent" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="LabelChef" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikAlien" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikAgent" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="UnderRubrikChef" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ButtonÄndraOmrådesChef" alignment="1" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="KnappÄndraOmrådeschef" alignment="1" min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="ButtonTaBortAlien" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="ButtonNyregistreraAgent" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="KnappTaBortAlien" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="KnappNyregistreraAgent" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ButtonÄndraKontorschef" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="KnappÄndraKontorschef" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="ButtonÄndraInfoAlien" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="ButtonSökaInfoAgent" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="KnappÄndraInfoOmAlien" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="KnappSökaInfoAgent" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="ButtonNyregistreraAlien" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="ButtonGeAdminStatus" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="KnappNyregistreraAlien" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="KnappGeAdminStatus" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="ButtonÄndraInfoAgent" min="-2" pref="50" max="-2" attributes="0"/>
@@ -107,11 +107,11 @@
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ButtonTaBortAgent" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
+                  <Component id="KnappTaBortAgent" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="LabelUtrustning" min="-2" max="-2" attributes="0"/>
+                      <Component id="UnderRubrikUtrustning" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="ButtonTaBortUtrustning" min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="KnappTaBortUtrustning" min="-2" pref="44" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="75" max="32767" attributes="0"/>
@@ -120,15 +120,15 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="ButtonNyregistreraAlien">
+    <Component class="javax.swing.JButton" name="KnappNyregistreraAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nyregistrera alien"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonNyregistreraAlienActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappNyregistreraAlienActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="LabelHejAdministrat&#xf6;r">
+    <Component class="javax.swing.JLabel" name="RubrikHejAdministrat&#xf6;r">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>
@@ -136,44 +136,44 @@
         <Property name="text" type="java.lang.String" value="Hej Administrat&#xf6;r"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonTaBortAlien">
+    <Component class="javax.swing.JButton" name="KnappTaBortAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ta bort alien"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonTaBortAlienActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappTaBortAlienActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Button&#xc4;ndraInfoAlien">
+    <Component class="javax.swing.JButton" name="Knapp&#xc4;ndraInfoOmAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information om alien??"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraInfoAlienActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Knapp&#xc4;ndraInfoOmAlienActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonNyregistreraAgent">
+    <Component class="javax.swing.JButton" name="KnappNyregistreraAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nyregistrera agent"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonNyregistreraAgentActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappNyregistreraAgentActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonS&#xf6;kaInfoAgent">
+    <Component class="javax.swing.JButton" name="KnappS&#xf6;kaInfoAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xf6;ka information om agent"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonS&#xf6;kaInfoAgentActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappS&#xf6;kaInfoAgentActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonGeAdminStatus">
+    <Component class="javax.swing.JButton" name="KnappGeAdminStatus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ge administrat&#xf6;rstatus"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonGeAdminStatusActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappGeAdminStatusActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button&#xc4;ndraInfoAgent">
@@ -184,58 +184,58 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraInfoAgentActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="LabelAlien">
+    <Component class="javax.swing.JLabel" name="UnderRubrikAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alien"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
     </Component>
-    <Component class="javax.swing.JLabel" name="LabelAgent">
+    <Component class="javax.swing.JLabel" name="UnderRubrikAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="Agent"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonTaBortAgent">
+    <Component class="javax.swing.JButton" name="KnappTaBortAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ta bort agent"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonTaBortAgentActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappTaBortAgentActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="LabelChef">
+    <Component class="javax.swing.JLabel" name="UnderRubrikChef">
       <Properties>
         <Property name="text" type="java.lang.String" value="Chef"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Button&#xc4;ndraOmr&#xe5;desChef">
+    <Component class="javax.swing.JButton" name="Knapp&#xc4;ndraOmr&#xe5;deschef">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra omr&#xe5;deschef"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraOmr&#xe5;desChefActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Knapp&#xc4;ndraOmr&#xe5;deschefActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Button&#xc4;ndraKontorschef">
+    <Component class="javax.swing.JButton" name="Knapp&#xc4;ndraKontorschef">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra kontorschef"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button&#xc4;ndraKontorschefActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Knapp&#xc4;ndraKontorschefActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="LabelUtrustning">
+    <Component class="javax.swing.JLabel" name="UnderRubrikUtrustning">
       <Properties>
         <Property name="text" type="java.lang.String" value="Utrustning"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="ButtonTaBortUtrustning">
+    <Component class="javax.swing.JButton" name="KnappTaBortUtrustning">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ta bort utrustning"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonTaBortUtrustningActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappTaBortUtrustningActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
