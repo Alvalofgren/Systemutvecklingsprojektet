@@ -11,13 +11,11 @@ import oru.inf.InfDB;
  */
 public class Fonster extends javax.swing.JFrame {
 
-    private InfDB idb;
-    /**
-     * Creates new form Fonster
-     */
+    private static InfDB idb;
+   
     public Fonster(InfDB idb) {
         initComponents();
-        this.idb=idb;
+        this.idb = idb;
         
     }
 
