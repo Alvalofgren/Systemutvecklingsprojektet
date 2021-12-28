@@ -63,7 +63,7 @@ public class HejAdministrator extends javax.swing.JFrame {
             }
         });
 
-        KnappÄndraInfoOmAlien.setText("Ändra information om alien??");
+        KnappÄndraInfoOmAlien.setText("Ändra information om alien");
         KnappÄndraInfoOmAlien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 KnappÄndraInfoOmAlienActionPerformed(evt);
