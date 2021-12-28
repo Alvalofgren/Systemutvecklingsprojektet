@@ -77,7 +77,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelV&#xe4;ljAgentID">
       <Properties>
-        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent-ID:"/>
+        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent-ID"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ComboBoxV&#xe4;ljAgentID">
@@ -97,7 +97,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelTillKontor">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Till kontor:"/>
+        <Property name="text" type="java.lang.String" value="Till kontor"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ComboBoxV&#xe4;ljKontor">

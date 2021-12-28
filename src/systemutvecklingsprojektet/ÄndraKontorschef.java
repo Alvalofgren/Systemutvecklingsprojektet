@@ -37,11 +37,11 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
         RubrikÄndraKontorschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikÄndraKontorschef.setText("Ändra kontorschef");
 
-        LabelVäljAgentID.setText("Välj Agent-ID:");
+        LabelVäljAgentID.setText("Välj Agent-ID");
 
         ComboBoxVäljAgentID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        LabelTillKontor.setText("Till kontor:");
+        LabelTillKontor.setText("Till kontor");
 
         ComboBoxVäljKontor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 

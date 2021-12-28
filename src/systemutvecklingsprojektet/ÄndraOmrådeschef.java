@@ -37,11 +37,11 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         RubrikÄndraOmrådeschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikÄndraOmrådeschef.setText("Ändra områdeschef");
 
-        LabelVäljAgentID.setText("Välj Agent-ID:");
+        LabelVäljAgentID.setText("Välj Agent-ID");
 
         ComboBoxVäljAgentID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        LabelTillOmråde.setText("Till område:");
+        LabelTillOmråde.setText("Till område");
 
         ComboBoxVäljOmråde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
