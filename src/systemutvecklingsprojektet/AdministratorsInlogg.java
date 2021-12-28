@@ -16,14 +16,12 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
     /**
      * Creates new form AdministratorsInlogg
      */
-    public AdministratorsInlogg(InfDB idb) {
+    public AdministratorsInlogg() {
         initComponents();
         this.idb=idb;
     }
 
-    private AdministratorsInlogg() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 
    
 

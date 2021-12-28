@@ -19,15 +19,13 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
     /**
      * Creates new form AllInformationEnAlien
      */
-    public AllInformationEnAlien(InfDB idb) {
+    public AllInformationEnAlien() {
         initComponents();
         this.idb=idb;
     }
 
     
-    private AllInformationEnAlien() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 
     
 
