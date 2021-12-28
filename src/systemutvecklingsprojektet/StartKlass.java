@@ -7,7 +7,8 @@ import oru.inf.InfException;
  *
  * @author alval
  */
-public class StartKlass {
+public class StartKlass 
+{
 
     private static InfDB idb;
 

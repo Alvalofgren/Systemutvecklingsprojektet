@@ -11,7 +11,7 @@ import oru.inf.InfDB;
  */
 public class Fonster extends javax.swing.JFrame {
 
-    private static InfDB idb;
+    private InfDB idb;
    
     public Fonster(InfDB idb) {
         initComponents();
