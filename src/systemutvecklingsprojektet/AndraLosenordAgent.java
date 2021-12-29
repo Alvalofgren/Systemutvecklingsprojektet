@@ -18,7 +18,7 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
     /**
      * Creates new form AndraLosenord
      */
-    public AndraLosenordAgent() {
+    public AndraLosenordAgent(InfDB idb) {
         initComponents();
         this.idb = idb;
     }
@@ -96,7 +96,7 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
      
         if (Validering.rutornaMatchar(TextFieldNyttLösenord, TextFieldBekräftaLösenord)) {
             
-//            String ändring = ("UPDATE AGENT SET LOSENORD = " + TextFieldNyttLösenord.getText() + " WHERE NAMN = " + AgentInlogg.Användarnamn.getText());
+          String ändring = ("UPDATE AGENT SET LOSENORD = " + TextFieldNyttLösenord.getText() + " WHERE NAMN = '" + AgentInlogg.getNamn() + "'");
    //Fixa nån slags getANvändarnamn-metod i stället
             new lösenordÄndrat().setVisible(true);
             //Ska bara ske om ändringen går igenom!!
@@ -141,7 +141,7 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AndraLosenordAgent().setVisible(true);
+                new AndraLosenordAgent(idb).setVisible(true);
             }
         });
     }

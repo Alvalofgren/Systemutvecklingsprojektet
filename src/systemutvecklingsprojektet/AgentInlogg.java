@@ -26,6 +26,10 @@ public class AgentInlogg extends javax.swing.JFrame {
         this.idb=idb;
     }
 
+    public String getNamn(){
+        return TextFieldAnvändarnamn.getText();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
