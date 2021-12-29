@@ -23,19 +23,21 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="ButtonLoggaIn" min="-2" pref="92" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="ButtonLoggaIn" min="-2" pref="92" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="TextFieldLösenord" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
+                      <Component id="TextFieldAnvändarnamn" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
+                      <Component id="LabelLösenord" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="LabelAnvändarnamn" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="RubrikAdministatör" min="-2" pref="172" max="-2" attributes="0"/>
-                  <Component id="TextFieldLösenord" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
-                  <Component id="TextFieldAnvändarnamn" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
-                  <Component id="LabelLösenord" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="LabelAnvändarnamn" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="92" max="32767" attributes="0"/>
           </Group>
@@ -46,7 +48,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Component id="RubrikAdministatör" min="-2" pref="53" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="LabelAnvändarnamn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="TextFieldAnvändarnamn" min="-2" pref="33" max="-2" attributes="0"/>
