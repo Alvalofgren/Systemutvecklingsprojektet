@@ -32,16 +32,19 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPasswordField1 = new javax.swing.JPasswordField();
         rubrikÄndraLösenord = new javax.swing.JLabel();
-        TextFieldNyttLösenord = new javax.swing.JTextField();
-        TextFieldBekräftaLösenord = new javax.swing.JTextField();
         ButtonBytLösenord = new javax.swing.JButton();
         LabelNyttLösenord = new javax.swing.JLabel();
         LabelBekräftaLösenord = new javax.swing.JLabel();
+        PFNyttLösen = new javax.swing.JPasswordField();
+        PFBekräftaLösen = new javax.swing.JPasswordField();
+
+        jPasswordField1.setText("jPasswordField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        rubrikÄndraLösenord.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        rubrikÄndraLösenord.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         rubrikÄndraLösenord.setText("Ändra lösenord");
 
         ButtonBytLösenord.setText("Byt lösenord");
@@ -51,42 +54,50 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
             }
         });
 
-        LabelNyttLösenord.setText("Nytt lösenord");
+        LabelNyttLösenord.setText("Nytt lösenord:");
 
-        LabelBekräftaLösenord.setText("Bekräfta lösenord");
+        LabelBekräftaLösenord.setText("Bekräfta lösenord:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(154, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(TextFieldNyttLösenord, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(TextFieldBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(LabelBekräftaLösenord, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(ButtonBytLösenord))
-                .addGap(84, 84, 84))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(PFNyttLösen)
+                                .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(ButtonBytLösenord))
+                            .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(LabelBekräftaLösenord))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addContainerGap(42, Short.MAX_VALUE)
                 .addComponent(rubrikÄndraLösenord)
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LabelNyttLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addComponent(PFNyttLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LabelBekräftaLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(ButtonBytLösenord)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGap(97, 97, 97))
         );
 
         pack();
@@ -94,23 +105,33 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
 
     private void ButtonBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBytLösenordActionPerformed
      
-        if (Validering.rutornaMatchar(TextFieldNyttLösenord, TextFieldBekräftaLösenord)) {
+       try
+       {
+        if (Validering.rutornaMatchar(PFNyttLösen, PFBekräftaLösen)) {
             
-          String ändring = ("UPDATE AGENT SET LOSENORD = " + TextFieldNyttLösenord.getText() + " WHERE NAMN = '" + AgentInlogg.getNamn() + "'");
-   //Fixa nån slags getANvändarnamn-metod i stället
+          String ändring = ("UPDATE AGENT SET LOSENORD = '" + PFNyttLösen.getText() + "'" + " WHERE NAMN = '" + AgentInlogg.getNamn() + "'");
+            idb.update(ändring);
             new lösenordÄndrat().setVisible(true);
-            //Ska bara ske om ändringen går igenom!!
+    
          }
         else{
             JOptionPane.showMessageDialog(null, "Lösenorden matchar inte");
         }
-         //Vi kanske måste göra en bytaLösenord för varje klass (agent, alien, administratörberoende på att man 
-         //skriver tabellnamnet i SQL-frågan
-       
-        //Ska bara ske om ändringen går igenom!!
+       }
+       catch(InfException undantag)
+       {
+           JOptionPane.showMessageDialog(null, "FEEEEEEEEL");
+       }
     }//GEN-LAST:event_ButtonBytLösenordActionPerformed
 
-    /**
+    
+       
+       
+       
+       
+       
+       
+       /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -150,8 +171,9 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
     private javax.swing.JButton ButtonBytLösenord;
     private javax.swing.JLabel LabelBekräftaLösenord;
     private javax.swing.JLabel LabelNyttLösenord;
-    private javax.swing.JTextField TextFieldBekräftaLösenord;
-    private javax.swing.JTextField TextFieldNyttLösenord;
+    private javax.swing.JPasswordField PFBekräftaLösen;
+    private javax.swing.JPasswordField PFNyttLösen;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel rubrikÄndraLösenord;
     // End of variables declaration//GEN-END:variables
 }

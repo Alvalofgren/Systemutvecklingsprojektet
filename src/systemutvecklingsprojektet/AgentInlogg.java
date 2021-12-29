@@ -15,7 +15,7 @@ import oru.inf.InfException;
 public class AgentInlogg extends javax.swing.JFrame {
 
     private InfDB idb;
-   
+    private static String agentNamn;
    
     
     /**
@@ -26,8 +26,8 @@ public class AgentInlogg extends javax.swing.JFrame {
         this.idb=idb;
     }
 
-    public String getNamn(){
-        return TextFieldAnvändarnamn.getText();
+    public static String getNamn(){
+        return agentNamn;
     }
     
     /**
@@ -126,7 +126,9 @@ public class AgentInlogg extends javax.swing.JFrame {
 
             }
             
+            
         }
+        agentNamn = TextFieldAnvändarnamn.getText();
        }
             
        catch(InfException undantag){
