@@ -3,7 +3,6 @@ package systemutvecklingsprojektet;
 import oru.inf.InfDB;
 import oru.inf.InfException;
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author alval

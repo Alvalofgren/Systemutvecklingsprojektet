@@ -4,7 +4,7 @@
  */
 package systemutvecklingsprojektet;
 import oru.inf.InfDB;
-
+import oru.inf.InfException;
 /**
  * @author Julius
  */
@@ -12,17 +12,15 @@ import oru.inf.InfDB;
 public class Fonster extends javax.swing.JFrame {
 
    private InfDB idb;
+
    
     public Fonster(InfDB idb) 
     {
         initComponents();
-        this.idb=idb;    
+        this.idb = idb;
     }
 
-    private Fonster() 
-    {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -110,7 +108,7 @@ public class Fonster extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgentActionPerformed
-         new AgentInlogg().setVisible(true);
+         new AgentInlogg(idb).setVisible(true);
     }//GEN-LAST:event_ButtonAgentActionPerformed
 
     private void ButtonAdministratörActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAdministratörActionPerformed
