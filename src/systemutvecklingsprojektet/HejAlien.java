@@ -93,7 +93,7 @@ private InfDB idb;
     }//GEN-LAST:event_ButtonÄndraLösenordActionPerformed
 
     private void ButtonVisaInfoOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaInfoOmrådeschefActionPerformed
-        new InfoOmOmrådeschef().setVisible(true);
+        new InfoOmOmrådeschef(idb).setVisible(true);
     }//GEN-LAST:event_ButtonVisaInfoOmrådeschefActionPerformed
 
     /**
