@@ -58,34 +58,39 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
 
         LabelBekräftaLösenord.setText("Bekräfta lösenord:");
 
+        PFNyttLösen.setText("dasdasd");
+        PFNyttLösen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PFNyttLösenActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(115, 115, 115)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(PFNyttLösen)
+                        .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(PFNyttLösen)
-                                .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(ButtonBytLösenord))
-                            .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(LabelBekräftaLösenord))))
+                        .addGap(32, 32, 32)
+                        .addComponent(ButtonBytLösenord))
+                    .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
+                        .addGap(29, 29, 29)
+                        .addComponent(LabelBekräftaLösenord))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
                         .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
                 .addComponent(rubrikÄndraLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LabelNyttLösenord)
@@ -97,7 +102,7 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
                 .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonBytLösenord)
-                .addGap(97, 97, 97))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
@@ -123,6 +128,10 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "FEEEEEEEEL");
        }
     }//GEN-LAST:event_ButtonBytLösenordActionPerformed
+
+    private void PFNyttLösenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PFNyttLösenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PFNyttLösenActionPerformed
 
     
        
