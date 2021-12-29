@@ -111,7 +111,7 @@ public class Fonster extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonAdministratörActionPerformed
 
     private void ButtonAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAlienActionPerformed
-        new AlienInlogg().setVisible(true);
+        new AlienInlogg(idb).setVisible(true);
     }//GEN-LAST:event_ButtonAlienActionPerformed
 
     /**
