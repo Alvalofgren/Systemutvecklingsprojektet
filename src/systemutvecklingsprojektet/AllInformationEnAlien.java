@@ -63,12 +63,21 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         RubrikVisaAllInfoAlien = new javax.swing.JLabel();
         LabelVäljAlien = new javax.swing.JLabel();
         ComboBoxVäljAlien = new javax.swing.JComboBox<>();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        TextAreaVisningsFönster = new javax.swing.JTextArea();
         KnappVälj = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TextAreaFönster = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -78,9 +87,22 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikVisaAllInfoAlien.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        RubrikVisaAllInfoAlien.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikVisaAllInfoAlien.setText("Lista all information om en alien");
 
         LabelVäljAlien.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -93,10 +115,6 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
             }
         });
 
-        TextAreaVisningsFönster.setColumns(20);
-        TextAreaVisningsFönster.setRows(5);
-        jScrollPane2.setViewportView(TextAreaVisningsFönster);
-
         KnappVälj.setText("Välj");
         KnappVälj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,38 +122,93 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
             }
         });
 
+        TextAreaFönster.setColumns(20);
+        TextAreaFönster.setRows(5);
+        jScrollPane2.setViewportView(TextAreaFönster);
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel1.setText("Alien-ID");
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel2.setText("Registreringsdatum");
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel3.setText("Lösenord");
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel4.setText("Namn");
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel5.setText("Telefon");
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel6.setText("Plats");
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel7.setText("Ansvarig agent");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LabelVäljAlien)
-                .addGap(29, 29, 29)
-                .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(KnappVälj, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RubrikVisaAllInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel3)
+                                        .addGap(19, 19, 19))
+                                    .addComponent(LabelVäljAlien))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(44, 44, 44)
+                                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(19, 19, 19)
+                                        .addComponent(jLabel4)
+                                        .addGap(48, 48, 48)
+                                        .addComponent(jLabel5)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(jLabel6)
+                                        .addGap(36, 36, 36)
+                                        .addComponent(jLabel7))))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(KnappVälj, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RubrikVisaAllInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(RubrikVisaAllInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(KnappVälj, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelVäljAlien))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                    .addComponent(LabelVäljAlien)
+                    .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(22, 22, 22)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
@@ -146,16 +219,26 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
     }//GEN-LAST:event_ComboBoxVäljAlienActionPerformed
 
     private void KnappVäljActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappVäljActionPerformed
+        TextAreaFönster.setText("");
         try
         {
-            String query = "Select * from alien where Namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'"; 
-            HashMap<String, String> rad = idb.fetchRow(query);
+            String query = "Select * from alien where Namn = '" + ComboBoxVäljAlien.getSelectedItem().toString() + "'"; 
+            ArrayList<HashMap<String, String>> rad = idb.fetchRows(query);
             
-            for(String värde : rad.keySet())
+            for(HashMap kolumn : rad)
             {
-                TextAreaVisningsFönster.setText(värde);
+                
+                   TextAreaFönster.append(kolumn.get("Alien_ID") + "\t");
+                   TextAreaFönster.append(" " + kolumn.get("Registreringsdatum") + "\t");
+                   TextAreaFönster.append(" " + kolumn.get("Losenord") + "\t");
+                   TextAreaFönster.append(" " + kolumn.get("Namn") + "\t");
+                   TextAreaFönster.append(" " + kolumn.get("Telefon") + "\t");
+                   TextAreaFönster.append(" " + kolumn.get("Plats") + "\t");
+                   TextAreaFönster.append(" " + kolumn.get("Ansvarig_Agent") + "\n");
+
+                }
             }
-        }
+        
         
         catch(InfException abc)
         {
@@ -204,11 +287,20 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
     private javax.swing.JButton KnappVälj;
     private javax.swing.JLabel LabelVäljAlien;
     private javax.swing.JLabel RubrikVisaAllInfoAlien;
-    private javax.swing.JTextArea TextAreaVisningsFönster;
+    private javax.swing.JTextArea TextAreaFönster;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
