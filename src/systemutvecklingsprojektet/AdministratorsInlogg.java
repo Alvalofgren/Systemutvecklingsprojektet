@@ -4,6 +4,7 @@
  */
 package systemutvecklingsprojektet;
 
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
 /**
@@ -119,44 +120,78 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
     }//GEN-LAST:event_TextFieldLösenordActionPerformed
 
     private void ButtonLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggaInActionPerformed
-        new HejAdministrator(idb).setVisible(true);
+          try {
+         
+        String query = "SELECT Losenord FROM agent WHERE Namn = '" + TextFieldAnvändarnamn.getText()+"'";
+        String losen = idb.fetchSingle(query);
+        String aStatus = "select administrator from agent WHERE Namn ='" + 
+        
+        if(losen == null)
+                {
+                    JOptionPane.showMessageDialog(null, "Användarnamnet finns inte");
+                }
+        
+        else
+        {
+            if(losen.equals(TextFieldLösenord.getText()) && aStatus.equals(J))
+            {
+                new HejAlien(idb).setVisible(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null,"Fel Lösenord");
+
+            }
+            
+            
+        }
+       
+       }
+            
+       catch(InfException undantag){
+                    JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
+                        System.out.println("Error" + undantag.getMessage());
+                    }
+                                               
+    }                                             
+
     }//GEN-LAST:event_ButtonLoggaInActionPerformed
 
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(AdministratorsInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(AdministratorsInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(AdministratorsInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(AdministratorsInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new AdministratorsInlogg(idb).setVisible(true);
-//            }
-//        });
-//    }
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(AdministratorsInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(AdministratorsInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(AdministratorsInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(AdministratorsInlogg.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new AdministratorsInlogg(idb).setVisible(true);
+            }
+        });
+        }
+        }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonLoggaIn;
     private javax.swing.JLabel LabelAnvändarnamn;

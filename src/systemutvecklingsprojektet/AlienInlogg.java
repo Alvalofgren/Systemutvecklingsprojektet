@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
+import oru.inf.InfException;
 
 /**
  *
@@ -108,7 +110,39 @@ public class AlienInlogg extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggaInActionPerformed
-        // TODO add your handling code here:
+          
+        try {
+         
+        String query = "SELECT Losenord FROM alien WHERE Namn = '" + TextFieldAnvändarnamn.getText()+"'";
+        String losen = idb.fetchSingle(query);
+        
+        if(losen == null)
+                {
+                    JOptionPane.showMessageDialog(null, "Användarnamnet finns inte");
+                }
+        
+        else
+        {
+            if(losen.equals(TextFieldLösenord.getText()))
+            {
+                new HejAlien(idb).setVisible(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null,"Fel Lösenord");
+
+            }
+            
+            
+        }
+       
+       }
+            
+       catch(InfException undantag){
+                    JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
+                        System.out.println("Error" + undantag.getMessage());
+                    }
+                                               
     }//GEN-LAST:event_ButtonLoggaInActionPerformed
 
     private void TextFieldAnvändarnamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldAnvändarnamnActionPerformed
