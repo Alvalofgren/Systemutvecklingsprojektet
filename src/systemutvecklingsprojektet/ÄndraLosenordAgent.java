@@ -90,9 +90,9 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
                         .addGap(139, 139, 139)
                         .addComponent(ButtonÄndraLösenord))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
+                        .addGap(104, 104, 104)
                         .addComponent(LabelLösenHarÄndrats)))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
