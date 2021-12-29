@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
 import java.util.ArrayList;
+import java.util.HashMap;
 /**
  *
  * @author almahedengren
@@ -29,7 +30,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
     private void fyllILista(){
         try {
             ComboBoxVäljOmrådeschef.removeAllItems();
-            String fraga = "select Omrade from Omradeschef";
+            String fraga = "select Benamning from Omrade";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
         for(String värde : svar)
@@ -125,19 +126,27 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
 
     private void ButtonVisaInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaInfoActionPerformed
         try
+        {
+               TextAreaResultat.replaceSelection(" ");
+                String fråga = "Select Agent.Namn, Agent.Agent_ID, Omrade.Benamning from Agent join Omradeschef on Agent.Omrade = Omradeschef.Omrade join Omrade on Agent.Omrade = Omrade.Omrades_ID where Omrade.Benamning = '" + ComboBoxVäljOmrådeschef.getSelectedItem().toString() + "' ";
+                ArrayList<HashMap<String,String>> lista = idb.fetchRows(fråga);
+                
+            for(HashMap kolumn : lista)
             {
-                String fråga = "SELECT Namn, agent.Agent_ID, Benamning FROM agent join omradeschef on agent.Omrade = omradeschef.Omrade join omrade on agent.Omrade = omrade.Omrades_ID where Benamning = '" 
-                + ComboBoxVäljOmrådeschef.getSelectedItem()+"'";
                
-                idb.fetchSingle(fråga);
-                TextAreaResultat.setText(fråga);
+                TextAreaResultat.append(kolumn.get("Namn") + "\t");
+                TextAreaResultat.append(" " + kolumn.get("Agent_ID") + "\t");
+                TextAreaResultat.append(" " + kolumn.get("Benamning") + "\n");
+            }
             }
         catch(InfException undantag)
                 {
-                JOptionPane.showMessageDialog(null, "");
+                JOptionPane.showMessageDialog(null, "Något gick fel");
                     System.out.println(undantag.getMessage());
                 }
-                
+            
+          
+    
     }//GEN-LAST:event_ButtonVisaInfoActionPerformed
 
     /**
