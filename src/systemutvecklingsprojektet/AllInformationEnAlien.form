@@ -50,17 +50,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane2" min="-2" pref="471" max="-2" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="RubrikVisaAllInfoAlien" min="-2" pref="426" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="28" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="LabelVäljAlien" min="-2" max="-2" attributes="0"/>
@@ -69,6 +58,14 @@
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Component id="KnappVälj" min="-2" pref="96" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jScrollPane2" min="-2" pref="459" max="-2" attributes="0"/>
+                  <Component id="RubrikVisaAllInfoAlien" min="-2" pref="426" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="39" pref="17" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

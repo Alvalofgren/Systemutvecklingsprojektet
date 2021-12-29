@@ -103,16 +103,26 @@ public class AgentInlogg extends javax.swing.JFrame {
         try {
          
         String query = "SELECT Losenord FROM agent WHERE Namn = '" + TextFieldAnvändarnamn.getText()+"'";
-        String losen =idb.fetchSingle(query);
+        String losen = idb.fetchSingle(query);
         
-        if(losen.equals(TextFieldLösenord.getText()))
+        if(losen == null)
+                {
+                    JOptionPane.showMessageDialog(null, "Användarnamnet finns inte");
+                }
+        
+        else
         {
-            new HejAgent().setVisible(true);
+            if(losen.equals(TextFieldLösenord.getText()))
+            {
+                new HejAgent().setVisible(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null,"Fel Lösenord");
+
+            }
+            
         }
-        else{
-        JOptionPane.showMessageDialog(null,"Fel Lösenord");
-        }
-        String agentLösenord = "select lösenord from agent";
        }
             
        catch(InfException undantag){

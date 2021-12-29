@@ -5,13 +5,13 @@
 package systemutvecklingsprojektet;
 
 import javax.swing.JFrame;
-
+import oru.inf.InfDB;
 /**
  *
  * @author Julius
  */
 public class HejAgent extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form HejAgent
      */
@@ -175,7 +175,7 @@ public class HejAgent extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonÄndraLösenordActionPerformed
 
     private void ButtonAllInfoOmEnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAllInfoOmEnAlienActionPerformed
-        new AllInformationEnAlien().setVisible(true);
+        new AllInformationEnAlien(idb).setVisible(true);
     }//GEN-LAST:event_ButtonAllInfoOmEnAlienActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
