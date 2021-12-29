@@ -114,7 +114,7 @@ public class AgentInlogg extends javax.swing.JFrame {
         {
             if(losen.equals(TextFieldLösenord.getText()))
             {
-                new HejAgent().setVisible(true);
+                new HejAgent(idb).setVisible(true);
             }
             else
             {

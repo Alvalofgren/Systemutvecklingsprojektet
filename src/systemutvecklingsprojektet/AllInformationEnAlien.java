@@ -6,7 +6,9 @@ package systemutvecklingsprojektet;
 
 import oru.inf.InfDB;
 import oru.inf.InfException;
+import java.util.ArrayList;
 import java.util.HashMap;
+
 
 // *
 // * @author almahedengren
@@ -16,14 +18,35 @@ import javax.swing.JOptionPane;
 public class AllInformationEnAlien extends javax.swing.JFrame {
 
     private InfDB idb;
+    private ArrayList<String> allaAliens;
     /**
      * Creates new form AllInformationEnAlien
      */
     public AllInformationEnAlien(InfDB idb) {
         initComponents();
         this.idb=idb;
+        allaAliens = new ArrayList<>();
+        fyllILista();
+        
+      
+        
     }
 
+    private void fyllILista()
+    {
+        
+        try {
+            String fraga = "select Namn from alien";
+        ArrayList<String> svar = idb.fetchColumn(fraga);
+        
+        for(String värde: svar){
+            TextAreaVisningsFönster.setText(värde);
+        }
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
