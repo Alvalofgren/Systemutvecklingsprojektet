@@ -125,7 +125,7 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
          
         String query = "SELECT Losenord FROM agent WHERE Namn = '" + TextFieldAnvändarnamn.getText()+"'";
         String losen = idb.fetchSingle(query);
-        String fråga = "select administrator from agent WHERE Namn ='" + TextFieldAnvändarnamn.getText() + "'";
+        String fråga = "SELECT administrator from agent WHERE Namn ='" + TextFieldAnvändarnamn.getText() + "'";
         String aStatus = idb.fetchSingle(fråga);
         
         if(losen == null)
@@ -167,9 +167,9 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
 
     }//GEN-LAST:event_ButtonLoggaInActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+//    /**
+//     * @param args the command line arguments
+//     */
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
