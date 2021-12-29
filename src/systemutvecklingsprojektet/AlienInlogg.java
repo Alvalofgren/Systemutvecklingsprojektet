@@ -13,6 +13,7 @@ import oru.inf.InfException;
  */
 public class AlienInlogg extends javax.swing.JFrame {
     private InfDB idb;
+    private static String alienNamn;
 
     /**
      * Creates new form AlienInlogg
@@ -21,7 +22,10 @@ public class AlienInlogg extends javax.swing.JFrame {
         initComponents();
         this.idb=idb;
     }
-
+    
+    public static String getNamn(){
+        return alienNamn;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -133,7 +137,7 @@ public class AlienInlogg extends javax.swing.JFrame {
 
             }
             
-            
+        alienNamn = TextFieldAnvändarnamn.getText();
         }
        
        }

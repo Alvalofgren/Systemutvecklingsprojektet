@@ -4,17 +4,22 @@
  */
 package systemutvecklingsprojektet;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author Julius
  */
 public class ÄndraLösenordAlien extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form ÄndraLösenordAlien
      */
-    public ÄndraLösenordAlien() {
+    public ÄndraLösenordAlien(InfDB idb) {
         initComponents();
+        this.idb=idb;
     }
 
     /**
@@ -28,10 +33,10 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
 
         RubrikÄndraLösenord = new javax.swing.JLabel();
         KnappBytLösenord = new javax.swing.JToggleButton();
-        TextFieldNyttLösenord = new javax.swing.JTextField();
-        TextFieldBekräftaLösenord = new javax.swing.JTextField();
         LabelNyttLösenord = new javax.swing.JLabel();
         LabelBekräftaLösenord = new javax.swing.JLabel();
+        PasswordFieldNyttLösen = new javax.swing.JPasswordField();
+        PasswordFieldBekräftaLösen = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,25 +54,32 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
 
         LabelBekräftaLösenord.setText("Bekräfta lösenord");
 
+        PasswordFieldNyttLösen.setText("jPasswordField1");
+
+        PasswordFieldBekräftaLösen.setText("jPasswordField2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(TextFieldBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(RubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(LabelBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(TextFieldNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(KnappBytLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(KnappBytLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(20, 20, 20)
+                                    .addComponent(RubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(LabelBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(PasswordFieldNyttLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(PasswordFieldBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)))))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -77,13 +89,13 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
                 .addComponent(RubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(LabelNyttLösenord)
-                .addGap(2, 2, 2)
-                .addComponent(TextFieldNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(LabelBekräftaLösenord)
+                .addGap(8, 8, 8)
+                .addComponent(PasswordFieldNyttLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addComponent(LabelBekräftaLösenord)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(PasswordFieldBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(KnappBytLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(52, Short.MAX_VALUE))
         );
@@ -92,52 +104,66 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void KnappBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappBytLösenordActionPerformed
-        
-        
-        new lösenordÄndrat().setVisible(true);
+        try
+       {
+        if (Validering.rutornaMatchar(PasswordFieldNyttLösen, PasswordFieldBekräftaLösen)) {
+            
+          String ändring = ("UPDATE alien SET LOSENORD = '" + PasswordFieldNyttLösen.getText() + "'" + " WHERE NAMN = '" + AlienInlogg.getNamn() + "'");
+            idb.update(ändring);
+            new lösenordÄndrat().setVisible(true);
+    
+         }
+        else{
+            JOptionPane.showMessageDialog(null, "Lösenorden matchar inte");
+        }
+       }
+       catch(InfException undantag)
+       {
+           JOptionPane.showMessageDialog(null, "FEEEEEEEEL");
+       }         
     }//GEN-LAST:event_KnappBytLösenordActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ÄndraLösenordAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ÄndraLösenordAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ÄndraLösenordAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ÄndraLösenordAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ÄndraLösenordAlien().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraLösenordAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraLösenordAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraLösenordAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraLösenordAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new ÄndraLösenordAlien(idb).setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton KnappBytLösenord;
     private javax.swing.JLabel LabelBekräftaLösenord;
     private javax.swing.JLabel LabelNyttLösenord;
+    private javax.swing.JPasswordField PasswordFieldBekräftaLösen;
+    private javax.swing.JPasswordField PasswordFieldNyttLösen;
     private javax.swing.JLabel RubrikÄndraLösenord;
-    private javax.swing.JTextField TextFieldBekräftaLösenord;
-    private javax.swing.JTextField TextFieldNyttLösenord;
     // End of variables declaration//GEN-END:variables
 }

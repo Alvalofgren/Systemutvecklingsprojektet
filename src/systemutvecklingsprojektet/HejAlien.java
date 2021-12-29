@@ -89,7 +89,7 @@ private InfDB idb;
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraLösenordActionPerformed
-       new ÄndraLösenordAlien().setVisible(true);
+       new ÄndraLösenordAlien(idb).setVisible(true);
     }//GEN-LAST:event_ButtonÄndraLösenordActionPerformed
 
     private void ButtonVisaInfoOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaInfoOmrådeschefActionPerformed

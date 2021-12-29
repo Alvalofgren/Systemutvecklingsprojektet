@@ -23,24 +23,29 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="TextFieldBekräftaLösenord" alignment="1" min="-2" pref="146" max="-2" attributes="0"/>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="RubrikÄndraLösenord" min="-2" pref="126" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="LabelBekräftaLösenord" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="LabelNyttLösenord" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="TextFieldNyttLösenord" min="-2" pref="146" max="-2" attributes="0"/>
-                  </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                       <Component id="KnappBytLösenord" min="-2" pref="130" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="RubrikÄndraLösenord" min="-2" pref="126" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="LabelBekräftaLösenord" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                              <Component id="PasswordFieldNyttLösen" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="PasswordFieldBekräftaLösen" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="LabelNyttLösenord" min="-2" pref="86" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="137" max="32767" attributes="0"/>
@@ -54,13 +59,13 @@
               <Component id="RubrikÄndraLösenord" min="-2" pref="36" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="LabelNyttLösenord" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-              <Component id="TextFieldNyttLösenord" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="LabelBekräftaLösenord" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <Component id="PasswordFieldNyttLösen" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="TextFieldBekräftaLösenord" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="LabelBekräftaLösenord" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="PasswordFieldBekräftaLösen" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="KnappBytLösenord" min="-2" pref="38" max="-2" attributes="0"/>
               <EmptySpace pref="52" max="32767" attributes="0"/>
           </Group>
@@ -84,10 +89,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KnappBytL&#xf6;senordActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldNyttL&#xf6;senord">
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldBekr&#xe4;ftaL&#xf6;senord">
-    </Component>
     <Component class="javax.swing.JLabel" name="LabelNyttL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nytt l&#xf6;senord"/>
@@ -96,6 +97,16 @@
     <Component class="javax.swing.JLabel" name="LabelBekr&#xe4;ftaL&#xf6;senord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bekr&#xe4;fta l&#xf6;senord"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="PasswordFieldNyttL&#xf6;sen">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="PasswordFieldBekr&#xe4;ftaL&#xf6;sen">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jPasswordField2"/>
       </Properties>
     </Component>
   </SubComponents>
