@@ -3,19 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
-
+import oru.inf.InfDB;
 /**
  *
  * @author almahedengren
  */
 public class HejAdministrator extends javax.swing.JFrame {
 
+    private static InfDB idb;
     /**
      * Creates new form HejAdministrator
      */
-    public HejAdministrator() {
+    public HejAdministrator(InfDB idb) {
         initComponents();
+        this.idb=idb;
     }
+
+    
+    private HejAdministrator() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+   
 
     /**
      * This method is called from within the constructor to initialize the form.

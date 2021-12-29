@@ -21,7 +21,7 @@ public class AgentInlogg extends javax.swing.JFrame {
     /**
      * Creates new form AgentInlogg2
      */
-    public AgentInlogg() {
+    public AgentInlogg(InfDB idb) {
         initComponents();
         this.idb=idb;
     }
@@ -150,11 +150,11 @@ public class AgentInlogg extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AgentInlogg().setVisible(true);
-            }
-        });
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new AgentInlogg(idb).setVisible(true);
+//            }
+      //  });
         }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

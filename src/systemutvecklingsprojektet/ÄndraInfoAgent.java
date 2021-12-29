@@ -33,11 +33,11 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
 
         RubrikÄndraInfoAgent = new javax.swing.JLabel();
         ComboBoxVäljAttribut = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
+        LabelVäljÄndra = new javax.swing.JLabel();
         TextFältNyttVärde = new javax.swing.JTextField();
         ComboBoxVäljAgent = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        LabelFörAgent = new javax.swing.JLabel();
+        LabelNyttVärde = new javax.swing.JLabel();
         KnappÄndraVärde = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,7 +47,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
 
         ComboBoxVäljAttribut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel1.setText("Välj att ändra:");
+        LabelVäljÄndra.setText("Välj att ändra:");
 
         TextFältNyttVärde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,9 +57,9 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
 
         ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel2.setText("För agent:");
+        LabelFörAgent.setText("För agent:");
 
-        jLabel3.setText("Nytt värde:");
+        LabelNyttVärde.setText("Nytt värde:");
 
         KnappÄndraVärde.setText("Ändra värde");
         KnappÄndraVärde.addActionListener(new java.awt.event.ActionListener() {
@@ -76,11 +76,11 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
                 .addContainerGap(48, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelVäljÄndra, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ComboBoxVäljAttribut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelFörAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33))
@@ -93,7 +93,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(27, 27, 27)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(TextFältNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(KnappÄndraVärde)
@@ -108,11 +108,11 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComboBoxVäljAttribut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
+                    .addComponent(LabelVäljÄndra)
                     .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(LabelFörAgent))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(LabelNyttVärde)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TextFältNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -185,10 +185,10 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ComboBoxVäljAgent;
     private javax.swing.JComboBox<String> ComboBoxVäljAttribut;
     private javax.swing.JButton KnappÄndraVärde;
+    private javax.swing.JLabel LabelFörAgent;
+    private javax.swing.JLabel LabelNyttVärde;
+    private javax.swing.JLabel LabelVäljÄndra;
     private javax.swing.JLabel RubrikÄndraInfoAgent;
     private javax.swing.JTextField TextFältNyttVärde;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

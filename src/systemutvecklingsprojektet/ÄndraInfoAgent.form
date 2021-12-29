@@ -27,11 +27,11 @@
               <EmptySpace pref="48" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="84" max="-2" attributes="0"/>
+                      <Component id="LabelVäljÄndra" min="-2" pref="84" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="ComboBoxVäljAttribut" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="62" max="-2" attributes="0"/>
+                      <Component id="LabelFörAgent" min="-2" pref="62" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="ComboBoxVäljAgent" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -48,7 +48,7 @@
                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="LabelNyttVärde" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
                       <Component id="TextFältNyttVärde" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
                   </Group>
@@ -69,12 +69,12 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ComboBoxVäljAttribut" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelVäljÄndra" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ComboBoxVäljAgent" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelFörAgent" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <Component id="LabelNyttVärde" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="TextFältNyttVärde" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -108,7 +108,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="LabelV&#xe4;lj&#xc4;ndra">
       <Properties>
         <Property name="text" type="java.lang.String" value="V&#xe4;lj att &#xe4;ndra:"/>
       </Properties>
@@ -133,12 +133,12 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="LabelF&#xf6;rAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="F&#xf6;r agent:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="LabelNyttV&#xe4;rde">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nytt v&#xe4;rde:"/>
       </Properties>

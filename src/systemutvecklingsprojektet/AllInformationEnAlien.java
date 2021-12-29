@@ -4,18 +4,26 @@
  */
 package systemutvecklingsprojektet;
 
-/**
- *
- * @author almahedengren
- */
+import oru.inf.InfDB;
+import oru.inf.InfException;
+import java.util.HashMap;
+
+// *
+// * @author almahedengren
+// */
+
+import javax.swing.JOptionPane;
 public class AllInformationEnAlien extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form AllInformationEnAlien
      */
     public AllInformationEnAlien() {
         initComponents();
+        this.idb=idb;
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,7 +42,8 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         LabelVäljAlien = new javax.swing.JLabel();
         ComboBoxVäljAlien = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
-        TextArea = new javax.swing.JTextArea();
+        TextAreaVisningsFönster = new javax.swing.JTextArea();
+        KnappVälj = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -49,56 +58,88 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         RubrikVisaAllInfoAlien.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         RubrikVisaAllInfoAlien.setText("Lista all information om en alien");
 
-        LabelVäljAlien.setText("Välj Alien:");
+        LabelVäljAlien.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LabelVäljAlien.setText("Välj alien:");
 
         ComboBoxVäljAlien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboBoxVäljAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBoxVäljAlienActionPerformed(evt);
+            }
+        });
 
-        TextArea.setColumns(20);
-        TextArea.setRows(5);
-        jScrollPane2.setViewportView(TextArea);
+        TextAreaVisningsFönster.setColumns(20);
+        TextAreaVisningsFönster.setRows(5);
+        jScrollPane2.setViewportView(TextAreaVisningsFönster);
+
+        KnappVälj.setText("Välj");
+        KnappVälj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KnappVäljActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(LabelVäljAlien)
-                        .addGap(18, 18, 18)
-                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(144, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(81, 81, 81)
-                    .addComponent(RubrikVisaAllInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(44, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(RubrikVisaAllInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LabelVäljAlien)
+                .addGap(29, 29, 29)
+                .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(KnappVälj, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(LabelVäljAlien)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 29, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(20, 20, 20)
-                    .addComponent(RubrikVisaAllInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(210, Short.MAX_VALUE)))
+                .addContainerGap()
+                .addComponent(RubrikVisaAllInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(KnappVälj, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelVäljAlien))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ComboBoxVäljAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxVäljAlienActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBoxVäljAlienActionPerformed
+
+    private void KnappVäljActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappVäljActionPerformed
+        try
+        {
+            String query = "Select * from alien where Namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'"; 
+            HashMap<String, String> rad = idb.fetchRow(query);
+            
+            for(String värde : rad.keySet())
+            {
+                TextAreaVisningsFönster.setText(värde);
+            }
+        }
+        
+        catch(InfException abc)
+        {
+            JOptionPane.showMessageDialog(null, "Ange ett giltigt namn");
+            System.out.println("Error" + abc.getMessage());
+        }
+    }//GEN-LAST:event_KnappVäljActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,9 +178,10 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboBoxVäljAlien;
+    private javax.swing.JButton KnappVälj;
     private javax.swing.JLabel LabelVäljAlien;
     private javax.swing.JLabel RubrikVisaAllInfoAlien;
-    private javax.swing.JTextArea TextArea;
+    private javax.swing.JTextArea TextAreaVisningsFönster;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;

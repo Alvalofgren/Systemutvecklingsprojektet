@@ -27,7 +27,7 @@
               <EmptySpace pref="38" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="LabelÄndraAttribut" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -37,7 +37,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="ComboBoxVäljAttribut" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" pref="59" max="-2" attributes="0"/>
+                              <Component id="LabelFörAlien" min="-2" pref="59" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="ComboBoxVäljAlien" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -49,7 +49,7 @@
                       <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel3" min="-2" pref="72" max="-2" attributes="0"/>
+                      <Component id="LabelNyttVärde" min="-2" pref="72" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -63,13 +63,13 @@
               <Component id="RubrikÄndraInfoAlien" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelÄndraAttribut" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelFörAlien" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ComboBoxVäljAttribut" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ComboBoxVäljAlien" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="18" max="32767" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <Component id="LabelNyttVärde" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="TextFältNyttVärde" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -88,12 +88,12 @@
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information om alien"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="Label&#xc4;ndraAttribut">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra attributet:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="LabelF&#xf6;rAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="F&#xf6;r alien:"/>
       </Properties>
@@ -138,7 +138,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="TextF&#xe4;ltNyttV&#xe4;rde">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="LabelNyttV&#xe4;rde">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nytt v&#xe4;rde:"/>
       </Properties>
