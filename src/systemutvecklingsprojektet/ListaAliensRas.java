@@ -24,7 +24,8 @@ public class ListaAliensRas extends javax.swing.JFrame {
     
     private void fyllILista()
     {
-        
+        ListaVäljRas.removeAllItems();
+        //String query = "select ras from alien"
     }
 
     /**
@@ -74,7 +75,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(LabelVäljRas, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
+                        .addGap(62, 62, 62)
                         .addComponent(ListaVäljRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
