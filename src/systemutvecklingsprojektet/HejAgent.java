@@ -170,7 +170,7 @@ public class HejAgent extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonPlatsActionPerformed
 
     private void ButtonDatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDatumActionPerformed
-        new ListaAliensDatum().setVisible(true);
+        new ListaAliensDatum(idb).setVisible(true);
     }//GEN-LAST:event_ButtonDatumActionPerformed
 
     private void ButtonÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraLösenordActionPerformed

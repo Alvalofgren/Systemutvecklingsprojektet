@@ -34,8 +34,8 @@
                   <Component id="ButtonLoggain" pref="152" max="32767" attributes="0"/>
                   <Component id="TextFieldAnvändarnamn" max="32767" attributes="0"/>
                   <Component id="LabelLösenord" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                  <Component id="LabelAnvändarnamn" min="-2" pref="92" max="-2" attributes="0"/>
                   <Component id="PasswordFieldLösenord" alignment="0" max="32767" attributes="0"/>
+                  <Component id="LabelAnvändarnamn" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>

@@ -3,18 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
-
+import oru.inf.InfDB;
+import java.util.ArrayList;
+import java.util.HashMap;
+import javax.swing.JOptionPane;
+import oru.inf.InfException;
 /**
  *
  * @author Julius
  */
 public class ListaAliensDatum extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form ListaAliensDatum
      */
-    public ListaAliensDatum() {
+    public ListaAliensDatum(InfDB idb) {
         initComponents();
+        this.idb = idb;
+       
     }
 
     /**
@@ -31,12 +37,13 @@ public class ListaAliensDatum extends javax.swing.JFrame {
         jFileChooser1 = new javax.swing.JFileChooser();
         jDialog1 = new javax.swing.JDialog();
         RubrikAlienMellanDatum = new javax.swing.JLabel();
-        TextVäljDatumFrån = new javax.swing.JTextField();
-        TextVäljDatumTill = new javax.swing.JTextField();
         LabelDatumFrånTill = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         TextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        ButtonVisa = new javax.swing.JButton();
+        FormattedTextFieldDatumFrån = new javax.swing.JFormattedTextField();
+        FormattedTextFieldTill = new javax.swing.JFormattedTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -67,12 +74,6 @@ public class ListaAliensDatum extends javax.swing.JFrame {
         RubrikAlienMellanDatum.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikAlienMellanDatum.setText("Lista alien mellan datum");
 
-        TextVäljDatumFrån.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextVäljDatumFrånActionPerformed(evt);
-            }
-        });
-
         LabelDatumFrånTill.setText("Datum från-till (ÅÅÅÅ-MM-DD):");
 
         TextArea.setColumns(20);
@@ -80,6 +81,17 @@ public class ListaAliensDatum extends javax.swing.JFrame {
         jScrollPane2.setViewportView(TextArea);
 
         jLabel1.setText("-");
+
+        ButtonVisa.setText("Visa");
+        ButtonVisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonVisaActionPerformed(evt);
+            }
+        });
+
+        FormattedTextFieldDatumFrån.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+
+        FormattedTextFieldTill.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,16 +107,21 @@ public class ListaAliensDatum extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(TextVäljDatumFrån, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(TextVäljDatumTill, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(26, Short.MAX_VALUE))))
+                                .addComponent(FormattedTextFieldDatumFrån, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel1)))
+                        .addContainerGap(60, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(RubrikAlienMellanDatum, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(FormattedTextFieldTill, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ButtonVisa)
+                        .addGap(79, 79, 79))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(RubrikAlienMellanDatum, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(150, 150, 150))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,62 +132,77 @@ public class ListaAliensDatum extends javax.swing.JFrame {
                 .addComponent(LabelDatumFrånTill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextVäljDatumFrån, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TextVäljDatumTill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(ButtonVisa)
+                    .addComponent(FormattedTextFieldDatumFrån, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FormattedTextFieldTill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TextVäljDatumFrånActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextVäljDatumFrånActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextVäljDatumFrånActionPerformed
-
+    private void ButtonVisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaActionPerformed
+       try{
+        
+        String query = "select Alien.Alien_ID, Alien.Namn, Alien.Registreringsdatum from Alien where From_date between >= '" + FormattedTextFieldDatumFrån.getText()+"' and '" + FormattedTextFieldTill.getText()+"'";
+        ArrayList<HashMap<String, String>> rad = idb.fetchRows(query);
+        TextArea.setText(null);
+        
+        for(HashMap kolumn : rad){
+            TextArea.append(kolumn.get("Alien_ID") + "\t");
+            TextArea.append(" " + kolumn.get("Namn") + "\t");
+            TextArea.append(" " + kolumn.get("Registreringsdatum") + "\n");
+            
+        }
+    }//GEN-LAST:event_ButtonVisaActionPerformed
+       catch(InfException e){
+           JOptionPane.showMessageDialog(null, "Error");
+       }
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListaAliensDatum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListaAliensDatum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListaAliensDatum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListaAliensDatum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ListaAliensDatum().setVisible(true);
-            }
-        });
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(ListaAliensDatum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(ListaAliensDatum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(ListaAliensDatum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(ListaAliensDatum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new ListaAliensDatum(idb).setVisible(true);
+//            }
+//        });
+//    }
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonVisa;
+    private javax.swing.JFormattedTextField FormattedTextFieldDatumFrån;
+    private javax.swing.JFormattedTextField FormattedTextFieldTill;
     private javax.swing.JLabel LabelDatumFrånTill;
     private javax.swing.JLabel RubrikAlienMellanDatum;
     private javax.swing.JTextArea TextArea;
-    private javax.swing.JTextField TextVäljDatumFrån;
-    private javax.swing.JTextField TextVäljDatumTill;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;

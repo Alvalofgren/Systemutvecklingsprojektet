@@ -76,8 +76,8 @@ public class AgentInlogg extends javax.swing.JFrame {
                     .addComponent(ButtonLoggain, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
                     .addComponent(TextFieldAnvändarnamn)
                     .addComponent(LabelLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PasswordFieldLösenord))
+                    .addComponent(PasswordFieldLösenord)
+                    .addComponent(LabelAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

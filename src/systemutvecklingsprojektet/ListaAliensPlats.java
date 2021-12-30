@@ -69,6 +69,8 @@ public class ListaAliensPlats extends javax.swing.JFrame {
         ListaVäljPlats = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         TextAreaPlatsLista = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -90,25 +92,36 @@ public class ListaAliensPlats extends javax.swing.JFrame {
         TextAreaPlatsLista.setRows(5);
         jScrollPane1.setViewportView(TextAreaPlatsLista);
 
+        jLabel1.setText("Alien-ID");
+
+        jLabel2.setText("Namn");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(LabelVäljPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ListaVäljPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(LabelVäljPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(ListaVäljPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(7, 7, 7)
+                                .addComponent(jLabel2))))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(35, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(RubrikAlienEfterPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72))
+                .addComponent(RubrikAlienEfterPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,9 +132,13 @@ public class ListaAliensPlats extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelVäljPlats)
                     .addComponent(ListaVäljPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(3, 3, 3)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
@@ -129,6 +146,22 @@ public class ListaAliensPlats extends javax.swing.JFrame {
 
     private void ListaVäljPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaVäljPlatsActionPerformed
         
+        try
+        {
+            String query = "select Alien.Alien_ID, Alien.Namn from Alien join Plats on Alien.Plats = Plats.Plats_ID where benamning = '"+ ListaVäljPlats.getSelectedItem()+"'";
+            ArrayList<HashMap<String, String>> raden = idb.fetchRows(query);
+            TextAreaPlatsLista.setText(null);
+            
+        for (HashMap kolumn : raden){
+            TextAreaPlatsLista.append(kolumn.get("Alien_ID") + "\t");
+            TextAreaPlatsLista.append(" " + kolumn.get("Namn") + "\n");
+        } 
+        }
+        
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+            
+        }
     }//GEN-LAST:event_ListaVäljPlatsActionPerformed
 
     /**
@@ -172,6 +205,8 @@ public class ListaAliensPlats extends javax.swing.JFrame {
     private javax.swing.JLabel RubrikAlienEfterPlats;
     private javax.swing.JTextArea TextAreaPlatsLista;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
