@@ -28,7 +28,7 @@
               <Component id="LabelVäljAgentID" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="ComboBoxVäljAgentID" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <EmptySpace pref="36" max="32767" attributes="0"/>
               <Component id="ButtonTaBort" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
           </Group>
@@ -66,7 +66,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelV&#xe4;ljAgentID">
       <Properties>
-        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent-ID"/>
+        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent-ID:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ComboBoxV&#xe4;ljAgentID">

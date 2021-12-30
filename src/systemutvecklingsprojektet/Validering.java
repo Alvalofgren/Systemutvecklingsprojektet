@@ -45,12 +45,7 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
                return resultat;
            }
     
-    /** 
-     *
-     * @param aktuellRuta
-     * @param aktuellRuta2
-     * @return
-     */
+    
     public static boolean rutornaMatchar(JTextField aktuellRuta, JTextField aktuellRuta2)
    {
        boolean matchar = false;

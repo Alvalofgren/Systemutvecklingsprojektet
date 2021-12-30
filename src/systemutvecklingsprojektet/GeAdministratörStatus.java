@@ -29,41 +29,46 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         LabelVäljAgent = new javax.swing.JLabel();
         ComboBoxVäljAgent = new javax.swing.JComboBox<>();
         RubrikGeAdministratörstatus = new javax.swing.JLabel();
+        ButtonOK = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        LabelVäljAgent.setText("Välj Agent");
+        LabelVäljAgent.setText("Välj Agent:");
 
         ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         RubrikGeAdministratörstatus.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikGeAdministratörstatus.setText("Ge administratörstatus");
 
+        ButtonOK.setText("OK");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(LabelVäljAgent)
-                .addGap(74, 74, 74)
-                .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(131, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(RubrikGeAdministratörstatus)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(LabelVäljAgent)
+                        .addGap(47, 47, 47)
+                        .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(ButtonOK))
+                    .addComponent(RubrikGeAdministratörstatus))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(49, 49, 49)
                 .addComponent(RubrikGeAdministratörstatus)
-                .addGap(35, 35, 35)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelVäljAgent)
-                    .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(148, Short.MAX_VALUE))
+                    .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonOK))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         pack();
@@ -105,6 +110,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonOK;
     private javax.swing.JComboBox<String> ComboBoxVäljAgent;
     private javax.swing.JLabel LabelVäljAgent;
     private javax.swing.JLabel RubrikGeAdministratörstatus;

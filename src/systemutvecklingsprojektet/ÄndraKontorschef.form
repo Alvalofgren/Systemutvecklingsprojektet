@@ -23,22 +23,27 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-                      <Component id="RubrikÄndraKontorschef" min="-2" pref="203" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="LabelVäljAgentID" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="LabelTillKontor" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ComboBoxVäljKontor" min="-2" max="-2" attributes="0"/>
-                          <Component id="ComboBoxVäljAgentID" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="ComboBoxVäljAgentID" max="32767" attributes="0"/>
+                          <Component id="ComboBoxVäljKontor" min="-2" pref="105" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                          <Component id="RubrikÄndraKontorschef" min="-2" pref="203" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+                          <Component id="ButtonÄndra" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -51,17 +56,19 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Component id="RubrikÄndraKontorschef" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabelVäljAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ComboBoxVäljAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabelTillKontor" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ComboBoxVäljKontor" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="144" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Component id="ButtonÄndra" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="38" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,7 +84,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelV&#xe4;ljAgentID">
       <Properties>
-        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent-ID"/>
+        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent-ID:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ComboBoxV&#xe4;ljAgentID">
@@ -97,7 +104,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelTillKontor">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Till kontor"/>
+        <Property name="text" type="java.lang.String" value="Till kontor:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ComboBoxV&#xe4;ljKontor">
@@ -117,6 +124,11 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="Button&#xc4;ndra">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

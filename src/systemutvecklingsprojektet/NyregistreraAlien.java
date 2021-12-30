@@ -49,6 +49,11 @@ public class NyregistreraAlien extends javax.swing.JFrame {
         RubrikNyregistreraAlien.setText("Nyregistrering av alien");
 
         RegistreringKnappAlien.setText("Registrera");
+        RegistreringKnappAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistreringKnappAlienActionPerformed(evt);
+            }
+        });
 
         TextrutaAlienID.setColumns(9);
 
@@ -74,7 +79,7 @@ public class NyregistreraAlien extends javax.swing.JFrame {
 
         TextrutaTelefonAlien.setColumns(9);
 
-        UnderRubrikAlienID.setText("AlienID");
+        UnderRubrikAlienID.setText("Alien-ID");
 
         UnderRubrikRegistreringsdatum.setText("Registreringsdatum");
 
@@ -117,12 +122,11 @@ public class NyregistreraAlien extends javax.swing.JFrame {
                                     .addComponent(TextrutaNamnAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(TextrutaAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(UnderRubrikAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(TextrutaAnsvarigAgent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addComponent(RegistreringKnappAlien)
-                                        .addGap(12, 12, 12))))))
+                                        .addGap(12, 12, 12))
+                                    .addComponent(UnderRubrikAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(RubrikNyregistreraAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -184,6 +188,10 @@ public class NyregistreraAlien extends javax.swing.JFrame {
     private void TextrutaNamnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextrutaNamnAlienActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TextrutaNamnAlienActionPerformed
+
+    private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
 
     /**
      * @param args the command line arguments
