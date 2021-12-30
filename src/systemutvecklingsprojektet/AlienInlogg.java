@@ -39,8 +39,8 @@ public class AlienInlogg extends javax.swing.JFrame {
         ButtonLoggaIn = new javax.swing.JButton();
         RubrikAlienLoggaIn = new javax.swing.JLabel();
         TextFieldAnvändarnamn = new javax.swing.JTextField();
-        TextFieldLösenord = new javax.swing.JTextField();
         LabelAnvändarnamn = new javax.swing.JLabel();
+        PasswordFieldLösenord = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,13 +62,13 @@ public class AlienInlogg extends javax.swing.JFrame {
             }
         });
 
-        TextFieldLösenord.addActionListener(new java.awt.event.ActionListener() {
+        LabelAnvändarnamn.setText("Användarnamn");
+
+        PasswordFieldLösenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextFieldLösenordActionPerformed(evt);
+                PasswordFieldLösenordActionPerformed(evt);
             }
         });
-
-        LabelAnvändarnamn.setText("Användarnamn");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,11 +81,11 @@ public class AlienInlogg extends javax.swing.JFrame {
                         .addComponent(RubrikAlienLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                             .addComponent(LabelLösenord)
-                            .addComponent(LabelAnvändarnamn))))
+                            .addComponent(LabelAnvändarnamn)
+                            .addComponent(PasswordFieldLösenord))))
                 .addContainerGap(132, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -101,10 +101,10 @@ public class AlienInlogg extends javax.swing.JFrame {
                 .addComponent(LabelAnvändarnamn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(LabelLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PasswordFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonLoggaIn)
                 .addContainerGap())
@@ -127,7 +127,7 @@ public class AlienInlogg extends javax.swing.JFrame {
         
         else
         {
-            if(losen.equals(TextFieldLösenord.getText()))
+            if(losen.equals(PasswordFieldLösenord.getText()))
             {
                 new HejAlien(idb).setVisible(true);
             }
@@ -153,9 +153,9 @@ public class AlienInlogg extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TextFieldAnvändarnamnActionPerformed
 
-    private void TextFieldLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldLösenordActionPerformed
+    private void PasswordFieldLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldLösenordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldLösenordActionPerformed
+    }//GEN-LAST:event_PasswordFieldLösenordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,8 +196,8 @@ public class AlienInlogg extends javax.swing.JFrame {
     private javax.swing.JButton ButtonLoggaIn;
     private javax.swing.JLabel LabelAnvändarnamn;
     private javax.swing.JLabel LabelLösenord;
+    private javax.swing.JPasswordField PasswordFieldLösenord;
     private javax.swing.JLabel RubrikAlienLoggaIn;
     private javax.swing.JTextField TextFieldAnvändarnamn;
-    private javax.swing.JTextField TextFieldLösenord;
     // End of variables declaration//GEN-END:variables
 }

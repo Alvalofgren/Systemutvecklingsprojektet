@@ -31,11 +31,11 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="TextFieldLösenord" min="-2" pref="132" max="-2" attributes="0"/>
-                          <Component id="TextFieldAnvändarnamn" min="-2" pref="132" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="TextFieldAnvändarnamn" pref="132" max="32767" attributes="0"/>
                           <Component id="LabelLösenord" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="LabelAnvändarnamn" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PasswordFieldLösenord" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -57,11 +57,11 @@
               <Component id="LabelAnvändarnamn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="TextFieldAnvändarnamn" min="-2" pref="33" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="32767" attributes="0"/>
               <Component id="LabelLösenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="TextFieldLösenord" min="-2" pref="33" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="PasswordFieldLösenord" min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="ButtonLoggaIn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -95,15 +95,15 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextFieldAnv&#xe4;ndarnamnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldL&#xf6;senord">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextFieldL&#xf6;senordActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="LabelAnv&#xe4;ndarnamn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Anv&#xe4;ndarnamn"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="PasswordFieldL&#xf6;senord">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PasswordFieldL&#xf6;senordActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

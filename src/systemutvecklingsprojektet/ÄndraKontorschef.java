@@ -31,17 +31,18 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
         ComboBoxVäljAgentID = new javax.swing.JComboBox<>();
         LabelTillKontor = new javax.swing.JLabel();
         ComboBoxVäljKontor = new javax.swing.JComboBox<>();
+        ButtonÄndra = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         RubrikÄndraKontorschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikÄndraKontorschef.setText("Ändra kontorschef");
 
-        LabelVäljAgentID.setText("Välj Agent-ID");
+        LabelVäljAgentID.setText("Välj Agent-ID:");
 
         ComboBoxVäljAgentID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        LabelTillKontor.setText("Till kontor");
+        LabelTillKontor.setText("Till kontor:");
 
         ComboBoxVäljKontor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         ComboBoxVäljKontor.addActionListener(new java.awt.event.ActionListener() {
@@ -50,24 +51,29 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
             }
         });
 
+        ButtonÄndra.setText("Ändra");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(RubrikÄndraKontorschef, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelVäljAgentID)
                             .addComponent(LabelTillKontor, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ComboBoxVäljKontor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComboBoxVäljAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ComboBoxVäljAgentID, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ComboBoxVäljKontor, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(96, 96, 96)
+                            .addComponent(RubrikÄndraKontorschef, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(160, 160, 160)
+                            .addComponent(ButtonÄndra))))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -75,15 +81,17 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(RubrikÄndraKontorschef)
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelVäljAgentID)
                     .addComponent(ComboBoxVäljAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelTillKontor)
                     .addComponent(ComboBoxVäljKontor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(ButtonÄndra)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -129,6 +137,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonÄndra;
     private javax.swing.JComboBox<String> ComboBoxVäljAgentID;
     private javax.swing.JComboBox<String> ComboBoxVäljKontor;
     private javax.swing.JLabel LabelTillKontor;

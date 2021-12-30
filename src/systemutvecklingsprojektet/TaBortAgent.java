@@ -4,6 +4,7 @@
  */
 package systemutvecklingsprojektet;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfException;
 import oru.inf.InfDB;
@@ -18,9 +19,10 @@ public class TaBortAgent extends javax.swing.JFrame {
     /**
      * Creates new form TaBortAgent
      */
-    public TaBortAgent() {
+    public TaBortAgent(InfDB idb) {
         initComponents();
         this.idb = idb;
+        fyllILista();
     }
 
     /**
@@ -42,7 +44,7 @@ public class TaBortAgent extends javax.swing.JFrame {
         RubrikTaBortAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikTaBortAgent.setText("Ta bort Agent");
 
-        LabelVäljAgentID.setText("Välj Agent-ID");
+        LabelVäljAgentID.setText("Välj Agent-ID:");
 
         ComboBoxVäljAgentID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -62,7 +64,7 @@ public class TaBortAgent extends javax.swing.JFrame {
                 .addComponent(LabelVäljAgentID)
                 .addGap(18, 18, 18)
                 .addComponent(ComboBoxVäljAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(ButtonTaBort)
                 .addGap(22, 22, 22))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -94,45 +96,60 @@ public class TaBortAgent extends javax.swing.JFrame {
         }
         
         catch(InfException undantag)
-                    {
+                {
                     JOptionPane.showMessageDialog(null, "");
-                    }
+                }
     }//GEN-LAST:event_ButtonTaBortActionPerformed
 
+    private void fyllILista(){
+        try {
+            ComboBoxVäljAgentID.removeAllItems();
+            String fraga = "select Agent_ID from agent";
+            ArrayList<String> svar = idb.fetchColumn(fraga);
+        
+        for(String värde : svar)
+        {
+            ComboBoxVäljAgentID.addItem(värde);
+        }
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TaBortAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TaBortAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TaBortAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TaBortAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TaBortAgent().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(TaBortAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(TaBortAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(TaBortAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(TaBortAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new TaBortAgent().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonTaBort;

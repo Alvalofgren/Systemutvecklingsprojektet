@@ -30,14 +30,12 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="ButtonLoggain" pref="152" max="32767" attributes="0"/>
-                      <Component id="TextFieldAnvändarnamn" max="32767" attributes="0"/>
-                      <Component id="LabelLösenord" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="TextFieldLösenord" alignment="0" max="32767" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="ButtonLoggain" pref="152" max="32767" attributes="0"/>
+                  <Component id="TextFieldAnvändarnamn" max="32767" attributes="0"/>
+                  <Component id="LabelLösenord" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
                   <Component id="LabelAnvändarnamn" min="-2" pref="92" max="-2" attributes="0"/>
+                  <Component id="PasswordFieldLösenord" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -52,11 +50,11 @@
               <Component id="LabelAnvändarnamn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="TextFieldAnvändarnamn" min="-2" pref="39" max="-2" attributes="0"/>
-              <EmptySpace pref="15" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="LabelLösenord" min="-2" pref="27" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="TextFieldLösenord" min="-2" pref="45" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="PasswordFieldLösenord" min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="ButtonLoggain" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
           </Group>
@@ -73,8 +71,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TextFieldAnv&#xe4;ndarnamn">
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextFieldL&#xf6;senord">
     </Component>
     <Component class="javax.swing.JButton" name="ButtonLoggain">
       <Properties>
@@ -93,6 +89,8 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="L&#xf6;senord"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="PasswordFieldL&#xf6;senord">
     </Component>
   </SubComponents>
 </Form>

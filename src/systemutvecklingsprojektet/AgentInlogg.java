@@ -41,10 +41,10 @@ public class AgentInlogg extends javax.swing.JFrame {
 
         RubrikAgent = new javax.swing.JLabel();
         TextFieldAnvändarnamn = new javax.swing.JTextField();
-        TextFieldLösenord = new javax.swing.JTextField();
         ButtonLoggain = new javax.swing.JButton();
         LabelAnvändarnamn = new javax.swing.JLabel();
         LabelLösenord = new javax.swing.JLabel();
+        PasswordFieldLösenord = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,13 +72,12 @@ public class AgentInlogg extends javax.swing.JFrame {
                 .addGap(102, 102, 102))
             .addGroup(layout.createSequentialGroup()
                 .addGap(112, 112, 112)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(ButtonLoggain, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                        .addComponent(TextFieldAnvändarnamn)
-                        .addComponent(LabelLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(TextFieldLösenord))
-                    .addComponent(LabelAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ButtonLoggain, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                    .addComponent(TextFieldAnvändarnamn)
+                    .addComponent(LabelLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PasswordFieldLösenord))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -90,11 +89,11 @@ public class AgentInlogg extends javax.swing.JFrame {
                 .addComponent(LabelAnvändarnamn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LabelLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(PasswordFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addComponent(ButtonLoggain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(40, 40, 40))
         );
@@ -116,7 +115,7 @@ public class AgentInlogg extends javax.swing.JFrame {
         
         else
         {
-            if(losen.equals(TextFieldLösenord.getText()))
+            if(losen.equals(PasswordFieldLösenord.getText()))
             {
                 new HejAgent(idb).setVisible(true);
             }
@@ -177,9 +176,9 @@ public class AgentInlogg extends javax.swing.JFrame {
     private javax.swing.JButton ButtonLoggain;
     private javax.swing.JLabel LabelAnvändarnamn;
     private javax.swing.JLabel LabelLösenord;
+    private javax.swing.JPasswordField PasswordFieldLösenord;
     private javax.swing.JLabel RubrikAgent;
     private javax.swing.JTextField TextFieldAnvändarnamn;
-    private javax.swing.JTextField TextFieldLösenord;
     // End of variables declaration//GEN-END:variables
 
 }

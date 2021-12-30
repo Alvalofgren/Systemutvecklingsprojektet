@@ -5,7 +5,6 @@
 package systemutvecklingsprojektet;
 
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import oru.inf.InfDB;
 import oru.inf.InfException;
 
@@ -13,14 +12,15 @@ import oru.inf.InfException;
  *
  * @author Julius
  */
-public class AndraLosenordAgent extends javax.swing.JFrame {
+public class ÄndraLosenordAgent extends javax.swing.JFrame {
     private static InfDB idb;
     /**
      * Creates new form AndraLosenord
      */
-    public AndraLosenordAgent(InfDB idb) {
+    public ÄndraLosenordAgent(InfDB idb) {
         initComponents();
         this.idb = idb;
+        LabelLösenHarÄndrats.setVisible(false);
     }
 
     /**
@@ -34,11 +34,12 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
 
         jPasswordField1 = new javax.swing.JPasswordField();
         rubrikÄndraLösenord = new javax.swing.JLabel();
-        ButtonBytLösenord = new javax.swing.JButton();
+        ButtonÄndraLösenord = new javax.swing.JButton();
         LabelNyttLösenord = new javax.swing.JLabel();
         LabelBekräftaLösenord = new javax.swing.JLabel();
         PFNyttLösen = new javax.swing.JPasswordField();
         PFBekräftaLösen = new javax.swing.JPasswordField();
+        LabelLösenHarÄndrats = new javax.swing.JLabel();
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -47,16 +48,25 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
         rubrikÄndraLösenord.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         rubrikÄndraLösenord.setText("Ändra lösenord");
 
-        ButtonBytLösenord.setText("Byt lösenord");
-        ButtonBytLösenord.addActionListener(new java.awt.event.ActionListener() {
+        ButtonÄndraLösenord.setText("Ändra lösenord");
+        ButtonÄndraLösenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonBytLösenordActionPerformed(evt);
+                ButtonÄndraLösenordActionPerformed(evt);
             }
         });
 
         LabelNyttLösenord.setText("Nytt lösenord:");
 
         LabelBekräftaLösenord.setText("Bekräfta lösenord:");
+
+        PFNyttLösen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PFNyttLösenActionPerformed(evt);
+            }
+        });
+
+        LabelLösenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        LabelLösenHarÄndrats.setText("Lösenordet har ändrats!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,27 +75,29 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
+                        .addGap(115, 115, 115)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(PFNyttLösen)
-                                .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(ButtonBytLösenord))
                             .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
-                                .addComponent(LabelBekräftaLösenord))))
+                                .addComponent(LabelBekräftaLösenord))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(PFNyttLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(124, Short.MAX_VALUE))
+                        .addGap(139, 139, 139)
+                        .addComponent(ButtonÄndraLösenord))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(LabelLösenHarÄndrats)))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
                 .addComponent(rubrikÄndraLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LabelNyttLösenord)
@@ -95,23 +107,26 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
                 .addComponent(LabelBekräftaLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ButtonBytLösenord)
-                .addGap(97, 97, 97))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LabelLösenHarÄndrats)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ButtonBytLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBytLösenordActionPerformed
-     
+    private void ButtonÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraLösenordActionPerformed
+    
        try
        {
-        if (Validering.rutornaMatchar(PFNyttLösen, PFBekräftaLösen)) {
+           
+           if (Validering.rutornaMatchar(PFNyttLösen, PFBekräftaLösen)) {
             
           String ändring = ("UPDATE AGENT SET LOSENORD = '" + PFNyttLösen.getText() + "'" + " WHERE NAMN = '" + AgentInlogg.getNamn() + "'");
             idb.update(ändring);
-            new lösenordÄndrat().setVisible(true);
+            LabelLösenHarÄndrats.setVisible(true);
     
          }
         else{
@@ -122,7 +137,11 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
        {
            JOptionPane.showMessageDialog(null, "FEEEEEEEEL");
        }
-    }//GEN-LAST:event_ButtonBytLösenordActionPerformed
+    }//GEN-LAST:event_ButtonÄndraLösenordActionPerformed
+
+    private void PFNyttLösenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PFNyttLösenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PFNyttLösenActionPerformed
 
     
        
@@ -148,28 +167,31 @@ public class AndraLosenordAgent extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AndraLosenordAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ÄndraLosenordAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AndraLosenordAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ÄndraLosenordAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AndraLosenordAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ÄndraLosenordAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AndraLosenordAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ÄndraLosenordAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AndraLosenordAgent(idb).setVisible(true);
+                new ÄndraLosenordAgent(idb).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonBytLösenord;
+    private javax.swing.JButton ButtonÄndraLösenord;
     private javax.swing.JLabel LabelBekräftaLösenord;
+    private javax.swing.JLabel LabelLösenHarÄndrats;
     private javax.swing.JLabel LabelNyttLösenord;
     private javax.swing.JPasswordField PFBekräftaLösen;
     private javax.swing.JPasswordField PFNyttLösen;

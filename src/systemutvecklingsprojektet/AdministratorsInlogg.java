@@ -39,10 +39,10 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
 
         RubrikAdministatör = new javax.swing.JLabel();
         TextFieldAnvändarnamn = new javax.swing.JTextField();
-        TextFieldLösenord = new javax.swing.JTextField();
         LabelAnvändarnamn = new javax.swing.JLabel();
         LabelLösenord = new javax.swing.JLabel();
         ButtonLoggaIn = new javax.swing.JButton();
+        PasswordFieldLösenord = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,12 +52,6 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
         TextFieldAnvändarnamn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextFieldAnvändarnamnActionPerformed(evt);
-            }
-        });
-
-        TextFieldLösenord.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextFieldLösenordActionPerformed(evt);
             }
         });
 
@@ -79,16 +73,16 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(136, 136, 136)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addComponent(RubrikAdministatör, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(PasswordFieldLösenord, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
                             .addGap(22, 22, 22)
                             .addComponent(ButtonLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18))
-                        .addComponent(TextFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(LabelLösenord)
-                        .addComponent(LabelAnvändarnamn))
-                    .addComponent(RubrikAdministatör, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(LabelLösenord, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(LabelAnvändarnamn, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -100,10 +94,10 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
                 .addComponent(LabelAnvändarnamn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TextFieldAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(LabelLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PasswordFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonLoggaIn)
                 .addContainerGap())
@@ -116,16 +110,12 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TextFieldAnvändarnamnActionPerformed
 
-    private void TextFieldLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldLösenordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldLösenordActionPerformed
-
     private void ButtonLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggaInActionPerformed
           try {
          
         String query = "SELECT Losenord FROM agent WHERE Namn = '" + TextFieldAnvändarnamn.getText()+"'";
         String losen = idb.fetchSingle(query);
-        String fråga = "select administrator from agent WHERE Namn ='" + TextFieldAnvändarnamn.getText() + "'";
+        String fråga = "SELECT administrator from agent WHERE Namn ='" + TextFieldAnvändarnamn.getText() + "'";
         String aStatus = idb.fetchSingle(fråga);
         
         if(losen == null)
@@ -137,7 +127,7 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
         {
             if(aStatus.equals("J"))
             {
-                if(losen.equals(TextFieldLösenord.getText()))
+                if(losen.equals(PasswordFieldLösenord.getText()))
                 {
                     new HejAdministrator(idb).setVisible(true);
                 }
@@ -167,9 +157,9 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
 
     }//GEN-LAST:event_ButtonLoggaInActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+//    /**
+//     * @param args the command line arguments
+//     */
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -206,8 +196,8 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
     private javax.swing.JButton ButtonLoggaIn;
     private javax.swing.JLabel LabelAnvändarnamn;
     private javax.swing.JLabel LabelLösenord;
+    private javax.swing.JPasswordField PasswordFieldLösenord;
     private javax.swing.JLabel RubrikAdministatör;
     private javax.swing.JTextField TextFieldAnvändarnamn;
-    private javax.swing.JTextField TextFieldLösenord;
     // End of variables declaration//GEN-END:variables
 }

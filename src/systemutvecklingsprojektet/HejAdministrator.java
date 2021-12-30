@@ -234,7 +234,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappÄndraInfoOmAlienActionPerformed
 
     private void KnappTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortAgentActionPerformed
-        new TaBortAgent().setVisible(true);
+        new TaBortAgent(idb).setVisible(true);
     }//GEN-LAST:event_KnappTaBortAgentActionPerformed
 
     private void KnappNyregistreraAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappNyregistreraAgentActionPerformed
@@ -242,7 +242,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappNyregistreraAgentActionPerformed
 
     private void KnappTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortAlienActionPerformed
-        new TaBortAlien().setVisible(true);
+        new TaBortAlien(idb).setVisible(true);
     }//GEN-LAST:event_KnappTaBortAlienActionPerformed
 
     private void KnappTaBortUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortUtrustningActionPerformed
