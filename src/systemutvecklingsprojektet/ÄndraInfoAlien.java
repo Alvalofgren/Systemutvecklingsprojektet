@@ -143,15 +143,22 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void KnappÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraActionPerformed
+        
         try
         {
-            String query = "Update " + ComboBoxVäljAttribut.getSelectedItem() + "set " + TextFältNyttVärde.getText() + "where Namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
+            if(Validering.kontrollTextFältVärde(TextFältNyttVärde)){
+                
+            String query = "Update '" + ComboBoxVäljAttribut.getSelectedItem() + "' set '" + TextFältNyttVärde.getText() + "' where Namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
             idb.update(query);
-            //Denna sql fråga funkar inte 
+            //Denna sql fråga funkar inte, den hoppar till catchen
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Skriv in något i rutan");
+            }
         }
         catch(InfException abc)
         {
-            JOptionPane.showMessageDialog(null, "Ange ett giltygt nytt värde");
+            JOptionPane.showMessageDialog(null, "Ange ett giltigt nytt värde");
             System.out.println("Error" + abc.getMessage());
         }
         

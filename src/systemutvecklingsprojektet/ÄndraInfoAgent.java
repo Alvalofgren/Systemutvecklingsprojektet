@@ -156,10 +156,13 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
 
     private void KnappÄndraVärdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraVärdeActionPerformed
         try
+        {    
+        if(Validering.kontrollTextFältVärde(TextFältNyttVärde))
         {
             String query = "Update '" + ComboBoxVäljAttribut.getSelectedItem() + "' set '" + TextFältNyttVärde.getText() + "' where Namn = '" + ComboBoxVäljAgent.getSelectedItem() +"'";
             idb.update(query);
-            //Denna sql fråga funkar inte
+            //Denna sql fråga funkar inte, den hoppar till catchen
+        }
         }
         catch(InfException abc)
         {
