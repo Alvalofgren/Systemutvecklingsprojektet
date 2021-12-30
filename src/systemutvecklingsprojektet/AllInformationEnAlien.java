@@ -28,7 +28,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         allaAliens = new ArrayList<>();
         fyllILista();
         
-      
+        
         
     }
 
