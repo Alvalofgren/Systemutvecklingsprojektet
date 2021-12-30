@@ -16,7 +16,6 @@ import java.util.HashMap;
  */
 public class ListaAliensRas extends javax.swing.JFrame {
     private InfDB idb;
-    
     /**
      * Creates new form ListaAliens
      */
@@ -68,17 +67,24 @@ public class ListaAliensRas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         RubrikVisaRas = new javax.swing.JLabel();
         LabelVäljRas = new javax.swing.JLabel();
         ListaVäljRas = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         TextAreaFörRas = new javax.swing.JTextArea();
+        ButtonVisa = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+
+        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikVisaRas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        RubrikVisaRas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikVisaRas.setText("Visa ras av alien");
 
+        LabelVäljRas.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         LabelVäljRas.setText("Välj ras:");
 
         ListaVäljRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -92,6 +98,19 @@ public class ListaAliensRas extends javax.swing.JFrame {
         TextAreaFörRas.setRows(5);
         jScrollPane1.setViewportView(TextAreaFörRas);
 
+        ButtonVisa.setText("Visa");
+        ButtonVisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonVisaActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel2.setText("Alien-ID:");
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel3.setText("Namn:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -103,11 +122,18 @@ public class ListaAliensRas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(LabelVäljRas, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(62, 62, 62)
-                        .addComponent(ListaVäljRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(45, 45, 45)
+                        .addComponent(LabelVäljRas, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ListaVäljRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(ButtonVisa)))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -118,42 +144,52 @@ public class ListaAliensRas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ListaVäljRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelVäljRas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(LabelVäljRas)
+                    .addComponent(ButtonVisa))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ListaVäljRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaVäljRasActionPerformed
+    
+    }//GEN-LAST:event_ListaVäljRasActionPerformed
+
+    private void ButtonVisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaActionPerformed
         
-        try {
+        try 
+        {
             
       
-         if(ListaVäljRas.getSelectedItem().equals("Boglodite")){
-            String query = "select alien.alien_id, alien.namn, boglodite.Antal_Boogies from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
+         if(ListaVäljRas.getSelectedItem().toString().equals("Boglodite")){
+            String query = "select alien.alien_id, alien.namn from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
             ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
             TextAreaFörRas.setText(null);
             
             for(HashMap kolumn : rader){
             TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\t");
-            TextAreaFörRas.append(" " + kolumn.get("Antal_Boogies") + "\n");
+            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
+           
             
             }
-        }else if(ListaVäljRas.getSelectedItem().equals("Squid")){
-            String query = "select alien.alien_id, alien.namn, squid.Antal_Armar from alien join Squid on alien.Alien_ID = squid.Alien_ID";
+        }else if(ListaVäljRas.getSelectedItem().toString().equals("Squid")){
+            String query = "select alien.alien_id, alien.namn from alien join Squid on alien.Alien_ID = squid.Alien_ID";
             ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
             TextAreaFörRas.setText(null);
             
             for(HashMap kolumn : rader){
             TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\t");
-            TextAreaFörRas.append(" " + kolumn.get("Antal_Armar") + "\n");
+            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
+           
             }
-        }else if (ListaVäljRas.getSelectedItem().equals("Worm")){
+        }else if (ListaVäljRas.getSelectedItem().toString().equals("Worm")){
             String query = "select alien.Alien_ID, alien.Namn from alien join Worm on alien.Alien_ID = Worm.Alien_ID";
             ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
             TextAreaFörRas.setText(null);
@@ -167,7 +203,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
         catch(InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
-    }//GEN-LAST:event_ListaVäljRasActionPerformed
+    }//GEN-LAST:event_ButtonVisaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,10 +242,14 @@ public class ListaAliensRas extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonVisa;
     private javax.swing.JLabel LabelVäljRas;
     private javax.swing.JComboBox<String> ListaVäljRas;
     private javax.swing.JLabel RubrikVisaRas;
     private javax.swing.JTextArea TextAreaFörRas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
