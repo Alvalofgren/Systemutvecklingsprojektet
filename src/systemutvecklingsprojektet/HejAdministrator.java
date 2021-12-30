@@ -230,7 +230,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappNyregistreraAlienActionPerformed
 
     private void KnappÄndraInfoOmAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraInfoOmAlienActionPerformed
-        new ÄndraInfoAlien().setVisible(true);
+        new ÄndraInfoAlien(idb).setVisible(true);
     }//GEN-LAST:event_KnappÄndraInfoOmAlienActionPerformed
 
     private void KnappTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortAgentActionPerformed
@@ -246,7 +246,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappTaBortAlienActionPerformed
 
     private void KnappTaBortUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortUtrustningActionPerformed
-        new TaBortUtrustning().setVisible(true);
+        new TaBortUtrustning(idb).setVisible(true);
     }//GEN-LAST:event_KnappTaBortUtrustningActionPerformed
 
     private void KnappSökaInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappSökaInfoAgentActionPerformed
@@ -258,7 +258,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappGeAdminStatusActionPerformed
 
     private void ButtonÄndraInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraInfoAgentActionPerformed
-        new ÄndraInfoAgent().setVisible(true);
+        new ÄndraInfoAgent(idb).setVisible(true);
     }//GEN-LAST:event_ButtonÄndraInfoAgentActionPerformed
 
     private void KnappÄndraOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraOmrådeschefActionPerformed

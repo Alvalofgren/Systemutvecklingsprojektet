@@ -4,6 +4,7 @@
  */
 package systemutvecklingsprojektet;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfException;
 import oru.inf.InfDB;
@@ -17,11 +18,39 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
     /**
      * Creates new form ÄndraInfoAgent
      */
-    public ÄndraInfoAgent() {
+    public ÄndraInfoAgent(InfDB idb) {
         initComponents();
         this.idb=idb;
+        fyllIListaAgent();
+        fyllIListaAttribut();
     }
 
+    private void fyllIListaAgent(){
+        try {
+            ComboBoxVäljAgent.removeAllItems();
+            String fraga = "select namn from agent";
+            ArrayList<String> svar = idb.fetchColumn(fraga);
+        
+        for(String värde : svar)
+        {
+            ComboBoxVäljAgent.addItem(värde);
+        }
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
+    
+    private void fyllIListaAttribut(){
+        
+            ComboBoxVäljAttribut.removeAllItems();
+            ComboBoxVäljAttribut.addItem("välj");
+            ComboBoxVäljAttribut.addItem("Agent_ID");
+            ComboBoxVäljAttribut.addItem("Namn");
+            ComboBoxVäljAttribut.addItem("Telefon");
+            ComboBoxVäljAttribut.addItem("Administrator");
+            ComboBoxVäljAttribut.addItem("Lösenord");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -75,18 +104,16 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(48, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LabelVäljÄndra, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(LabelVäljÄndra)
+                        .addGap(3, 3, 3)
                         .addComponent(ComboBoxVäljAttribut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(LabelFörAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelFörAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(RubrikÄndraInfoAgent)
-                        .addGap(61, 61, 61))))
+                        .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RubrikÄndraInfoAgent))
+                .addGap(33, 33, 33))
             .addGroup(layout.createSequentialGroup()
                 .addGap(149, 149, 149)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,7 +157,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
     private void KnappÄndraVärdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraVärdeActionPerformed
         try
         {
-            String query = "Update " + ComboBoxVäljAttribut.getSelectedItem() + "set " + TextFältNyttVärde.getText() + "where Namn = '" + ComboBoxVäljAgent.getSelectedItem() +"'";
+            String query = "Update '" + ComboBoxVäljAttribut.getSelectedItem() + "' set '" + TextFältNyttVärde.getText() + "' where Namn = '" + ComboBoxVäljAgent.getSelectedItem() +"'";
             idb.update(query);
         }
         catch(InfException abc)
@@ -139,47 +166,43 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
                         System.out.println("Error" + abc.getMessage());
                         
         }
-        {
-            
-                
-                
-                    
+        {           
     }//GEN-LAST:event_KnappÄndraVärdeActionPerformed
     }
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ÄndraInfoAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ÄndraInfoAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ÄndraInfoAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ÄndraInfoAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ÄndraInfoAgent().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraInfoAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraInfoAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraInfoAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraInfoAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new ÄndraInfoAgent(idb).setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboBoxVäljAgent;
