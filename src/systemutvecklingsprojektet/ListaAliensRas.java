@@ -143,11 +143,25 @@ public class ListaAliensRas extends javax.swing.JFrame {
             TextAreaFörRas.append(" " + kolumn.get("Antal_Boogies") + "\n");
             
             }
-        } else if{
+        }else if(ListaVäljRas.getSelectedItem().equals("Squid")){
+            String query = "select alien.alien_id, alien.namn, squid.Antal_Armar from alien join Squid on alien.Alien_ID = squid.Alien_ID";
+            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+            TextAreaFörRas.setText(null);
             
+            for(HashMap kolumn : rader){
+            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\t");
+            TextAreaFörRas.append(" " + kolumn.get("Antal_Armar") + "\n");
+            }
+        }else if (ListaVäljRas.getSelectedItem().equals("Worm")){
+            String query = "select alien.Alien_ID, alien.Namn from alien join Worm on alien.Alien_ID = Worm.Alien_ID";
+            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+            TextAreaFörRas.setText(null);
             
-        }if(){
-            
+            for(HashMap kolumn : rader){
+            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
+            }
         }
         } 
         catch(InfException undantag){
