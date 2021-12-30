@@ -4,19 +4,42 @@
  */
 package systemutvecklingsprojektet;
 
+import oru.inf.InfDB;
+import java.util.ArrayList;
+import java.util.HashMap;
+import javax.swing.JOptionPane;
+import oru.inf.InfException;
+
 /**
  *
  * @author almahedengren
  */
 public class SökInfoOmAgent extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form SökInfoOmAgent
      */
-    public SökInfoOmAgent() {
+    public SökInfoOmAgent(InfDB idb) {
         initComponents();
+        this.idb = idb;
+        fyllILista();
     }
 
+    public void fyllILista(){
+        try {
+            ComboBoxVäljAgent.removeAllItems();
+            String fraga = "select namn from agent";
+            ArrayList<String> svar = idb.fetchColumn(fraga);
+        
+        for(String värde : svar)
+        {
+            ComboBoxVäljAgent.addItem(värde);
+        }
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,26 +50,52 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
     private void initComponents() {
 
         RubrikSökInfoAgent = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        ComboBoxVäljAgent = new javax.swing.JComboBox<>();
+        LabelVäljNamn = new javax.swing.JLabel();
+        ButtonSök = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TextAreaFönster = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         RubrikSökInfoAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikSökInfoAgent.setText("Sök information om agent");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel1.setText("Välj namn på agent");
+        LabelVäljNamn.setText("Välj namn på agent");
 
-        jButton1.setText("Sök");
+        ButtonSök.setText("Sök");
+        ButtonSök.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSökActionPerformed(evt);
+            }
+        });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jLabel1.setText("Agent-ID");
+
+        jLabel2.setText("Namn");
+
+        jLabel3.setText("Telefon");
+
+        jLabel4.setText("Anst.datum");
+
+        jLabel5.setText("Administratör");
+
+        jLabel6.setText("Lösen");
+
+        jLabel7.setText("Område");
+
+        TextAreaFönster.setColumns(20);
+        TextAreaFönster.setRows(5);
+        jScrollPane1.setViewportView(TextAreaFönster);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,17 +106,40 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addComponent(RubrikSökInfoAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(59, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(38, 38, 38)
+                                    .addComponent(LabelVäljNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(26, 26, 26))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(25, 25, 25)
+                                    .addComponent(jLabel1)
+                                    .addGap(32, 32, 32)
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel3)
+                                    .addGap(36, 36, 36)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(ButtonSök)
+                                    .addGap(67, 67, 67))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jLabel6)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jLabel7)
+                                    .addGap(20, 20, 20))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,58 +148,99 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
                 .addComponent(RubrikSökInfoAgent)
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelVäljNamn)
+                    .addComponent(ButtonSök))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void ButtonSökActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSökActionPerformed
+        TextAreaFönster.setText(null);
+        try
+        {
+            String query = "Select * from agent where Namn = '" + ComboBoxVäljAgent.getSelectedItem().toString() + "'"; 
+            ArrayList<HashMap<String, String>> rad = idb.fetchRows(query);
+            
+            for(HashMap kolumn : rad)
+            {
+                
+                   TextAreaFönster.append(kolumn.get("Agent_ID") + "\t");
+                   TextAreaFönster.append(kolumn.get("Namn") + "\t");
+                   TextAreaFönster.append(kolumn.get("Telefon") + "\t");
+                   TextAreaFönster.append(kolumn.get("Anstallningsdatum") + "\t");
+                   TextAreaFönster.append(kolumn.get("Administrator") + "\t");
+                   TextAreaFönster.append(kolumn.get("Losenord") + "\t");
+                   TextAreaFönster.append(kolumn.get("Omrade") + "\n");
+
+                }
+        } 
+        catch(InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }//GEN-LAST:event_ButtonSökActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SökInfoOmAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SökInfoOmAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SökInfoOmAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SökInfoOmAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SökInfoOmAgent().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(SökInfoOmAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(SökInfoOmAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(SökInfoOmAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(SökInfoOmAgent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new SökInfoOmAgent(idb).setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonSök;
+    private javax.swing.JComboBox<String> ComboBoxVäljAgent;
+    private javax.swing.JLabel LabelVäljNamn;
     private javax.swing.JLabel RubrikSökInfoAgent;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextArea TextAreaFönster;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

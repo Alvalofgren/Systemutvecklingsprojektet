@@ -250,7 +250,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappTaBortUtrustningActionPerformed
 
     private void KnappSökaInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappSökaInfoAgentActionPerformed
-        new SökInfoOmAgent().setVisible(true);
+        new SökInfoOmAgent(idb).setVisible(true);
     }//GEN-LAST:event_KnappSökaInfoAgentActionPerformed
 
     private void KnappGeAdminStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappGeAdminStatusActionPerformed

@@ -116,7 +116,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOKActionPerformed
-        try{
+        try{ 
         String query = "update agent set administrator = 'J' where namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'";
         idb.update(query);
         LabelGodkänd.setVisible(true);
