@@ -254,7 +254,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappSökaInfoAgentActionPerformed
 
     private void KnappGeAdminStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappGeAdminStatusActionPerformed
-        new GeAdministratörStatus().setVisible(true);
+        new GeAdministratörStatus(idb).setVisible(true);
     }//GEN-LAST:event_KnappGeAdminStatusActionPerformed
 
     private void ButtonÄndraInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraInfoAgentActionPerformed

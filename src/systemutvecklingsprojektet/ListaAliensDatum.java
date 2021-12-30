@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+
 import oru.inf.InfDB;
 import java.util.ArrayList;
 import java.util.HashMap;

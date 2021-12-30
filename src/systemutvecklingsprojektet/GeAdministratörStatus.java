@@ -4,19 +4,45 @@
  */
 package systemutvecklingsprojektet;
 
+import oru.inf.InfDB;
+import java.util.ArrayList;
+import java.util.HashMap;
+import javax.swing.JOptionPane;
+import oru.inf.InfException;
 /**
  *
  * @author almahedengren
  */
 public class GeAdministratörStatus extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form GeAdministratörStatus
      */
-    public GeAdministratörStatus() {
+    public GeAdministratörStatus(InfDB idb) {
         initComponents();
-    }
+        this.idb=idb;
+        fyllILista();
+        LabelGodkänd.setVisible(false);
 
+    }
+    
+    public void fyllILista()
+    {
+            try {
+            ComboBoxVäljAgent.removeAllItems();
+            String fraga = "select namn from agent";
+            ArrayList<String> svar = idb.fetchColumn(fraga);
+        
+        for(String värde : svar)
+        {
+            ComboBoxVäljAgent.addItem(värde);
+        }
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +56,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         ComboBoxVäljAgent = new javax.swing.JComboBox<>();
         RubrikGeAdministratörstatus = new javax.swing.JLabel();
         ButtonOK = new javax.swing.JButton();
+        LabelGodkänd = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,6 +68,14 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         RubrikGeAdministratörstatus.setText("Ge administratörstatus");
 
         ButtonOK.setText("OK");
+        ButtonOK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonOKActionPerformed(evt);
+            }
+        });
+
+        LabelGodkänd.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        LabelGodkänd.setText("Agenten har blivit administratör!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,14 +84,18 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RubrikGeAdministratörstatus)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(LabelVäljAgent)
                         .addGap(47, 47, 47)
                         .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
-                        .addComponent(ButtonOK))
-                    .addComponent(RubrikGeAdministratörstatus))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .addComponent(ButtonOK)))
+                .addContainerGap(66, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LabelGodkänd, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -68,50 +107,37 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
                     .addComponent(LabelVäljAgent)
                     .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonOK))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LabelGodkänd)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GeAdministratörStatus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GeAdministratörStatus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GeAdministratörStatus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GeAdministratörStatus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void ButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOKActionPerformed
+        try{
+        String query = "update agent set administrator = 'J' where namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'";
+        idb.update(query);
+        LabelGodkänd.setVisible(true);
         }
-        //</editor-fold>
+        
+        catch(InfException e){
+            JOptionPane.showMessageDialog(null, "Error!!");
+        }
+    }//GEN-LAST:event_ButtonOKActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GeAdministratörStatus().setVisible(true);
-            }
-        });
-    }
+    
+    
+    
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonOK;
     private javax.swing.JComboBox<String> ComboBoxVäljAgent;
+    private javax.swing.JLabel LabelGodkänd;
     private javax.swing.JLabel LabelVäljAgent;
     private javax.swing.JLabel RubrikGeAdministratörstatus;
     // End of variables declaration//GEN-END:variables
