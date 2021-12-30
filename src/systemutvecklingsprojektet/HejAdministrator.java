@@ -266,7 +266,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappÄndraOmrådeschefActionPerformed
 
     private void KnappÄndraKontorschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraKontorschefActionPerformed
-        new ÄndraKontorschef().setVisible(true);
+        new ÄndraKontorschef(idb).setVisible(true);
     }//GEN-LAST:event_KnappÄndraKontorschefActionPerformed
 
     /**

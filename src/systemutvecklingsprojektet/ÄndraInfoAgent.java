@@ -159,6 +159,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
         {
             String query = "Update '" + ComboBoxVäljAttribut.getSelectedItem() + "' set '" + TextFältNyttVärde.getText() + "' where Namn = '" + ComboBoxVäljAgent.getSelectedItem() +"'";
             idb.update(query);
+            //Denna sql fråga funkar inte
         }
         catch(InfException abc)
         {
