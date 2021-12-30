@@ -4,29 +4,60 @@
  */
 package systemutvecklingsprojektet;
 
-
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
  * @author alval
  */
 public class ListaAliensRas extends javax.swing.JFrame {
-
+    private InfDB idb;
+    
     /**
      * Creates new form ListaAliens
      */
-    public ListaAliensRas() {
+    public ListaAliensRas(InfDB idb) {
         initComponents();
+        this.idb = idb;
+        fyllILista();
 
         
         
     }
     
-    private void fyllILista()
+     private void fyllILista() 
     {
+        
+        
+//        try
+//        {
+            
+        
         ListaVäljRas.removeAllItems();
-        //String query = "select ras from alien"
-    }
+        ListaVäljRas.addItem("Välj");
+        ListaVäljRas.addItem("Boglodite");
+        ListaVäljRas.addItem("Squid");
+        ListaVäljRas.addItem("Worm");
+        
+//
+//       String query = "SELECT namn from alien";
+//        ArrayList<String> resultat = idb.fetchColumn(query);
+//        
+//        for(String värde : resultat)
+//        {
+//            ListaVäljRas.addItem(värde);
+//        }
+     }
+//        
+//        catch(InfException e)
+//        {
+//            JOptionPane.showMessageDialog(null, "Error");
+//        }
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -97,44 +128,68 @@ public class ListaAliensRas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ListaVäljRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaVäljRasActionPerformed
-        // TODO add your handling code here:
+        
+        try {
+            
+      
+         if(ListaVäljRas.getSelectedItem().equals("Boglodite")){
+            String query = "select alien.alien_id, alien.namn, boglodite.Antal_Boogies from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
+            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+            TextAreaFörRas.setText(null);
+            
+            for(HashMap kolumn : rader){
+            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\t");
+            TextAreaFörRas.append(" " + kolumn.get("Antal_Boogies") + "\n");
+            
+            }
+        } else if{
+            
+            
+        }if(){
+            
+        }
+        } 
+        catch(InfException undantag){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
     }//GEN-LAST:event_ListaVäljRasActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListaAliensRas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListaAliensRas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListaAliensRas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListaAliensRas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ListaAliensRas().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(ListaAliensRas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(ListaAliensRas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(ListaAliensRas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(ListaAliensRas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new ListaAliensRas(idb).setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelVäljRas;

@@ -162,7 +162,7 @@ public class HejAgent extends javax.swing.JFrame {
 
 
     private void ButtonRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRasActionPerformed
-        new ListaAliensRas().setVisible(true);
+        new ListaAliensRas(idb).setVisible(true);
     }//GEN-LAST:event_ButtonRasActionPerformed
 
     private void ButtonPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPlatsActionPerformed
