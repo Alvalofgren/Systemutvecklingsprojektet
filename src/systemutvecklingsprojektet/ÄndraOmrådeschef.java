@@ -4,17 +4,28 @@
  */
 package systemutvecklingsprojektet;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author almahedengren
  */
 public class ÄndraOmrådeschef extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form ÄndraOmrådeschef
+     * @param idb
      */
-    public ÄndraOmrådeschef() {
+    public ÄndraOmrådeschef(InfDB idb) {
+        this.idb = idb;
         initComponents();
+        fyllIListaAgent();
+        fyllIListaOmråde();
+        LabelOmrådeChefHarÄndrats.setVisible(false);
+        
     }
 
     /**
@@ -32,6 +43,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         LabelTillOmråde = new javax.swing.JLabel();
         ComboBoxVäljOmråde = new javax.swing.JComboBox<>();
         ButtonÄndra = new javax.swing.JButton();
+        LabelOmrådeChefHarÄndrats = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,6 +59,14 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         ComboBoxVäljOmråde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         ButtonÄndra.setText("Ändra");
+        ButtonÄndra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonÄndraActionPerformed(evt);
+            }
+        });
+
+        LabelOmrådeChefHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelOmrådeChefHarÄndrats.setText("Områdeschefen har ändrats!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,7 +89,10 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
                         .addComponent(RubrikÄndraOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(159, 159, 159)
-                        .addComponent(ButtonÄndra)))
+                        .addComponent(ButtonÄndra))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(LabelOmrådeChefHarÄndrats)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -85,53 +108,105 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelTillOmråde)
                     .addComponent(ComboBoxVäljOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
+                .addGap(18, 18, 18)
                 .addComponent(ButtonÄndra)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(LabelOmrådeChefHarÄndrats)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
+        try
+       {
+            
+          String ändring = ("UPDATE Omradeschef SET Agent_ID = '" + ComboBoxVäljAgentID.getSelectedItem() + "'" + " WHERE Benamning = '" + ComboBoxVäljOmråde.getSelectedItem() + "'");
+            idb.update(ändring);
+            LabelOmrådeChefHarÄndrats.setVisible(true);
+
+       }
+       catch(InfException undantag)
+       {
+           JOptionPane.showMessageDialog(null, "FEEEEEEEEL");
+       }
+    }//GEN-LAST:event_ButtonÄndraActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    
+    private void fyllIListaAgent(){
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ÄndraOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ÄndraOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ÄndraOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ÄndraOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            ComboBoxVäljAgentID.removeAllItems();
+            ComboBoxVäljAgentID.addItem("Välj");
+            String query = "select Agent_ID from agent";
+            ArrayList<String> svar = idb.fetchColumn(query);
+        
+        for(String värde : svar)
+        {
+            ComboBoxVäljAgentID.addItem(värde);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ÄndraOmrådeschef().setVisible(true);
-            }
-        });
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
     }
+    
+    private void fyllIListaOmråde(){
+        try{
+            ComboBoxVäljOmråde.removeAllItems();
+            ComboBoxVäljOmråde.addItem("Välj");
+            String query = "select Benamning from Omrade";
+            ArrayList<String> svar = idb.fetchColumn(query);
+            
+        for(String värde : svar)
+        {
+            ComboBoxVäljOmråde.addItem(värde);
+        }
+        }
+        catch(InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(ÄndraOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new ÄndraOmrådeschef(idb).setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonÄndra;
     private javax.swing.JComboBox<String> ComboBoxVäljAgentID;
     private javax.swing.JComboBox<String> ComboBoxVäljOmråde;
+    private javax.swing.JLabel LabelOmrådeChefHarÄndrats;
     private javax.swing.JLabel LabelTillOmråde;
     private javax.swing.JLabel LabelVäljAgentID;
     private javax.swing.JLabel RubrikÄndraOmrådeschef;

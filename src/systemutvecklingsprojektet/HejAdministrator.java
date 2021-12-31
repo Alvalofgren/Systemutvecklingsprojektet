@@ -262,7 +262,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonÄndraInfoAgentActionPerformed
 
     private void KnappÄndraOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraOmrådeschefActionPerformed
-        new ÄndraOmrådeschef().setVisible(true);
+        new ÄndraOmrådeschef(idb).setVisible(true);
     }//GEN-LAST:event_KnappÄndraOmrådeschefActionPerformed
 
     private void KnappÄndraKontorschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraKontorschefActionPerformed
@@ -299,7 +299,7 @@ public class HejAdministrator extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HejAdministrator().setVisible(true);
+                new HejAdministrator(idb).setVisible(true);
             }
         });
     }
