@@ -30,6 +30,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
     private void fyllILista(){
         try {
             ComboBoxVäljOmrådeschef.removeAllItems();
+            ComboBoxVäljOmrådeschef.addItem("Välj");
             String fraga = "select Benamning from Omrade";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         

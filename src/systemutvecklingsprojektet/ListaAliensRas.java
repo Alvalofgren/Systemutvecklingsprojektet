@@ -31,32 +31,15 @@ public class ListaAliensRas extends javax.swing.JFrame {
      private void fyllILista() 
     {
         
-        
-//        try
-//        {
-            
-        
+
         ListaVäljRas.removeAllItems();
         ListaVäljRas.addItem("Välj");
         ListaVäljRas.addItem("Boglodite");
         ListaVäljRas.addItem("Squid");
         ListaVäljRas.addItem("Worm");
         
-//
-//       String query = "SELECT namn from alien";
-//        ArrayList<String> resultat = idb.fetchColumn(query);
-//        
-//        for(String värde : resultat)
-//        {
-//            ListaVäljRas.addItem(värde);
-//        }
      }
-//        
-//        catch(InfException e)
-//        {
-//            JOptionPane.showMessageDialog(null, "Error");
-//        }
-//    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.

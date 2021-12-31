@@ -29,6 +29,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
     {
         try {
             ComboBoxVäljAgent.removeAllItems();
+            ComboBoxVäljAgent.addItem("Välj");
             String fraga = "select Agent_ID from agent";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
@@ -46,6 +47,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
     {
         try {
             ComboBoxVäljKontor.removeAllItems();
+            ComboBoxVäljKontor.addItem("Välj");
             String fraga = "select Kontorsbeteckning from kontorschef";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         

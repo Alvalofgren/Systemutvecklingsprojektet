@@ -39,6 +39,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
             String fraga = "select Namn from alien";
         ArrayList<String> svar = idb.fetchColumn(fraga);
         ComboBoxVäljAlien.removeAllItems();
+        ComboBoxVäljAlien.addItem("Välj");
         
         for(String värde: svar)
         {

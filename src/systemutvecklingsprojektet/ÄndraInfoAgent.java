@@ -28,6 +28,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
     private void fyllIListaAgent(){
         try {
             ComboBoxVäljAgent.removeAllItems();
+            ComboBoxVäljAgent.addItem("Välj");
             String fraga = "select namn from agent";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         

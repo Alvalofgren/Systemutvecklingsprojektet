@@ -28,6 +28,7 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
     public void fyllILista(){
         try {
             ComboBoxVäljAgent.removeAllItems();
+            ComboBoxVäljAgent.addItem("Välj");
             String fraga = "select namn from agent";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         

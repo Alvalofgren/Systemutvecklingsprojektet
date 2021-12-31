@@ -31,6 +31,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
     {
             try {
             ComboBoxVäljAgent.removeAllItems();
+            ComboBoxVäljAgent.addItem("välj");
             String fraga = "select namn from agent";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         

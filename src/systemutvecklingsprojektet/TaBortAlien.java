@@ -103,6 +103,7 @@ public class TaBortAlien extends javax.swing.JFrame {
      private void fyllILista(){
         try {
             ComboBoxVäljAlien.removeAllItems();
+            ComboBoxVäljAlien.addItem("Välj");
             String fraga = "select Namn from alien";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         

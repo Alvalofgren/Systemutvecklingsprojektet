@@ -28,6 +28,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
     private void fyllIListaAlien(){
         try {
             ComboBoxVäljAlien.removeAllItems();
+            ComboBoxVäljAlien.addItem("Välj");
             String fraga = "select namn from alien";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         

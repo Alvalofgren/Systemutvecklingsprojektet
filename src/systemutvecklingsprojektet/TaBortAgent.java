@@ -104,6 +104,7 @@ public class TaBortAgent extends javax.swing.JFrame {
     private void fyllILista(){
         try {
             ComboBoxVäljAgentID.removeAllItems();
+            ComboBoxVäljAgentID.addItem("Välj");
             String fraga = "select Agent_ID from agent";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
