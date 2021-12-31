@@ -226,7 +226,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void KnappNyregistreraAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappNyregistreraAlienActionPerformed
-        new NyregistreraAlien().setVisible(true);
+        new NyregistreraAlien(idb).setVisible(true);
     }//GEN-LAST:event_KnappNyregistreraAlienActionPerformed
 
     private void KnappÄndraInfoOmAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraInfoOmAlienActionPerformed
@@ -238,7 +238,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappTaBortAgentActionPerformed
 
     private void KnappNyregistreraAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappNyregistreraAgentActionPerformed
-        new NyregistreraAgent().setVisible(true);
+        new NyregistreraAgent(idb).setVisible(true);
     }//GEN-LAST:event_KnappNyregistreraAgentActionPerformed
 
     private void KnappTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortAlienActionPerformed
