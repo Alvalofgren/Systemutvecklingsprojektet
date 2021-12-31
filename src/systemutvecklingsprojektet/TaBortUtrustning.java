@@ -4,6 +4,8 @@
  */
 package systemutvecklingsprojektet;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
 /**
@@ -18,8 +20,26 @@ public class TaBortUtrustning extends javax.swing.JFrame {
     public TaBortUtrustning(InfDB idb) {
         initComponents();
         this.idb=idb;
+        fyllILista();
     }
 
+    private void fyllILista()
+    {
+        try {
+            ComboBoxVäljUtrustning.removeAllItems();
+            ComboBoxVäljUtrustning.addItem("Välj");
+            String fraga = "select Utrustnings_ID from Utrustning";
+            ArrayList<String> svar = idb.fetchColumn(fraga);
+        
+        for(String värde : svar)
+        {
+            ComboBoxVäljUtrustning.addItem(värde);
+        }
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,6 +64,11 @@ public class TaBortUtrustning extends javax.swing.JFrame {
         ComboBoxVäljUtrustning.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         ButtonTaBort.setText("Ta bort");
+        ButtonTaBort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTaBortActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,6 +102,19 @@ public class TaBortUtrustning extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
+        try
+        {
+            String query = "delete from Utrustning where Utrustnings_ID = '" + ComboBoxVäljUtrustning.getSelectedItem() + "'";
+            idb.delete(query);
+        }
+        
+        catch(InfException undantag)
+                    {
+                    JOptionPane.showMessageDialog(null, "");
+                    }
+    }//GEN-LAST:event_ButtonTaBortActionPerformed
 
     /**
      * @param args the command line arguments
