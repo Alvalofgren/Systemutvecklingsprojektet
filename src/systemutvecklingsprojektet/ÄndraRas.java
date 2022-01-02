@@ -149,8 +149,8 @@ public class ÄndraRas extends javax.swing.JFrame {
        try
        {
        if(ComboBoxVäljRas.getSelectedItem().equals("Boglodite")){
-           String ändring = "DELETE FROM Boglodite where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
-           String nyRas = "INSERT INTO'" + ComboBoxVäljRas.getSelectedItem() + '" + VALUES; 
+           String ändring = "DELETE FROM ? where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
+           String nyRas = "INSERT INTO Boglodite VALUES(); 
            idb.delete(ändring);
            idb.update(nyRas);
        }    
