@@ -21,6 +21,7 @@ public class ÄndraRas extends javax.swing.JFrame {
         initComponents();
         this.idb=idb;
         fyllIListaAlien();
+        fyllIListaRas();
         LabelRasenHarÄndrats.setVisible(false);
     }
 
@@ -40,6 +41,16 @@ public class ÄndraRas extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
+    
+    private void fyllIListaRas(){
+        ComboBoxVäljRas.removeAllItems();
+        ComboBoxVäljRas.addItem("Välj");
+        ComboBoxVäljRas.addItem("Boglodite");
+        ComboBoxVäljRas.addItem("Squid");
+        ComboBoxVäljRas.addItem("Worm");
+    }
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -135,8 +146,14 @@ public class ÄndraRas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
-       try{
-           
+       try
+       {
+       if(ComboBoxVäljRas.getSelectedItem().equals("Boglodite")){
+           String ändring = "DELETE FROM Boglodite where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
+           String nyRas = "INSERT INTO'" + ComboBoxVäljRas.getSelectedItem() + '" + VALUES; 
+           idb.delete(ändring);
+           idb.update(nyRas);
+       }    
            
        LabelRasenHarÄndrats.setVisible(true);
        }
