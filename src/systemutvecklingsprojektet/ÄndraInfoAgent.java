@@ -162,7 +162,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
         { 
             String query = "UPDATE AGENT SET '" + ComboBoxVäljAttribut.getSelectedItem() + "'" + " = '" + TextFältNyttVärde.getText() + "'" + "WHERE NAMN = '" + ComboBoxVäljAgent.getSelectedItem()+"'";
             idb.update(query);
-            //Denna sql fråga funkar inte, den hoppar till catchen
+            //Denna sql fråga funkar inte, den hoppar till catchen, vad är ett giltigt värde?
         }
         }
         catch(InfException abc)

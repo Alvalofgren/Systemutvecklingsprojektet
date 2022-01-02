@@ -150,7 +150,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
                 
             String query = "UPDATE ALIEN SET '" + ComboBoxVäljAttribut.getSelectedItem() + "'" + " = '" + TextFältNyttVärde.getText() + "'" + "WHERE NAMN = '" + ComboBoxVäljAlien.getSelectedItem()+"'";
             idb.update(query);
-            //Denna sql fråga funkar inte, den hoppar till catchen
+            //Denna sql fråga funkar inte, den hoppar till catchen, vad är giltigt värde?
             }
         }
         catch(InfException abc)
