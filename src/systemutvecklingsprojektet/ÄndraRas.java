@@ -27,7 +27,7 @@ public class ÄndraRas extends javax.swing.JFrame {
         try {
             ComboBoxVäljAlien.removeAllItems();
             ComboBoxVäljAlien.addItem("Välj");
-            String fraga = "select namn from alien";
+            String fraga = "select Alien_ID from alien";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
         for(String värde : svar)
