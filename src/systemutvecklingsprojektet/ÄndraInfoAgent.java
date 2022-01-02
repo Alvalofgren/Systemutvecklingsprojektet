@@ -159,8 +159,8 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
         try
         {    
         if(Validering.kontrollTextFältVärde(TextFältNyttVärde))
-        {
-            String query = "Update '" + ComboBoxVäljAttribut.getSelectedItem() + "' set '" + TextFältNyttVärde.getText() + "' where Namn = '" + ComboBoxVäljAgent.getSelectedItem() +"'";
+        { 
+            String query = "UPDATE AGENT SET '" + ComboBoxVäljAttribut.getSelectedItem() + "'" + " = '" + TextFältNyttVärde.getText() + "'" + "WHERE NAMN = '" + ComboBoxVäljAgent.getSelectedItem()+"'";
             idb.update(query);
             //Denna sql fråga funkar inte, den hoppar till catchen
         }
