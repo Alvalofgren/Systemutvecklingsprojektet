@@ -184,7 +184,7 @@ public class ÄndraRas extends javax.swing.JFrame {
           String ändring = "DELETE FROM Worm where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
           idb.delete(ändring);
           
-          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem() + " Alien_ID) " +  "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "'" + ")";
+          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem() + " (Alien_ID) " +  "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "'" + ")";
           idb.update(nyRas);
        }
        if(ComboBoxVäljNuvarandeRas.getSelectedItem().equals("Squid")){
