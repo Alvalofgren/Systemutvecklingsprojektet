@@ -26,9 +26,7 @@ public class HejAdministrator extends javax.swing.JFrame {
         LabelAgentNamn.setText(AgentInlogg.getNamn());
     }
     
-     public static boolean arAdmin(){
-       return arAdmin;  
-    }
+   
 
     
    
