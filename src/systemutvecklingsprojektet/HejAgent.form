@@ -50,9 +50,11 @@
               </Group>
               <EmptySpace pref="320" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" pref="197" max="-2" attributes="0"/>
                   <Component id="ButtonÄndraLösenord" min="-2" pref="197" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                  <Component id="ButtonRegistreraUtrustning" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
           </Group>
@@ -68,7 +70,7 @@
                   <Component id="LabelInfoAlien" min="-2" pref="72" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
-                      <Component id="jLabel1" pref="51" max="32767" attributes="0"/>
+                      <Component id="jLabel1" pref="82" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -84,8 +86,12 @@
                       <Component id="ButtonÄndraLösenord" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Component id="ButtonRas" min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="ButtonRas" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                  <Component id="ButtonRegistreraUtrustning" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Component id="ButtonPlats" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -173,6 +179,19 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registrera ny utrustning"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="ButtonRegistreraUtrustning">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registrera ny utrustning"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonRegistreraUtrustningActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
