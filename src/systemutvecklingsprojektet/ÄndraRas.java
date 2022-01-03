@@ -148,6 +148,8 @@ public class ÄndraRas extends javax.swing.JFrame {
     private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
        try
        {
+           
+           
        if(ComboBoxVäljRas.getSelectedItem().equals("Boglodite")){
            String ändring = "DELETE FROM ? where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
            String nyRas = "INSERT INTO Boglodite VALUES(); 
