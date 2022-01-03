@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
 /**
@@ -176,10 +177,19 @@ public class NyregistreraAgent extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void KnappFörRegistreringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappFörRegistreringActionPerformed
-        
-      
+      try
+      {
+      String query = "INSERT INTO Agent(Agent_ID, Namn, Telefon, Anstallningsdatum, Administrator, Losenord, Omrade) "
+                    + "VALUES" + "('"+ TextrutaAgentID.getText()+ "','" + TextRutaNamn.getText()+ "'.'" 
+                    + TextRutaTelefon.getText()+ "','" + TextrutaAnställningsdatum.getText()+ "','" + TextrutaAdministratör.getText()+ "','" + TextrutaLösenord.getText()+ "','" + TextrutaOmråde.getText()+ "')";
+            idb.insert(query);
     }//GEN-LAST:event_KnappFörRegistreringActionPerformed
-
+catch (InfException undantag)
+        {
+            JOptionPane.showMessageDialog(null, "Error");
+            System.out.println("Error" + undantag.getMessage());
+        }
+    }
     /**
      * @param args the command line arguments
      */
