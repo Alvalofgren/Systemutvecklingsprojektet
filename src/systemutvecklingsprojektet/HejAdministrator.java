@@ -12,17 +12,15 @@ public class HejAdministrator extends javax.swing.JFrame {
 
     private static InfDB idb;
     private static String agentNamn;
-    /**
-     * Creates new form HejAdministrator
-     */
-    public HejAdministrator(InfDB idb) {
+    
+    
+    public HejAdministrator(InfDB idb, String agentNamn) {
         initComponents();
         this.idb=idb;
-        agentNamn = AgentInlogg.getNamn();
+        this.agentNamn = agentNamn;
         LabelAgentNamn.setText(agentNamn);
-        //Fixa så att man ser namnet när man loggat in tex "Välkommen Agent O"
-
-        LabelAgentNamn.setText(AgentInlogg.getNamn());
+        System.out.println(agentNamn);
+        
     }
 
     
@@ -201,7 +199,7 @@ public class HejAdministrator extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(184, 184, 184)
                 .addComponent(RubrikHejAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LabelAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -331,7 +329,7 @@ public class HejAdministrator extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HejAdministrator(idb).setVisible(true);
+                new HejAdministrator(idb, agentNamn).setVisible(true);
             }
         });
     }
