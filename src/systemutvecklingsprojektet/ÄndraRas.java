@@ -177,22 +177,23 @@ public class ÄndraRas extends javax.swing.JFrame {
            String ändring = "DELETE FROM Boglodite where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";           
            idb.delete(ändring);
            
-           String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem()+ "(Alien_ID)" + "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "'" + ")";
-           idb.update(nyRas);
+           
+           String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem()+ "(Alien_ID)" + "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "')";
+           idb.insert(nyRas);
        }
        if(ComboBoxVäljNuvarandeRas.getSelectedItem().equals("Worm")){
           String ändring = "DELETE FROM Worm where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
           idb.delete(ändring);
-          
-          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem() + " (Alien_ID) " +  "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "'" + ")";
-          idb.update(nyRas);
+         
+          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem() + " (Alien_ID) " +  "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "')";
+          idb.insert(nyRas);
        }
        if(ComboBoxVäljNuvarandeRas.getSelectedItem().equals("Squid")){
           String ändring = "DELETE FROM Squid where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
           idb.delete(ändring);
           
-          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem()+ "(Alien_ID)" + "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "'" + ")";
-          idb.update(nyRas);
+          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem()+ "(Alien_ID)" + "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "')";
+          idb.insert(nyRas);
           
        }
           
