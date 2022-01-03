@@ -11,6 +11,7 @@ import oru.inf.InfException;
 public class AgentInlogg extends javax.swing.JFrame {
 
     private InfDB idb;
+   
     private static String agentNamn;
    
     
@@ -113,7 +114,8 @@ public class AgentInlogg extends javax.swing.JFrame {
                 }
         
         else if (aStatus.equals("J"))
-        {
+            {
+               
                 if(losen.equals(PasswordFieldLösenord.getText()))
                 {
                     agentNamn = TextFieldAnvändarnamn.getText();
@@ -147,7 +149,7 @@ public class AgentInlogg extends javax.swing.JFrame {
                         System.out.println("Error" + undantag.getMessage());
                     }
     }//GEN-LAST:event_ButtonLoggainActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
