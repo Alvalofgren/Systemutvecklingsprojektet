@@ -120,7 +120,7 @@ public class AgentInlogg extends javax.swing.JFrame {
                 {
                     agentNamn = TextFieldAnvändarnamn.getText();
                     
-                    new HejAdministrator(idb,agentNamn).setVisible(true);
+                    new HejAdministrator(idb).setVisible(true);
                 }
                 else
                 {

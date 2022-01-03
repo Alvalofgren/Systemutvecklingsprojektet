@@ -134,7 +134,7 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
             {
                 if(losen.equals(PasswordFieldLösenord.getText()))
                 {
-                    new HejAdministrator(idb, agentNamn).setVisible(true);
+                    new HejAdministrator(idb).setVisible(true);
                 }
                 else
                 {
