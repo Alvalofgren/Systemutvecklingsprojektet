@@ -61,10 +61,10 @@
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="UnderRubrikChef" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="KnappÄndraOmrådeschef" pref="0" max="32767" attributes="0"/>
+                          <Component id="KnappÄndraOmrådeschef" pref="142" max="32767" attributes="0"/>
                           <Component id="KnappÄndraKontorschef" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
