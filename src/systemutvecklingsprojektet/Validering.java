@@ -6,6 +6,7 @@ package systemutvecklingsprojektet;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import oru.inf.InfException;
 /**
  *
 
@@ -44,6 +45,23 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
                }
                return resultat;
            }
+ 
+ public static boolean ärEnString(JTextField aktuellRuta)
+ {
+     boolean resultat = true; 
+     try 
+     {
+         String enSträng = aktuellRuta.getText();
+         //Hur fortsätta??
+         
+     }
+     catch(NumberFormatException undantag)
+     {
+         JOptionPane.showMessageDialog(null, "Ange en sträng");
+         resultat = false;
+     }
+     return resultat; 
+ }
     
     
     public static boolean rutornaMatchar(JTextField aktuellRuta, JTextField aktuellRuta2)
