@@ -152,22 +152,13 @@
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextrutaRegistreringsdatumActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TextrutaL&#xf6;senordAlien">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextrutaL&#xf6;senordAlienActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TextrutaNamnAlien">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextrutaNamnAlienActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TextrutaTelefonAlien">
       <Properties>

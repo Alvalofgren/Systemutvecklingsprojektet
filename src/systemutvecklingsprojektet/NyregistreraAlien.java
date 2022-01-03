@@ -59,24 +59,8 @@ public class NyregistreraAlien extends javax.swing.JFrame {
         TextrutaAlienID.setColumns(9);
 
         TextrutaRegistreringsdatum.setColumns(9);
-        TextrutaRegistreringsdatum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextrutaRegistreringsdatumActionPerformed(evt);
-            }
-        });
-
-        TextrutaLösenordAlien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextrutaLösenordAlienActionPerformed(evt);
-            }
-        });
 
         TextrutaNamnAlien.setColumns(9);
-        TextrutaNamnAlien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextrutaNamnAlienActionPerformed(evt);
-            }
-        });
 
         TextrutaTelefonAlien.setColumns(9);
 
@@ -177,18 +161,6 @@ public class NyregistreraAlien extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void TextrutaRegistreringsdatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextrutaRegistreringsdatumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextrutaRegistreringsdatumActionPerformed
-
-    private void TextrutaLösenordAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextrutaLösenordAlienActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextrutaLösenordAlienActionPerformed
-
-    private void TextrutaNamnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextrutaNamnAlienActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextrutaNamnAlienActionPerformed
 
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
         // TODO add your handling code here:
