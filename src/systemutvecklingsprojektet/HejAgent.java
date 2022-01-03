@@ -12,6 +12,8 @@ import oru.inf.InfDB;
  */
 public class HejAgent extends javax.swing.JFrame {
     private InfDB idb;
+    private static boolean arAgent;
+    
     /**
      * Creates new form HejAgent
      */
@@ -21,7 +23,6 @@ public class HejAgent extends javax.swing.JFrame {
 
     }
     
-   
 
     /**
      * This method is called from within the constructor to initialize the form.

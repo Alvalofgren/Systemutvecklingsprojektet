@@ -23,6 +23,10 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
         this.idb=idb;
     }
 
+    public String getAgentNamn()
+    {
+        return agentNamn;
+    }
     
 
    
