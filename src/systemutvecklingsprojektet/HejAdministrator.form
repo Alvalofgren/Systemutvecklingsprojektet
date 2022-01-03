@@ -36,7 +36,7 @@
                           </Group>
                           <Component id="ButtonÄndraRas" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="52" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="530" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -50,7 +50,7 @@
                           <Component id="KnappNyregistreraAgent" alignment="0" max="32767" attributes="0"/>
                           <Component id="KnappSökaInfoAgent" alignment="0" max="32767" attributes="0"/>
                           <Component id="KnappGeAdminStatus" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ButtonÄndraInfoAgent" pref="223" max="32767" attributes="0"/>
+                          <Component id="ButtonÄndraInfoAgent" pref="212" max="32767" attributes="0"/>
                           <Component id="KnappTaBortAgent" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="UnderRubrikAgent" min="-2" pref="37" max="-2" attributes="0"/>
@@ -60,10 +60,10 @@
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="UnderRubrikChef" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="KnappÄndraOmrådeschef" pref="0" max="32767" attributes="0"/>
+                          <Component id="KnappÄndraOmrådeschef" pref="145" max="32767" attributes="0"/>
                           <Component id="KnappÄndraKontorschef" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
