@@ -30,7 +30,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
         try {
             ComboBoxVäljAgent.removeAllItems();
             ComboBoxVäljAgent.addItem("Välj");
-            String fraga = "select Agent_ID from agent";
+            String fraga = "select namn from agent";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
         for(String värde : svar)
@@ -82,7 +82,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
         RubrikÄndraKontorschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikÄndraKontorschef.setText("Ändra kontorschef");
 
-        LabelVäljAgent.setText("Välj Agent-ID:");
+        LabelVäljAgent.setText("Välj Agent:");
 
         ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -165,7 +165,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
         try
        {
             
-          String ändring = ("UPDATE kontorschef SET Agent_ID = '" + ComboBoxVäljAgent.getSelectedItem() + "'" + " WHERE Kontorsbeteckning = '" + ComboBoxVäljKontor.getSelectedItem() + "'");
+          String ändring = ("UPDATE kontorschef SET Namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'" + " WHERE Kontorsbeteckning = '" + ComboBoxVäljKontor.getSelectedItem() + "'");
             idb.update(ändring);
             LabelKontorChefÄndrats.setVisible(true);
 

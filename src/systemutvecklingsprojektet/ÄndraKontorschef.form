@@ -95,7 +95,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelV&#xe4;ljAgent">
       <Properties>
-        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent-ID:"/>
+        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ComboBoxV&#xe4;ljAgent">

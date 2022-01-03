@@ -36,7 +36,7 @@ public class TaBortAgent extends javax.swing.JFrame {
 
         RubrikTaBortAgent = new javax.swing.JLabel();
         LabelVäljAgentID = new javax.swing.JLabel();
-        ComboBoxVäljAgentID = new javax.swing.JComboBox<>();
+        ComboBoxVäljAgent = new javax.swing.JComboBox<>();
         ButtonTaBort = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,9 +44,9 @@ public class TaBortAgent extends javax.swing.JFrame {
         RubrikTaBortAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikTaBortAgent.setText("Ta bort Agent");
 
-        LabelVäljAgentID.setText("Välj Agent-ID:");
+        LabelVäljAgentID.setText("Välj Agentnamn:");
 
-        ComboBoxVäljAgentID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         ButtonTaBort.setText("Ta bort");
         ButtonTaBort.addActionListener(new java.awt.event.ActionListener() {
@@ -63,8 +63,8 @@ public class TaBortAgent extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addComponent(LabelVäljAgentID)
                 .addGap(18, 18, 18)
-                .addComponent(ComboBoxVäljAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(ButtonTaBort)
                 .addGap(22, 22, 22))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -80,7 +80,7 @@ public class TaBortAgent extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelVäljAgentID)
-                    .addComponent(ComboBoxVäljAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonTaBort))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
@@ -91,7 +91,7 @@ public class TaBortAgent extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
-            String query = "delete from agent where Agent_ID = '" + ComboBoxVäljAgentID.getSelectedItem().toString() + "'";
+            String query = "delete from agent where namn = '" + ComboBoxVäljAgent.getSelectedItem().toString() + "'";
             idb.delete(query);
         }
         
@@ -103,14 +103,14 @@ public class TaBortAgent extends javax.swing.JFrame {
 
     private void fyllILista(){
         try {
-            ComboBoxVäljAgentID.removeAllItems();
-            ComboBoxVäljAgentID.addItem("Välj");
-            String fraga = "select Agent_ID from agent";
+            ComboBoxVäljAgent.removeAllItems();
+            ComboBoxVäljAgent.addItem("Välj");
+            String fraga = "select namn from agent";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
         for(String värde : svar)
         {
-            ComboBoxVäljAgentID.addItem(värde);
+            ComboBoxVäljAgent.addItem(värde);
         }
         }
         catch (InfException e){
@@ -154,7 +154,7 @@ public class TaBortAgent extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonTaBort;
-    private javax.swing.JComboBox<String> ComboBoxVäljAgentID;
+    private javax.swing.JComboBox<String> ComboBoxVäljAgent;
     private javax.swing.JLabel LabelVäljAgentID;
     private javax.swing.JLabel RubrikTaBortAgent;
     // End of variables declaration//GEN-END:variables

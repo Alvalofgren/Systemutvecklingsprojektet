@@ -27,8 +27,8 @@
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Component id="LabelVäljAgentID" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="ComboBoxVäljAgentID" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="36" max="32767" attributes="0"/>
+              <Component id="ComboBoxVäljAgent" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="23" max="32767" attributes="0"/>
               <Component id="ButtonTaBort" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
           </Group>
@@ -47,7 +47,7 @@
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabelVäljAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ComboBoxVäljAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ComboBoxVäljAgent" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ButtonTaBort" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="27" max="32767" attributes="0"/>
@@ -66,10 +66,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelV&#xe4;ljAgentID">
       <Properties>
-        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agent-ID:"/>
+        <Property name="text" type="java.lang.String" value="V&#xe4;lj Agentnamn:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="ComboBoxV&#xe4;ljAgentID">
+    <Component class="javax.swing.JComboBox" name="ComboBoxV&#xe4;ljAgent">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
