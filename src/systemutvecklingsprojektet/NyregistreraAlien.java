@@ -167,9 +167,10 @@ public class NyregistreraAlien extends javax.swing.JFrame {
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
         try
         {
-            
-        
-            }
+            String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
+                    + "VALUES" + "('"+ TextrutaAlienID.getText()+ "','" + TextrutaRegistreringsdatum.getText()+ "'.'" 
+                    + TextrutaLösenordAlien.getText()+ "','" + TextrutaNamnAlien.getText()+ "','" + TextrutaTelefonAlien.getText()+ "','" + TextrutaPlats.getText()+ "','" + TextrutaAnsvarigAgent.getText()+ "')";
+            idb.insert(query);
         
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
         catch(InfException undantag)
@@ -177,7 +178,7 @@ public class NyregistreraAlien extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error");
         }
         
-    
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton RegistreringKnappAlien;
