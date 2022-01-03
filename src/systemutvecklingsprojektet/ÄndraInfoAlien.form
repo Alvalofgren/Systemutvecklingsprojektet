@@ -27,22 +27,30 @@
               <EmptySpace pref="38" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="LabelÄndraEgenskapen" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="KnappÄndra" min="-2" pref="118" max="-2" attributes="0"/>
-                              <Component id="TextFältNyttVärde" min="-2" pref="113" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="LabelNyttVärde" min="-2" pref="72" max="-2" attributes="0"/>
-                                  <Component id="ComboBoxVäljAttribut" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="LabelÄndraEgenskapen" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Component id="KnappÄndra" min="-2" pref="118" max="-2" attributes="0"/>
+                                      <Component id="TextFältNyttVärde" min="-2" pref="113" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="LabelNyttVärde" min="-2" pref="72" max="-2" attributes="0"/>
+                                          <Component id="ComboBoxVäljAttribut" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="LabelFörAlien" min="-2" pref="59" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="ComboBoxVäljAlien" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="LabelFörAlien" min="-2" pref="59" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="ComboBoxVäljAlien" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="LabelInfoÄndrats" min="-2" pref="171" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
@@ -67,13 +75,15 @@
                   <Component id="ComboBoxVäljAttribut" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ComboBoxVäljAlien" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="LabelNyttVärde" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="TextFältNyttVärde" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="KnappÄndra" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="LabelInfoÄndrats" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -140,6 +150,14 @@
     <Component class="javax.swing.JLabel" name="LabelNyttV&#xe4;rde">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nytt v&#xe4;rde:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelInfo&#xc4;ndrats">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Informationen har &#xe4;ndrats!"/>
       </Properties>
     </Component>
   </SubComponents>
