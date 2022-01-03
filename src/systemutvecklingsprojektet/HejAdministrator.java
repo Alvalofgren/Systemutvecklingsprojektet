@@ -12,15 +12,22 @@ public class HejAdministrator extends javax.swing.JFrame {
 
     private static InfDB idb;
     private static String agentNamn;
-    
-    
-    public HejAdministrator(InfDB idb, String agentNamn) {
+    private static boolean arAdmin;
+    /**
+     * Creates new form HejAdministrator
+     */
+    public HejAdministrator(InfDB idb) {
         initComponents();
         this.idb=idb;
-        this.agentNamn = agentNamn;
+        agentNamn = AgentInlogg.getNamn();
         LabelAgentNamn.setText(agentNamn);
-        System.out.println(agentNamn);
-        
+        //Fixa så att man ser namnet när man loggat in tex "Välkommen Agent O"
+
+        LabelAgentNamn.setText(AgentInlogg.getNamn());
+    }
+    
+     public static boolean arAdmin(){
+       return arAdmin;  
     }
 
     
@@ -207,7 +214,7 @@ public class HejAdministrator extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(184, 184, 184)
                 .addComponent(RubrikHejAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(LabelAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -344,7 +351,7 @@ public class HejAdministrator extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HejAdministrator(idb, agentNamn).setVisible(true);
+                new HejAdministrator(idb).setVisible(true);
             }
         });
     }
