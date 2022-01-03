@@ -43,7 +43,7 @@ public class TaBortAlien extends javax.swing.JFrame {
         RubrikTaBortAlien.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikTaBortAlien.setText("Ta bort alien");
 
-        LabelVäljAlienID.setText("Välj Alien-ID:");
+        LabelVäljAlienID.setText("Välj Alien:");
 
         ComboBoxVäljAlien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -90,7 +90,7 @@ public class TaBortAlien extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
-            String query = "delete from alien where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
+            String query = "delete from alien where namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
             idb.delete(query);
         }
         
@@ -104,7 +104,7 @@ public class TaBortAlien extends javax.swing.JFrame {
         try {
             ComboBoxVäljAlien.removeAllItems();
             ComboBoxVäljAlien.addItem("Välj");
-            String fraga = "select Alien_ID from alien";
+            String fraga = "select namn from alien";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
         for(String värde : svar)

@@ -122,7 +122,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         try
        {
             
-          String ändring = ("UPDATE Omradeschef SET Agent_ID = '" + ComboBoxVäljAgentID.getSelectedItem() + "'" + " WHERE Benamning = '" + ComboBoxVäljOmråde.getSelectedItem() + "'");
+          String ändring = ("UPDATE Omradeschef SET Namn = '" + ComboBoxVäljAgentID.getSelectedItem() + "'" + " WHERE Benamning = '" + ComboBoxVäljOmråde.getSelectedItem() + "'");
             idb.update(ändring);
             LabelOmrådeChefHarÄndrats.setVisible(true);
 
@@ -141,7 +141,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         try {
             ComboBoxVäljAgentID.removeAllItems();
             ComboBoxVäljAgentID.addItem("Välj");
-            String query = "select Agent_ID from agent";
+            String query = "select namn from agent";
             ArrayList<String> svar = idb.fetchColumn(query);
         
         for(String värde : svar)
