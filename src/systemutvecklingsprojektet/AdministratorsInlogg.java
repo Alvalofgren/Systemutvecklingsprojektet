@@ -14,6 +14,7 @@ import oru.inf.InfException;
 public class AdministratorsInlogg extends javax.swing.JFrame {
 
     private InfDB idb;
+    private String agentNamn;
     /**
      * Creates new form AdministratorsInlogg
      */
@@ -129,7 +130,7 @@ public class AdministratorsInlogg extends javax.swing.JFrame {
             {
                 if(losen.equals(PasswordFieldLösenord.getText()))
                 {
-                    new HejAdministrator(idb).setVisible(true);
+                    new HejAdministrator(idb, agentNamn).setVisible(true);
                 }
                 else
                 {

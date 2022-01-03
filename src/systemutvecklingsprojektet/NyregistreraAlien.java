@@ -167,12 +167,8 @@ public class NyregistreraAlien extends javax.swing.JFrame {
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
         try
         {
-            if(TextrutaAlienID.getText().equals()){
-                
-            }
-            else if(Validering.harHeltal(TextrutaAlienID)){
-            String query = "INSERT INTO Alien(Alien_ID) VALUES" + "('" + TextrutaAlienID.getText()+ "')";
-            idb.insert(query); 
+            
+        
             }
         
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed

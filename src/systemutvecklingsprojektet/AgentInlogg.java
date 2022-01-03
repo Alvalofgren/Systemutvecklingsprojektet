@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package systemutvecklingsprojektet;
 
 
@@ -122,7 +118,9 @@ public class AgentInlogg extends javax.swing.JFrame {
                
                 if(losen.equals(PasswordFieldLösenord.getText()))
                 {
-                    new HejAdministrator(idb).setVisible(true);
+                    agentNamn = TextFieldAnvändarnamn.getText();
+                    
+                    new HejAdministrator(idb,agentNamn).setVisible(true);
                 }
                 else
                 {

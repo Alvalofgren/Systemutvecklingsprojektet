@@ -21,6 +21,7 @@ public class TaBortUtrustning extends javax.swing.JFrame {
         initComponents();
         this.idb=idb;
         fyllILista();
+        LabelUtrustningBorttagen.setVisible(false);
     }
 
     private void fyllILista()
@@ -48,6 +49,7 @@ public class TaBortUtrustning extends javax.swing.JFrame {
         LabelVäljUtrustning = new javax.swing.JLabel();
         ComboBoxVäljUtrustning = new javax.swing.JComboBox<>();
         ButtonTaBort = new javax.swing.JButton();
+        LabelUtrustningBorttagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +67,9 @@ public class TaBortUtrustning extends javax.swing.JFrame {
             }
         });
 
+        LabelUtrustningBorttagen.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelUtrustningBorttagen.setText("Utrustningen är borttagen!");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -74,12 +79,17 @@ public class TaBortUtrustning extends javax.swing.JFrame {
                 .addComponent(RubrikTaBortUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(104, 104, 104))
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(LabelVäljUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ComboBoxVäljUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(ButtonTaBort)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(LabelVäljUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ComboBoxVäljUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(ButtonTaBort))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(118, 118, 118)
+                        .addComponent(LabelUtrustningBorttagen)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -92,7 +102,9 @@ public class TaBortUtrustning extends javax.swing.JFrame {
                     .addComponent(LabelVäljUtrustning)
                     .addComponent(ComboBoxVäljUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonTaBort))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(LabelUtrustningBorttagen)
+                .addGap(27, 27, 27))
         );
 
         pack();
@@ -101,13 +113,25 @@ public class TaBortUtrustning extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
-            String query = "delete from Utrustning where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
-            idb.delete(query);
+            String kommunikation = "delete from Kommunikation where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            idb.delete(kommunikation);
+            String vapen = "delete from Vapen where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem(); 
+            idb.delete(vapen);
+            String teknik = "delete from Teknik where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            idb.delete(teknik);
+            String innehar = "delete from innehar_utrustning where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            idb.delete(innehar);
+            String utrustning = "delete from Utrustning where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            idb.delete(utrustning);
+            
+            LabelUtrustningBorttagen.setVisible(true);
+            
         }
         
         catch(InfException undantag)
                     {
                     JOptionPane.showMessageDialog(null, "Error");
+                    System.out.println("Error" + undantag.getMessage());
                     }
     }//GEN-LAST:event_ButtonTaBortActionPerformed
 
@@ -149,6 +173,7 @@ public class TaBortUtrustning extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonTaBort;
     private javax.swing.JComboBox<String> ComboBoxVäljUtrustning;
+    private javax.swing.JLabel LabelUtrustningBorttagen;
     private javax.swing.JLabel LabelVäljUtrustning;
     private javax.swing.JLabel RubrikTaBortUtrustning;
     // End of variables declaration//GEN-END:variables
