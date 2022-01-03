@@ -96,7 +96,7 @@ public class TaBortAlien extends javax.swing.JFrame {
         
         catch(InfException undantag)
                     {
-                    JOptionPane.showMessageDialog(null, "");
+                    JOptionPane.showMessageDialog(null, "Error");
                     }
     }//GEN-LAST:event_ButtonTaBortActionPerformed
 
@@ -104,7 +104,7 @@ public class TaBortAlien extends javax.swing.JFrame {
         try {
             ComboBoxVäljAlien.removeAllItems();
             ComboBoxVäljAlien.addItem("Välj");
-            String fraga = "select Namn from alien";
+            String fraga = "select Alien_ID from alien";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
         for(String värde : svar)

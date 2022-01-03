@@ -91,7 +91,7 @@ public class TaBortAgent extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
-            String query = "delete from agent where Agent_ID = '" + ComboBoxVäljAgentID.getSelectedItem() + "'";
+            String query = "delete from agent where Agent_ID = '" + ComboBoxVäljAgentID.getSelectedItem().toString() + "'";
             idb.delete(query);
         }
         
