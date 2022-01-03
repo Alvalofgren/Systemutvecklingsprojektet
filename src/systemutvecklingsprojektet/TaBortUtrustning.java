@@ -101,13 +101,23 @@ public class TaBortUtrustning extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
-            String query = "delete from Utrustning where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
-            idb.delete(query);
+            String kommunikation = "delete from Kommunikation where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            idb.delete(kommunikation);
+            String vapen = "delete from Vapen where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem(); 
+            idb.delete(vapen);
+            String teknik = "delete from Teknik where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            idb.delete(teknik);
+            String innehar = "delete from innehar_utrustning where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            idb.delete(innehar);
+            String utrustning = "delete from Utrustning where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            idb.delete(utrustning);
+            
         }
         
         catch(InfException undantag)
                     {
                     JOptionPane.showMessageDialog(null, "Error");
+                    System.out.println("Error" + undantag.getMessage());
                     }
     }//GEN-LAST:event_ButtonTaBortActionPerformed
 
