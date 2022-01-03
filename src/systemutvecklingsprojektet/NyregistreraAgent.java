@@ -59,11 +59,6 @@ public class NyregistreraAgent extends javax.swing.JFrame {
 
         TextrutaAgentID.setColumns(9);
         TextrutaAgentID.setActionCommand("<Not Set>");
-        TextrutaAgentID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextrutaAgentIDActionPerformed(evt);
-            }
-        });
 
         TextRutaTelefon.setColumns(9);
 
@@ -180,12 +175,9 @@ public class NyregistreraAgent extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TextrutaAgentIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextrutaAgentIDActionPerformed
-         
-    }//GEN-LAST:event_TextrutaAgentIDActionPerformed
-
     private void KnappFörRegistreringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappFörRegistreringActionPerformed
-        // TODO add your handling code here:
+        
+      
     }//GEN-LAST:event_KnappFörRegistreringActionPerformed
 
     /**

@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
+import oru.inf.InfException;
 /**
  *
  * @author Julius
@@ -163,9 +165,22 @@ public class NyregistreraAlien extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
-        // TODO add your handling code here:
+        try
+        {
+            if(TextrutaAlienID.getText().equals()){
+                
+            }
+            else if(Validering.harHeltal(TextrutaAlienID)){
+            String query = "INSERT INTO Alien(Alien_ID) VALUES" + "('" + TextrutaAlienID.getText()+ "')";
+            idb.insert(query); 
+            }
+        
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
-
+        catch(InfException undantag)
+        {
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+        }
     /**
      * @param args the command line arguments
      */

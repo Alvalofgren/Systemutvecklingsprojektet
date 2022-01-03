@@ -161,9 +161,6 @@
         <Property name="columns" type="int" value="9"/>
         <Property name="actionCommand" type="java.lang.String" value="&lt;Not Set&gt;"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextrutaAgentIDActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TextRutaNamn">
     </Component>

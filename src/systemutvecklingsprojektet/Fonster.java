@@ -29,7 +29,6 @@ public class Fonster extends javax.swing.JFrame {
         RubrikForFonster = new javax.swing.JLabel();
         ButtonAgent = new javax.swing.JButton();
         ButtonAlien = new javax.swing.JButton();
-        ButtonAdministratör = new javax.swing.JButton();
         LabelLoggaIn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,13 +50,6 @@ public class Fonster extends javax.swing.JFrame {
             }
         });
 
-        ButtonAdministratör.setText("Administratör");
-        ButtonAdministratör.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonAdministratörActionPerformed(evt);
-            }
-        });
-
         LabelLoggaIn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         LabelLoggaIn.setText("Logga in");
 
@@ -72,7 +64,6 @@ public class Fonster extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(ButtonAgent, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
                             .addComponent(ButtonAlien, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-                            .addComponent(ButtonAdministratör, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
                             .addComponent(RubrikForFonster, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(214, 214, 214)
@@ -86,18 +77,15 @@ public class Fonster extends javax.swing.JFrame {
                 .addComponent(RubrikForFonster, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LabelLoggaIn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(50, 50, 50)
                 .addComponent(ButtonAgent, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(ButtonAlien, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(ButtonAdministratör, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                .addGap(50, 50, 50))
+                .addGap(99, 99, 99))
         );
 
         ButtonAgent.getAccessibleContext().setAccessibleName("");
         ButtonAlien.getAccessibleContext().setAccessibleName("");
-        ButtonAdministratör.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -105,10 +93,6 @@ public class Fonster extends javax.swing.JFrame {
     private void ButtonAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgentActionPerformed
          new AgentInlogg(idb).setVisible(true);
     }//GEN-LAST:event_ButtonAgentActionPerformed
-
-    private void ButtonAdministratörActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAdministratörActionPerformed
-        new AdministratorsInlogg(idb).setVisible(true);
-    }//GEN-LAST:event_ButtonAdministratörActionPerformed
 
     private void ButtonAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAlienActionPerformed
         new AlienInlogg(idb).setVisible(true);
@@ -120,7 +104,6 @@ public class Fonster extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonAdministratör;
     private javax.swing.JButton ButtonAgent;
     private javax.swing.JButton ButtonAlien;
     private javax.swing.JLabel LabelLoggaIn;
