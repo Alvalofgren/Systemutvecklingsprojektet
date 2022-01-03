@@ -123,7 +123,7 @@ public class TaBortAlien extends javax.swing.JFrame {
             new HejAdministrator(idb).setVisible(true);
             dispose();
         } else {
-            new AgentInlogg(idb).setVisible(true);
+            new HejAdministrator(idb).setVisible(true);
             dispose();
           }
     
