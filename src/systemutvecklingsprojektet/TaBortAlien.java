@@ -15,6 +15,7 @@ import oru.inf.InfException;
 public class TaBortAlien extends javax.swing.JFrame {
 
     private InfDB idb;
+    private static boolean arAdmin;
     /**
      * Creates new form TaBortAlien
      */
@@ -118,13 +119,13 @@ public class TaBortAlien extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonTaBortActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-          if (AgentInlogg.arAdmin()) {
+          if (HejAdministrator.arAdmin()) {
             new HejAdministrator(idb).setVisible(true);
             dispose();
         } else {
             new AgentInlogg(idb).setVisible(true);
             dispose();
-        }
+          }
     
                                            
     }//GEN-LAST:event_jButton1ActionPerformed
