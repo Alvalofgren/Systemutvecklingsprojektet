@@ -19,8 +19,43 @@ public class NyregistreraAlien extends javax.swing.JFrame {
     public NyregistreraAlien(InfDB idb) {
         initComponents();
         this.idb=idb;
+        fyllILista();
+        fyllIListaAgent();
     }
+    
+private void fyllILista(){
+    try {
+            ComboBoxPlats.removeAllItems();
+            ComboBoxPlats.addItem("Välj");
+            String fraga = "select plats_id from plats";
+            ArrayList<String> svar = idb.fetchColumn(fraga);
+        
+        for(String värde : svar)
+        {
+            ComboBoxPlats.addItem(värde);
+        }
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+}
 
+private void fyllIListaAgent(){
+     try {
+            ComboBoxAnsvarigAgent.removeAllItems();
+            ComboBoxAnsvarigAgent.addItem("Välj");
+            String fraga = "select agent_id from agent";
+            ArrayList<String> svar = idb.fetchColumn(fraga);
+        
+        for(String värde : svar)
+        {
+            ComboBoxAnsvarigAgent.addItem(värde);
+        }
+        }
+        catch (InfException e){
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,8 +72,6 @@ public class NyregistreraAlien extends javax.swing.JFrame {
         TextRutaLösenordAlien = new javax.swing.JTextField();
         TextRutaNamnAlien = new javax.swing.JTextField();
         TextRutaTelefonAlien = new javax.swing.JTextField();
-        TextRutaPlats = new javax.swing.JTextField();
-        TextRutaAnsvarigAgent = new javax.swing.JTextField();
         UnderRubrikAlienID = new javax.swing.JLabel();
         UnderRubrikRegistreringsdatum = new javax.swing.JLabel();
         UnderRubrikLösenordFörAlien = new javax.swing.JLabel();
@@ -47,6 +80,8 @@ public class NyregistreraAlien extends javax.swing.JFrame {
         UnderRubrikPlats = new javax.swing.JLabel();
         UnderRubrikAnsvarigAgent = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        ComboBoxPlats = new javax.swing.JComboBox<>();
+        ComboBoxAnsvarigAgent = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,6 +124,10 @@ public class NyregistreraAlien extends javax.swing.JFrame {
             }
         });
 
+        ComboBoxPlats.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        ComboBoxAnsvarigAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,7 +143,6 @@ public class NyregistreraAlien extends javax.swing.JFrame {
                             .addComponent(TextRutaRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextRutaPlats, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(TextRutaTelefonAlien, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(UnderRubrikTelefonFörAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(UnderRubrikPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -116,11 +154,14 @@ public class NyregistreraAlien extends javax.swing.JFrame {
                             .addComponent(TextRutaNamnAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextRutaAnsvarigAgent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(RegistreringKnappAlien)
-                                .addGap(12, 12, 12))
-                            .addComponent(UnderRubrikAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(UnderRubrikAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComboBoxAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RegistreringKnappAlien))
+                        .addGap(12, 12, 12))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(ComboBoxPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(25, 25, 25)))
                 .addGap(69, 69, 69))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -153,35 +194,36 @@ public class NyregistreraAlien extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(UnderRubrikRegistreringsdatum)
                         .addComponent(UnderRubrikPlats)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TextRutaPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TextRutaRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TextRutaRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UnderRubrikAnsvarigAgent)
                     .addComponent(UnderRubrikLösenordFörAlien))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TextRutaAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TextRutaLösenordAlien, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TextRutaLösenordAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
                         .addComponent(UnderRubrikNamnFörAlien)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TextRutaNamnAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                        .addGap(14, 14, 14)
+                        .addComponent(ComboBoxAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(RegistreringKnappAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
+
         try{
-            if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien) && Validering.kontrollTextFältVärde(TextRutaPlats) && Validering.kontrollTextFältVärde(TextRutaAnsvarigAgent)){
+            if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien)){
             String fråga = "select Alien_ID from alien";
                 ArrayList<String> svar = idb.fetchColumn(fråga);
 
@@ -196,9 +238,18 @@ public class NyregistreraAlien extends javax.swing.JFrame {
 
                             for (String namn : resultat) 
                             {
-                                if (TextRutaNamnAlien.getText().equals(namn)) 
+                                if (!TextRutaNamnAlien.getText().equals(namn)) 
                                 {
-
+                                    if(Validering.isValidMobileNo(TextRutaTelefonAlien.getText())){
+                                        String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
+                                        + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + TextRutaRegistreringsdatum.getText()+ "','" 
+                                        + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + ComboBoxPlats.getSelectedItem()+ "','" + ComboBoxAnsvarigAgent.getSelectedItem()+ "')";
+                                        idb.insert(query);
+                                    }
+                                    else 
+                                    {
+                                        JOptionPane.showMessageDialog(null, "Ange ett korrekt telefonnummer!");
+                                    }
                                 } 
                                 else 
                                 {
@@ -218,10 +269,6 @@ public class NyregistreraAlien extends javax.swing.JFrame {
 
                     }
                 }
-                String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
-                    + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + TextRutaRegistreringsdatum.getText()+ "','" 
-                    + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + TextRutaPlats.getText()+ "','" + TextRutaAnsvarigAgent.getText()+ "')";
-            idb.insert(query);
             }      
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
         catch(InfException undantag)
@@ -245,13 +292,13 @@ public class NyregistreraAlien extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ComboBoxAnsvarigAgent;
+    private javax.swing.JComboBox<String> ComboBoxPlats;
     private javax.swing.JButton RegistreringKnappAlien;
     private javax.swing.JLabel RubrikNyregistreraAlien;
     private javax.swing.JTextField TextRutaAlienID;
-    private javax.swing.JTextField TextRutaAnsvarigAgent;
     private javax.swing.JTextField TextRutaLösenordAlien;
     private javax.swing.JTextField TextRutaNamnAlien;
-    private javax.swing.JTextField TextRutaPlats;
     private javax.swing.JTextField TextRutaRegistreringsdatum;
     private javax.swing.JTextField TextRutaTelefonAlien;
     private javax.swing.JLabel UnderRubrikAlienID;

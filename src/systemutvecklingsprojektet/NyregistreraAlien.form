@@ -35,7 +35,6 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="TextRutaPlats" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
                           <Component id="TextRutaTelefonAlien" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
                           <Component id="UnderRubrikTelefonFörAlien" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
                           <Component id="UnderRubrikPlats" min="-2" pref="37" max="-2" attributes="0"/>
@@ -50,13 +49,16 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="TextRutaAnsvarigAgent" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="RegistreringKnappAlien" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          </Group>
                           <Component id="UnderRubrikAnsvarigAgent" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="ComboBoxAnsvarigAgent" min="-2" max="-2" attributes="0"/>
+                          <Component id="RegistreringKnappAlien" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="ComboBoxPlats" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
@@ -102,33 +104,32 @@
                       <Component id="UnderRubrikPlats" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TextRutaPlats" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextRutaRegistreringsdatum" alignment="0" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="TextRutaRegistreringsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ComboBoxPlats" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="UnderRubrikAnsvarigAgent" min="-2" max="-2" attributes="0"/>
                   <Component id="UnderRubrikLösenordFörAlien" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TextRutaAnsvarigAgent" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextRutaLösenordAlien" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="TextRutaLösenordAlien" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="UnderRubrikNamnFörAlien" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="TextRutaNamnAlien" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="ComboBoxAnsvarigAgent" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="RegistreringKnappAlien" min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="46" max="32767" attributes="0"/>
+              <EmptySpace pref="44" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -172,10 +173,6 @@
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextRutaPlats">
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextRutaAnsvarigAgent">
-    </Component>
     <Component class="javax.swing.JLabel" name="UnderRubrikAlienID">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alien-ID"/>
@@ -218,6 +215,36 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="ComboBoxPlats">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="ComboBoxAnsvarigAgent">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

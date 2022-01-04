@@ -7,6 +7,8 @@ package systemutvecklingsprojektet;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import oru.inf.InfException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 /**
  *
 
@@ -26,8 +28,16 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
         }
         return tom;
     }
-  
-      
+
+public static boolean isValidMobileNo(String str)  
+{  
+    Pattern ptrn = Pattern.compile("(0/91)?[7-9][0-9]{9}"); 
+    
+    Matcher match = ptrn.matcher(str); 
+    
+    return (match.find() && match.group().equals(str)); 
+}    
+
  public static boolean harHeltal(JTextField aktuellRuta)
            {
                boolean resultat = true;
