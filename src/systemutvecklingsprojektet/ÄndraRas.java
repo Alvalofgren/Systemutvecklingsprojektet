@@ -75,7 +75,6 @@ public class ÄndraRas extends javax.swing.JFrame {
         LabelRasenHarÄndrats = new javax.swing.JLabel();
         LabelNuvarandeRas = new javax.swing.JLabel();
         ComboBoxVäljNuvarandeRas = new javax.swing.JComboBox<>();
-        tillbaka = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,13 +102,6 @@ public class ÄndraRas extends javax.swing.JFrame {
         LabelNuvarandeRas.setText("Nuvarande ras:");
 
         ComboBoxVäljNuvarandeRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        tillbaka.setText("jButton1");
-        tillbaka.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tillbakaActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,8 +135,6 @@ public class ÄndraRas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(119, 119, 119)
                 .addComponent(ButtonÄndra)
-                .addGap(18, 18, 18)
-                .addComponent(tillbaka)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -170,9 +160,7 @@ public class ÄndraRas extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addComponent(LabelRasenHarÄndrats)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonÄndra)
-                    .addComponent(tillbaka))
+                .addComponent(ButtonÄndra)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -213,11 +201,6 @@ public class ÄndraRas extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Error");
        }
     }//GEN-LAST:event_ButtonÄndraActionPerformed
-
-    private void tillbakaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tillbakaActionPerformed
-     
-    
-    }//GEN-LAST:event_tillbakaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,6 +247,5 @@ public class ÄndraRas extends javax.swing.JFrame {
     private javax.swing.JLabel LabelRubrik;
     private javax.swing.JLabel LabelVäljAlien;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton tillbaka;
     // End of variables declaration//GEN-END:variables
 }
