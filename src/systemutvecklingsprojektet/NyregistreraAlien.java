@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
@@ -179,17 +180,56 @@ public class NyregistreraAlien extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
-        try
-        {
+        try{
             if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien) && Validering.kontrollTextFältVärde(TextRutaPlats) && Validering.kontrollTextFältVärde(TextRutaAnsvarigAgent)){
-            
+            String fråga = "select Alien_ID from alien";
+                ArrayList<String> svar = idb.fetchColumn(fråga);
+
+                for (String värde : svar) 
+                {
+                    if (!TextRutaAlienID.getText().equals(värde)) 
+                    {
+                        if (Validering.harHeltal(TextRutaAlienID)) 
+                        {
+                            String fraga = "select namn from alien";
+                            ArrayList<String> resultat = idb.fetchColumn(fraga);
+
+                            for (String namn : resultat) 
+                            {
+                                if (TextRutaNamnAlien.getText().equals(namn)) 
+                                {
+
+                                } 
+                                else 
+                                {
+                                    JOptionPane.showMessageDialog(null, "Aliennamnet finns redan!");
+                                }
+
+                            }
+                        } 
+                        else 
+                        {
+                            JOptionPane.showMessageDialog(null, "Alien-ID måste vara ett heltal!");
+                        }
+                    } 
+                    else 
+                    {
+                        JOptionPane.showMessageDialog(null, "Alien-ID finns redan!");
+
+                    }
+                }
                 String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
                     + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + TextRutaRegistreringsdatum.getText()+ "','" 
                     + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + TextRutaPlats.getText()+ "','" + TextRutaAnsvarigAgent.getText()+ "')";
             idb.insert(query);
-            }
+            }      
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
-
+        catch(InfException undantag)
+        {
+            JOptionPane.showMessageDialog(null, "Error");
+            System.out.println("Error" + undantag.getMessage());
+        }
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          if (HejAdministrator.getAdminStatus() == true) {
             new NyregistreraAlien(idb).setVisible(true);
@@ -202,13 +242,7 @@ public class NyregistreraAlien extends javax.swing.JFrame {
                                            
                                   
     }//GEN-LAST:event_jButton1ActionPerformed
-        catch(InfException undantag)
-        {
-            JOptionPane.showMessageDialog(null, "Error");
-            System.out.println("Error" + undantag.getMessage());
-        }
-        
-    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton RegistreringKnappAlien;

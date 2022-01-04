@@ -196,6 +196,12 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                     + TextRutaTelefon.getText()+ "','" + TextRutaAnställningsdatum.getText()+ "','" + TextRutaAdministratör.getText()+ "','" + TextRutaLösenord.getText()+ "','" + TextRutaOmråde.getText()+ "')";
             idb.insert(query);
     }//GEN-LAST:event_KnappFörRegistreringActionPerformed
+catch (InfException undantag)
+        {
+            JOptionPane.showMessageDialog(null, "Error");
+            System.out.println("Error" + undantag.getMessage());
+        }
+    }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          if (HejAdministrator.getAdminStatus() == true) {
@@ -205,16 +211,9 @@ public class NyregistreraAgent extends javax.swing.JFrame {
             new HejAdministrator(idb).setVisible(true);
             dispose();
           }
-    
-                                           
-    }                              
+                                 
     }//GEN-LAST:event_jButton1ActionPerformed
-catch (InfException undantag)
-        {
-            JOptionPane.showMessageDialog(null, "Error");
-            System.out.println("Error" + undantag.getMessage());
-        }
-    }
+
     /**
      * @param args the command line arguments
      */
