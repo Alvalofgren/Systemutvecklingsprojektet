@@ -180,7 +180,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
       try
       {
       String query = "INSERT INTO Agent(Agent_ID, Namn, Telefon, Anstallningsdatum, Administrator, Losenord, Omrade) "
-                    + "VALUES" + "('"+ TextrutaAgentID.getText()+ "','" + TextRutaNamn.getText()+ "'.'" 
+                    + "VALUES" + "('"+ TextrutaAgentID.getText()+ "','" + TextRutaNamn.getText()+ "','" 
                     + TextRutaTelefon.getText()+ "','" + TextrutaAnställningsdatum.getText()+ "','" + TextrutaAdministratör.getText()+ "','" + TextrutaLösenord.getText()+ "','" + TextrutaOmråde.getText()+ "')";
             idb.insert(query);
     }//GEN-LAST:event_KnappFörRegistreringActionPerformed

@@ -168,7 +168,7 @@ public class NyregistreraAlien extends javax.swing.JFrame {
         try
         {
             String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
-                    + "VALUES" + "('"+ TextrutaAlienID.getText()+ "','" + TextrutaRegistreringsdatum.getText()+ "'.'" 
+                    + "VALUES" + "('"+ TextrutaAlienID.getText()+ "','" + TextrutaRegistreringsdatum.getText()+ "','" 
                     + TextrutaLösenordAlien.getText()+ "','" + TextrutaNamnAlien.getText()+ "','" + TextrutaTelefonAlien.getText()+ "','" + TextrutaPlats.getText()+ "','" + TextrutaAnsvarigAgent.getText()+ "')";
             idb.insert(query);
         
