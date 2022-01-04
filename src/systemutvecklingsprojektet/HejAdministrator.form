@@ -30,8 +30,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="KnappNyregistreraAlien" min="-2" pref="192" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="UnderRubrikUtrustning" min="-2" pref="70" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                           <Component id="ButtonÄndraRas" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
@@ -39,13 +38,16 @@
                       <EmptySpace min="0" pref="530" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="UnderRubrikAlien" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
-                          <Component id="KnappÄndraInfoOmAlien" alignment="1" pref="192" max="32767" attributes="0"/>
-                          <Component id="KnappTaBortAlien" alignment="1" max="32767" attributes="0"/>
-                          <Component id="KnappTaBortUtrustning" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="UnderRubrikAlien" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                              <Component id="KnappÄndraInfoOmAlien" alignment="1" pref="192" max="32767" attributes="0"/>
+                              <Component id="KnappTaBortAlien" alignment="1" max="32767" attributes="0"/>
+                              <Component id="KnappTaBortUtrustning" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="UnderRubrikUtrustning" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="KnappNyregistreraAgent" alignment="0" max="32767" attributes="0"/>
                           <Component id="KnappSökaInfoAgent" alignment="0" max="32767" attributes="0"/>
@@ -123,13 +125,16 @@
                   </Group>
                   <Component id="ButtonÄndraRas" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="KnappTaBortAgent" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="UnderRubrikUtrustning" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="KnappTaBortUtrustning" min="-2" pref="44" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Component id="KnappTaBortAgent" min="-2" pref="56" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="70" max="32767" attributes="0"/>
