@@ -226,21 +226,28 @@ private void fyllIListaAgent(){
             if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien)){
             String fråga = "select Alien_ID from alien";
                 ArrayList<String> svar = idb.fetchColumn(fråga);
-
-                for (String värde : svar) 
+                int i = 0;
+               
+                while (i>=0 && i<svar.size())
+                   
                 {
-                    if (!TextRutaAlienID.getText().equals(värde)) 
+                    if(svar.contains(TextRutaAlienID.getText()))
                     {
-                        if (Validering.harHeltal(TextRutaAlienID)) 
+                        JOptionPane.showMessageDialog(null, "Alien-ID finns redan!");
+                    
+                    }
+                    else
+                    {    
+                    if (Validering.harHeltal(TextRutaAlienID)) 
                         {
                             String fraga = "select namn from alien";
                             ArrayList<String> resultat = idb.fetchColumn(fraga);
 
                             for (String namn : resultat) 
                             {
-                                if (!TextRutaNamnAlien.getText().equals(namn)) 
+                                if (!TextRutaNamnAlien.getText().equals(namn))
+                                    
                                 {
-//                                    if(Validering.isValidMobileNo(TextRutaTelefonAlien.getText())){
                                         if(!TextRutaTelefonAlien.getText().matches("[a-zA-Z]") && TextRutaTelefonAlien.getText().matches("[0-9]") || TextRutaTelefonAlien.getText().contains("-"))
                                                 
                                         {
@@ -261,18 +268,17 @@ private void fyllIListaAgent(){
 
                             }
                         } 
-                        else 
-                        {
-                            JOptionPane.showMessageDialog(null, "Alien-ID måste vara ett heltal!");
-                        }
-                    } 
-                    else 
-                    {
-                        JOptionPane.showMessageDialog(null, "Alien-ID finns redan!");
-
                     }
+//                        else 
+//                        {
+//                            JOptionPane.showMessageDialog(null, "Alien-ID måste vara ett heltal!");
+//                        }
+
+                    } i++;
                 }
-            }      
+                
+                
+               
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
         catch(InfException undantag)
         {
@@ -292,7 +298,6 @@ private void fyllIListaAgent(){
                                            
                                   
     }//GEN-LAST:event_jButton1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboBoxAnsvarigAgent;
