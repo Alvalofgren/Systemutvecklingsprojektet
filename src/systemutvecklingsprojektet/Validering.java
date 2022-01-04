@@ -73,7 +73,7 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
            }
        else 
                 {
-                    JOptionPane.showMessageDialog(null, "Rutorna matchar inte");              
+                    JOptionPane.showMessageDialog(null, "Textfälten matchar inte");              
                 }
        return matchar;
        

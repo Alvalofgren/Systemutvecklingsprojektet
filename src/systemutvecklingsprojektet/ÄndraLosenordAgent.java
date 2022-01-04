@@ -129,9 +129,6 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
             LabelLösenHarÄndrats.setVisible(true);
     
          }
-        else{
-            JOptionPane.showMessageDialog(null, "Lösenorden matchar inte");
-        }
        }
        catch(InfException undantag)
        {
