@@ -44,7 +44,6 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         ComboBoxVäljOmråde = new javax.swing.JComboBox<>();
         ButtonÄndra = new javax.swing.JButton();
         LabelOmrådeChefHarÄndrats = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,13 +68,6 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         LabelOmrådeChefHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         LabelOmrådeChefHarÄndrats.setText("Områdeschefen har ändrats!");
 
-        jButton1.setText("<--Tillbaka");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,9 +85,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(91, 91, 91)
                         .addComponent(RubrikÄndraOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(159, 159, 159)
@@ -108,13 +98,8 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(RubrikÄndraOmrådeschef))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1)))
+                .addGap(22, 22, 22)
+                .addComponent(RubrikÄndraOmrådeschef)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelVäljAgentID)
@@ -147,20 +132,6 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "FEEEEEEEEL");
        }
     }//GEN-LAST:event_ButtonÄndraActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (HejAdministrator.getAdminStatus() == true) {
-            new ÄndraOmrådeschef(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAdministrator(idb).setVisible(true);
-            dispose();
-          }
-    
-                                           
-                                 
-                                            
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,6 +210,5 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTillOmråde;
     private javax.swing.JLabel LabelVäljAgentID;
     private javax.swing.JLabel RubrikÄndraOmrådeschef;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

@@ -37,7 +37,6 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
         TextFieldBenamning = new javax.swing.JTextField();
         ButtonRegistrera = new javax.swing.JButton();
         LabelUtrustningRegistrerats = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,13 +56,6 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
 
         LabelUtrustningRegistrerats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         LabelUtrustningRegistrerats.setText("Utrustningen har registrerats!");
-
-        jButton1.setText("<--Tillbaka");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,10 +80,7 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
                         .addComponent(LabelRegistreraUtrustning))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(111, 111, 111)
-                        .addComponent(LabelUtrustningRegistrerats))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1)))
+                        .addComponent(LabelUtrustningRegistrerats)))
                 .addContainerGap(88, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -99,9 +88,7 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1)
-                        .addGap(17, 17, 17)
+                        .addGap(45, 45, 45)
                         .addComponent(LabelRegistreraUtrustning)
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -130,28 +117,13 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
             LabelUtrustningRegistrerats.setVisible(true);
             
     }//GEN-LAST:event_ButtonRegistreraActionPerformed
- catch (InfException undantag)
+        
+        catch (InfException undantag)
         {
             JOptionPane.showMessageDialog(null, "Error");
             System.out.println("Error" + undantag.getMessage());
         }
     }
-    
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (HejAgent.getAdminStatus() == true) {
-            new RegistreraUtrustning(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAgent(idb).setVisible(true);
-            dispose();
-          }
-    
-                                           
-                                 
-                                          
-    
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -195,6 +167,5 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
     private javax.swing.JLabel LabelUtrustningsID;
     private javax.swing.JTextField TextFieldBenamning;
     private javax.swing.JTextField TextFieldUtrustningsID;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,7 +13,7 @@ public class AgentInlogg extends javax.swing.JFrame {
     private InfDB idb;
    
     private static String agentNamn;
-    
+    private static boolean arAdmin;
    
     
     /**

@@ -76,7 +76,6 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
         ComboBoxVäljKontor = new javax.swing.JComboBox<>();
         ButtonÄndra = new javax.swing.JButton();
         LabelKontorChefÄndrats = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,13 +105,6 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
         LabelKontorChefÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         LabelKontorChefÄndrats.setText("Kontorschef har ändrats!");
 
-        jButton1.setText("<--Tillbaka");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -139,18 +131,13 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
                             .addGap(15, 15, 15)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(112, 112, 112)
-                        .addComponent(LabelKontorChefÄndrats))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1)))
+                        .addComponent(LabelKontorChefÄndrats)))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(28, 28, 28)
                 .addComponent(RubrikÄndraKontorschef)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -164,7 +151,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
                 .addComponent(ButtonÄndra)
                 .addGap(18, 18, 18)
                 .addComponent(LabelKontorChefÄndrats)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -188,20 +175,6 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "FEEEEEEEEL");
        }
     }//GEN-LAST:event_ButtonÄndraActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (HejAdministrator.getAdminStatus() == true) {
-            new ÄndraKontorschef(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAdministrator(idb).setVisible(true);
-            dispose();
-          }
-    
-                                           
-                                 
-                                            
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,6 +219,5 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTillKontor;
     private javax.swing.JLabel LabelVäljAgent;
     private javax.swing.JLabel RubrikÄndraKontorschef;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

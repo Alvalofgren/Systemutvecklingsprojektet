@@ -13,7 +13,6 @@ public class HejAdministrator extends javax.swing.JFrame {
     private static InfDB idb;
     private static String agentNamn;
     private static boolean arAdmin;
-    
    
     /**
      * Creates new form HejAdministrator
@@ -29,9 +28,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }
     
    
-public static boolean getAdminStatus() {
-    return arAdmin;
-}
+
     
    
     

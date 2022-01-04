@@ -50,7 +50,6 @@ public class TaBortUtrustning extends javax.swing.JFrame {
         ComboBoxVäljUtrustning = new javax.swing.JComboBox<>();
         ButtonTaBort = new javax.swing.JButton();
         LabelUtrustningBorttagen = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,21 +70,12 @@ public class TaBortUtrustning extends javax.swing.JFrame {
         LabelUtrustningBorttagen.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         LabelUtrustningBorttagen.setText("Utrustningen är borttagen!");
 
-        jButton1.setText("<--Tillbaka");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addContainerGap(108, Short.MAX_VALUE)
                 .addComponent(RubrikTaBortUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(104, 104, 104))
             .addGroup(layout.createSequentialGroup()
@@ -105,13 +95,8 @@ public class TaBortUtrustning extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(RubrikTaBortUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1)))
+                .addGap(18, 18, 18)
+                .addComponent(RubrikTaBortUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelVäljUtrustning)
@@ -149,19 +134,6 @@ public class TaBortUtrustning extends javax.swing.JFrame {
                     System.out.println("Error" + undantag.getMessage());
                     }
     }//GEN-LAST:event_ButtonTaBortActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (HejAdministrator.getAdminStatus() == true) {
-            new TaBortUtrustning(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAdministrator(idb).setVisible(true);
-            dispose();
-          }
-    
-                                           
-                                  
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,6 +176,5 @@ public class TaBortUtrustning extends javax.swing.JFrame {
     private javax.swing.JLabel LabelUtrustningBorttagen;
     private javax.swing.JLabel LabelVäljUtrustning;
     private javax.swing.JLabel RubrikTaBortUtrustning;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

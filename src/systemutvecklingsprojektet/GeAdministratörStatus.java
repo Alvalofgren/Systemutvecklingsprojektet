@@ -58,7 +58,6 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         RubrikGeAdministratörstatus = new javax.swing.JLabel();
         ButtonOK = new javax.swing.JButton();
         LabelGodkänd = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,13 +78,6 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         LabelGodkänd.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         LabelGodkänd.setText("Agenten har blivit administratör!");
 
-        jButton1.setText("<--Tillbaka");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -105,17 +97,11 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LabelGodkänd, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addGap(49, 49, 49)
                 .addComponent(RubrikGeAdministratörstatus)
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -142,19 +128,6 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ButtonOKActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (HejAdministrator.getAdminStatus() == true) {
-            new GeAdministratörStatus(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAdministrator(idb).setVisible(true);
-            dispose();
-          }
-    
-                                           
-                                 
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     
     
     
@@ -168,6 +141,5 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
     private javax.swing.JLabel LabelGodkänd;
     private javax.swing.JLabel LabelVäljAgent;
     private javax.swing.JLabel RubrikGeAdministratörstatus;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
