@@ -240,7 +240,10 @@ private void fyllIListaAgent(){
                             {
                                 if (!TextRutaNamnAlien.getText().equals(namn)) 
                                 {
-                                    if(TextRutaTelefonAlien.getText()){
+//                                    if(Validering.isValidMobileNo(TextRutaTelefonAlien.getText())){
+                                        if(!TextRutaTelefonAlien.getText().matches("[a-zA-Z]") && TextRutaTelefonAlien.getText().matches("[0-9]") || TextRutaTelefonAlien.getText().contains("-"))
+                                                
+                                        {
                                         String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
                                         + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + TextRutaRegistreringsdatum.getText()+ "','" 
                                         + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + ComboBoxPlats.getSelectedItem()+ "','" + ComboBoxAnsvarigAgent.getSelectedItem()+ "')";
@@ -278,13 +281,13 @@ private void fyllIListaAgent(){
         }
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//         if (HejAdministrator.getAdminStatus() == true) {
-//            new NyregistreraAlien(idb).setVisible(true);
-//            dispose();
-//        } else {
-//            new HejAdministrator(idb).setVisible(true);
-//            dispose();
-//          }
+         if (HejAdministrator.getAdminStatus() == true) {
+            new NyregistreraAlien(idb).setVisible(true);
+            dispose();
+        } else {
+            new HejAdministrator(idb).setVisible(true);
+            dispose();
+          }
     
                                            
                                   
