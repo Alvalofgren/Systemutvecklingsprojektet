@@ -39,6 +39,7 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
         PasswordFieldNyttLösen = new javax.swing.JPasswordField();
         PasswordFieldBekräftaLösen = new javax.swing.JPasswordField();
         LabelLösenHarÄndrats = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +66,13 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
         LabelLösenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         LabelLösenHarÄndrats.setText("Lösenordet har ändrats!");
 
+        jButton1.setText("<--Tillbaka");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -80,9 +88,11 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
                             .addComponent(PasswordFieldBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PasswordFieldNyttLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(102, 102, 102)
+                        .addContainerGap()
+                        .addComponent(jButton1)
+                        .addGap(21, 21, 21)
                         .addComponent(RubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,8 +109,13 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(RubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(RubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1)))
                 .addGap(18, 18, 18)
                 .addComponent(LabelNyttLösenord)
                 .addGap(8, 8, 8)
@@ -139,6 +154,16 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
     private void PasswordFieldBekräftaLösenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldBekräftaLösenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordFieldBekräftaLösenActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+          if (HejAdministrator.getAdminStatus() == true) {
+            new ÄndraLösenordAlien(idb).setVisible(true);
+            dispose();
+        } else {
+            new HejAdministrator(idb).setVisible(true);
+            dispose();
+          }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,5 +208,6 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
     private javax.swing.JPasswordField PasswordFieldBekräftaLösen;
     private javax.swing.JPasswordField PasswordFieldNyttLösen;
     private javax.swing.JLabel RubrikÄndraLösenord;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
