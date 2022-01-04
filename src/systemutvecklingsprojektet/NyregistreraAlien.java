@@ -240,7 +240,7 @@ private void fyllIListaAgent(){
                             {
                                 if (!TextRutaNamnAlien.getText().equals(namn)) 
                                 {
-                                    if(Validering.isValidMobileNo(TextRutaTelefonAlien.getText())){
+                                    if(TextRutaTelefonAlien.getText()){
                                         String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
                                         + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + TextRutaRegistreringsdatum.getText()+ "','" 
                                         + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + ComboBoxPlats.getSelectedItem()+ "','" + ComboBoxAnsvarigAgent.getSelectedItem()+ "')";
