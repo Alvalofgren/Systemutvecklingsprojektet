@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -28,14 +28,21 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="UnderRubrikAlienID" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="TextRutaAlienID" min="-2" pref="142" max="-2" attributes="0"/>
-                                  <Component id="UnderRubrikRegistreringsdatum" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
-                                  <Component id="TextRutaRegistreringsdatum" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="UnderRubrikAlienID" min="-2" pref="53" max="-2" attributes="0"/>
+                                          <Component id="TextRutaAlienID" min="-2" pref="142" max="-2" attributes="0"/>
+                                          <Component id="UnderRubrikRegistreringsdatum" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="TextRutaRegistreringsdatum" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace pref="46" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="TextRutaPlats" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
                                   <Component id="TextRutaTelefonAlien" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
@@ -95,9 +102,9 @@
                       <Component id="UnderRubrikPlats" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TextRutaPlats" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextRutaRegistreringsdatum" alignment="0" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="TextRutaPlats" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextRutaRegistreringsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -144,11 +151,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TextRutaAlienID">
-      <Properties>
-        <Property name="columns" type="int" value="9"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextRutaRegistreringsdatum">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
@@ -202,6 +204,13 @@
     <Component class="javax.swing.JLabel" name="UnderRubrikAnsvarigAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ansvarig agent"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="TextRutaRegistreringsdatum">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format subtype="1" type="1"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

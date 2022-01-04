@@ -3,21 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
+
 /**
  *
  * @author Julius
  */
 public class NyregistreraAlien extends javax.swing.JFrame {
+
     private InfDB idb;
+
     /**
      * Creates new form NyRegistreraAlien
      */
     public NyregistreraAlien(InfDB idb) {
         initComponents();
-        this.idb=idb;
+        this.idb = idb;
     }
 
     /**
@@ -32,7 +37,6 @@ public class NyregistreraAlien extends javax.swing.JFrame {
         RubrikNyregistreraAlien = new javax.swing.JLabel();
         RegistreringKnappAlien = new javax.swing.JButton();
         TextRutaAlienID = new javax.swing.JTextField();
-        TextRutaRegistreringsdatum = new javax.swing.JTextField();
         TextRutaLösenordAlien = new javax.swing.JTextField();
         TextRutaNamnAlien = new javax.swing.JTextField();
         TextRutaTelefonAlien = new javax.swing.JTextField();
@@ -45,6 +49,7 @@ public class NyregistreraAlien extends javax.swing.JFrame {
         UnderRubrikTelefonFörAlien = new javax.swing.JLabel();
         UnderRubrikPlats = new javax.swing.JLabel();
         UnderRubrikAnsvarigAgent = new javax.swing.JLabel();
+        TextRutaRegistreringsdatum = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,8 +64,6 @@ public class NyregistreraAlien extends javax.swing.JFrame {
         });
 
         TextRutaAlienID.setColumns(9);
-
-        TextRutaRegistreringsdatum.setColumns(9);
 
         TextRutaNamnAlien.setColumns(9);
 
@@ -80,6 +83,8 @@ public class NyregistreraAlien extends javax.swing.JFrame {
 
         UnderRubrikAnsvarigAgent.setText("Ansvarig agent");
 
+        TextRutaRegistreringsdatum.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,11 +96,15 @@ public class NyregistreraAlien extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(UnderRubrikAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextRutaAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(UnderRubrikRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextRutaRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(UnderRubrikAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(TextRutaAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(UnderRubrikRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(TextRutaRegistreringsdatum)
+                                        .addGap(46, 46, 46)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TextRutaPlats, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(TextRutaTelefonAlien, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,7 +147,7 @@ public class NyregistreraAlien extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(UnderRubrikRegistreringsdatum)
                         .addComponent(UnderRubrikPlats)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TextRutaPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TextRutaRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -165,22 +174,58 @@ public class NyregistreraAlien extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
-        try
-        {
-            if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien) && Validering.kontrollTextFältVärde(TextRutaPlats) && Validering.kontrollTextFältVärde(TextRutaAnsvarigAgent)){
-            
+        try {
+            if (Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien) && Validering.kontrollTextFältVärde(TextRutaPlats) && Validering.kontrollTextFältVärde(TextRutaAnsvarigAgent)) {
+
+                String fråga = "select Alien_ID from alien";
+                ArrayList<String> svar = idb.fetchColumn(fråga);
+
+                for (String värde : svar) 
+                {
+                    if (!TextRutaAlienID.getText().equals(värde)) 
+                    {
+                        if (Validering.harHeltal(TextRutaAlienID)) 
+                        {
+                            String fraga = "select namn from alien";
+                            ArrayList<String> resultat = idb.fetchColumn(fraga);
+
+                            for (String namn : resultat) 
+                            {
+                                if (TextRutaNamnAlien.getText().equals(namn)) 
+                                {
+                                    
+                                } 
+                                else 
+                                {
+                                    JOptionPane.showMessageDialog(null, "Aliennamnet finns redan!");
+                                }
+
+                            }
+                        } 
+                        else 
+                        {
+                            JOptionPane.showMessageDialog(null, "Alien-ID måste vara ett heltal!");
+                        }
+                    } 
+                    else 
+                    {
+                        JOptionPane.showMessageDialog(null, "Alien-ID finns redan!");
+
+                    }
+                }
+
                 String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
-                    + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + TextRutaRegistreringsdatum.getText()+ "','" 
-                    + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + TextRutaPlats.getText()+ "','" + TextRutaAnsvarigAgent.getText()+ "')";
-            idb.insert(query);
+                        + "VALUES" + "('" + TextRutaAlienID.getText() + "','" + TextRutaRegistreringsdatum.getText() + "','"
+                        + TextRutaLösenordAlien.getText() + "','" + TextRutaNamnAlien.getText() + "','" + TextRutaTelefonAlien.getText() + "','" + TextRutaPlats.getText() + "','" + TextRutaAnsvarigAgent.getText() + "')";
+                idb.insert(query);
             }
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
-        catch(InfException undantag)
+        catch (InfException undantag) 
         {
             JOptionPane.showMessageDialog(null, "Error");
             System.out.println("Error" + undantag.getMessage());
         }
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -191,7 +236,7 @@ public class NyregistreraAlien extends javax.swing.JFrame {
     private javax.swing.JTextField TextRutaLösenordAlien;
     private javax.swing.JTextField TextRutaNamnAlien;
     private javax.swing.JTextField TextRutaPlats;
-    private javax.swing.JTextField TextRutaRegistreringsdatum;
+    private javax.swing.JFormattedTextField TextRutaRegistreringsdatum;
     private javax.swing.JTextField TextRutaTelefonAlien;
     private javax.swing.JLabel UnderRubrikAlienID;
     private javax.swing.JLabel UnderRubrikAnsvarigAgent;
