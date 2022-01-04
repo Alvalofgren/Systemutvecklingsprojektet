@@ -130,7 +130,13 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
             LabelUtrustningRegistrerats.setVisible(true);
             
     }//GEN-LAST:event_ButtonRegistreraActionPerformed
-
+ catch (InfException undantag)
+        {
+            JOptionPane.showMessageDialog(null, "Error");
+            System.out.println("Error" + undantag.getMessage());
+        }
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          if (HejAgent.getAdminStatus() == true) {
             new RegistreraUtrustning(idb).setVisible(true);
@@ -145,13 +151,7 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
                                           
     
     }//GEN-LAST:event_jButton1ActionPerformed
-        
-        catch (InfException undantag)
-        {
-            JOptionPane.showMessageDialog(null, "Error");
-            System.out.println("Error" + undantag.getMessage());
-        }
-    }
+
     /**
      * @param args the command line arguments
      */
