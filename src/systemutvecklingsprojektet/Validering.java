@@ -20,7 +20,7 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
         boolean tom = true;
                 
         if(aktuellRuta.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Skriv in något i rutan!");
+            JOptionPane.showMessageDialog(null, "Skriv in något i rutan/rutorna!");
             tom = false;
             aktuellRuta.requestFocus();
         }
@@ -73,7 +73,7 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
            }
        else 
                 {
-                    JOptionPane.showMessageDialog(null, "Rutorna matchar inte");              
+                    JOptionPane.showMessageDialog(null, "Textfälten matchar inte");              
                 }
        return matchar;
        

@@ -31,13 +31,13 @@ public class NyregistreraAgent extends javax.swing.JFrame {
 
         RubrikNyregistreraAgent = new javax.swing.JLabel();
         KnappFörRegistrering = new javax.swing.JButton();
-        TextrutaAgentID = new javax.swing.JTextField();
+        TextRutaAgentID = new javax.swing.JTextField();
         TextRutaNamn = new javax.swing.JTextField();
         TextRutaTelefon = new javax.swing.JTextField();
-        TextrutaAnställningsdatum = new javax.swing.JTextField();
-        TextrutaAdministratör = new javax.swing.JTextField();
-        TextrutaLösenord = new javax.swing.JTextField();
-        TextrutaOmråde = new javax.swing.JTextField();
+        TextRutaAnställningsdatum = new javax.swing.JTextField();
+        TextRutaAdministratör = new javax.swing.JTextField();
+        TextRutaLösenord = new javax.swing.JTextField();
+        TextRutaOmråde = new javax.swing.JTextField();
         UnderRubrikAgentID = new javax.swing.JLabel();
         UnderRubrikTelefon = new javax.swing.JLabel();
         UnderRubrikAnställningsdatum = new javax.swing.JLabel();
@@ -58,16 +58,16 @@ public class NyregistreraAgent extends javax.swing.JFrame {
             }
         });
 
-        TextrutaAgentID.setColumns(9);
-        TextrutaAgentID.setActionCommand("<Not Set>");
+        TextRutaAgentID.setColumns(9);
+        TextRutaAgentID.setActionCommand("<Not Set>");
 
         TextRutaTelefon.setColumns(9);
 
-        TextrutaAdministratör.setColumns(9);
+        TextRutaAdministratör.setColumns(9);
 
-        TextrutaLösenord.setColumns(9);
+        TextRutaLösenord.setColumns(9);
 
-        TextrutaOmråde.setColumns(9);
+        TextRutaOmråde.setColumns(9);
 
         UnderRubrikAgentID.setText("AgentID");
 
@@ -97,18 +97,18 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(TextrutaAnställningsdatum)
+                                .addComponent(TextRutaAnställningsdatum)
                                 .addComponent(TextRutaTelefon)
                                 .addComponent(TextRutaNamn)
-                                .addComponent(TextrutaAgentID))
+                                .addComponent(TextRutaAgentID))
                             .addComponent(UnderRubrikAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextrutaAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextrutaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextrutaOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(TextRutaAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextRutaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextRutaOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(72, 72, 72))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(KnappFörRegistrering)
@@ -146,8 +146,8 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                             .addComponent(UnderRubrikAdministratör))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(TextrutaAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextrutaAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(TextRutaAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextRutaAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UnderRubrikTelefon)
@@ -155,15 +155,15 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TextRutaTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TextrutaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextRutaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UnderRubrikAnställningsdatum)
                     .addComponent(UnderRubrikOmråde))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextrutaAnställningsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TextrutaOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextRutaAnställningsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextRutaOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(UnderRubrikNamn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -180,8 +180,8 @@ public class NyregistreraAgent extends javax.swing.JFrame {
       try
       {
       String query = "INSERT INTO Agent(Agent_ID, Namn, Telefon, Anstallningsdatum, Administrator, Losenord, Omrade) "
-                    + "VALUES" + "('"+ TextrutaAgentID.getText()+ "','" + TextRutaNamn.getText()+ "'.'" 
-                    + TextRutaTelefon.getText()+ "','" + TextrutaAnställningsdatum.getText()+ "','" + TextrutaAdministratör.getText()+ "','" + TextrutaLösenord.getText()+ "','" + TextrutaOmråde.getText()+ "')";
+                    + "VALUES" + "('"+ TextRutaAgentID.getText()+ "','" + TextRutaNamn.getText()+ "','" 
+                    + TextRutaTelefon.getText()+ "','" + TextRutaAnställningsdatum.getText()+ "','" + TextRutaAdministratör.getText()+ "','" + TextRutaLösenord.getText()+ "','" + TextRutaOmråde.getText()+ "')";
             idb.insert(query);
     }//GEN-LAST:event_KnappFörRegistreringActionPerformed
 catch (InfException undantag)
@@ -229,13 +229,13 @@ catch (InfException undantag)
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton KnappFörRegistrering;
     private javax.swing.JLabel RubrikNyregistreraAgent;
+    private javax.swing.JTextField TextRutaAdministratör;
+    private javax.swing.JTextField TextRutaAgentID;
+    private javax.swing.JTextField TextRutaAnställningsdatum;
+    private javax.swing.JTextField TextRutaLösenord;
     private javax.swing.JTextField TextRutaNamn;
+    private javax.swing.JTextField TextRutaOmråde;
     private javax.swing.JTextField TextRutaTelefon;
-    private javax.swing.JTextField TextrutaAdministratör;
-    private javax.swing.JTextField TextrutaAgentID;
-    private javax.swing.JTextField TextrutaAnställningsdatum;
-    private javax.swing.JTextField TextrutaLösenord;
-    private javax.swing.JTextField TextrutaOmråde;
     private javax.swing.JLabel UnderRubrikAdministratör;
     private javax.swing.JLabel UnderRubrikAgentID;
     private javax.swing.JLabel UnderRubrikAnställningsdatum;
