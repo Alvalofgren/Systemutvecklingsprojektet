@@ -40,6 +40,7 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
         PFNyttLösen = new javax.swing.JPasswordField();
         PFBekräftaLösen = new javax.swing.JPasswordField();
         LabelLösenHarÄndrats = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -68,6 +69,13 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
         LabelLösenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         LabelLösenHarÄndrats.setText("Lösenordet har ändrats!");
 
+        jButton1.setText("<--Tillbaka");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -75,7 +83,9 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
+                        .addContainerGap()
+                        .addComponent(jButton1)
+                        .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
@@ -97,8 +107,13 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(rubrikÄndraLösenord)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(rubrikÄndraLösenord))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LabelNyttLösenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -139,6 +154,21 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
     private void PFNyttLösenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PFNyttLösenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PFNyttLösenActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+          if (HejAgent.getAdminStatus() == true) {
+            new ÄndraLosenordAgent(idb).setVisible(true);
+            dispose();
+        } else {
+            new HejAgent(idb).setVisible(true);
+            dispose();
+          }
+    
+                                           
+                                 
+                                          
+    
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
        
@@ -192,6 +222,7 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
     private javax.swing.JLabel LabelNyttLösenord;
     private javax.swing.JPasswordField PFBekräftaLösen;
     private javax.swing.JPasswordField PFNyttLösen;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel rubrikÄndraLösenord;
     // End of variables declaration//GEN-END:variables
