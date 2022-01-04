@@ -13,6 +13,7 @@ import oru.inf.InfException;
  */
 public class HejAlien extends javax.swing.JFrame {
 private InfDB idb;
+private static boolean arAdmin;
     /**
      * Creates new form HejAlien
      */
@@ -22,6 +23,10 @@ private InfDB idb;
         
         
     }
+    
+    public static boolean getAdminStatus(){
+     return arAdmin;
+ } 
 
     /**
      * This method is called from within the constructor to initialize the form.
