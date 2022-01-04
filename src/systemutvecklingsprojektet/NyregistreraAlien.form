@@ -31,28 +31,28 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="UnderRubrikAlienID" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="TextrutaAlienID" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="TextRutaAlienID" min="-2" pref="142" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikRegistreringsdatum" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
-                                  <Component id="TextrutaRegistreringsdatum" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="TextRutaRegistreringsdatum" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="46" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TextrutaPlats" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
-                                  <Component id="TextrutaTelefonAlien" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
+                                  <Component id="TextRutaPlats" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
+                                  <Component id="TextRutaTelefonAlien" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikTelefonFörAlien" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikPlats" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TextrutaLösenordAlien" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="TextRutaLösenordAlien" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikLösenordFörAlien" min="-2" pref="86" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikNamnFörAlien" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="TextrutaNamnAlien" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="TextRutaNamnAlien" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TextrutaAnsvarigAgent" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
+                                  <Component id="TextRutaAnsvarigAgent" alignment="1" min="-2" pref="114" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="RegistreringKnappAlien" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -85,8 +85,8 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="TextrutaAlienID" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TextrutaTelefonAlien" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextRutaAlienID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextRutaTelefonAlien" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
@@ -96,8 +96,8 @@
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TextrutaPlats" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextrutaRegistreringsdatum" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextRutaPlats" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextRutaRegistreringsdatum" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -106,15 +106,15 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="TextrutaAnsvarigAgent" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextrutaLösenordAlien" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextRutaAnsvarigAgent" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextRutaLösenordAlien" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="UnderRubrikNamnFörAlien" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="TextrutaNamnAlien" min="-2" max="-2" attributes="0"/>
+                      <Component id="TextRutaNamnAlien" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -143,31 +143,31 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistreringKnappAlienActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextrutaAlienID">
+    <Component class="javax.swing.JTextField" name="TextRutaAlienID">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextrutaRegistreringsdatum">
+    <Component class="javax.swing.JTextField" name="TextRutaRegistreringsdatum">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextrutaL&#xf6;senordAlien">
+    <Component class="javax.swing.JTextField" name="TextRutaL&#xf6;senordAlien">
     </Component>
-    <Component class="javax.swing.JTextField" name="TextrutaNamnAlien">
+    <Component class="javax.swing.JTextField" name="TextRutaNamnAlien">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextrutaTelefonAlien">
+    <Component class="javax.swing.JTextField" name="TextRutaTelefonAlien">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextrutaPlats">
+    <Component class="javax.swing.JTextField" name="TextRutaPlats">
     </Component>
-    <Component class="javax.swing.JTextField" name="TextrutaAnsvarigAgent">
+    <Component class="javax.swing.JTextField" name="TextRutaAnsvarigAgent">
     </Component>
     <Component class="javax.swing.JLabel" name="UnderRubrikAlienID">
       <Properties>
