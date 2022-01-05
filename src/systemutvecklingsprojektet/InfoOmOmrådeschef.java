@@ -53,6 +53,9 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TextAreaResultat = new javax.swing.JTextArea();
         ButtonVisaInfo = new javax.swing.JButton();
+        LabelAgentID = new javax.swing.JLabel();
+        LabelAgent = new javax.swing.JLabel();
+        LabelOmråde = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,6 +83,12 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
             }
         });
 
+        LabelAgentID.setText("Agent ID");
+
+        LabelAgent.setText("Agent");
+
+        LabelOmråde.setText("Område");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,7 +104,14 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(ComboBoxVäljOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(ButtonVisaInfo))))
+                            .addComponent(ButtonVisaInfo)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(LabelAgent)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelAgentID)
+                        .addGap(77, 77, 77)
+                        .addComponent(LabelOmråde)))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -108,9 +124,14 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
                     .addComponent(ComboBoxVäljOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelVäljOmråde)
                     .addComponent(ButtonVisaInfo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelAgentID)
+                    .addComponent(LabelAgent)
+                    .addComponent(LabelOmråde))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -184,6 +205,9 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonVisaInfo;
     private javax.swing.JComboBox<String> ComboBoxVäljOmrådeschef;
+    private javax.swing.JLabel LabelAgent;
+    private javax.swing.JLabel LabelAgentID;
+    private javax.swing.JLabel LabelOmråde;
     private javax.swing.JLabel LabelVäljOmråde;
     private javax.swing.JLabel RubrikInfoOmrådeschef;
     private javax.swing.JTextArea TextAreaResultat;
