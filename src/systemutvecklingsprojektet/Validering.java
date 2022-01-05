@@ -29,19 +29,6 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
         return tom;
     }
 
-public static boolean kontrollDateVärde (JDateChooser aktuellRuta)
-{
-    boolean tom = true; 
-    
-    if(aktuellRuta.getDate() == null)
-    {
-        JOptionPane.showMessageDialog(null, "Skriv in något i rutan(rutorna");
-        tom = false;
-        aktuellRuta.requestFocus();
-    }
-    return tom;
-}
-
 public static boolean isValidMobileNo(String str)  
 {  
     Pattern ptrn = Pattern.compile("(0/91)?[7-9][0-9]{9}"); 
