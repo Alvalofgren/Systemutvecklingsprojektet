@@ -238,10 +238,12 @@ private void fyllIListaAgent(){
                     if(nyID == finnsID)
                     {
                         JOptionPane.showMessageDialog(null, "Alien-ID finns redan!");
+                        break;
                     
                     }
-                    if(nyID!=finnsID)
-                    {    
+                   else
+                    {
+                        
                     if (Validering.harHeltal(TextRutaAlienID)) 
                         {
                             String fraga = "select namn from alien";
@@ -277,7 +279,7 @@ private void fyllIListaAgent(){
 //                        {
 //                            JOptionPane.showMessageDialog(null, "Alien-ID måste vara ett heltal!");
 //                        }
-
+                        
                     } 
                 }
         
@@ -290,6 +292,10 @@ private void fyllIListaAgent(){
             System.out.println("Error" + undantag.getMessage());
         }
     }
+    
+    
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          if (HejAdministrator.getAdminStatus() == true) {
             new NyregistreraAlien(idb).setVisible(true);
