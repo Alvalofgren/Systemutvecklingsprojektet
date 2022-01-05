@@ -138,7 +138,7 @@ public class TaBortAgent extends javax.swing.JFrame {
             ComboBoxVäljAgent.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }

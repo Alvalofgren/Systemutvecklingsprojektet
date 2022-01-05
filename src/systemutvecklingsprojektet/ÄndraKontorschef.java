@@ -38,7 +38,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
             ComboBoxVäljAgent.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -56,7 +56,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
             ComboBoxVäljKontor.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
