@@ -35,7 +35,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
             ComboBoxOmråde.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }

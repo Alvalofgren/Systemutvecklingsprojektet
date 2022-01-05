@@ -39,7 +39,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
             ComboBoxVäljOmrådeschef.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }

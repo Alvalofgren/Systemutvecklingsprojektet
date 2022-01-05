@@ -95,6 +95,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         LabelNyttVärde.setText("Nytt värde:");
 
         LabelInfoÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelInfoÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelInfoÄndrats.setText("Informationen har ändrats!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

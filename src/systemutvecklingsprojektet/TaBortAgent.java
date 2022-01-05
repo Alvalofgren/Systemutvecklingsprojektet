@@ -97,7 +97,7 @@ public class TaBortAgent extends javax.swing.JFrame {
                     .addComponent(LabelVäljAgentID)
                     .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonTaBort))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();

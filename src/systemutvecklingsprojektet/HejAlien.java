@@ -4,9 +4,9 @@
  */
 package systemutvecklingsprojektet;
 
-import javax.swing.JOptionPane;
+
 import oru.inf.InfDB;
-import oru.inf.InfException;
+
 /**
  *
  * @author almahedengren
