@@ -38,16 +38,23 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="TextRutaNamn" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="TextRutaAgentID" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="UnderRubrikAgentID" min="-2" pref="52" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="TextRutaNamn" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="TextRutaAgentID" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="UnderRubrikAgentID" min="-2" pref="52" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="UnderRubrikNamn" min="-2" pref="52" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="TextRutaAnställningsdatum" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                                  <Component id="UnderRubrikNamn" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="DateChooser" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="ComboBoxAdministratör" min="-2" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikAdministratör" min="-2" pref="104" max="-2" attributes="0"/>
@@ -102,10 +109,10 @@
                   <Component id="UnderRubrikAnställningsdatum" alignment="3" pref="23" max="32767" attributes="0"/>
                   <Component id="UnderRubrikOmråde" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TextRutaAnställningsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ComboBoxOmråde" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ComboBoxOmråde" min="-2" max="-2" attributes="0"/>
+                  <Component id="DateChooser" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="UnderRubrikNamn" min="-2" max="-2" attributes="0"/>
@@ -194,13 +201,6 @@
         <Property name="text" type="java.lang.String" value="Omr&#xe5;de"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="TextRutaAnst&#xe4;llningsdatum">
-      <Properties>
-        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-          <Format subtype="1" type="1"/>
-        </Property>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JComboBox" name="ComboBoxAdministrat&#xf6;r">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -230,6 +230,8 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="DateChooser">
     </Component>
   </SubComponents>
 </Form>

@@ -276,7 +276,7 @@ private void fyllIListaAgent(){
                                                 
                                         {
                                         String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
-                                        + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + DateChooser.getDateFormatString()+ "','" 
+                                        + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + DateChooser.getDate()+ "','" 
                                         + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + ComboBoxPlats.getSelectedItem()+ "','" + ComboBoxAnsvarigAgent.getSelectedItem()+ "')";
                                         idb.insert(query);
                                     }
