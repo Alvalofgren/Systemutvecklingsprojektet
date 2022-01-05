@@ -23,6 +23,7 @@ public class TaBortAlien extends javax.swing.JFrame {
         initComponents();
         this.idb=idb;
         fyllILista();
+        LabelAgentBorttagen.setVisible(false);
     }
 
     /**
@@ -39,6 +40,7 @@ public class TaBortAlien extends javax.swing.JFrame {
         ComboBoxVäljAlien = new javax.swing.JComboBox<>();
         ButtonTaBort = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        LabelAgentBorttagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +65,10 @@ public class TaBortAlien extends javax.swing.JFrame {
             }
         });
 
+        LabelAgentBorttagen.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelAgentBorttagen.setForeground(new java.awt.Color(0, 204, 51));
+        LabelAgentBorttagen.setText("Alien har tagits bort!");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -83,6 +89,10 @@ public class TaBortAlien extends javax.swing.JFrame {
                         .addGap(28, 28, 28)))
                 .addComponent(ButtonTaBort)
                 .addGap(21, 21, 21))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(LabelAgentBorttagen, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,7 +109,9 @@ public class TaBortAlien extends javax.swing.JFrame {
                     .addComponent(LabelVäljAlienID)
                     .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonTaBort))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(LabelAgentBorttagen)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,6 +130,8 @@ public class TaBortAlien extends javax.swing.JFrame {
             idb.delete(squid);
             String alien = "delete from alien where namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
             idb.delete(alien);
+            
+            LabelAgentBorttagen.setVisible(true);
         }
         
         catch(InfException undantag)
@@ -192,6 +206,7 @@ public class TaBortAlien extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonTaBort;
     private javax.swing.JComboBox<String> ComboBoxVäljAlien;
+    private javax.swing.JLabel LabelAgentBorttagen;
     private javax.swing.JLabel LabelVäljAlienID;
     private javax.swing.JLabel RubrikTaBortAlien;
     private javax.swing.JButton jButton1;
