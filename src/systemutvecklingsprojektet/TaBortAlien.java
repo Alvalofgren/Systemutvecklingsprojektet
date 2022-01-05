@@ -108,8 +108,16 @@ public class TaBortAlien extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
-            String query = "delete from alien where namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
-            idb.delete(query);
+            String alienID = "select Alien_ID from alien where namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
+            String svar = idb.fetchSingle(alienID);
+            String boglodite = "delete from boglodite where Alien_ID =" + svar; 
+            idb.delete(boglodite);
+            String squid = "delete from squid where Alien_ID =" + svar; 
+            idb.delete(squid);
+            String worm = "delete from worm where Alien_ID =" + svar;
+            idb.delete(squid);
+            String alien = "delete from alien where namn = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
+            idb.delete(alien);
         }
         
         catch(InfException undantag)
