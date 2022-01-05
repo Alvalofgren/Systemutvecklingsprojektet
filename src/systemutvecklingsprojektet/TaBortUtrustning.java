@@ -68,6 +68,7 @@ public class TaBortUtrustning extends javax.swing.JFrame {
         });
 
         LabelUtrustningBorttagen.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelUtrustningBorttagen.setForeground(new java.awt.Color(0, 204, 51));
         LabelUtrustningBorttagen.setText("Utrustningen är borttagen!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
