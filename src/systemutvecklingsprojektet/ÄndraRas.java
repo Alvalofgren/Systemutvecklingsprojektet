@@ -29,7 +29,7 @@ public class ÄndraRas extends javax.swing.JFrame {
         try {
             ComboBoxVäljAlien.removeAllItems();
             ComboBoxVäljAlien.addItem("Välj");
-            String fraga = "select Alien_ID from alien";
+            String fraga = "select namn from alien";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
         for(String värde : svar)
@@ -171,27 +171,29 @@ public class ÄndraRas extends javax.swing.JFrame {
     private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
        try
        {
+           String namn = "select Alien_ID from alien where namn ='" + ComboBoxVäljAlien.getSelectedItem()+"'";
+           String svar = idb.fetchSingle(namn);
            
        if(ComboBoxVäljNuvarandeRas.getSelectedItem().equals("Boglodite")){
-           String ändring = "DELETE FROM Boglodite where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";           
+           String ändring = "DELETE FROM Boglodite where Alien_ID = " + svar;           
            idb.delete(ändring);
            
            
-           String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem()+ "(Alien_ID)" + "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "')";
+           String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem()+ "(Alien_ID)" + "VALUES" + "(" +svar+ ")";
            idb.insert(nyRas);
        }
        if(ComboBoxVäljNuvarandeRas.getSelectedItem().equals("Worm")){
-          String ändring = "DELETE FROM Worm where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
+          String ändring = "DELETE FROM Worm where Alien_ID = '" + svar;
           idb.delete(ändring);
          
-          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem() + " (Alien_ID) " +  "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "')";
+          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem() + " (Alien_ID) " +  "VALUES" + "(" + svar+ ")";
           idb.insert(nyRas);
        }
        if(ComboBoxVäljNuvarandeRas.getSelectedItem().equals("Squid")){
-          String ändring = "DELETE FROM Squid where Alien_ID = '" + ComboBoxVäljAlien.getSelectedItem() + "'";
+          String ändring = "DELETE FROM Squid where Alien_ID = " + svar ;
           idb.delete(ändring);
           
-          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem()+ "(Alien_ID)" + "VALUES" + "('" + ComboBoxVäljAlien.getSelectedItem()+ "')";
+          String nyRas = "INSERT INTO " + ComboBoxVäljNyRas.getSelectedItem()+ "(Alien_ID)" + "VALUES" + "(" + svar+ ")";
           idb.insert(nyRas);
           
        }

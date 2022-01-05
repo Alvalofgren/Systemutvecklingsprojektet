@@ -51,7 +51,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         RubrikÄndraOmrådeschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         RubrikÄndraOmrådeschef.setText("Ändra områdeschef");
 
-        LabelVäljAgentID.setText("Välj Agent-ID:");
+        LabelVäljAgentID.setText("Välj Agent:");
 
         ComboBoxVäljAgentID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -82,7 +82,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(82, Short.MAX_VALUE)
+                .addContainerGap(97, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LabelVäljAgentID)
                     .addComponent(LabelTillOmråde))
