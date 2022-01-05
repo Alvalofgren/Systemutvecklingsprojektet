@@ -123,8 +123,7 @@ public class TaBortAgent extends javax.swing.JFrame {
             String agentID = "select Agent_ID from agent where namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'";
             
             String svar = idb.fetchSingle(agentID);
-//            String alien = "delete Ansvarig_Agent from alien where Ansvarig_Agent = " + svar;
-//            idb.delete(alien);
+            
             String inneharFordon = "delete from Innehar_Fordon where Agent_ID = " + svar ;
             idb.delete(inneharFordon);
             String fältAgent = "delete from Faltagent where Agent_ID = " + svar;
