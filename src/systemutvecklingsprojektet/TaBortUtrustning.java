@@ -29,7 +29,7 @@ public class TaBortUtrustning extends javax.swing.JFrame {
         try {
             ComboBoxVäljUtrustning.removeAllItems();
             ComboBoxVäljUtrustning.addItem("Välj");
-            String fraga = "select Utrustnings_ID from Utrustning";
+            String fraga = "select benamning from Utrustning";
             ArrayList<String> svar = idb.fetchColumn(fraga);
         
         for(String värde : svar)
@@ -114,15 +114,18 @@ public class TaBortUtrustning extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
-            String kommunikation = "delete from Kommunikation where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            String id = "select Utrustnings_ID from utrustning where benamning ='" + ComboBoxVäljUtrustning.getSelectedItem()+"'";
+            String id2 = idb.fetchSingle(id);
+                    
+            String kommunikation = "delete from Kommunikation where Utrustnings_ID = " + id2;
             idb.delete(kommunikation);
-            String vapen = "delete from Vapen where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem(); 
+            String vapen = "delete from Vapen where Utrustnings_ID = " + id2; 
             idb.delete(vapen);
-            String teknik = "delete from Teknik where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            String teknik = "delete from Teknik where Utrustnings_ID = " + id2;
             idb.delete(teknik);
-            String innehar = "delete from innehar_utrustning where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            String innehar = "delete from innehar_utrustning where Utrustnings_ID = " + id2;
             idb.delete(innehar);
-            String utrustning = "delete from Utrustning where Utrustnings_ID = " + ComboBoxVäljUtrustning.getSelectedItem();
+            String utrustning = "delete from Utrustning where Utrustnings_ID = " + id2;
             idb.delete(utrustning);
             
             LabelUtrustningBorttagen.setVisible(true);
