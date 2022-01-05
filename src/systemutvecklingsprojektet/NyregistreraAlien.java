@@ -251,13 +251,12 @@ private void fyllIListaAgent(){
 
                             for (String namn : resultat) 
                             {
-                                if (TextRutaNamnAlien.getText().equals(namn))
+                      
+                                if(TextRutaNamnAlien.getText().equals(namn))
                                 {  
-                                    JOptionPane.showMessageDialog(null, "Aliennamnet finns redan!");
-                                         break;
                                     
-                                
-                                        
+                                    JOptionPane.showMessageDialog(null, "Aliennamnet finns redan!");
+                                    break;
                                 } 
                                 else 
                                 {
