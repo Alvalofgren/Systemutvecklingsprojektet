@@ -119,22 +119,26 @@ public class TaBortAgent extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
+            
             String agentID = "select Agent_ID from agent where namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'";
+            
             String svar = idb.fetchSingle(agentID);
-            String alien = "delete Ansvarig_Agent from alien where Ansvarig_Agent = '" + svar + "'";
-            idb.delete(alien);
-            String inneharFordon = "delete from Innehar_Fordon where Agent_ID = '" + svar + "'";
+//            String alien = "delete Ansvarig_Agent from alien where Ansvarig_Agent = " + svar;
+//            idb.delete(alien);
+            String inneharFordon = "delete from Innehar_Fordon where Agent_ID = " + svar ;
             idb.delete(inneharFordon);
-            String inneharUtrustning = "delete from Innehar_Utrustning where Agent_ID = '" + svar + "'";
+            String fältAgent = "delete from Faltagent where Agent_ID = " + svar;
+            idb.delete(fältAgent);
+            String inneharUtrustning = "delete from Innehar_Utrustning where Agent_ID = " + svar ;
             idb.delete(inneharUtrustning);
-            String Kontorschef = "delete Agent_ID from kontorschef where Agent_ID = '" + svar + "'";
+            String Kontorschef = "delete from kontorschef where Agent_ID = " + svar ;
             idb.delete(Kontorschef);
-            String omradeschef = "delete Agent_ID from omradeschef where Agent_ID = '" + svar + "'";
+            String omradeschef = "delete from omradeschef where Agent_ID = " + svar  ;
             idb.delete(omradeschef);
             
             
             
-            String query = "delete from agent where Agent_ID = '" + svar + "'";
+            String query = "delete from agent where Agent_ID = " + svar ;
             idb.delete(query);
            
             LabelAgentBorttagen.setVisible(true);
