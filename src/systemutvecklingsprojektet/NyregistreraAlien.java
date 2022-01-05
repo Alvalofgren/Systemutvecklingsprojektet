@@ -251,10 +251,17 @@ private void fyllIListaAgent(){
 
                             for (String namn : resultat) 
                             {
-                                if (!TextRutaNamnAlien.getText().equals(namn))
+                                if (TextRutaNamnAlien.getText().equals(namn))
+                                {  
+                                    JOptionPane.showMessageDialog(null, "Aliennamnet finns redan!");
+                                         break;
                                     
+                                
+                                        
+                                } 
+                                else 
                                 {
-                                        if(!TextRutaTelefonAlien.getText().matches("[a-zA-Z]") && TextRutaTelefonAlien.getText().matches("[0-9]") || TextRutaTelefonAlien.getText().contains("-"))
+                                   if(!TextRutaTelefonAlien.getText().matches("[a-zA-Z]") && TextRutaTelefonAlien.getText().matches("[0-9]") || TextRutaTelefonAlien.getText().contains("-"))
                                                 
                                         {
                                         String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
@@ -266,10 +273,6 @@ private void fyllIListaAgent(){
                                     {
                                         JOptionPane.showMessageDialog(null, "Ange ett korrekt telefonnummer!");
                                     }
-                                } 
-                                else 
-                                {
-                                    JOptionPane.showMessageDialog(null, "Aliennamnet finns redan!");
                                 }
 
                             }
