@@ -223,20 +223,24 @@ private void fyllIListaAgent(){
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
 
         try{
-            if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien)){
-            String fråga = "select Alien_ID from alien";
-                ArrayList<String> svar = idb.fetchColumn(fråga);
-                int i = 0;
-               
-                while (i>=0 && i<svar.size())
-                   
+        
+        if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien)){
+        String fråga = "select Alien_ID from alien";
+        ArrayList<String> svar = idb.fetchColumn(fråga);
+                
+            
+            int nyID = Integer.parseInt(TextRutaAlienID.getText());
+            
+                for (String värde : svar)
                 {
-                    if(svar.contains(TextRutaAlienID.getText()))
+               int finnsID =  Integer.parseInt(värde);
+                
+                    if(nyID == finnsID)
                     {
                         JOptionPane.showMessageDialog(null, "Alien-ID finns redan!");
                     
                     }
-                    else
+                    if(nyID!=finnsID)
                     {    
                     if (Validering.harHeltal(TextRutaAlienID)) 
                         {
@@ -274,9 +278,9 @@ private void fyllIListaAgent(){
 //                            JOptionPane.showMessageDialog(null, "Alien-ID måste vara ett heltal!");
 //                        }
 
-                    } i++;
+                    } 
                 }
-                
+        
                 
                
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
