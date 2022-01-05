@@ -23,6 +23,7 @@ public class TaBortAgent extends javax.swing.JFrame {
         initComponents();
         this.idb = idb;
         fyllILista();
+        LabelAgentBorttagen.setVisible(false);
     }
 
     /**
@@ -39,6 +40,7 @@ public class TaBortAgent extends javax.swing.JFrame {
         ComboBoxVäljAgent = new javax.swing.JComboBox<>();
         ButtonTaBort = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        LabelAgentBorttagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +65,10 @@ public class TaBortAgent extends javax.swing.JFrame {
             }
         });
 
+        LabelAgentBorttagen.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelAgentBorttagen.setForeground(new java.awt.Color(0, 204, 51));
+        LabelAgentBorttagen.setText("Agenten har tagits bort!");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,10 +83,15 @@ public class TaBortAgent extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(RubrikTaBortAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(RubrikTaBortAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(89, 89, 89))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(LabelAgentBorttagen, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +108,9 @@ public class TaBortAgent extends javax.swing.JFrame {
                     .addComponent(LabelVäljAgentID)
                     .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonTaBort))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(LabelAgentBorttagen)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -106,13 +119,31 @@ public class TaBortAgent extends javax.swing.JFrame {
     private void ButtonTaBortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTaBortActionPerformed
         try
         {
-            String query = "delete from agent where namn = '" + ComboBoxVäljAgent.getSelectedItem().toString() + "'";
+            String agentID = "select Agent_ID from agent where namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'";
+            String svar = idb.fetchSingle(agentID);
+            String alien = "delete Ansvarig_Agent from alien where Ansvarig_Agent = '" + svar + "'";
+            idb.delete(alien);
+            String inneharFordon = "delete from Innehar_Fordon where Agent_ID = '" + svar + "'";
+            idb.delete(inneharFordon);
+            String inneharUtrustning = "delete from Innehar_Utrustning where Agent_ID = '" + svar + "'";
+            idb.delete(inneharUtrustning);
+            String Kontorschef = "delete Agent_ID from kontorschef where Agent_ID = '" + svar + "'";
+            idb.delete(Kontorschef);
+            String omradeschef = "delete Agent_ID from omradeschef where Agent_ID = '" + svar + "'";
+            idb.delete(omradeschef);
+            
+            
+            
+            String query = "delete from agent where Agent_ID = '" + svar + "'";
             idb.delete(query);
+           
+            LabelAgentBorttagen.setVisible(true);
         }
         
         catch(InfException undantag)
                 {
-                    JOptionPane.showMessageDialog(null, "");
+                    JOptionPane.showMessageDialog(null, "Error");
+                    System.out.println("Error" + undantag.getMessage());
                 }
     }//GEN-LAST:event_ButtonTaBortActionPerformed
 
@@ -180,6 +211,7 @@ public class TaBortAgent extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonTaBort;
     private javax.swing.JComboBox<String> ComboBoxVäljAgent;
+    private javax.swing.JLabel LabelAgentBorttagen;
     private javax.swing.JLabel LabelVäljAgentID;
     private javax.swing.JLabel RubrikTaBortAgent;
     private javax.swing.JButton jButton1;
