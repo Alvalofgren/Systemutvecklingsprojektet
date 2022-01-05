@@ -68,7 +68,6 @@ private void fyllIListaAgent(){
         RubrikNyregistreraAlien = new javax.swing.JLabel();
         RegistreringKnappAlien = new javax.swing.JButton();
         TextRutaAlienID = new javax.swing.JTextField();
-        TextRutaRegistreringsdatum = new javax.swing.JTextField();
         TextRutaLösenordAlien = new javax.swing.JTextField();
         TextRutaNamnAlien = new javax.swing.JTextField();
         TextRutaTelefonAlien = new javax.swing.JTextField();
@@ -83,6 +82,7 @@ private void fyllIListaAgent(){
         ComboBoxPlats = new javax.swing.JComboBox<>();
         ComboBoxAnsvarigAgent = new javax.swing.JComboBox<>();
         LabelDatum = new javax.swing.JLabel();
+        DateChooser = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -97,8 +97,6 @@ private void fyllIListaAgent(){
         });
 
         TextRutaAlienID.setColumns(9);
-
-        TextRutaRegistreringsdatum.setColumns(9);
 
         TextRutaNamnAlien.setColumns(9);
 
@@ -131,6 +129,8 @@ private void fyllIListaAgent(){
 
         LabelDatum.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         LabelDatum.setText("YYYY-MM-DD");
+
+        DateChooser.setDateFormatString("YYYY-MM-DD");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -165,10 +165,11 @@ private void fyllIListaAgent(){
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TextRutaAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextRutaRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(UnderRubrikAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(LabelDatum)
-                            .addComponent(UnderRubrikRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(DateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(UnderRubrikRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(UnderRubrikTelefonFörAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,9 +207,9 @@ private void fyllIListaAgent(){
                     .addComponent(UnderRubrikRegistreringsdatum)
                     .addComponent(UnderRubrikPlats))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextRutaRegistreringsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBoxPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ComboBoxPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UnderRubrikAnsvarigAgent)
@@ -226,7 +227,7 @@ private void fyllIListaAgent(){
                         .addComponent(ComboBoxAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(RegistreringKnappAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -236,7 +237,7 @@ private void fyllIListaAgent(){
 
         try{
         
-        if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollTextFältVärde(TextRutaRegistreringsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien)){
+        if(Validering.kontrollTextFältVärde(TextRutaAlienID) && Validering.kontrollDateVärde(DateChooser) && Validering.kontrollTextFältVärde(TextRutaLösenordAlien) && Validering.kontrollTextFältVärde(TextRutaNamnAlien) && Validering.kontrollTextFältVärde(TextRutaTelefonAlien)){
         String fråga = "select Alien_ID from alien";
         ArrayList<String> svar = idb.fetchColumn(fråga);
                 
@@ -275,7 +276,7 @@ private void fyllIListaAgent(){
                                                 
                                         {
                                         String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
-                                        + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + TextRutaRegistreringsdatum.getText()+ "','" 
+                                        + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + DateChooser.getDateFormatString()+ "','" 
                                         + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + ComboBoxPlats.getSelectedItem()+ "','" + ComboBoxAnsvarigAgent.getSelectedItem()+ "')";
                                         idb.insert(query);
                                     }
@@ -326,13 +327,13 @@ private void fyllIListaAgent(){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboBoxAnsvarigAgent;
     private javax.swing.JComboBox<String> ComboBoxPlats;
+    private com.toedter.calendar.JDateChooser DateChooser;
     private javax.swing.JLabel LabelDatum;
     private javax.swing.JButton RegistreringKnappAlien;
     private javax.swing.JLabel RubrikNyregistreraAlien;
     private javax.swing.JTextField TextRutaAlienID;
     private javax.swing.JTextField TextRutaLösenordAlien;
     private javax.swing.JTextField TextRutaNamnAlien;
-    private javax.swing.JTextField TextRutaRegistreringsdatum;
     private javax.swing.JTextField TextRutaTelefonAlien;
     private javax.swing.JLabel UnderRubrikAlienID;
     private javax.swing.JLabel UnderRubrikAnsvarigAgent;
