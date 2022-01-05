@@ -264,7 +264,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappFörRegistreringActionPerformed
 catch (InfException undantag)
         {
-            JOptionPane.showMessageDialog(null, "Error");
+//            JOptionPane.showMessageDialog(null, "Error");
             System.out.println("Error" + undantag.getMessage());
         }
     }
