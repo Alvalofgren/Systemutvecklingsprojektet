@@ -34,8 +34,7 @@ public class ListaAliensPlats extends javax.swing.JFrame {
     {
         try
         {
-            
-        
+     
         ListaVäljPlats.removeAllItems();
         ListaVäljPlats.addItem("Välj");
 
@@ -48,7 +47,7 @@ public class ListaAliensPlats extends javax.swing.JFrame {
         }
         }
         
-        catch(InfException e)
+        catch(InfException undantag)
         {
             JOptionPane.showMessageDialog(null, "Error");
         }
@@ -173,7 +172,7 @@ public class ListaAliensPlats extends javax.swing.JFrame {
         } 
         }
         
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
             
         }

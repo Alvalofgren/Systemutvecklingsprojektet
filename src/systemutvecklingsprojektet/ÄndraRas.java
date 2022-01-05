@@ -37,7 +37,7 @@ public class ÄndraRas extends javax.swing.JFrame {
             ComboBoxVäljAlien.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -75,7 +75,6 @@ public class ÄndraRas extends javax.swing.JFrame {
         LabelRasenHarÄndrats = new javax.swing.JLabel();
         LabelNuvarandeRas = new javax.swing.JLabel();
         ComboBoxVäljNuvarandeRas = new javax.swing.JComboBox<>();
-        tillbaka = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,48 +104,39 @@ public class ÄndraRas extends javax.swing.JFrame {
 
         ComboBoxVäljNuvarandeRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        tillbaka.setText("jButton1");
-        tillbaka.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tillbakaActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(109, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LabelRubrik)
-                        .addGap(147, 147, 147))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LabelRasenHarÄndrats)
-                        .addGap(124, 124, 124))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ComboBoxVäljNyRas, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LabelVäljAlien)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(LabelNuvarandeRas)
-                        .addGap(43, 43, 43)
-                        .addComponent(ComboBoxVäljNuvarandeRas, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(LabelRubrik)
+                .addGap(147, 147, 147))
             .addGroup(layout.createSequentialGroup()
                 .addGap(119, 119, 119)
                 .addComponent(ButtonÄndra)
-                .addGap(18, 18, 18)
-                .addComponent(tillbaka)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ComboBoxVäljNyRas, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(LabelVäljAlien)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(LabelNuvarandeRas)
+                                .addGap(43, 43, 43)
+                                .addComponent(ComboBoxVäljNuvarandeRas, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(LabelRasenHarÄndrats)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,9 +161,7 @@ public class ÄndraRas extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addComponent(LabelRasenHarÄndrats)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonÄndra)
-                    .addComponent(tillbaka))
+                .addComponent(ButtonÄndra)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -214,11 +202,6 @@ public class ÄndraRas extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Error");
        }
     }//GEN-LAST:event_ButtonÄndraActionPerformed
-
-    private void tillbakaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tillbakaActionPerformed
-     
-    
-    }//GEN-LAST:event_tillbakaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -265,6 +248,5 @@ public class ÄndraRas extends javax.swing.JFrame {
     private javax.swing.JLabel LabelRubrik;
     private javax.swing.JLabel LabelVäljAlien;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton tillbaka;
     // End of variables declaration//GEN-END:variables
 }

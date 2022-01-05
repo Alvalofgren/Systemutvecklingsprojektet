@@ -6,7 +6,6 @@ package systemutvecklingsprojektet;
 
 import oru.inf.InfDB;
 import java.util.ArrayList;
-import java.util.HashMap;
 import javax.swing.JOptionPane;
 import oru.inf.InfException;
 /**
@@ -40,7 +39,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
             ComboBoxVäljAgent.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -77,6 +76,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         });
 
         LabelGodkänd.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        LabelGodkänd.setForeground(new java.awt.Color(0, 204, 51));
         LabelGodkänd.setText("Agenten har blivit administratör!");
 
         jButton1.setText("<--Tillbaka");
@@ -137,7 +137,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         LabelGodkänd.setVisible(true);
         }
         
-        catch(InfException e){
+        catch(InfException undantag){
             JOptionPane.showMessageDialog(null, "Error!!");
         }
     }//GEN-LAST:event_ButtonOKActionPerformed

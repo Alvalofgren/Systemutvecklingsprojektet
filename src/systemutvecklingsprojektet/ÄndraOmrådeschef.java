@@ -67,6 +67,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         });
 
         LabelOmrådeChefHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelOmrådeChefHarÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelOmrådeChefHarÄndrats.setText("Områdeschefen har ändrats!");
 
         jButton1.setText("<--Tillbaka");
