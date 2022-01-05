@@ -198,7 +198,7 @@ public class ÄndraRas extends javax.swing.JFrame {
           
        LabelRasenHarÄndrats.setVisible(true);
        }
-       catch(InfException e){
+       catch(InfException undantag){
            JOptionPane.showMessageDialog(null, "Error");
        }
     }//GEN-LAST:event_ButtonÄndraActionPerformed
