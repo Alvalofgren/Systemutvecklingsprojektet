@@ -37,7 +37,7 @@ public class TaBortUtrustning extends javax.swing.JFrame {
             ComboBoxVäljUtrustning.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }

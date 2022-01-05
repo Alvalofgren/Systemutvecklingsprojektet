@@ -37,7 +37,7 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
             ComboBoxVäljAgent.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -189,7 +189,7 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
 
                 }
         } 
-        catch(InfException e){
+        catch(InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }//GEN-LAST:event_ButtonSökActionPerformed

@@ -45,7 +45,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Component id="UnderRubrikPlats" min="-2" pref="37" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                   </Group>
@@ -61,10 +61,12 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="TextRutaAlienID" min="-2" pref="142" max="-2" attributes="0"/>
-                          <Component id="TextRutaRegistreringsdatum" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
                           <Component id="UnderRubrikAlienID" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="LabelDatum" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="UnderRubrikRegistreringsdatum" min="-2" pref="131" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="DateChooser" alignment="1" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikRegistreringsdatum" min="-2" pref="131" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -115,9 +117,9 @@
                   <Component id="UnderRubrikPlats" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TextRutaRegistreringsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ComboBoxPlats" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ComboBoxPlats" min="-2" max="-2" attributes="0"/>
+                  <Component id="DateChooser" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -140,7 +142,7 @@
                       <Component id="RegistreringKnappAlien" min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="23" max="32767" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -163,11 +165,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TextRutaAlienID">
-      <Properties>
-        <Property name="columns" type="int" value="9"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextRutaRegistreringsdatum">
       <Properties>
         <Property name="columns" type="int" value="9"/>
       </Properties>
@@ -263,6 +260,11 @@
           <Font name="Lucida Grande" size="10" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="YYYY-MM-DD"/>
+      </Properties>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="DateChooser">
+      <Properties>
+        <Property name="dateFormatString" type="java.lang.String" value="YYYY-MM-DD"/>
       </Properties>
     </Component>
   </SubComponents>

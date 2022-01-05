@@ -148,7 +148,7 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
        }
        catch(InfException undantag)
        {
-           JOptionPane.showMessageDialog(null, "FEEEEEEEEL");
+           JOptionPane.showMessageDialog(null, "Error");
        }         
     }//GEN-LAST:event_KnappÄndraLösenordActionPerformed
 

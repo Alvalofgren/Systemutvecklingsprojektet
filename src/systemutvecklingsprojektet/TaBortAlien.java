@@ -142,7 +142,7 @@ public class TaBortAlien extends javax.swing.JFrame {
             ComboBoxVäljAlien.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }

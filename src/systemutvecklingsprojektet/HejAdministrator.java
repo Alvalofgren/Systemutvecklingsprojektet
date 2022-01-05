@@ -22,7 +22,7 @@ public class HejAdministrator extends javax.swing.JFrame {
         this.idb=idb;
         agentNamn = AgentInlogg.getNamn();
         LabelAgentNamn.setText(agentNamn);
-        //Fixa så att man ser namnet när man loggat in tex "Välkommen Agent O"
+        
 
         LabelAgentNamn.setText(AgentInlogg.getNamn());
     }

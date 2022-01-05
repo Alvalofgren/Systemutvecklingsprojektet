@@ -38,7 +38,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
             ComboBoxVäljAlien.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -95,6 +95,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         LabelNyttVärde.setText("Nytt värde:");
 
         LabelInfoÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelInfoÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelInfoÄndrats.setText("Informationen har ändrats!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,10 +167,10 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
             
             }
         }
-        catch(InfException abc)
+        catch(InfException undantag)
         {
             JOptionPane.showMessageDialog(null, "Ange ett giltigt nytt värde");
-            System.out.println("Error" + abc.getMessage());
+            System.out.println("Error" + undantag.getMessage());
         }
         
     }//GEN-LAST:event_KnappÄndraActionPerformed

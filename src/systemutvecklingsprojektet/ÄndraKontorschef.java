@@ -38,7 +38,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
             ComboBoxVäljAgent.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -56,7 +56,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
             ComboBoxVäljKontor.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -104,6 +104,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
         });
 
         LabelKontorChefÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelKontorChefÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelKontorChefÄndrats.setText("Kontorschef har ändrats!");
 
         jButton1.setText("<--Tillbaka");

@@ -198,7 +198,7 @@ public class ListaAliensDatum extends javax.swing.JFrame {
             TextArea.append(" " + kolumn.get("Registreringsdatum") + "\n");
             
         }}
-        catch(InfException e){
+        catch(InfException undantag){
            JOptionPane.showMessageDialog(null, "Error");
                 }   
     }//GEN-LAST:event_ButtonVisaActionPerformed

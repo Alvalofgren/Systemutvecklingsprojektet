@@ -35,7 +35,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
             ComboBoxOmråde.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -69,9 +69,9 @@ public class NyregistreraAgent extends javax.swing.JFrame {
         UnderRubrikAdministratör = new javax.swing.JLabel();
         UnderRubrikLösenord = new javax.swing.JLabel();
         UnderRubrikOmråde = new javax.swing.JLabel();
-        TextRutaAnställningsdatum = new javax.swing.JFormattedTextField();
         ComboBoxAdministratör = new javax.swing.JComboBox<>();
         ComboBoxOmråde = new javax.swing.JComboBox<>();
+        DateChooser = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,8 +106,6 @@ public class NyregistreraAgent extends javax.swing.JFrame {
 
         UnderRubrikOmråde.setText("Område");
 
-        TextRutaAnställningsdatum.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-
         ComboBoxAdministratör.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         ComboBoxOmråde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -129,14 +127,18 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(TextRutaNamn)
-                                        .addComponent(TextRutaAgentID)
-                                        .addComponent(UnderRubrikAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(TextRutaAnställningsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(UnderRubrikNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(43, 43, 43)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(TextRutaNamn)
+                                                .addComponent(TextRutaAgentID)
+                                                .addComponent(UnderRubrikAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(UnderRubrikNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(43, 43, 43))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(DateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(42, 42, 42)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(ComboBoxAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(UnderRubrikAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -177,10 +179,10 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UnderRubrikAnställningsdatum, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                     .addComponent(UnderRubrikOmråde))
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextRutaAnställningsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBoxOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ComboBoxOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(UnderRubrikNamn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -199,7 +201,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
     private void KnappFörRegistreringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappFörRegistreringActionPerformed
       try
       {
-      if(Validering.kontrollTextFältVärde(TextRutaAgentID) && Validering.kontrollTextFältVärde(TextRutaNamn) && Validering.kontrollTextFältVärde(TextRutaTelefon) && Validering.kontrollTextFältVärde(TextRutaAnställningsdatum) && Validering.kontrollTextFältVärde(TextRutaLösenord)){
+      if(Validering.kontrollTextFältVärde(TextRutaAgentID) && Validering.kontrollTextFältVärde(TextRutaNamn) && Validering.kontrollTextFältVärde(TextRutaTelefon) && Validering.kontrollDateVärde(DateChooser) && Validering.kontrollTextFältVärde(TextRutaLösenord)){
         String fråga = "select Agent_ID from agent";
         ArrayList<String> svar = idb.fetchColumn(fråga);
           
@@ -234,7 +236,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                         {
                         String query = "INSERT INTO Agent(Agent_ID, Namn, Telefon, Anstallningsdatum, Administrator, Losenord, Omrade) "
                         + "VALUES" + "('"+ TextRutaAgentID.getText()+ "','" + TextRutaNamn.getText()+ "','" 
-                        + TextRutaTelefon.getText()+ "','" + TextRutaAnställningsdatum.getText()+ "','" + ComboBoxAdministratör.getSelectedItem()+ "','" + TextRutaLösenord.getText()+ "','" + ComboBoxOmråde.getSelectedItem()+ "')";
+                        + TextRutaTelefon.getText()+ "','" + DateChooser.getDate()+ "','" + ComboBoxAdministratör.getSelectedItem()+ "','" + TextRutaLösenord.getText()+ "','" + ComboBoxOmråde.getSelectedItem()+ "')";
                         idb.insert(query);
                         }
                         else 
@@ -298,10 +300,10 @@ catch (InfException undantag)
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboBoxAdministratör;
     private javax.swing.JComboBox<String> ComboBoxOmråde;
+    private com.toedter.calendar.JDateChooser DateChooser;
     private javax.swing.JButton KnappFörRegistrering;
     private javax.swing.JLabel RubrikNyregistreraAgent;
     private javax.swing.JTextField TextRutaAgentID;
-    private javax.swing.JFormattedTextField TextRutaAnställningsdatum;
     private javax.swing.JTextField TextRutaLösenord;
     private javax.swing.JTextField TextRutaNamn;
     private javax.swing.JTextField TextRutaTelefon;

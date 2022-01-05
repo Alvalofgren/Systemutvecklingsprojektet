@@ -36,7 +36,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
     {
         
         try {
-            String fraga = "select Namn from alien";
+        String fraga = "select Namn from alien";
         ArrayList<String> svar = idb.fetchColumn(fraga);
         ComboBoxVäljAlien.removeAllItems();
         ComboBoxVäljAlien.addItem("Välj");
@@ -46,7 +46,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
             ComboBoxVäljAlien.addItem(värde);
         }
         }
-        catch (InfException e){
+        catch (InfException undantag){
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
@@ -253,10 +253,10 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
             }
         
         
-        catch(InfException abc)
+        catch(InfException undantag)
         {
             JOptionPane.showMessageDialog(null, "Ange ett giltigt namn");
-            System.out.println("Error" + abc.getMessage());
+            System.out.println("Error" + undantag.getMessage());
         }
     }//GEN-LAST:event_KnappVäljActionPerformed
 
