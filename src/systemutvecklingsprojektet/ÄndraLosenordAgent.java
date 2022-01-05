@@ -67,6 +67,7 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
         });
 
         LabelLösenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        LabelLösenHarÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelLösenHarÄndrats.setText("Lösenordet har ändrats!");
 
         jButton1.setText("<--Tillbaka");
