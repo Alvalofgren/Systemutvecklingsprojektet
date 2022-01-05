@@ -138,7 +138,7 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
     private void KnappÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraLösenordActionPerformed
         try
        {
-        if (Validering.rutornaMatchar(PasswordFieldNyttLösen, PasswordFieldBekräftaLösen)) {
+        if (Validering.rutornaMatchar(PasswordFieldNyttLösen, PasswordFieldBekräftaLösen) && Validering.kontrollTextFältVärde(PasswordFieldNyttLösen) && Validering.kontrollTextFältVärde(PasswordFieldBekräftaLösen)) {
             
           String ändring = ("UPDATE alien SET LOSENORD = '" + PasswordFieldNyttLösen.getText() + "'" + " WHERE NAMN = '" + AlienInlogg.getNamn() + "'");
             idb.update(ändring);

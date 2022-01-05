@@ -138,7 +138,7 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
        try
        {
            
-           if (Validering.rutornaMatchar(PFNyttLösen, PFBekräftaLösen)) {
+           if (Validering.rutornaMatchar(PFNyttLösen, PFBekräftaLösen) && Validering.kontrollTextFältVärde(PFNyttLösen) && Validering.kontrollTextFältVärde(PFBekräftaLösen)) {
             
           String ändring = ("UPDATE AGENT SET LOSENORD = '" + PFNyttLösen.getText() + "'" + " WHERE NAMN = '" + AgentInlogg.getNamn() + "'");
             idb.update(ändring);
