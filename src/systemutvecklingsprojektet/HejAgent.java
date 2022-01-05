@@ -50,6 +50,7 @@ public class HejAgent extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         ButtonRegistreraUtrustning = new javax.swing.JButton();
+        ButtonRegistreraAlien = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,6 +115,13 @@ public class HejAgent extends javax.swing.JFrame {
             }
         });
 
+        ButtonRegistreraAlien.setText("Registrera ny alien");
+        ButtonRegistreraAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonRegistreraAlienActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -143,7 +151,9 @@ public class HejAgent extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButtonRegistreraUtrustning))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(ButtonRegistreraAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ButtonRegistreraUtrustning, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(281, 281, 281))
         );
         layout.setVerticalGroup(
@@ -156,7 +166,7 @@ public class HejAgent extends javax.swing.JFrame {
                     .addComponent(LabelInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -172,7 +182,9 @@ public class HejAgent extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonRas, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonRegistreraUtrustning))
-                .addGap(36, 36, 36)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ButtonRegistreraAlien)
+                .addGap(13, 13, 13)
                 .addComponent(ButtonPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(ButtonDatum, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -210,6 +222,10 @@ public class HejAgent extends javax.swing.JFrame {
     private void ButtonRegistreraUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRegistreraUtrustningActionPerformed
         new RegistreraUtrustning(idb).setVisible(true);
     }//GEN-LAST:event_ButtonRegistreraUtrustningActionPerformed
+
+    private void ButtonRegistreraAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRegistreraAlienActionPerformed
+        new NyregistreraAlien(idb).setVisible(true);
+    }//GEN-LAST:event_ButtonRegistreraAlienActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,6 +266,7 @@ public class HejAgent extends javax.swing.JFrame {
     private javax.swing.JButton ButtonDatum;
     private javax.swing.JButton ButtonPlats;
     private javax.swing.JButton ButtonRas;
+    private javax.swing.JButton ButtonRegistreraAlien;
     private javax.swing.JButton ButtonRegistreraUtrustning;
     private javax.swing.JButton ButtonÄndraLösenord;
     private javax.swing.JLabel LabelHejAgent;
