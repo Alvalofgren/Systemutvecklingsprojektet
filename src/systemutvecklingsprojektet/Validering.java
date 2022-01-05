@@ -4,9 +4,9 @@
  */
 package systemutvecklingsprojektet;
 
+import com.toedter.calendar.JDateChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import oru.inf.InfException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /**
@@ -28,6 +28,19 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
         }
         return tom;
     }
+
+public static boolean kontrollDateVärde (JDateChooser aktuellRuta)
+{
+    boolean tom = true; 
+    
+    if(aktuellRuta.getDate() == null)
+    {
+        JOptionPane.showMessageDialog(null, "Skriv in något i rutan(rutorna");
+        tom = false;
+        aktuellRuta.requestFocus();
+    }
+    return tom;
+}
 
 public static boolean isValidMobileNo(String str)  
 {  
@@ -88,4 +101,6 @@ public static boolean isValidMobileNo(String str)
        return matchar;
        
    }
+   
+   
 }
