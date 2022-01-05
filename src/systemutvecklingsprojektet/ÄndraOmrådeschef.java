@@ -145,7 +145,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
        }
        catch(InfException undantag)
        {
-           JOptionPane.showMessageDialog(null, "FEL");
+           JOptionPane.showMessageDialog(null, "Error");
        }
     }//GEN-LAST:event_ButtonÄndraActionPerformed
 
