@@ -97,7 +97,8 @@ public class ÄndraRas extends javax.swing.JFrame {
             }
         });
 
-        LabelRasenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        LabelRasenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelRasenHarÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelRasenHarÄndrats.setText("Rasen har ändrats!");
 
         LabelNuvarandeRas.setText("Nuvarande ras:");
@@ -116,7 +117,7 @@ public class ÄndraRas extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(79, Short.MAX_VALUE)
+                .addContainerGap(109, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(LabelRubrik)
@@ -173,7 +174,7 @@ public class ÄndraRas extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonÄndra)
                     .addComponent(tillbaka))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
