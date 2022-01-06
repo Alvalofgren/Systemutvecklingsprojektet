@@ -12,7 +12,9 @@ import oru.inf.InfDB;
  *
  * @author almahedengren
  */
-public class ÄndraInfoAgent extends javax.swing.JFrame {
+public class ÄndraInfoAgent extends javax.swing.JFrame { 
+    
+    //Denna klass ändrar ett valt attribut till ett av användaren valt nytt värde
 
     private InfDB idb;
     /**
@@ -184,6 +186,9 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
     }//GEN-LAST:event_TextFältNyttVärdeActionPerformed
 
     private void KnappÄndraVärdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraVärdeActionPerformed
+        
+        //Ändrar värdet till det nya värde användaren valt
+        
         try
         {    
         if(Validering.kontrollTextFältVärde(TextFältNyttVärde))
