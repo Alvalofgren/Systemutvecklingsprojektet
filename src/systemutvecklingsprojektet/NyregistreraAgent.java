@@ -244,7 +244,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                         if(!TextRutaTelefon.getText().matches("[a-zA-Z]") && TextRutaTelefon.getText().matches("[0-9]") || TextRutaTelefon.getText().contains("-"))
                         {
                         String query = "INSERT INTO Agent(Agent_ID, Namn, Telefon, Anstallningsdatum, Administrator, Losenord, Omrade) "
-                        + "VALUES" + "('"+ TextRutaAgentID.getText()+ "','" + TextRutaNamn.getText()+ "','" 
+                        + "VALUES" + "("+ nyID+ ",'" + TextRutaNamn.getText()+ "','" 
                         + TextRutaTelefon.getText()+ "','" + TextRutaAnställningsdatum.getText()+ "','" + ComboBoxAdministratör.getSelectedItem()+ "','" + TextRutaLösenord.getText()+ "','" + ComboBoxOmråde.getSelectedItem()+ "')";
                         idb.insert(query);
                         
