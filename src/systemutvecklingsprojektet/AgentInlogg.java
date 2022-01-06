@@ -109,7 +109,10 @@ public class AgentInlogg extends javax.swing.JFrame {
         String fråga = "SELECT administrator from agent WHERE Namn ='" + TextFieldAnvändarnamn.getText() + "'";
         String aStatus = idb.fetchSingle(fråga);
         
-        if(losen == null)
+        if(!Validering.kontrollTextFältVärde(TextFieldAnvändarnamn)){
+            
+        }
+        else if(losen == null)
                 {
                     JOptionPane.showMessageDialog(null, "Användarnamnet finns inte");
                 }
