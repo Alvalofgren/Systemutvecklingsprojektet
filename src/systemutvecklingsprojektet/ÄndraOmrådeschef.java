@@ -39,7 +39,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
 
         RubrikÄndraOmrådeschef = new javax.swing.JLabel();
         LabelVäljAgentID = new javax.swing.JLabel();
-        ComboBoxVäljAgentID = new javax.swing.JComboBox<>();
+        ComboBoxVäljAgent = new javax.swing.JComboBox<>();
         LabelTillOmråde = new javax.swing.JLabel();
         ComboBoxVäljOmråde = new javax.swing.JComboBox<>();
         ButtonÄndra = new javax.swing.JButton();
@@ -53,7 +53,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
 
         LabelVäljAgentID.setText("Välj Agent:");
 
-        ComboBoxVäljAgentID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         LabelTillOmråde.setText("Till område:");
 
@@ -88,7 +88,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
                     .addComponent(LabelTillOmråde))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ComboBoxVäljAgentID, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ComboBoxVäljAgent, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ComboBoxVäljOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(78, 78, 78))
             .addGroup(layout.createSequentialGroup()
@@ -119,7 +119,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelVäljAgentID)
-                    .addComponent(ComboBoxVäljAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelTillOmråde)
@@ -137,8 +137,13 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
     private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
         try
        {
-            
-          String ändring = ("UPDATE Omradeschef SET Namn = '" + ComboBoxVäljAgentID.getSelectedItem() + "'" + " WHERE Benamning = '" + ComboBoxVäljOmråde.getSelectedItem() + "'");
+        String id = "select Agent_ID from agent where namn= '"+ ComboBoxVäljAgent.getSelectedItem()+"'";
+        String idagent = idb.fetchSingle(id);
+         
+        String område = "select Omrades_ID from Omrade where Benamning ='"+ ComboBoxVäljOmråde.getSelectedItem()+ "'";
+        String idområde = idb.fetchSingle(område);
+        
+          String ändring = ("UPDATE Omradeschef SET Agent_ID = '" +idagent + "'" + " WHERE Omrade = '" + idområde + "'");
             idb.update(ändring);
             LabelOmrådeChefHarÄndrats.setVisible(true);
 
@@ -146,6 +151,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
        catch(InfException undantag)
        {
            JOptionPane.showMessageDialog(null, "Error");
+           System.out.println("Error" + undantag.getMessage());
        }
     }//GEN-LAST:event_ButtonÄndraActionPerformed
 
@@ -165,14 +171,14 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
     
     private void fyllIListaAgent(){
         try {
-            ComboBoxVäljAgentID.removeAllItems();
-            ComboBoxVäljAgentID.addItem("Välj");
+            ComboBoxVäljAgent.removeAllItems();
+            ComboBoxVäljAgent.addItem("Välj");
             String query = "select namn from agent";
             ArrayList<String> svar = idb.fetchColumn(query);
         
         for(String värde : svar)
         {
-            ComboBoxVäljAgentID.addItem(värde);
+            ComboBoxVäljAgent.addItem(värde);
         }
         }
         catch (InfException e){
@@ -230,7 +236,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonÄndra;
-    private javax.swing.JComboBox<String> ComboBoxVäljAgentID;
+    private javax.swing.JComboBox<String> ComboBoxVäljAgent;
     private javax.swing.JComboBox<String> ComboBoxVäljOmråde;
     private javax.swing.JLabel LabelOmrådeChefHarÄndrats;
     private javax.swing.JLabel LabelTillOmråde;

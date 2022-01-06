@@ -178,8 +178,10 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
     private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
         try
        {
-            
-          String ändring = ("UPDATE kontorschef SET Namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'" + " WHERE Kontorsbeteckning = '" + ComboBoxVäljKontor.getSelectedItem() + "'");
+        String id = "select Agent_ID from agent where namn= '"+ ComboBoxVäljAgent.getSelectedItem()+"'";
+        String agentid = idb.fetchSingle(id); 
+        
+          String ändring = ("UPDATE kontorschef SET Agent_ID = '" + agentid + "'" + " WHERE Kontorsbeteckning = '" + ComboBoxVäljKontor.getSelectedItem() + "'");
             idb.update(ändring);
             LabelKontorChefÄndrats.setVisible(true);
 
