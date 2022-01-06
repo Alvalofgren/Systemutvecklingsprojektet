@@ -27,11 +27,14 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         this.idb=idb;
         allaAliens = new ArrayList<>();
         fyllILista();
-        
-        
-        
+
     }
 
+    /**
+     * FyllILista metoden fyller vår comboBox med värden. Värdena är från den databas som vi ska använda oss av dessa får vi 
+     * tag på genom att använda oss av sql frågor i vår javakod. 
+     */
+    
     private void fyllILista()
     {
         
@@ -237,7 +240,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
     }//GEN-LAST:event_ComboBoxVäljAlienActionPerformed
 
     /**
-     * Metoden lägger in värden i vår combobox utifrån en alien som man väljer
+     * Metoden lägger in värden i vår textarea utifrån en alien som man väljer
      * @param evt 
      */
     
