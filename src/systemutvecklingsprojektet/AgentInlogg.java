@@ -99,6 +99,12 @@ public class AgentInlogg extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Metoden nedanför är lik den som är i klassen AlienInlogg men en stor skillnad är att denna (AgentInlogg) kontrollerar
+     * om du är Agent eller Administratör. Beroende på vilken av dessa titlar som man tillhör hamnar man i olika fönster
+     * @param evt 
+     */
+    
     private void ButtonLoggainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggainActionPerformed
 
         try {
