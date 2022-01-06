@@ -9,7 +9,7 @@ import oru.inf.InfException;
 
 /**
  *
- * @author Julius // Första inmloggningsrutan där man kan välja mellan agent, alien och administratör.
+ * @author Julius // Första inloggningsrutan där man kan välja mellan agent, alien och administratör.
  */
 public class AlienInlogg extends javax.swing.JFrame {
     private InfDB idb;
