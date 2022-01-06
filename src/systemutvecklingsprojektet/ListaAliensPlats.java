@@ -29,6 +29,7 @@ public class ListaAliensPlats extends javax.swing.JFrame {
        fyllILista();
       
     }
+//Fyller i comboboxen med värden, använder sql fråga för att hämta ut information från databasen. 
     
     private void fyllILista() 
     {
@@ -157,7 +158,8 @@ public class ListaAliensPlats extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//Denna metoden hämtar ut information om alien från tabellen alien beroende på vilken plats vi väljer i comboboxen.
+//Sedan skriver den ut informationen om alien som finns på den valda platsen i textArean.
     private void ListaVäljPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaVäljPlatsActionPerformed
         
         try

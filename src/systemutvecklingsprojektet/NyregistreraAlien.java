@@ -226,7 +226,9 @@ private void fyllIListaAgent(){
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//En metod för att nyregistrera en alient och lägga till de valda värdena i databasen. 
+//Flera olika sorter valideringar för att kontrollera att de olika värdena man skriver in i fälten fungerar. 
+    
     private void RegistreringKnappAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistreringKnappAlienActionPerformed
 
         try{
@@ -270,7 +272,7 @@ private void fyllIListaAgent(){
                                                 
                                         {
                                         String query = "INSERT INTO Alien(Alien_ID, Registreringsdatum, Losenord, Namn, Telefon, Plats, Ansvarig_Agent) "
-                                        + "VALUES" + "('"+ TextRutaAlienID.getText()+ "','" + TextRutaRegistreringsdatum.getText()+ "','" 
+                                        + "VALUES" + "("+ nyID+ ",'" + TextRutaRegistreringsdatum.getText()+ "','" 
                                         + TextRutaLösenordAlien.getText()+ "','" + TextRutaNamnAlien.getText()+ "','" + TextRutaTelefonAlien.getText()+ "','" + ComboBoxPlats.getSelectedItem()+ "','" + ComboBoxAnsvarigAgent.getSelectedItem()+ "')";
                                         idb.insert(query);
                                         

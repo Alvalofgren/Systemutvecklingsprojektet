@@ -27,7 +27,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
         
         
     }
-    
+//Comboboxen fylls med dessa värden, de olika raser som finns.   
      private void fyllILista() 
     {
         
@@ -159,7 +159,8 @@ public class ListaAliensRas extends javax.swing.JFrame {
     private void ListaVäljRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaVäljRasActionPerformed
     
     }//GEN-LAST:event_ListaVäljRasActionPerformed
-
+//Denna metoden hämtar ut information från tabellen alien beroende på vilken ras vi väljer i comboboxen.
+//Sedan skriver den ut informationen i textArean om de alien som finns i den valda rasen.
     private void ButtonVisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaActionPerformed
         
         try 

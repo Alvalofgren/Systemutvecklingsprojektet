@@ -130,6 +130,11 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+   /**
+    * Metoden nedan ger en agent som inte är administratör en administratörstatus. Då ändras statusen till bokstaven J
+    * @param evt 
+    */ 
+    
     private void ButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOKActionPerformed
         try{ 
         String query = "update agent set administrator = 'J' where namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'";
@@ -142,6 +147,13 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ButtonOKActionPerformed
 
+    /**
+     * Den här metoden är skriven på tillbakaknapparna som vi har på många av våra sidor. Funktionen på tillbaka knappen är som 
+     * det låter att genom att trycka på knappen ska man komma tillbaka till föregående sida och den föregående sidan ska 
+     * med andra ord öppnas. 
+     * @param evt 
+     */
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          if (HejAdministrator.getTillbakaKnapp()) {
             new GeAdministratörStatus(idb).setVisible(true);

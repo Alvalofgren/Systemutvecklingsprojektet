@@ -43,8 +43,8 @@ public static boolean isValidMobileNo(String str)
                boolean resultat = true;
                try
                {
-                   String enSträng = aktuellRuta.getText();
-                   Integer.parseInt(enSträng);
+                   String heltal = aktuellRuta.getText();
+                   Integer.parseInt(heltal);
                    aktuellRuta.requestFocus();
                }
                
@@ -55,23 +55,6 @@ public static boolean isValidMobileNo(String str)
                }
                return resultat;
            }
- 
- public static boolean ärEnString(JTextField aktuellRuta)
- {
-     boolean resultat = true; 
-     try 
-     {
-         String enSträng = aktuellRuta.getText();
-         //Hur fortsätta??
-         
-     }
-     catch(NumberFormatException undantag)
-     {
-         JOptionPane.showMessageDialog(null, "Ange en sträng");
-         resultat = false;
-     }
-     return resultat; 
- }
     
     
     public static boolean rutornaMatchar(JTextField aktuellRuta, JTextField aktuellRuta2)

@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
@@ -121,13 +122,36 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//En metod för att registrera ny utrustning. Med sql-frågan läggs de värden man skrivit in om den nya utrustningen in i databasen.
     private void ButtonRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRegistreraActionPerformed
         try{
         
-            String query = "INSERT INTO Utrustning(Utrustnings_ID, Benamning) VALUES" + "('"+ TextFieldUtrustningsID.getText()+ "','" + TextFieldBenamning.getText()+"')"; 
-            idb.insert(query);
-            LabelUtrustningRegistrerats.setVisible(true);
+        if(Validering.kontrollTextFältVärde(TextFieldBenamning) && Validering.kontrollTextFältVärde(TextFieldUtrustningsID))
+        {
+                
+        String fråga = "select Utrustnings_ID from Utrustning";
+        ArrayList<String> svar = idb.fetchColumn(fråga);
+                
+            
+            int nyID = Integer.parseInt(TextFieldUtrustningsID.getText());
+            
+                for (String värde : svar)
+                {
+               int finnsID =  Integer.parseInt(värde);
+                
+                    if(nyID == finnsID)
+                    {
+                        JOptionPane.showMessageDialog(null, "Utrustnings-ID finns redan!");
+                        break;
+                    
+                    }
+                    else {
+                         String query = "INSERT INTO Utrustning(Utrustnings_ID, Benamning) VALUES" + "('"+ TextFieldUtrustningsID.getText()+ "','" + TextFieldBenamning.getText()+"')"; 
+                         idb.insert(query);
+                         LabelUtrustningRegistrerats.setVisible(true);
+                    }
+        }
+        }
         }
         catch (InfException undantag)
         {

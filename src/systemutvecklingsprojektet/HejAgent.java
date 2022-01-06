@@ -106,7 +106,7 @@ public class HejAgent extends javax.swing.JFrame {
 
         jLabel1.setText("Ändra information");
 
-        jLabel2.setText("Registrera ny utrustning");
+        jLabel2.setText("Registrera");
 
         ButtonRegistreraUtrustning.setText("Registrera ny utrustning");
         ButtonRegistreraUtrustning.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +148,7 @@ public class HejAgent extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 320, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, Short.MAX_VALUE)
                     .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonRegistreraUtrustning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
