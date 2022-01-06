@@ -135,7 +135,7 @@ public class TaBortAgent extends javax.swing.JFrame {
             String omradeschef = "delete from omradeschef where Agent_ID = " + svar  ;
             idb.delete(omradeschef);
             
-            
+            // KODEN OVAN FUNGERAR INTE OM MAN FÖRSÖKER TA BORT EN AGENT SOM ÄR ANSVARIG AGENT ÖVER EN ALIEN!!!!!
             
             String query = "delete from agent where Agent_ID = " + svar ;
             idb.delete(query);
