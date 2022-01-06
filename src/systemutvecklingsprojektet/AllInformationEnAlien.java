@@ -236,6 +236,11 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ComboBoxVäljAlienActionPerformed
 
+    /**
+     * Metoden lägger in värden i vår combobox utifrån en alien som man väljer
+     * @param evt 
+     */
+    
     private void KnappVäljActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappVäljActionPerformed
         TextAreaFönster.setText("");
         try

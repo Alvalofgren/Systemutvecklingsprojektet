@@ -110,6 +110,13 @@ public class AlienInlogg extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    /**
+     * Metoden nedan kontrollerar så att rätt användarnamn och lösenord används när man loggar in i systemet
+     * Det sker också en kontroll med ett felmeddelande om man loggar in i systemet och inte skriver in något i inmatningrutorna
+     * @param evt 
+     */
+    
     private void ButtonLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggaInActionPerformed
           
         try {
