@@ -7,8 +7,7 @@ package systemutvecklingsprojektet;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 /**
  *
 
@@ -16,7 +15,15 @@ import java.util.regex.Pattern;
  */
 public class Validering {
   
-   
+/**
+ * Metoden kontrollTextFältVärde kontrollerar olika textfält och de värden som matas in. Det kan handla om att logga in i systemet
+ * eller att registrera agenter, aliens eller utrusning. Denna metod specificierar sig och kontrollerar att om rutorna är 
+ * tomma ska ett felmeddelande komma upp. Metoderna i den här klassen använder vi oss av i andra klasser för att göra
+ * olika valideringar.
+ * @param aktuellRuta
+ * @return 
+ */ 
+    
 public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
     {
         boolean tom = true;
@@ -29,14 +36,12 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
         return tom;
     }
 
-public static boolean isValidMobileNo(String str)  
-{  
-    Pattern ptrn = Pattern.compile("(0/91)?[7-9][0-9]{9}"); 
-    
-    Matcher match = ptrn.matcher(str); 
-    
-    return (match.find() && match.group().equals(str)); 
-}    
+/**
+ * Nästa metod som är nedanför kontrollerar denna gång om det som skrivs in i ett textfält är av ett heltal. I de olika klasserna
+ * för reigstrering av olika slag ska man registrera telefon nummer i vissa fall och då används den här metoden.
+ * @param aktuellRuta
+ * @return 
+ */
 
  public static boolean harHeltal(JTextField aktuellRuta)
            {
@@ -56,7 +61,12 @@ public static boolean isValidMobileNo(String str)
                return resultat;
            }
     
-    
+    /**
+     * Nästa metod validerar så att rutorna i två textfält matchar
+     * @param aktuellRuta
+     * @param aktuellRuta2
+     * @return 
+     */
     public static boolean rutornaMatchar(JTextField aktuellRuta, JTextField aktuellRuta2)
    {
        boolean matchar = false;
