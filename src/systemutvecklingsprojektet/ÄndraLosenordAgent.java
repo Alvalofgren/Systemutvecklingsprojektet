@@ -133,6 +133,9 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+//Denna metod ändrar lösenordet för alien. Först kontrolleras att textfälten inte är tomma och att båda textfält matchar med varandra.
+//Sedan när valideringarna kontrolleras så uppdateras databasen med det nya lösenordet. 
+    
     private void ButtonÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraLösenordActionPerformed
     
        try

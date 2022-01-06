@@ -134,6 +134,9 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Denna metod ändrar områdeschefen. Den uppdaterar tabellen områdeschef och sätter agent-id från det valda agentnamnet man valt ska bli ny områdeschef. 
+    //Eftersom man väljer ett agentnamn i comboboxen men det är ett agent id som ska in i områdeschef tabellen så har vi med sql-frågor hämtat ut agent-id för det valda namnet och lagrat det i variabler.
+    
     private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
         try
        {

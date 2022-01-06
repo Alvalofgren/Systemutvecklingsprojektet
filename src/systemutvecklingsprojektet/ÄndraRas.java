@@ -24,7 +24,7 @@ public class ÄndraRas extends javax.swing.JFrame {
         fyllIListaRas();
         LabelRasenHarÄndrats.setVisible(false);
     }
-
+//Fyller combobox med de olika aliennamn som finns. 
     private void fyllIListaAlien(){
         try {
             ComboBoxVäljAlien.removeAllItems();
@@ -41,7 +41,7 @@ public class ÄndraRas extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
-    
+//Fyller combobox med de raser som finns.   
     private void fyllIListaRas(){
         ComboBoxVäljNyRas.removeAllItems();
         ComboBoxVäljNyRas.addItem("Välj");
@@ -166,6 +166,10 @@ public class ÄndraRas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+//Ändrar ras på den alien man valt. 
+//Först kontrolleras med olika if-satser vilken ras alien tillhör och då raderas den valda alien från den nuvarande rasen med hjälp av en delete sql-fråga. 
+//Sedan läggs alien-id till i tabellen för den nya rasen man valt.
+    
     private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
        try
        {
