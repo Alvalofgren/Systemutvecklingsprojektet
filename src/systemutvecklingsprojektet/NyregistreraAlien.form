@@ -23,126 +23,102 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="TextRutaRegistreringsdatum" min="-2" pref="142" max="-2" attributes="0"/>
+                          <Component id="TextRutaAlienID" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="TextRutaLösenordAlien" alignment="0" max="32767" attributes="0"/>
+                              <Component id="TextRutaTelefonAlien" alignment="0" pref="187" max="32767" attributes="0"/>
+                              <Component id="TextRutaNamnAlien" alignment="0" max="32767" attributes="0"/>
+                              <Component id="ComboBoxPlats" alignment="0" max="32767" attributes="0"/>
+                              <Component id="ComboBoxAnsvarigAgent" alignment="0" max="32767" attributes="0"/>
+                              <Component id="TextRutaRegistreringsdatum" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TextRutaLösenordAlien" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                  <Component id="UnderRubrikLösenordFörAlien" min="-2" pref="86" max="-2" attributes="0"/>
-                                  <Component id="UnderRubrikNamnFörAlien" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="TextRutaNamnAlien" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikAnsvarigAgent" min="-2" pref="94" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikPlats" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikNamnFörAlien" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikTelefonFörAlien" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikRegistreringsdatum" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                                  <Component id="LabelDatum" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="UnderRubrikRegistreringsdatum" min="-2" pref="131" max="-2" attributes="0"/>
-                          <Component id="LabelDatum" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="UnderRubrikAnsvarigAgent" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
-                              <Component id="ComboBoxAnsvarigAgent" min="-2" max="-2" attributes="0"/>
-                              <Component id="RegistreringKnappAlien" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="UnderRubrikPlats" min="-2" pref="37" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="ComboBoxPlats" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikAlienID" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
+                      <Component id="UnderRubrikLösenordFörAlien" min="-2" pref="86" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                      <Component id="RubrikNyregistreraAlien" min="-2" pref="252" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UnderRubrikAlienID" min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="TextRutaAlienID" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                          <Component id="LabelAlienRegistrerad" min="-2" max="-2" attributes="0"/>
+                          <Component id="RegistreringKnappAlien" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UnderRubrikTelefonFörAlien" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="TextRutaTelefonAlien" min="-2" pref="114" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="RubrikNyregistreraAlien" min="-2" pref="252" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              <EmptySpace pref="135" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="RubrikNyregistreraAlien" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              <Component id="RubrikNyregistreraAlien" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="UnderRubrikAlienID" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="UnderRubrikAlienID" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="UnderRubrikTelefonFörAlien" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="TextRutaAlienID" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="LabelDatum" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+              <Component id="UnderRubrikRegistreringsdatum" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TextRutaAlienID" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextRutaTelefonAlien" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="UnderRubrikPlats" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="LabelDatum" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="UnderRubrikRegistreringsdatum" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ComboBoxPlats" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextRutaRegistreringsdatum" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="TextRutaRegistreringsdatum" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="UnderRubrikAnsvarigAgent" min="-2" max="-2" attributes="0"/>
-                  <Component id="UnderRubrikLösenordFörAlien" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="TextRutaLösenordAlien" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="UnderRubrikNamnFörAlien" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="TextRutaNamnAlien" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="ComboBoxAnsvarigAgent" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="RegistreringKnappAlien" min="-2" pref="26" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="8" max="32767" attributes="0"/>
+              <Component id="UnderRubrikLösenordFörAlien" min="-2" pref="15" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="TextRutaLösenordAlien" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="UnderRubrikTelefonFörAlien" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="TextRutaTelefonAlien" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="UnderRubrikNamnFörAlien" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="TextRutaNamnAlien" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="UnderRubrikPlats" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="ComboBoxPlats" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Component id="UnderRubrikAnsvarigAgent" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="ComboBoxAnsvarigAgent" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="RegistreringKnappAlien" min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="LabelAlienRegistrerad" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -263,6 +239,17 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="TextRutaRegistreringsdatum">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelAlienRegistrerad">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Alien &#xe4;r registrerad!"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
