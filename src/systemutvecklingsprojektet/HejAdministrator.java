@@ -29,12 +29,13 @@ public class HejAdministrator extends javax.swing.JFrame {
     
     /**
      * Den här metoden är en get metod som vi använder oss av i en annan metod som vi har i flera andra klasser. Den metoden
-     * är kopplad till knappar som vi gör för att kunna 
+     * är kopplad till knappar som vi gör för att kunna gå tillbaka till föregående sida. Den returnerar ett fält som är av 
+     * typen boolean, det vill säga att den returnerar ett värde som antingen är true eller false. 
      * 
      * @return 
      */
     
-    public static boolean getAdminStatus(){
+    public static boolean getTillbakaKnapp(){
      return arAdmin;
  } 
 

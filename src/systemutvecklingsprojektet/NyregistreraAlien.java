@@ -308,7 +308,7 @@ private void fyllIListaAgent(){
     
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (HejAdministrator.getAdminStatus() == true) {
+         if (HejAdministrator.getTillbakaKnapp() == true) {
             new NyregistreraAlien(idb).setVisible(true);
             dispose();
         } else {

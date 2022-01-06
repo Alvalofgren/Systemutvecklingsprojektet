@@ -24,7 +24,7 @@ private static boolean arAdmin;
         
     }
     
-    public static boolean getAdminStatus(){
+    public static boolean getTillbakaKnapp(){
      return arAdmin;
  } 
 

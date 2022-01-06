@@ -157,7 +157,7 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
     }//GEN-LAST:event_PFNyttLösenActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (HejAgent.getAdminStatus()) {
+        if (HejAgent.getTillbakaKnapp()) {
             new ÄndraLosenordAgent(idb).setVisible(true);
             dispose();
         } else {
