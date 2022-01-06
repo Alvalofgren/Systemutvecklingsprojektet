@@ -183,7 +183,9 @@ public class ListaAliensDatum extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //Denna metoden hämtar ut information från tabellen alien beroende på mellan vilka registreringsdatum vi vill ha infomrmation från.
+    //Sedan skriver den ut informationen om de alien i textArean. 
     private void ButtonVisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaActionPerformed
        try
        {

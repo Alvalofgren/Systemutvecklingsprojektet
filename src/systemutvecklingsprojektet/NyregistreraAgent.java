@@ -23,7 +23,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
         fyllILista();
         LabelAgentRegistrerad.setVisible(false);
     }
-
+//Hämtar ut områdes_id från område genom en sql-fråga och fyller comboboxen med den informationen. 
     private void fyllIListaOmråde()
     {
         try {
@@ -40,7 +40,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
-    
+//Fyller i comboboxen med J och N.    
     private void fyllILista()
     {
             ComboBoxAdministratör.removeAllItems();
@@ -206,7 +206,9 @@ public class NyregistreraAgent extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//En metod för att nyregistrera en agent och lägga till de valda värdena i databasen. 
+//Flera olika sorter valideringar för att kontrollera att de olika värdena man skriver in i fälten fungerar. 
+    
     private void KnappFörRegistreringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappFörRegistreringActionPerformed
       try
       {
