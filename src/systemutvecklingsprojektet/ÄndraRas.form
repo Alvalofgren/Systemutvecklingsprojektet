@@ -23,16 +23,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="109" max="32767" attributes="0"/>
-              <Component id="LabelRubrik" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-              <Component id="ButtonÄndra" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -60,30 +50,37 @@
                       <Component id="LabelRasenHarÄndrats" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="115" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                      <Component id="ButtonÄndra" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                      <Component id="LabelRubrik" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="LabelRubrik" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LabelNuvarandeRas" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="ComboBoxVäljNuvarandeRas" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LabelVäljAlien" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ComboBoxVäljAlien" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <Component id="LabelRubrik" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelNuvarandeRas" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="ComboBoxVäljNuvarandeRas" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelVäljAlien" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ComboBoxVäljAlien" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -105,7 +102,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xc4;ndra ras"/>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra rastillh&#xf6;righet"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="LabelV&#xe4;ljAlien">
