@@ -179,7 +179,7 @@ public class ListaAliensPlats extends javax.swing.JFrame {
     }//GEN-LAST:event_ListaVäljPlatsActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if (HejAgent.getAdminStatus()) {
+        if (HejAgent.getTillbakaKnapp()) {
             new ListaAliensPlats(idb).setVisible(true);
             dispose();
         } else {

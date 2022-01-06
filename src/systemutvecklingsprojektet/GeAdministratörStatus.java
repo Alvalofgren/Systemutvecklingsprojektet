@@ -143,7 +143,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonOKActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (HejAdministrator.getAdminStatus()) {
+         if (HejAdministrator.getTillbakaKnapp()) {
             new GeAdministratörStatus(idb).setVisible(true);
             dispose();
         } else {

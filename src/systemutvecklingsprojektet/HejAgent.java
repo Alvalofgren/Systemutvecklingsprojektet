@@ -25,7 +25,7 @@ public class HejAgent extends javax.swing.JFrame {
 
     }
     
-    public static boolean getAdminStatus(){
+    public static boolean getTillbakaKnapp(){
      return arAdmin;
  } 
 

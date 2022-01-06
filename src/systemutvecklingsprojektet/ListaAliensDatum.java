@@ -208,7 +208,7 @@ public class ListaAliensDatum extends javax.swing.JFrame {
     }//GEN-LAST:event_FormattedTextFieldTillActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (HejAgent.getAdminStatus()) {
+        if (HejAgent.getTillbakaKnapp()) {
             new ListaAliensDatum(idb).setVisible(true);
             dispose();
         } else {

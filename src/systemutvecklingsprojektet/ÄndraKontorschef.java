@@ -191,7 +191,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonÄndraActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (HejAdministrator.getAdminStatus()) {
+         if (HejAdministrator.getTillbakaKnapp()) {
             new ÄndraKontorschef(idb).setVisible(true);
             dispose();
         } else {
