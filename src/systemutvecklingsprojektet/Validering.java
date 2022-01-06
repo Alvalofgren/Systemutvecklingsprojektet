@@ -4,7 +4,7 @@
  */
 package systemutvecklingsprojektet;
 
-import com.toedter.calendar.JDateChooser;
+
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.util.regex.Matcher;
