@@ -69,8 +69,6 @@ public class ListaAliensPlats extends javax.swing.JFrame {
         ListaVäljPlats = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         TextAreaPlatsLista = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
@@ -95,10 +93,6 @@ public class ListaAliensPlats extends javax.swing.JFrame {
         TextAreaPlatsLista.setRows(5);
         jScrollPane1.setViewportView(TextAreaPlatsLista);
 
-        jLabel1.setText("Alien-ID");
-
-        jLabel2.setText("Namn");
-
         jButton2.setText("<--Tillbaka");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,18 +110,10 @@ public class ListaAliensPlats extends javax.swing.JFrame {
                         .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addGap(47, 47, 47))
-                                    .addComponent(LabelVäljPlats, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(ListaVäljPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(7, 7, 7)
-                                        .addComponent(jLabel2))))
+                                .addGap(22, 22, 22)
+                                .addComponent(LabelVäljPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(ListaVäljPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -153,11 +139,7 @@ public class ListaAliensPlats extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(LabelVäljPlats)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(3, 3, 3)
+                .addGap(37, 37, 37)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -174,7 +156,12 @@ public class ListaAliensPlats extends javax.swing.JFrame {
             ArrayList<HashMap<String, String>> raden = idb.fetchRows(query);
             TextAreaPlatsLista.setText(null);
             
+            TextAreaPlatsLista.append(("Alien_ID") + "\t");
+            TextAreaPlatsLista.append(("Namn") + "\n");
+            
         for (HashMap kolumn : raden){
+           
+            
             TextAreaPlatsLista.append(kolumn.get("Alien_ID") + "\t");
             TextAreaPlatsLista.append(" " + kolumn.get("Namn") + "\n");
         } 
@@ -239,8 +226,6 @@ public class ListaAliensPlats extends javax.swing.JFrame {
     private javax.swing.JTextArea TextAreaPlatsLista;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

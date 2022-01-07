@@ -57,8 +57,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TextAreaFörRas = new javax.swing.JTextArea();
         ButtonVisa = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
@@ -90,12 +88,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel2.setText("Alien-ID:");
-
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel3.setText("Namn:");
-
         jButton1.setText("<--Tillbaka");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,10 +108,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
@@ -145,11 +133,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                     .addComponent(ListaVäljRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelVäljRas)
                     .addComponent(ButtonVisa))
-                .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -173,12 +157,14 @@ public class ListaAliensRas extends javax.swing.JFrame {
             ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
             TextAreaFörRas.setText(null);
             
-            for(HashMap kolumn : rader){
             TextAreaFörRas.append(("Alien_ID") + "\t");
-            TextAreaFörRas.append(("Namn") + "\t");
+            TextAreaFörRas.append(("Namn") + "\n");
+            
+            for(HashMap kolumn : rader){
+           
 
             TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
+            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
            
             
             }
@@ -187,7 +173,12 @@ public class ListaAliensRas extends javax.swing.JFrame {
             ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
             TextAreaFörRas.setText(null);
             
+            TextAreaFörRas.append(("Alien_ID") + "\t");
+            TextAreaFörRas.append(("Namn") + "\n");
+            
             for(HashMap kolumn : rader){
+                
+            
             TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
             TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
            
@@ -197,7 +188,12 @@ public class ListaAliensRas extends javax.swing.JFrame {
             ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
             TextAreaFörRas.setText(null);
             
+            TextAreaFörRas.append(("Alien_ID") + "\t");
+            TextAreaFörRas.append(("Namn") + "\n");
+            
             for(HashMap kolumn : rader){
+             
+            
             TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
             TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
             }
@@ -263,8 +259,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
     private javax.swing.JTextArea TextAreaFörRas;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
