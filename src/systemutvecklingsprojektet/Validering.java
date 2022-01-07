@@ -5,8 +5,11 @@
 package systemutvecklingsprojektet;
 
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import oru.inf.InfDB;
+import oru.inf.InfException;
 
 /**
  *
@@ -14,7 +17,7 @@ import javax.swing.JTextField;
  * @author Julius
  */
 public class Validering {
-  
+  private InfDB idb;
 /**
  * Metoden kontrollTextFältVärde kontrollerar olika textfält och de värden som matas in. Det kan handla om att logga in i systemet
  * eller att registrera agenter, aliens eller utrusning. Denna metod specificierar sig och kontrollerar att om rutorna är 
@@ -23,7 +26,11 @@ public class Validering {
  * @param aktuellRuta
  * @return 
  */ 
-    
+public Validering (InfDB idb)
+        {
+            this.idb=idb;
+        }
+  
 public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
     {
         boolean tom = true;
@@ -97,5 +104,25 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
         return giltig;
     }
    
-   
+//    public static boolean namnFinns(JTextField aktuellRuta)
+//    {
+//        boolean finns = false;
+//        
+//        try{     
+//        String fraga = "select namn from agent";
+//        ArrayList<String> svarNamn = idb.fetchColumn(fraga);
+//                    
+//                for(String namn : svarNamn)
+//                {
+//                    if(aktuellRuta.getText().equals(namn)) 
+//                    finns = true;
+//                }    
+//        }
+//       catch(InfException undantaget)
+//        {
+//            JOptionPane.showMessageDialog(null, "Ange ett giltigt nytt värde");
+//                        System.out.println("Error" + undantaget.getMessage());              
+//        }
+//        return finns;
+//    }               
 }

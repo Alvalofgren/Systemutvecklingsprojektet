@@ -230,8 +230,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Agent-ID finns redan");
                 break;
             }
-            else 
-            {
+        }
                 if(Validering.harHeltal(TextRutaAgentID))
                 {
                     String fraga = "select namn from agent";
@@ -262,13 +261,8 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                     }    
                 }
                 }
-                else
-                {
-                    
-                }
-            }
-        }
-       
+            
+        
       }
     }//GEN-LAST:event_KnappFörRegistreringActionPerformed
 catch (InfException undantag)
