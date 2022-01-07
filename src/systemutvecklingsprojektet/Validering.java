@@ -81,6 +81,21 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
        return matchar;
        
    }
+    
+    public static boolean telefonÄrGiltig (JTextField aktuellRuta)
+    {
+       boolean giltig = false;
+       
+        if(!aktuellRuta.getText().matches("[a-zA-Z]") && aktuellRuta.getText().matches("[0-9]") || aktuellRuta.getText().contains("-"))
+        {
+            giltig = true;
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Ange ett giltigt telefonnummer");
+        }
+        return giltig;
+    }
    
    
 }
