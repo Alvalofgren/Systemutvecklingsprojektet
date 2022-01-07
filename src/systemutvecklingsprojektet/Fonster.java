@@ -31,7 +31,8 @@ public class Fonster extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikForFonster.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikForFonster.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikForFonster.setForeground(new java.awt.Color(0, 204, 255));
         RubrikForFonster.setText("    Välkommen till Men in Black");
 
         ButtonAgent.setText("Agent");
@@ -48,7 +49,8 @@ public class Fonster extends javax.swing.JFrame {
             }
         });
 
-        LabelLoggaIn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        LabelLoggaIn.setFont(new java.awt.Font("Perpetua", 0, 18)); // NOI18N
+        LabelLoggaIn.setForeground(new java.awt.Color(0, 204, 255));
         LabelLoggaIn.setText("Logga in");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

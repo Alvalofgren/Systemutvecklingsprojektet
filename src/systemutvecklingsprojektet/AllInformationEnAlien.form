@@ -154,7 +154,7 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" pref="201" max="-2" attributes="0"/>
-              <EmptySpace pref="70" max="32767" attributes="0"/>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -163,7 +163,10 @@
     <Component class="javax.swing.JLabel" name="RubrikVisaAllInfoAlien">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="24" style="1"/>
+          <Font name="Perpetua" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Lista all information om en alien"/>
       </Properties>
@@ -171,7 +174,7 @@
     <Component class="javax.swing.JLabel" name="LabelV&#xe4;ljAlien">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Perpetua" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="V&#xe4;lj alien:"/>
       </Properties>
@@ -220,7 +223,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="12" style="1"/>
+          <Font name="Perpetua" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Alien-ID"/>
       </Properties>
@@ -228,7 +231,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="12" style="1"/>
+          <Font name="Perpetua" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Registreringsdatum"/>
       </Properties>
@@ -236,7 +239,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="12" style="1"/>
+          <Font name="Perpetua" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="L&#xf6;senord"/>
       </Properties>
@@ -244,7 +247,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="12" style="1"/>
+          <Font name="Perpetua" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Namn"/>
       </Properties>
@@ -252,7 +255,7 @@
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="12" style="1"/>
+          <Font name="Perpetua" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Telefon"/>
       </Properties>
@@ -260,7 +263,7 @@
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="12" style="1"/>
+          <Font name="Perpetua" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Plats"/>
       </Properties>
@@ -268,7 +271,7 @@
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="12" style="1"/>
+          <Font name="Perpetua" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Ansvarig agent"/>
       </Properties>

@@ -46,7 +46,8 @@ public class AgentInlogg extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikAgent.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikAgent.setForeground(new java.awt.Color(0, 204, 255));
         RubrikAgent.setText("Agent");
 
         ButtonLoggain.setText("Logga in");
@@ -56,8 +57,10 @@ public class AgentInlogg extends javax.swing.JFrame {
             }
         });
 
+        LabelAnvändarnamn.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelAnvändarnamn.setText("Användarnamn");
 
+        LabelLösenord.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelLösenord.setText("Lösenord");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

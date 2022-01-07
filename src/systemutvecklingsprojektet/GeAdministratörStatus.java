@@ -61,11 +61,13 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        LabelVäljAgent.setFont(new java.awt.Font("Perpetua", 0, 12)); // NOI18N
         LabelVäljAgent.setText("Välj Agent:");
 
         ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        RubrikGeAdministratörstatus.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikGeAdministratörstatus.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikGeAdministratörstatus.setForeground(new java.awt.Color(0, 204, 255));
         RubrikGeAdministratörstatus.setText("Ge administratörstatus");
 
         ButtonOK.setText("OK");
@@ -100,7 +102,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
                         .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
                         .addComponent(ButtonOK)))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LabelGodkänd, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -124,7 +126,7 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
                     .addComponent(ButtonOK))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LabelGodkänd)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();

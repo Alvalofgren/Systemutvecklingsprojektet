@@ -44,6 +44,7 @@ public class AlienInlogg extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        LabelLösenord.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelLösenord.setText("Lösenord");
 
         ButtonLoggaIn.setText("Logga in");
@@ -53,7 +54,8 @@ public class AlienInlogg extends javax.swing.JFrame {
             }
         });
 
-        RubrikAlienLoggaIn.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikAlienLoggaIn.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikAlienLoggaIn.setForeground(new java.awt.Color(0, 204, 255));
         RubrikAlienLoggaIn.setText("Alien");
 
         TextFieldAnvändarnamn.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +64,7 @@ public class AlienInlogg extends javax.swing.JFrame {
             }
         });
 
+        LabelAnvändarnamn.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelAnvändarnamn.setText("Användarnamn");
 
         PasswordFieldLösenord.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +107,7 @@ public class AlienInlogg extends javax.swing.JFrame {
                 .addComponent(PasswordFieldLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonLoggaIn)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();

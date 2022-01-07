@@ -107,10 +107,11 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikVisaAllInfoAlien.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikVisaAllInfoAlien.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikVisaAllInfoAlien.setForeground(new java.awt.Color(0, 204, 255));
         RubrikVisaAllInfoAlien.setText("Lista all information om en alien");
 
-        LabelVäljAlien.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LabelVäljAlien.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelVäljAlien.setText("Välj alien:");
 
         ComboBoxVäljAlien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -131,25 +132,25 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         TextAreaFönster.setRows(5);
         jScrollPane2.setViewportView(TextAreaFönster);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
         jLabel1.setText("Alien-ID");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
         jLabel2.setText("Registreringsdatum");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
         jLabel3.setText("Lösenord");
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
         jLabel4.setText("Namn");
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
         jLabel5.setText("Telefon");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
         jLabel6.setText("Plats");
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Perpetua", 1, 12)); // NOI18N
         jLabel7.setText("Ansvarig agent");
 
         jButton1.setText("<--Tillbaka");
@@ -229,7 +230,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         pack();
