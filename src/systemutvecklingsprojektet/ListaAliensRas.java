@@ -174,6 +174,9 @@ public class ListaAliensRas extends javax.swing.JFrame {
             TextAreaFörRas.setText(null);
             
             for(HashMap kolumn : rader){
+            TextAreaFörRas.append(("Alien_ID") + "\t");
+            TextAreaFörRas.append(("Namn") + "\t");
+
             TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
             TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
            
