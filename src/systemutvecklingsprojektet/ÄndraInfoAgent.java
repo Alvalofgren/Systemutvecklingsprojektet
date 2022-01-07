@@ -222,7 +222,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
             }
             else if(ComboBoxVäljAttribut.getSelectedItem().equals("Lösenord"))
             {
-               String losen = "UPDATE AGENT SET LÖSENORD ='"+TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
+               String losen = "UPDATE AGENT SET LOSENORD ='"+TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
                idb.update(losen);
                LabelInfoÄndrats.setVisible(true);
             }
