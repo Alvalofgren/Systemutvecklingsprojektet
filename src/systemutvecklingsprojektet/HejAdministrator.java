@@ -84,7 +84,8 @@ public class HejAdministrator extends javax.swing.JFrame {
             }
         });
 
-        RubrikHejAdministratör.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        RubrikHejAdministratör.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikHejAdministratör.setForeground(new java.awt.Color(0, 204, 255));
         RubrikHejAdministratör.setText("Välkommen");
 
         KnappTaBortAlien.setText("Ta bort alien");
@@ -129,8 +130,10 @@ public class HejAdministrator extends javax.swing.JFrame {
             }
         });
 
+        UnderRubrikAlien.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         UnderRubrikAlien.setText("Alien");
 
+        UnderRubrikAgent.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         UnderRubrikAgent.setText("Agent");
 
         KnappTaBortAgent.setText("Ta bort agent");
@@ -140,6 +143,7 @@ public class HejAdministrator extends javax.swing.JFrame {
             }
         });
 
+        UnderRubrikChef.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         UnderRubrikChef.setText("Chef");
 
         KnappÄndraOmrådeschef.setText("Ändra områdeschef");
@@ -172,7 +176,8 @@ public class HejAdministrator extends javax.swing.JFrame {
             }
         });
 
-        LabelAgentNamn.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        LabelAgentNamn.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        LabelAgentNamn.setForeground(new java.awt.Color(0, 204, 255));
         LabelAgentNamn.setText("jLabel1");
 
         jButton1.setText("Byt till agentsidan");
@@ -223,7 +228,7 @@ public class HejAdministrator extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(184, 184, 184)
                 .addComponent(RubrikHejAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LabelAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -272,7 +277,7 @@ public class HejAdministrator extends javax.swing.JFrame {
                         .addComponent(UnderRubrikUtrustning)
                         .addGap(30, 30, 30)
                         .addComponent(KnappTaBortUtrustning, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         pack();
