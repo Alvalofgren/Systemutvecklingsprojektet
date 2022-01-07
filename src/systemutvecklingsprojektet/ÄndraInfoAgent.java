@@ -49,8 +49,6 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
         
             ComboBoxVäljAttribut.removeAllItems();
             ComboBoxVäljAttribut.addItem("välj");
-            ComboBoxVäljAttribut.addItem("Agent_ID");
-            ComboBoxVäljAttribut.addItem("Namn");
             ComboBoxVäljAttribut.addItem("Telefon");
             ComboBoxVäljAttribut.addItem("Administrator");
             ComboBoxVäljAttribut.addItem("Lösenord");
@@ -193,40 +191,41 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
         {    
         if(Validering.kontrollTextFältVärde(TextFältNyttVärde))
         {
-//        { 
-//            String query = "UPDATE AGENT SET " + ComboBoxVäljAttribut.getSelectedItem() + " = '" + TextFältNyttVärde.getText() + "'" + "WHERE NAMN = '" + ComboBoxVäljAgent.getSelectedItem()+"'";
-//            idb.update(query);
-//            LabelInfoÄndrats.setVisible(true);       
-//        }
-        if(ComboBoxVäljAttribut.getSelectedItem().equals("Telefon"));
-        {
-           if(Validering.telefonÄrGiltig(TextFältNyttVärde)) 
-           {
-               String telefon = "UPDATE AGENT SET TELEFON = '"+ TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
-               idb.update(telefon);
-               LabelInfoÄndrats.setVisible(true);
-           }
-        }
-        if(ComboBoxVäljAttribut.getSelectedItem().equals("Administrator"))
-        {
-            if(TextFältNyttVärde.getText().equals("Ja"))
+            if(ComboBoxVäljAttribut.getSelectedItem().equals("Telefon"));
             {
-                String administratör = "UPDATE AGENT SET ADMINISTRATOR = J";
+                if(Validering.telefonÄrGiltig(TextFältNyttVärde)) 
+                {
+                String telefon = "UPDATE AGENT SET TELEFON = '"+ TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
+                idb.update(telefon);
+                LabelInfoÄndrats.setVisible(true);
+                }
+            }
+            if(ComboBoxVäljAttribut.getSelectedItem().equals("Administrator"))
+            {
+                if(TextFältNyttVärde.getText().equals("Ja"))
+                {
+                String administratör = "UPDATE AGENT SET ADMINISTRATOR = 'J' WHERE NAMN='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
                 idb.update(administratör);
                 LabelInfoÄndrats.setVisible(true);
-            }
-            else if(TextFältNyttVärde.getText().equals("Nej"))
-            {
-                String admin = "UPDATE AGENT SET ADMINISTRATOR = N";
+                }
+                else if(TextFältNyttVärde.getText().equals("Nej"))
+                {
+                String admin = "UPDATE AGENT SET ADMINISTRATOR = 'N' WHERE NAMN = '"+ ComboBoxVäljAgent.getSelectedItem()+"'";
                 idb.update(admin);
                 LabelInfoÄndrats.setVisible(true);
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(null,"Skriv in ja eller nej");
-            }
+                }
+                else
+                {
+                JOptionPane.showMessageDialog(null,"Skriv in ja eller nej i rutan");
+                }
                 
-        }
+            }
+            if(ComboBoxVäljAttribut.getSelectedItem().equals("Lösenord"))
+            {
+               String losen = "UPDATE AGENT SET LÖSENORD ='"+TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
+               idb.update(losen);
+               LabelInfoÄndrats.setVisible(true);
+            }
         }
         }
         catch(InfException undantaget)
