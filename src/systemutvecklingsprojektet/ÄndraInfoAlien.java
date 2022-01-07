@@ -47,7 +47,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
     
     private void fyllIListaAttribut(){
         ComboBoxVäljAttribut.removeAllItems();
-            ComboBoxVäljAttribut.addItem("välj");
+            ComboBoxVäljAttribut.addItem("Välj");
             ComboBoxVäljAttribut.addItem("Lösenord");
             ComboBoxVäljAttribut.addItem("Telefon");
             ComboBoxVäljAttribut.addItem("Plats");
@@ -108,32 +108,32 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(LabelÄndraEgenskapen)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ComboBoxVäljAttribut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelFörAlien)
+                        .addGap(1, 1, 1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(LabelNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(LabelNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(LabelÄndraEgenskapen)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(ComboBoxVäljAttribut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addComponent(LabelFörAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(KnappÄndra, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextFältNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(51, 51, 51)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(LabelInfoÄndrats, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(KnappÄndra, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextFältNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)))
+                .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(RubrikÄndraInfoAlien)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(RubrikÄndraInfoAlien))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(LabelInfoÄndrats, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -180,10 +180,34 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
             }
             else if(ComboBoxVäljAttribut.getSelectedItem().equals("Plats"))
             {
-                
-                String plats = "UPDATE ALIEN SET PLATS =" +TextFältNyttVärde.getText()+"" + " WHERE NAMN='"+ ComboBoxVäljAlien.getSelectedItem()+"'";
+                if(TextFältNyttVärde.getText().equals("Vilhelmina"))
+                {
+                String plats = "UPDATE ALIEN SET PLATS = 3 WHERE NAMN='"+ ComboBoxVäljAlien.getSelectedItem()+"'";
                 idb.update(plats);
                 LabelInfoÄndrats.setVisible(true);
+                }
+                else if(TextFältNyttVärde.getText().equals("Örebro"))
+                {
+                String plats = "UPDATE ALIEN SET PLATS = 1 WHERE NAMN='"+ ComboBoxVäljAlien.getSelectedItem()+"'";
+                idb.update(plats);
+                LabelInfoÄndrats.setVisible(true);
+                }
+                else if(TextFältNyttVärde.getText().equals("Västerås"))
+                {
+                String plats = "UPDATE ALIEN SET PLATS = 2 WHERE NAMN='"+ ComboBoxVäljAlien.getSelectedItem()+"'";
+                idb.update(plats);
+                LabelInfoÄndrats.setVisible(true);
+                }
+                else if(TextFältNyttVärde.getText().equals("Borås"))
+                {
+                String plats = "UPDATE ALIEN SET PLATS = 4 WHERE NAMN='"+ ComboBoxVäljAlien.getSelectedItem()+"'";
+                idb.update(plats);
+                LabelInfoÄndrats.setVisible(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Välj Vilhelmina, Örebro, Västerås eller Borås!");
+                }
                 
             }
             else if(ComboBoxVäljAttribut.getSelectedItem().equals("Lösenord"))
