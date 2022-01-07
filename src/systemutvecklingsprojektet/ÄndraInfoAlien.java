@@ -107,7 +107,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(LabelÄndraEgenskapen)
@@ -218,9 +218,12 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
             }
             else if(ComboBoxVäljAttribut.getSelectedItem().equals("Ansvarig_Agent"))
             {
+                if(Validering.harHeltal(TextFältNyttVärde))
+                {
                 String ansvarig = "UPDATE ALIEN SET ANSVARIG_AGENT = "+TextFältNyttVärde.getText()+"" + " WHERE NAMN = '"+ ComboBoxVäljAlien.getSelectedItem()+"'";
                 idb.update(ansvarig);
                 LabelInfoÄndrats.setVisible(true);
+                }
             }
         }
         }
