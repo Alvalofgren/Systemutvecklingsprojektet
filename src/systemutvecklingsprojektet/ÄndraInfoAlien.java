@@ -59,6 +59,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBox1 = new javax.swing.JCheckBox();
         RubrikÄndraInfoAlien = new javax.swing.JLabel();
         LabelÄndraEgenskapen = new javax.swing.JLabel();
         LabelFörAlien = new javax.swing.JLabel();
@@ -69,13 +70,18 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         LabelNyttVärde = new javax.swing.JLabel();
         LabelInfoÄndrats = new javax.swing.JLabel();
 
+        jCheckBox1.setText("jCheckBox1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikÄndraInfoAlien.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikÄndraInfoAlien.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikÄndraInfoAlien.setForeground(new java.awt.Color(0, 204, 255));
         RubrikÄndraInfoAlien.setText("Ändra information om alien");
 
+        LabelÄndraEgenskapen.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelÄndraEgenskapen.setText("Ändra egenskapen:");
 
+        LabelFörAlien.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelFörAlien.setText("För alien:");
 
         KnappÄndra.setText("Ändra");
@@ -89,9 +95,10 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
 
         ComboBoxVäljAlien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        LabelNyttVärde.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelNyttVärde.setText("Nytt värde:");
 
-        LabelInfoÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelInfoÄndrats.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelInfoÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelInfoÄndrats.setText("Informationen har ändrats!");
 
@@ -100,31 +107,32 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(LabelNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(LabelÄndraEgenskapen)
-                                .addGap(1, 1, 1)
-                                .addComponent(ComboBoxVäljAttribut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(LabelFörAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(LabelNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(LabelÄndraEgenskapen)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(ComboBoxVäljAttribut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addComponent(LabelFörAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(KnappÄndra, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextFältNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(51, 51, 51)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(KnappÄndra, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextFältNyttVärde, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(51, 51, 51)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ComboBoxVäljAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)
+                        .addComponent(LabelInfoÄndrats, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(47, 47, 47))
             .addGroup(layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(LabelInfoÄndrats, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(55, 55, 55)
                 .addComponent(RubrikÄndraInfoAlien)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -214,5 +222,6 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
     private javax.swing.JLabel LabelÄndraEgenskapen;
     private javax.swing.JLabel RubrikÄndraInfoAlien;
     private javax.swing.JTextField TextFältNyttVärde;
+    private javax.swing.JCheckBox jCheckBox1;
     // End of variables declaration//GEN-END:variables
 }

@@ -40,9 +40,11 @@ public class TaBortAgent extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikTaBortAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikTaBortAgent.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikTaBortAgent.setForeground(new java.awt.Color(0, 204, 255));
         RubrikTaBortAgent.setText("Ta bort Agent");
 
+        LabelVäljAgentID.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelVäljAgentID.setText("Välj Agentnamn:");
 
         ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -61,7 +63,7 @@ public class TaBortAgent extends javax.swing.JFrame {
             }
         });
 
-        LabelAgentBorttagen.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelAgentBorttagen.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelAgentBorttagen.setForeground(new java.awt.Color(0, 204, 51));
         LabelAgentBorttagen.setText("Agenten har tagits bort!");
 
@@ -106,7 +108,7 @@ public class TaBortAgent extends javax.swing.JFrame {
                     .addComponent(ButtonTaBort))
                 .addGap(18, 18, 18)
                 .addComponent(LabelAgentBorttagen)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();

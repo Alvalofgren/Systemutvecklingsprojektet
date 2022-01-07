@@ -48,13 +48,16 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikÄndraOmrådeschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikÄndraOmrådeschef.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikÄndraOmrådeschef.setForeground(new java.awt.Color(0, 204, 255));
         RubrikÄndraOmrådeschef.setText("Ändra områdeschef");
 
+        LabelVäljAgentID.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelVäljAgentID.setText("Välj Agent:");
 
         ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        LabelTillOmråde.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelTillOmråde.setText("Till område:");
 
         ComboBoxVäljOmråde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -66,7 +69,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
             }
         });
 
-        LabelOmrådeChefHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelOmrådeChefHarÄndrats.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelOmrådeChefHarÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelOmrådeChefHarÄndrats.setText("Områdeschefen har ändrats!");
 
@@ -82,7 +85,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(97, Short.MAX_VALUE)
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LabelVäljAgentID)
                     .addComponent(LabelTillOmråde))
@@ -128,7 +131,7 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
                 .addComponent(ButtonÄndra)
                 .addGap(18, 18, 18)
                 .addComponent(LabelOmrådeChefHarÄndrats)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();

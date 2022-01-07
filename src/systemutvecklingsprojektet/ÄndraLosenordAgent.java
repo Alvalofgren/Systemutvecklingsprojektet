@@ -46,7 +46,8 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        rubrikÄndraLösenord.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        rubrikÄndraLösenord.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        rubrikÄndraLösenord.setForeground(new java.awt.Color(0, 204, 255));
         rubrikÄndraLösenord.setText("Ändra lösenord");
 
         ButtonÄndraLösenord.setText("Ändra lösenord");
@@ -56,8 +57,10 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
             }
         });
 
-        LabelNyttLösenord.setText("Nytt lösenord:");
+        LabelNyttLösenord.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
+        LabelNyttLösenord.setText("Nytt lösenord");
 
+        LabelBekräftaLösenord.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelBekräftaLösenord.setText("Bekräfta lösenord:");
 
         PFNyttLösen.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +69,7 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
             }
         });
 
-        LabelLösenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        LabelLösenHarÄndrats.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelLösenHarÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelLösenHarÄndrats.setText("Lösenordet har ändrats!");
 
@@ -82,28 +85,25 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1)
-                        .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rubrikÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(LabelBekräftaLösenord))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(PFNyttLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(29, 29, 29)
+                        .addComponent(LabelBekräftaLösenord))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(ButtonÄndraLösenord))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(LabelLösenHarÄndrats)))
-                .addContainerGap(110, Short.MAX_VALUE))
+                        .addGap(40, 40, 40)
+                        .addComponent(LabelNyttLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PFNyttLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelLösenHarÄndrats))
+                .addContainerGap(118, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ButtonÄndraLösenord)
+                .addGap(146, 146, 146))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,9 +125,9 @@ public class ÄndraLosenordAgent extends javax.swing.JFrame {
                 .addComponent(PFBekräftaLösen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(LabelLösenHarÄndrats)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();

@@ -65,10 +65,11 @@ public class ListaAliensRas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikVisaRas.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikVisaRas.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikVisaRas.setForeground(new java.awt.Color(0, 204, 255));
         RubrikVisaRas.setText("Visa ras av alien");
 
-        LabelVäljRas.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelVäljRas.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelVäljRas.setText("Välj ras:");
 
         ListaVäljRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));

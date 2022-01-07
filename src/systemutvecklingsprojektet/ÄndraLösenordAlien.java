@@ -43,7 +43,8 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikÄndraLösenord.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikÄndraLösenord.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikÄndraLösenord.setForeground(new java.awt.Color(0, 204, 255));
         RubrikÄndraLösenord.setText("Ändra lösenord");
 
         KnappÄndraLösenord.setText("Ändra lösenord");
@@ -53,8 +54,10 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
             }
         });
 
-        LabelNyttLösenord.setText("Nytt lösenord :");
+        LabelNyttLösenord.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
+        LabelNyttLösenord.setText("Nytt lösenord ");
 
+        LabelBekräftaLösenord.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelBekräftaLösenord.setText("Bekräfta lösenord:");
 
         PasswordFieldBekräftaLösen.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +66,7 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
             }
         });
 
-        LabelLösenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        LabelLösenHarÄndrats.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelLösenHarÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelLösenHarÄndrats.setText("Lösenordet har ändrats!");
 
@@ -97,15 +100,14 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LabelBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(125, 125, 125))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(KnappÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(118, 118, 118))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LabelLösenHarÄndrats)
-                        .addGap(92, 92, 92))))
+                    .addComponent(LabelLösenHarÄndrats)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(LabelBekräftaLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(125, 125, 125))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(KnappÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(118, 118, 118)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,7 +131,7 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
                 .addComponent(KnappÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(LabelLösenHarÄndrats)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();

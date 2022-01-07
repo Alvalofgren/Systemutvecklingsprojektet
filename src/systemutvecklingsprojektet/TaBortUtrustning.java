@@ -53,9 +53,11 @@ public class TaBortUtrustning extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikTaBortUtrustning.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikTaBortUtrustning.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikTaBortUtrustning.setForeground(new java.awt.Color(0, 204, 255));
         RubrikTaBortUtrustning.setText("Ta bort utrustning");
 
+        LabelVäljUtrustning.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelVäljUtrustning.setText("Välj utrusning");
 
         ComboBoxVäljUtrustning.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -67,7 +69,7 @@ public class TaBortUtrustning extends javax.swing.JFrame {
             }
         });
 
-        LabelUtrustningBorttagen.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelUtrustningBorttagen.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelUtrustningBorttagen.setForeground(new java.awt.Color(0, 204, 51));
         LabelUtrustningBorttagen.setText("Utrustningen är borttagen!");
 

@@ -66,10 +66,11 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
             }
         });
 
-        LabelVäljOmråde.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        LabelVäljOmråde.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelVäljOmråde.setText("Välj område:");
 
-        RubrikInfoOmrådeschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikInfoOmrådeschef.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikInfoOmrådeschef.setForeground(new java.awt.Color(0, 204, 255));
         RubrikInfoOmrådeschef.setText("Information om områdeschef");
 
         TextAreaResultat.setColumns(20);

@@ -76,9 +76,11 @@ public class ListaAliensDatum extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikAlienMellanDatum.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikAlienMellanDatum.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikAlienMellanDatum.setForeground(new java.awt.Color(0, 204, 255));
         RubrikAlienMellanDatum.setText("Lista alien mellan datum");
 
+        LabelDatumFrånTill.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelDatumFrånTill.setText("Datum från-till (ÅÅÅÅ-MM-DD):");
 
         TextArea.setColumns(20);
@@ -134,7 +136,7 @@ public class ListaAliensDatum extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(FormattedTextFieldTill, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(60, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelDatumFrånTill)

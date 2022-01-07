@@ -60,7 +60,8 @@ private static boolean arAdmin;
             }
         });
 
-        LabelHejAlien.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        LabelHejAlien.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        LabelHejAlien.setForeground(new java.awt.Color(0, 204, 255));
         LabelHejAlien.setText("Hej alien");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

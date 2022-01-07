@@ -42,11 +42,14 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        LabelRegistreraUtrustning.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        LabelRegistreraUtrustning.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        LabelRegistreraUtrustning.setForeground(new java.awt.Color(0, 204, 255));
         LabelRegistreraUtrustning.setText("Registrera ny utrustning");
 
+        LabelUtrustningsID.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelUtrustningsID.setText("Utrustnings-ID:");
 
+        LabelBenamning.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelBenamning.setText("Benämning:");
 
         ButtonRegistrera.setText("Registrera");
@@ -56,7 +59,8 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
             }
         });
 
-        LabelUtrustningRegistrerats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelUtrustningRegistrerats.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
+        LabelUtrustningRegistrerats.setForeground(new java.awt.Color(0, 204, 51));
         LabelUtrustningRegistrerats.setText("Utrustningen har registrerats!");
 
         jButton1.setText("<--Tillbaka");
@@ -93,7 +97,7 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addComponent(jButton1)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

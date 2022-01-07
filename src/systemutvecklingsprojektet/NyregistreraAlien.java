@@ -88,7 +88,8 @@ private void fyllIListaAgent(){
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikNyregistreraAlien.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikNyregistreraAlien.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikNyregistreraAlien.setForeground(new java.awt.Color(0, 204, 255));
         RubrikNyregistreraAlien.setText("Nyregistrering av alien");
 
         RegistreringKnappAlien.setText("Registrera");
@@ -132,7 +133,7 @@ private void fyllIListaAgent(){
         LabelDatum.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         LabelDatum.setText("YYYY-MM-DD");
 
-        LabelAlienRegistrerad.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelAlienRegistrerad.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelAlienRegistrerad.setForeground(new java.awt.Color(0, 204, 51));
         LabelAlienRegistrerad.setText("Alien är registrerad!");
 
@@ -178,7 +179,9 @@ private void fyllIListaAgent(){
                         .addGap(175, 175, 175)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelAlienRegistrerad)
-                            .addComponent(RegistreringKnappAlien))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(RegistreringKnappAlien)))))
                 .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -203,7 +206,7 @@ private void fyllIListaAgent(){
                 .addComponent(TextRutaLösenordAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(UnderRubrikTelefonFörAlien)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addComponent(TextRutaTelefonAlien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(UnderRubrikNamnFörAlien)
@@ -217,11 +220,11 @@ private void fyllIListaAgent(){
                 .addComponent(UnderRubrikAnsvarigAgent)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ComboBoxAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(RegistreringKnappAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LabelAlienRegistrerad)
-                .addGap(16, 16, 16))
+                .addGap(10, 10, 10))
         );
 
         pack();
