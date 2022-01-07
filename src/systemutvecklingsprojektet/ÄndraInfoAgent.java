@@ -192,14 +192,15 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
         try
         {    
         if(Validering.kontrollTextFältVärde(TextFältNyttVärde))
-        { 
-            String query = "UPDATE AGENT SET " + ComboBoxVäljAttribut.getSelectedItem() + " = '" + TextFältNyttVärde.getText() + "'" + "WHERE NAMN = '" + ComboBoxVäljAgent.getSelectedItem()+"'";
-            idb.update(query);
-            LabelInfoÄndrats.setVisible(true);       
-        }
+        {
+//        { 
+//            String query = "UPDATE AGENT SET " + ComboBoxVäljAttribut.getSelectedItem() + " = '" + TextFältNyttVärde.getText() + "'" + "WHERE NAMN = '" + ComboBoxVäljAgent.getSelectedItem()+"'";
+//            idb.update(query);
+//            LabelInfoÄndrats.setVisible(true);       
+//        }
         if(ComboBoxVäljAttribut.getSelectedItem().equals("Telefon"));
         {
-           if(Validering.) 
+           if(Validering.telefonÄrGiltig(TextFältNyttVärde)) 
            {
                String telefon = "UPDATE AGENT SET TELEFON = '"+ TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
                idb.update(telefon);
@@ -225,6 +226,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,"Skriv in ja eller nej");
             }
                 
+        }
         }
         }
         catch(InfException undantaget)
