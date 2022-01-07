@@ -197,6 +197,35 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
             idb.update(query);
             LabelInfoÄndrats.setVisible(true);       
         }
+        if(ComboBoxVäljAttribut.getSelectedItem().equals("Telefon"));
+        {
+           if(Validering.) 
+           {
+               String telefon = "UPDATE AGENT SET TELEFON = '"+ TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
+               idb.update(telefon);
+               LabelInfoÄndrats.setVisible(true);
+           }
+        }
+        if(ComboBoxVäljAttribut.getSelectedItem().equals("Administrator"))
+        {
+            if(TextFältNyttVärde.getText().equals("Ja"))
+            {
+                String administratör = "UPDATE AGENT SET ADMINISTRATOR = J";
+                idb.update(administratör);
+                LabelInfoÄndrats.setVisible(true);
+            }
+            else if(TextFältNyttVärde.getText().equals("Nej"))
+            {
+                String admin = "UPDATE AGENT SET ADMINISTRATOR = N";
+                idb.update(admin);
+                LabelInfoÄndrats.setVisible(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null,"Skriv in ja eller nej");
+            }
+                
+        }
         }
         catch(InfException undantaget)
         {
