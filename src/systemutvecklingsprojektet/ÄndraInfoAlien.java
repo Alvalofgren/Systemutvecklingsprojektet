@@ -48,9 +48,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
     private void fyllIListaAttribut(){
         ComboBoxVäljAttribut.removeAllItems();
             ComboBoxVäljAttribut.addItem("välj");
-            ComboBoxVäljAttribut.addItem("Alien_ID");
-            ComboBoxVäljAttribut.addItem("Losenord");
-            ComboBoxVäljAttribut.addItem("Namn");
+            ComboBoxVäljAttribut.addItem("Lösenord");
             ComboBoxVäljAttribut.addItem("Telefon");
             ComboBoxVäljAttribut.addItem("Plats");
             ComboBoxVäljAttribut.addItem("Ansvarig_Agent");
@@ -160,20 +158,47 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         //Här får användaren ange ett nytt värde som skickas in i tabellen
         
         try
+        {    
+        if(Validering.kontrollTextFältVärde(TextFältNyttVärde))
         {
-            if(Validering.kontrollTextFältVärde(TextFältNyttVärde)){
+            if(ComboBoxVäljAttribut.getSelectedItem().equals("Telefon"))
+            {
+                if(Validering.telefonÄrGiltig(TextFältNyttVärde)) 
+                {
+                String telefon = "UPDATE ALIEN SET TELEFON = '"+ TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAlien.getSelectedItem()+"'";
+                idb.update(telefon);
+                LabelInfoÄndrats.setVisible(true);
+                }
+            }
+            else if(ComboBoxVäljAttribut.getSelectedItem().equals("Plats"))
+            {
                 
-            String query = "UPDATE ALIEN SET " + ComboBoxVäljAttribut.getSelectedItem() + " = '" + TextFältNyttVärde.getText() + "'" + "WHERE NAMN = '" + ComboBoxVäljAlien.getSelectedItem()+"'";
-            idb.update(query);
-            LabelInfoÄndrats.setVisible(true);
-            
+                String plats = "UPDATE ALIEN SET PLATS =" +TextFältNyttVärde.getText()+"" + " WHERE NAMN='"+ ComboBoxVäljAlien.getSelectedItem()+"'";
+                idb.update(plats);
+                LabelInfoÄndrats.setVisible(true);
+                
+            }
+            else if(ComboBoxVäljAttribut.getSelectedItem().equals("Lösenord"))
+            {
+               String losen = "UPDATE ALIEN SET LOSENORD ='"+TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAlien.getSelectedItem()+"'";
+               idb.update(losen);
+               LabelInfoÄndrats.setVisible(true);
+            }
+            else if(ComboBoxVäljAttribut.getSelectedItem().equals("Ansvarig_Agent"))
+            {
+                String ansvarig = "UPDATE ALIEN SET ANSVARIG_AGENT = "+TextFältNyttVärde.getText()+"" + " WHERE NAMN = '"+ ComboBoxVäljAlien.getSelectedItem()+"'";
+                idb.update(ansvarig);
+                LabelInfoÄndrats.setVisible(true);
             }
         }
-        catch(InfException undantag)
+        }
+        catch(InfException undantaget)
         {
             JOptionPane.showMessageDialog(null, "Ange ett giltigt nytt värde");
-            System.out.println("Error" + undantag.getMessage());
-        }
+            System.out.println("Error" + undantaget.getMessage());
+                                  
+    }        
+        
         
     }//GEN-LAST:event_KnappÄndraActionPerformed
 
