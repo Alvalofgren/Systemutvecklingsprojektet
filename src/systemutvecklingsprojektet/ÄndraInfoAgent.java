@@ -77,11 +77,13 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikÄndraInfoAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikÄndraInfoAgent.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikÄndraInfoAgent.setForeground(new java.awt.Color(0, 204, 255));
         RubrikÄndraInfoAgent.setText("Ändra information om agent");
 
         ComboBoxVäljAttribut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        LabelVäljÄndra.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelVäljÄndra.setText("Välj att ändra:");
 
         TextFältNyttVärde.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +94,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
 
         ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        LabelFörAgent.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelFörAgent.setText("För agent:");
 
         LabelNyttVärde.setText("Nytt värde:");
@@ -103,7 +106,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
             }
         });
 
-        LabelInfoÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelInfoÄndrats.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelInfoÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelInfoÄndrats.setText("Informationen har ändrats!");
 

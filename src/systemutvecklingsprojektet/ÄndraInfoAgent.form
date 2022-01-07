@@ -104,7 +104,10 @@
     <Component class="javax.swing.JLabel" name="Rubrik&#xc4;ndraInfoAgent">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="24" style="1"/>
+          <Font name="Perpetua" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information om agent"/>
       </Properties>
@@ -126,6 +129,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelV&#xe4;lj&#xc4;ndra">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Perpetua" size="14" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="V&#xe4;lj att &#xe4;ndra:"/>
       </Properties>
     </Component>
@@ -151,6 +157,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LabelF&#xf6;rAgent">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Perpetua" size="14" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="F&#xf6;r agent:"/>
       </Properties>
     </Component>
@@ -170,7 +179,7 @@
     <Component class="javax.swing.JLabel" name="LabelInfo&#xc4;ndrats">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="14" style="1"/>
+          <Font name="Perpetua" size="14" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="cc" red="0" type="rgb"/>

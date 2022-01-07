@@ -70,7 +70,10 @@
                       <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="LabelAlienRegistrerad" min="-2" max="-2" attributes="0"/>
-                          <Component id="RegistreringKnappAlien" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Component id="RegistreringKnappAlien" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -100,7 +103,7 @@
               <Component id="TextRutaLösenordAlien" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="UnderRubrikTelefonFörAlien" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="7" max="32767" attributes="0"/>
               <Component id="TextRutaTelefonAlien" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="UnderRubrikNamnFörAlien" min="-2" max="-2" attributes="0"/>
@@ -114,11 +117,11 @@
               <Component id="UnderRubrikAnsvarigAgent" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="ComboBoxAnsvarigAgent" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="RegistreringKnappAlien" min="-2" pref="26" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="LabelAlienRegistrerad" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -127,7 +130,10 @@
     <Component class="javax.swing.JLabel" name="RubrikNyregistreraAlien">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="24" style="1"/>
+          <Font name="Perpetua" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Nyregistrering av alien"/>
       </Properties>
@@ -243,7 +249,7 @@
     <Component class="javax.swing.JLabel" name="LabelAlienRegistrerad">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="14" style="1"/>
+          <Font name="Perpetua" size="14" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="cc" red="0" type="rgb"/>

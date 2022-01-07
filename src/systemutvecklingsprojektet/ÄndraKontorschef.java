@@ -78,13 +78,16 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikÄndraKontorschef.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikÄndraKontorschef.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikÄndraKontorschef.setForeground(new java.awt.Color(0, 204, 255));
         RubrikÄndraKontorschef.setText("Ändra kontorschef");
 
+        LabelVäljAgent.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelVäljAgent.setText("Välj Agent:");
 
         ComboBoxVäljAgent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        LabelTillKontor.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelTillKontor.setText("Till kontor:");
 
         ComboBoxVäljKontor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -101,7 +104,7 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
             }
         });
 
-        LabelKontorChefÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelKontorChefÄndrats.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelKontorChefÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelKontorChefÄndrats.setText("Kontorschef har ändrats!");
 
@@ -128,20 +131,18 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
                                 .addComponent(ComboBoxVäljAgent, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(ComboBoxVäljKontor, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(96, 96, 96)
-                                    .addComponent(RubrikÄndraKontorschef, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(160, 160, 160)
-                                    .addComponent(ButtonÄndra)))
+                            .addGap(96, 96, 96)
+                            .addComponent(RubrikÄndraKontorschef, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(15, 15, 15)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(112, 112, 112)
                         .addComponent(LabelKontorChefÄndrats))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(161, 161, 161)
+                        .addComponent(ButtonÄndra)))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -159,11 +160,11 @@ public class ÄndraKontorschef extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelTillKontor)
                     .addComponent(ComboBoxVäljKontor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(ButtonÄndra)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LabelKontorChefÄndrats)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();

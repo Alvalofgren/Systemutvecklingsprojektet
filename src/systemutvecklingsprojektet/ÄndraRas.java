@@ -78,13 +78,16 @@ public class ÄndraRas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        LabelRubrik.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        LabelRubrik.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        LabelRubrik.setForeground(new java.awt.Color(0, 204, 255));
         LabelRubrik.setText("Ändra rastillhörighet");
 
+        LabelVäljAlien.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelVäljAlien.setText("Välj Alien:");
 
         ComboBoxVäljAlien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jLabel1.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         jLabel1.setText("Ny ras:");
 
         ComboBoxVäljNyRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -96,10 +99,11 @@ public class ÄndraRas extends javax.swing.JFrame {
             }
         });
 
-        LabelRasenHarÄndrats.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        LabelRasenHarÄndrats.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
         LabelRasenHarÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelRasenHarÄndrats.setText("Rasen har ändrats!");
 
+        LabelNuvarandeRas.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelNuvarandeRas.setText("Nuvarande ras:");
 
         ComboBoxVäljNuvarandeRas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -128,7 +132,7 @@ public class ÄndraRas extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(LabelRasenHarÄndrats)))
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -160,7 +164,7 @@ public class ÄndraRas extends javax.swing.JFrame {
                 .addComponent(LabelRasenHarÄndrats)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonÄndra)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();

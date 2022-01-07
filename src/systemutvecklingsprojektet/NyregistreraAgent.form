@@ -39,7 +39,8 @@
                       <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="UnderRubrikAgentID" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="UnderRubrikAdministratör" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                               <Component id="UnderRubrikAnställningsdatum" min="-2" max="-2" attributes="0"/>
                               <Component id="UnderRubrikTelefon" min="-2" pref="49" max="-2" attributes="0"/>
                               <Component id="UnderRubrikNamn" min="-2" pref="52" max="-2" attributes="0"/>
@@ -52,8 +53,10 @@
                               <Component id="LabelDatum" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="TextRutaAgentID" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="UnderRubrikAdministratör" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
-                          <Component id="LabelAgentRegistrerad" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              <Component id="LabelAgentRegistrerad" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -117,7 +120,10 @@
     <Component class="javax.swing.JLabel" name="RubrikNyregistreraAgent">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="24" style="1"/>
+          <Font name="Perpetua" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Nyregistrering av agent"/>
       </Properties>
@@ -231,7 +237,7 @@
     <Component class="javax.swing.JLabel" name="LabelAgentRegistrerad">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Lucida Grande" size="14" style="0"/>
+          <Font name="Perpetua" size="14" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="cc" red="0" type="rgb"/>

@@ -78,7 +78,8 @@ public class NyregistreraAgent extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        RubrikNyregistreraAgent.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        RubrikNyregistreraAgent.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
+        RubrikNyregistreraAgent.setForeground(new java.awt.Color(0, 204, 255));
         RubrikNyregistreraAgent.setText("Nyregistrering av agent");
 
         KnappFörRegistrering.setText("Registrera");
@@ -118,7 +119,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
 
         TextRutaAnställningsdatum.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
 
-        LabelAgentRegistrerad.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        LabelAgentRegistrerad.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelAgentRegistrerad.setForeground(new java.awt.Color(0, 204, 51));
         LabelAgentRegistrerad.setText("Agenten är registrerad!");
 
@@ -140,6 +141,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                         .addGap(113, 113, 113)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(UnderRubrikAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UnderRubrikAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(UnderRubrikAnställningsdatum)
                                 .addComponent(UnderRubrikTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -152,8 +154,9 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                                 .addComponent(TextRutaAnställningsdatum)
                                 .addComponent(LabelDatum)
                                 .addComponent(TextRutaAgentID))
-                            .addComponent(UnderRubrikAdministratör, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelAgentRegistrerad)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(LabelAgentRegistrerad))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(123, 123, 123)
                         .addComponent(UnderRubrikOmråde, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
