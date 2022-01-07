@@ -191,7 +191,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
         {    
         if(Validering.kontrollTextFältVärde(TextFältNyttVärde))
         {
-            if(ComboBoxVäljAttribut.getSelectedItem().equals("Telefon"));
+            if(ComboBoxVäljAttribut.getSelectedItem().equals("Telefon"))
             {
                 if(Validering.telefonÄrGiltig(TextFältNyttVärde)) 
                 {
@@ -200,7 +200,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
                 LabelInfoÄndrats.setVisible(true);
                 }
             }
-            if(ComboBoxVäljAttribut.getSelectedItem().equals("Administrator"))
+            else if(ComboBoxVäljAttribut.getSelectedItem().equals("Administrator"))
             {
                 if(TextFältNyttVärde.getText().equals("Ja"))
                 {
@@ -220,7 +220,7 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
                 }
                 
             }
-            if(ComboBoxVäljAttribut.getSelectedItem().equals("Lösenord"))
+            else if(ComboBoxVäljAttribut.getSelectedItem().equals("Lösenord"))
             {
                String losen = "UPDATE AGENT SET LÖSENORD ='"+TextFältNyttVärde.getText() + "'" + "WHERE NAMN ='"+ ComboBoxVäljAgent.getSelectedItem()+"'";
                idb.update(losen);
