@@ -46,7 +46,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="383" max="32767" attributes="0"/>
+                      <EmptySpace pref="323" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -56,11 +56,12 @@
               </Group>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" pref="197" max="32767" attributes="0"/>
-                  <Component id="ButtonÄndraLösenord" pref="197" max="32767" attributes="0"/>
+                  <Component id="jButton1" max="32767" attributes="0"/>
+                  <Component id="ButtonÄndraLösenord" max="32767" attributes="0"/>
                   <Component id="jLabel1" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                   <Component id="ButtonRegistreraUtrustning" alignment="0" max="32767" attributes="0"/>
                   <Component id="ButtonRegistreraAlien" alignment="0" max="32767" attributes="0"/>
+                  <Component id="ButtonVisaInfoOmrådeschef" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
           </Group>
@@ -93,7 +94,10 @@
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Component id="ButtonRas" min="-2" pref="44" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="ButtonRas" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                  <Component id="ButtonVisaInfoOmrådeschef" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -126,9 +130,6 @@
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Perpetua" size="18" style="0"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Information om alien"/>
       </Properties>
@@ -214,6 +215,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonRegistreraAlienActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="ButtonVisaInfoOmr&#xe5;deschef">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Visa information om omr&#xe5;deschef"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonVisaInfoOmr&#xe5;deschefActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -51,6 +51,7 @@ public class HejAgent extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         ButtonRegistreraUtrustning = new javax.swing.JButton();
         ButtonRegistreraAlien = new javax.swing.JButton();
+        ButtonVisaInfoOmrådeschef = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,7 +60,6 @@ public class HejAgent extends javax.swing.JFrame {
         LabelHejAgent.setText("Hej Agent");
 
         LabelInfoAlien.setFont(new java.awt.Font("Perpetua", 0, 18)); // NOI18N
-        LabelInfoAlien.setForeground(new java.awt.Color(0, 0, 0));
         LabelInfoAlien.setText("Information om alien");
 
         ButtonRas.setText("Ras");
@@ -124,6 +124,13 @@ public class HejAgent extends javax.swing.JFrame {
             }
         });
 
+        ButtonVisaInfoOmrådeschef.setText("Visa information om områdeschef");
+        ButtonVisaInfoOmrådeschef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonVisaInfoOmrådeschefActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,18 +153,19 @@ public class HejAgent extends javax.swing.JFrame {
                                     .addComponent(ButtonPlats, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ButtonDatum, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ButtonRas, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 383, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 323, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(LabelInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(276, 276, 276)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                    .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonRegistreraUtrustning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ButtonRegistreraAlien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(ButtonRegistreraAlien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ButtonVisaInfoOmrådeschef, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(281, 281, 281))
         );
         layout.setVerticalGroup(
@@ -182,7 +190,9 @@ public class HejAgent extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(25, 25, 25)
-                .addComponent(ButtonRas, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonRas, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonVisaInfoOmrådeschef, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
@@ -240,6 +250,11 @@ public class HejAgent extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_ButtonRegistreraAlienActionPerformed
 
+    private void ButtonVisaInfoOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaInfoOmrådeschefActionPerformed
+        new InfoOmOmrådeschef(idb).setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonVisaInfoOmrådeschefActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -281,6 +296,7 @@ public class HejAgent extends javax.swing.JFrame {
     private javax.swing.JButton ButtonRas;
     private javax.swing.JButton ButtonRegistreraAlien;
     private javax.swing.JButton ButtonRegistreraUtrustning;
+    private javax.swing.JButton ButtonVisaInfoOmrådeschef;
     private javax.swing.JButton ButtonÄndraLösenord;
     private javax.swing.JLabel LabelHejAgent;
     private javax.swing.JLabel LabelInfoAlien;
