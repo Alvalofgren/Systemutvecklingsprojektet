@@ -212,13 +212,9 @@ public class ListaAliensRas extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonVisaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       if (HejAgent.getTillbakaKnapp()) {
-            new ListaAliensRas(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAgent(idb).setVisible(true);
-            dispose();
-          }
+    new HejAgent(idb).setVisible(true);
+      dispose();
+     
   
     }//GEN-LAST:event_jButton1ActionPerformed
 

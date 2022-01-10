@@ -8,6 +8,7 @@ import oru.inf.InfDB;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfException;
+
 /**
  *
  * @author almahedengren
@@ -15,34 +16,33 @@ import oru.inf.InfException;
 public class GeAdministratörStatus extends javax.swing.JFrame {
 
     private InfDB idb;
+
     /**
      * Creates new form GeAdministratörStatus
      */
     public GeAdministratörStatus(InfDB idb) {
         initComponents();
-        this.idb=idb;
+        this.idb = idb;
         fyllILista();
         LabelGodkänd.setVisible(false);
 
     }
-    
-    public void fyllILista()
-    {
-            try {
+
+    public void fyllILista() {
+        try {
             ComboBoxVäljAgent.removeAllItems();
             ComboBoxVäljAgent.addItem("välj");
             String fraga = "select namn from agent";
             ArrayList<String> svar = idb.fetchColumn(fraga);
-        
-        for(String värde : svar)
-        {
-            ComboBoxVäljAgent.addItem(värde);
-        }
-        }
-        catch (InfException undantag){
+
+            for (String värde : svar) {
+                ComboBoxVäljAgent.addItem(värde);
+            }
+        } catch (InfException undantag) {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -132,46 +132,38 @@ public class GeAdministratörStatus extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-   /**
-    * Metoden nedan ger en agent som inte är administratör en administratörstatus. Då ändras statusen till bokstaven J
-    * @param evt 
-    */ 
-    
+    /**
+     * Metoden nedan ger en agent som inte är administratör en
+     * administratörstatus. Då ändras statusen till bokstaven J
+     *
+     * @param evt
+     */
+
     private void ButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOKActionPerformed
-        try{ 
-        String query = "update agent set administrator = 'J' where namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'";
-        idb.update(query);
-        LabelGodkänd.setVisible(true);
-        }
-        
-        catch(InfException undantag){
+        try {
+            String query = "update agent set administrator = 'J' where namn = '" + ComboBoxVäljAgent.getSelectedItem() + "'";
+            idb.update(query);
+            LabelGodkänd.setVisible(true);
+        } catch (InfException undantag) {
             JOptionPane.showMessageDialog(null, "Error!!");
         }
     }//GEN-LAST:event_ButtonOKActionPerformed
 
     /**
-     * Den här metoden är skriven på tillbakaknapparna som vi har på många av våra sidor. Funktionen på tillbaka knappen är som 
-     * det låter att genom att trycka på knappen ska man komma tillbaka till föregående sida och den föregående sidan ska 
-     * med andra ord öppnas. 
-     * @param evt 
+     * Den här metoden är skriven på tillbakaknapparna som vi har på många av
+     * våra sidor. Funktionen på tillbaka knappen är som det låter att genom att
+     * trycka på knappen ska man komma tillbaka till föregående sida och den
+     * föregående sidan ska med andra ord öppnas.
+     *
+     * @param evt
      */
-    
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (HejAdministrator.getTillbakaKnapp()) {
-            new GeAdministratörStatus(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAdministrator(idb).setVisible(true);
-            dispose();
-          }
+        new HejAdministrator(idb).setVisible(true);
+        dispose();
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    
-    
-    
-    
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonOK;

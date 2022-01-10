@@ -285,50 +285,62 @@ public class HejAdministrator extends javax.swing.JFrame {
 
     private void KnappNyregistreraAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappNyregistreraAlienActionPerformed
         new NyregistreraAlien(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappNyregistreraAlienActionPerformed
 
     private void KnappÄndraInfoOmAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraInfoOmAlienActionPerformed
         new ÄndraInfoAlien(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappÄndraInfoOmAlienActionPerformed
 
     private void KnappTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortAgentActionPerformed
         new TaBortAgent(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappTaBortAgentActionPerformed
 
     private void KnappNyregistreraAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappNyregistreraAgentActionPerformed
         new NyregistreraAgent(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappNyregistreraAgentActionPerformed
 
     private void KnappTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortAlienActionPerformed
         new TaBortAlien(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappTaBortAlienActionPerformed
 
     private void KnappTaBortUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappTaBortUtrustningActionPerformed
         new TaBortUtrustning(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappTaBortUtrustningActionPerformed
 
     private void KnappSökaInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappSökaInfoAgentActionPerformed
         new SökInfoOmAgent(idb).setVisible(true);
+       dispose();
     }//GEN-LAST:event_KnappSökaInfoAgentActionPerformed
 
     private void KnappGeAdminStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappGeAdminStatusActionPerformed
         new GeAdministratörStatus(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappGeAdminStatusActionPerformed
 
     private void ButtonÄndraInfoAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraInfoAgentActionPerformed
         new ÄndraInfoAgent(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonÄndraInfoAgentActionPerformed
 
     private void KnappÄndraOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraOmrådeschefActionPerformed
         new ÄndraOmrådeschef(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappÄndraOmrådeschefActionPerformed
 
     private void KnappÄndraKontorschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KnappÄndraKontorschefActionPerformed
         new ÄndraKontorschef(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_KnappÄndraKontorschefActionPerformed
 
     private void ButtonÄndraRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraRasActionPerformed
         new ÄndraRas(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonÄndraRasActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
