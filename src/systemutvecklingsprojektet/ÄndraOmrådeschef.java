@@ -143,20 +143,36 @@ public class ÄndraOmrådeschef extends javax.swing.JFrame {
     private void ButtonÄndraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraActionPerformed
         try
        {
-        String id = "select Agent_ID from agent where namn= '"+ ComboBoxVäljAgent.getSelectedItem()+"'";
-        String idagent = idb.fetchSingle(id);
-         
-        String område = "select Omrades_ID from Omrade where Benamning ='"+ ComboBoxVäljOmråde.getSelectedItem()+ "'";
-        String idområde = idb.fetchSingle(område);
+           String query = "SELECT AGENT_ID FROM OMRADESCHEF";
+           ArrayList<String> svar = idb.fetchColumn(query);
+          
+            String id = "select Agent_ID from agent where namn= '"+ ComboBoxVäljAgent.getSelectedItem()+"'";
+            String idagent = idb.fetchSingle(id);
+            
+            int finnsID = Integer.parseInt(idagent);
+            
+            for(String varjeID : svar)
+            {
+                int agentID = Integer.parseInt(varjeID);
+            
+                if(agentID != finnsID)
+                {
+            String område = "select Omrades_ID from Omrade where Benamning ='"+ ComboBoxVäljOmråde.getSelectedItem()+ "'";
+            String idområde = idb.fetchSingle(område);
         
-          String ändring = ("UPDATE Omradeschef SET Agent_ID = '" +idagent + "'" + " WHERE Omrade = '" + idområde + "'");
+            String ändring = ("UPDATE Omradeschef SET Agent_ID = '" +idagent + "'" + " WHERE Omrade = '" + idområde + "'");
             idb.update(ändring);
             LabelOmrådeChefHarÄndrats.setVisible(true);
-
+                }
+                else 
+                {
+                    JOptionPane.showMessageDialog(null, "Agenten är redan omradeschef!");
+                }
+            }
        }
        catch(InfException undantag)
        {
-           JOptionPane.showMessageDialog(null, "Error");
+           JOptionPane.showMessageDialog(null, "Något blev fel, ");
            System.out.println("Error" + undantag.getMessage());
        }
     }//GEN-LAST:event_ButtonÄndraActionPerformed
