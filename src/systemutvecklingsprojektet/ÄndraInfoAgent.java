@@ -241,13 +241,8 @@ public class ÄndraInfoAgent extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappÄndraVärdeActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (HejAdministrator.getTillbakaKnapp()) {
-            new ÄndraInfoAgent(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAdministrator(idb).setVisible(true);
-            dispose();
-          }
+        new HejAdministrator(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
     
     /**
