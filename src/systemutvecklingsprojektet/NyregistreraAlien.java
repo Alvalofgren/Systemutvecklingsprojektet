@@ -313,9 +313,15 @@ private void fyllIListaAgent(){
     
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       new HejAgent(idb).setVisible(true);
+       if(HejAdministrator.getTillbakaKnapp() == true)
+       {
+           new HejAdministrator(idb).setVisible(true);
+       }
+       else 
+       {
+           new HejAgent(idb).setVisible(true);
+       }
         dispose();
-    
                                            
                                   
     }//GEN-LAST:event_jButton1ActionPerformed
