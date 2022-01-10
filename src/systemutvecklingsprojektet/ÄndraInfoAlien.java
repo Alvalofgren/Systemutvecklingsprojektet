@@ -69,6 +69,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         TextFältNyttVärde = new javax.swing.JTextField();
         LabelNyttVärde = new javax.swing.JLabel();
         LabelInfoÄndrats = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jCheckBox1.setText("jCheckBox1");
 
@@ -102,6 +103,13 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         LabelInfoÄndrats.setForeground(new java.awt.Color(0, 204, 51));
         LabelInfoÄndrats.setText("Informationen har ändrats!");
 
+        jButton1.setText("<--Tillbaka");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -133,13 +141,18 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
                         .addComponent(RubrikÄndraInfoAlien))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(97, 97, 97)
-                        .addComponent(LabelInfoÄndrats, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(LabelInfoÄndrats, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addGap(2, 2, 2)
                 .addComponent(RubrikÄndraInfoAlien)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -237,6 +250,11 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
         
     }//GEN-LAST:event_KnappÄndraActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new HejAgent(idb).setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -249,6 +267,7 @@ public class ÄndraInfoAlien extends javax.swing.JFrame {
     private javax.swing.JLabel LabelÄndraEgenskapen;
     private javax.swing.JLabel RubrikÄndraInfoAlien;
     private javax.swing.JTextField TextFältNyttVärde;
+    private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     // End of variables declaration//GEN-END:variables
 }

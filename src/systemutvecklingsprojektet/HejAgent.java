@@ -202,34 +202,42 @@ public class HejAgent extends javax.swing.JFrame {
 
     private void ButtonRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRasActionPerformed
         new ListaAliensRas(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonRasActionPerformed
 
     private void ButtonPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPlatsActionPerformed
         new ListaAliensPlats(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonPlatsActionPerformed
 
     private void ButtonDatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDatumActionPerformed
         new ListaAliensDatum(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonDatumActionPerformed
 
     private void ButtonÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraLösenordActionPerformed
         new ÄndraLosenordAgent(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonÄndraLösenordActionPerformed
 
     private void ButtonAllInfoOmEnAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAllInfoOmEnAlienActionPerformed
         new AllInformationEnAlien(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonAllInfoOmEnAlienActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new ÄndraInfoAlien(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ButtonRegistreraUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRegistreraUtrustningActionPerformed
         new RegistreraUtrustning(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonRegistreraUtrustningActionPerformed
 
     private void ButtonRegistreraAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRegistreraAlienActionPerformed
         new NyregistreraAlien(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonRegistreraAlienActionPerformed
 
     /**

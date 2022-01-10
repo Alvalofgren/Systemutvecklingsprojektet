@@ -226,13 +226,8 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
     }//GEN-LAST:event_KnappVäljActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       if (HejAgent.getTillbakaKnapp()) {
-            new AllInformationEnAlien(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAgent(idb).setVisible(true);
-            dispose();
-          }
+ new HejAgent(idb).setVisible(true);
+ dispose();
   
     }//GEN-LAST:event_jButton1ActionPerformed
 
