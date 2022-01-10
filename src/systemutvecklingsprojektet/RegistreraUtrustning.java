@@ -159,7 +159,7 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
         }
         catch (InfException undantag)
         {
-            JOptionPane.showMessageDialog(null, "Error");
+//            JOptionPane.showMessageDialog(null, "Error");
             System.out.println("Error" + undantag.getMessage());
         }
         

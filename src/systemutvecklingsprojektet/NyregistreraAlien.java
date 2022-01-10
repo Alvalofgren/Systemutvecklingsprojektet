@@ -253,8 +253,9 @@ private void fyllIListaAgent(){
                         break;
                     
                     }
-                   else
-                    {
+                }
+                  
+                    
                     if (Validering.harHeltal(TextRutaAlienID)) 
                         {
                             String fraga = "select namn from alien";
@@ -262,13 +263,14 @@ private void fyllIListaAgent(){
 
                             for (String namn : resultat) 
                             {
-                      
+                                        
                                 if(TextRutaNamnAlien.getText().equals(namn))
                                 {  
                                     
                                     JOptionPane.showMessageDialog(null, "Aliennamnet finns redan!");
                                     break;
-                                } 
+                                }
+                                
                                 else 
                                 {
                                    if(!TextRutaTelefonAlien.getText().matches("[a-zA-Z]") && TextRutaTelefonAlien.getText().matches("[0-9]") || TextRutaTelefonAlien.getText().contains("-"))
@@ -288,15 +290,10 @@ private void fyllIListaAgent(){
                                 }
 
                             }
-                        } 
+                        
 
                     }
-//                        else 
-//                        {
-//                            JOptionPane.showMessageDialog(null, "Alien-ID måste vara ett heltal!");
-//                        }
-                        
-                    } 
+                    
                 }
         
                 
@@ -304,7 +301,7 @@ private void fyllIListaAgent(){
     }//GEN-LAST:event_RegistreringKnappAlienActionPerformed
         catch(InfException undantag)
         {
-            JOptionPane.showMessageDialog(null, "Error");
+//            JOptionPane.showMessageDialog(null, "Error");
             System.out.println("Error" + undantag.getMessage());
         }
     }
