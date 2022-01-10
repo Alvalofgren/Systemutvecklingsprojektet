@@ -171,6 +171,7 @@ public class ListaAliensDatum extends javax.swing.JFrame {
        try
        {
         
+        TextArea.setEditable(false);
         String query = "select Alien.Alien_ID, Alien.Namn, Alien.Registreringsdatum from Alien where registreringsdatum between '" + FormattedTextFieldDatumFrån.getText()+"' AND '" + FormattedTextFieldTill.getText()+"'";
         ArrayList<HashMap<String, String>> rad = idb.fetchRows(query);
         TextArea.setText(null);
@@ -185,6 +186,7 @@ public class ListaAliensDatum extends javax.swing.JFrame {
             TextArea.append(kolumn.get("Alien_ID") + "\t");
             TextArea.append(" " + kolumn.get("Namn") + "\t");
             TextArea.append(" " + kolumn.get("Registreringsdatum") + "\n");
+            TextArea.setEditable(false); 
             
         }}
         catch(InfException undantag){

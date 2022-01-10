@@ -155,6 +155,7 @@ public class ListaAliensPlats extends javax.swing.JFrame {
             String query = "select Alien.Alien_ID, Alien.Namn from Alien join Plats on Alien.Plats = Plats.Plats_ID where benamning = '"+ ListaVäljPlats.getSelectedItem()+"'";
             ArrayList<HashMap<String, String>> raden = idb.fetchRows(query);
             TextAreaPlatsLista.setText(null);
+            TextAreaPlatsLista.setEditable(false);
             
             TextAreaPlatsLista.append(("Alien_ID") + "\t");
             TextAreaPlatsLista.append(("Namn") + "\n");
@@ -164,6 +165,7 @@ public class ListaAliensPlats extends javax.swing.JFrame {
             
             TextAreaPlatsLista.append(kolumn.get("Alien_ID") + "\t");
             TextAreaPlatsLista.append(" " + kolumn.get("Namn") + "\n");
+            TextAreaPlatsLista.setEditable(false);
         } 
         }
         
