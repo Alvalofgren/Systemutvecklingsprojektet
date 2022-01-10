@@ -27,6 +27,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
         this.idb=idb;
         allaAliens = new ArrayList<>();
         fyllILista();
+        TextAreaFönster.setEditable(false);
 
     }
 
@@ -202,6 +203,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
             TextAreaFönster.append(("Telefon") + "\t");
             TextAreaFönster.append(("Plats") + "\t");
             TextAreaFönster.append(("Ansvarig_Agent") + "\n");
+            TextAreaFönster.setEditable(false);
             
             for(HashMap kolumn : rad)
             {
@@ -213,6 +215,7 @@ public class AllInformationEnAlien extends javax.swing.JFrame {
                    TextAreaFönster.append(kolumn.get("Telefon") + "\t");
                    TextAreaFönster.append(kolumn.get("Plats") + "\t");
                    TextAreaFönster.append(kolumn.get("Ansvarig_Agent") + "\n");
+                   TextAreaFönster.setEditable(false);
 
                 }
             }

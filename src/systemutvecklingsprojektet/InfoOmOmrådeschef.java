@@ -25,6 +25,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
         this.idb=idb;
         allaOmrådeschefer = new ArrayList<>();
         fyllILista();
+        TextAreaResultat.setEditable(false);
     }
     
     private void fyllILista(){
@@ -138,6 +139,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
                 TextAreaResultat.append(kolumn.get("Namn") + "\t");
                 TextAreaResultat.append(" " + kolumn.get("Agent_ID") + "\t");
                 TextAreaResultat.append(" " + kolumn.get("Benamning") + "\n");
+                TextAreaResultat.setEditable(false);
             }
             }
         catch(InfException undantag)
@@ -150,40 +152,8 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
     
     }//GEN-LAST:event_ButtonVisaInfoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(InfoOmOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(InfoOmOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(InfoOmOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(InfoOmOmrådeschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new InfoOmOmrådeschef(idb).setVisible(true);
-//            }
-//        });
-//    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonVisaInfo;
