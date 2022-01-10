@@ -25,6 +25,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
         this.idb=idb;
         allaOmrådeschefer = new ArrayList<>();
         fyllILista();
+        TextAreaResultat.setEditable(false);
     }
     
     private void fyllILista(){
@@ -138,6 +139,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
                 TextAreaResultat.append(kolumn.get("Namn") + "\t");
                 TextAreaResultat.append(" " + kolumn.get("Agent_ID") + "\t");
                 TextAreaResultat.append(" " + kolumn.get("Benamning") + "\n");
+                TextAreaResultat.setEditable(false);
             }
             }
         catch(InfException undantag)
