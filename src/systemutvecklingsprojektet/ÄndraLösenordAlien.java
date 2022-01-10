@@ -160,13 +160,8 @@ public class ÄndraLösenordAlien extends javax.swing.JFrame {
     }//GEN-LAST:event_PasswordFieldBekräftaLösenActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-          if (HejAlien.getTillbakaKnapp()) {
-            new ÄndraLösenordAlien(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAlien(idb).setVisible(true);
-            dispose();
-          }
+         new HejAlien(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

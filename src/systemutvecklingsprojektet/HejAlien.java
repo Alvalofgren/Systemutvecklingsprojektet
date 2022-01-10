@@ -96,10 +96,12 @@ private static boolean arAdmin;
 
     private void ButtonÄndraLösenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonÄndraLösenordActionPerformed
        new ÄndraLösenordAlien(idb).setVisible(true);
+       dispose();
     }//GEN-LAST:event_ButtonÄndraLösenordActionPerformed
 
     private void ButtonVisaInfoOmrådeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaInfoOmrådeschefActionPerformed
         new InfoOmOmrådeschef(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonVisaInfoOmrådeschefActionPerformed
 
     /**

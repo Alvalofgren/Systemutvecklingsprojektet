@@ -157,7 +157,7 @@ public class TaBortUtrustning extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonTaBortActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new HejAdministrator(idb).setVisible(true);
+        new HejAgent(idb).setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -56,6 +56,7 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
         ButtonSök = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TextAreaFönster = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,6 +80,13 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
         TextAreaFönster.setRows(5);
         jScrollPane1.setViewportView(TextAreaFönster);
 
+        jButton1.setText("<-Tillbaka");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,7 +101,9 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
                         .addGap(58, 58, 58)
                         .addComponent(ButtonSök))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
+                        .addGap(14, 14, 14)
+                        .addComponent(jButton1)
+                        .addGap(81, 81, 81)
                         .addComponent(RubrikSökInfoAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
@@ -103,8 +113,13 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(RubrikSökInfoAgent)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(RubrikSökInfoAgent))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jButton1)))
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComboBoxVäljAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -151,6 +166,11 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ButtonSökActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new HejAdministrator(idb).setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -192,6 +212,7 @@ public class SökInfoOmAgent extends javax.swing.JFrame {
     private javax.swing.JLabel LabelVäljNamn;
     private javax.swing.JLabel RubrikSökInfoAgent;
     private javax.swing.JTextArea TextAreaFönster;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
