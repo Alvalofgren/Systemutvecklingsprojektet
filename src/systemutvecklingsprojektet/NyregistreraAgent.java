@@ -244,6 +244,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                 break;
             }
         }
+       
                 if(Validering.harHeltal(TextRutaAgentID))
                 {
                     String fraga = "select namn from agent";
@@ -269,7 +270,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                         }
                         else 
                         {
-                            JOptionPane.showMessageDialog(null, "Ange ett korrekt telefonnummer!");
+                            JOptionPane.showMessageDialog(null, "Ange ett korrekt telefonnummer, använd siffror och bindesstreck!");
                         }
                     }    
                 }

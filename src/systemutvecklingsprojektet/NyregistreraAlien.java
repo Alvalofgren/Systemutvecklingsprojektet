@@ -288,7 +288,7 @@ private void fyllIListaAgent(){
                                     }
                                     else 
                                     {
-                                        JOptionPane.showMessageDialog(null, "Ange ett korrekt telefonnummer!");
+                                        JOptionPane.showMessageDialog(null, "Ange ett korrekt telefonnummer, använd siffror och bindesstreck!");
                                     }
                                 }
 
