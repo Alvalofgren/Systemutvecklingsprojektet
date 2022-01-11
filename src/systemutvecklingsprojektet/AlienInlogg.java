@@ -127,16 +127,18 @@ public class AlienInlogg extends javax.swing.JFrame {
         String query = "SELECT Losenord FROM alien WHERE Namn = '" + TextFieldAnvändarnamn.getText()+"'";
         String losen = idb.fetchSingle(query);
         
+        String fraga = "SELECT NAMN FROM ALIEN WHERE NAMN ='" + TextFieldAnvändarnamn.getText() + "'";
+        String svar = idb.fetchSingle(fraga);
         
         if(!Validering.kontrollTextFältVärde(TextFieldAnvändarnamn)){
             
         }
-        else if(losen == null)
+        if(losen == null)
                 {
                     JOptionPane.showMessageDialog(null, "Användarnamnet finns inte");
                 }
         
-        else
+        if(svar.equals(TextFieldAnvändarnamn.getText()))
         {
             if(losen.equals(PasswordFieldLösenord.getText()))
             {
@@ -149,6 +151,10 @@ public class AlienInlogg extends javax.swing.JFrame {
             }
             
         alienNamn = TextFieldAnvändarnamn.getText();
+        }
+        else 
+        {
+            JOptionPane.showMessageDialog(null,"Fel användarnamn!");
         }
        
        }
