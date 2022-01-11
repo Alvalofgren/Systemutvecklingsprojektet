@@ -156,6 +156,7 @@ public class AlienInlogg extends javax.swing.JFrame {
             if(losen.equals(PasswordFieldLösenord.getText()))
             {
                 new HejAlien(idb).setVisible(true);
+                dispose();
             }
             else
             {

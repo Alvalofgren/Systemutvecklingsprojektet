@@ -162,6 +162,7 @@ public class AgentInlogg extends javax.swing.JFrame {
                 if(losen.equals(PasswordFieldLösenord.getText()))
                 {
                 new HejAgent(idb).setVisible(true);
+                dispose();
                 }
                 else
                 {

@@ -70,7 +70,7 @@ public class HejAdministrator extends javax.swing.JFrame {
         KnappTaBortUtrustning = new javax.swing.JButton();
         ButtonÄndraRas = new javax.swing.JButton();
         LabelAgentNamn = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        ButtonBytTillAgent = new javax.swing.JButton();
         ButtonLoggaUt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -178,10 +178,10 @@ public class HejAdministrator extends javax.swing.JFrame {
         LabelAgentNamn.setForeground(new java.awt.Color(0, 204, 255));
         LabelAgentNamn.setText("jLabel1");
 
-        jButton1.setText("Byt till agentsidan");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonBytTillAgent.setText("Byt till agentsidan");
+        ButtonBytTillAgent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonBytTillAgentActionPerformed(evt);
             }
         });
 
@@ -238,7 +238,7 @@ public class HejAdministrator extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(LabelAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ButtonBytTillAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70))))
         );
         layout.setVerticalGroup(
@@ -250,7 +250,7 @@ public class HejAdministrator extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(RubrikHejAdministratör)
                             .addComponent(LabelAgentNamn)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(ButtonBytTillAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(ButtonLoggaUt)))
@@ -357,9 +357,10 @@ public class HejAdministrator extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_ButtonÄndraRasActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ButtonBytTillAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBytTillAgentActionPerformed
         new HejAgent(idb).setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_ButtonBytTillAgentActionPerformed
 
     private void ButtonLoggaUtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggaUtActionPerformed
         new Fonster(idb).setVisible(true);
@@ -402,6 +403,7 @@ public class HejAdministrator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonBytTillAgent;
     private javax.swing.JButton ButtonLoggaUt;
     private javax.swing.JButton ButtonÄndraInfoAgent;
     private javax.swing.JButton ButtonÄndraRas;
@@ -421,7 +423,6 @@ public class HejAdministrator extends javax.swing.JFrame {
     private javax.swing.JLabel UnderRubrikAlien;
     private javax.swing.JLabel UnderRubrikChef;
     private javax.swing.JLabel UnderRubrikUtrustning;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
