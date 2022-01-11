@@ -41,6 +41,7 @@ private static boolean arAdmin;
         ButtonÄndraLösenord = new javax.swing.JButton();
         ButtonVisaInfoOmrådeschef = new javax.swing.JButton();
         LabelHejAlien = new javax.swing.JLabel();
+        ButtonLoggaUt = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -64,12 +65,21 @@ private static boolean arAdmin;
         LabelHejAlien.setForeground(new java.awt.Color(0, 204, 255));
         LabelHejAlien.setText("Hej alien");
 
+        ButtonLoggaUt.setText("Logga ut");
+        ButtonLoggaUt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonLoggaUtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(ButtonLoggaUt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LabelHejAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(119, 119, 119))
             .addGroup(layout.createSequentialGroup()
@@ -82,8 +92,13 @@ private static boolean arAdmin;
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(LabelHejAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(LabelHejAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ButtonLoggaUt)))
                 .addGap(39, 39, 39)
                 .addComponent(ButtonÄndraLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -103,6 +118,11 @@ private static boolean arAdmin;
         new InfoOmOmrådeschef(idb).setVisible(true);
         dispose();
     }//GEN-LAST:event_ButtonVisaInfoOmrådeschefActionPerformed
+
+    private void ButtonLoggaUtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLoggaUtActionPerformed
+        new Fonster(idb).setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonLoggaUtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,6 +160,7 @@ private static boolean arAdmin;
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonLoggaUt;
     private javax.swing.JButton ButtonVisaInfoOmrådeschef;
     private javax.swing.JButton ButtonÄndraLösenord;
     private javax.swing.JLabel LabelHejAlien;
