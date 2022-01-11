@@ -182,7 +182,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                 
             
             TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
+            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
             TextAreaFörRas.setEditable(false);
            
 
@@ -200,7 +200,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
              
             
             TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-            TextAreaFörRas.append(" " + kolumn.get("Namn") + "\n");
+            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
             TextAreaFörRas.setEditable(false);
             }
         }
