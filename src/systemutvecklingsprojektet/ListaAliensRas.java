@@ -21,7 +21,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
         initComponents();
         this.idb = idb;
         fyllILista();
-        TextAreaFörRas.setEditable(false);
     }
 
 //Comboboxen fylls med dessa värden, de olika raser som finns.   
@@ -66,6 +65,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
             }
         });
 
+        TextAreaFörRas.setEditable(false);
         TextAreaFörRas.setColumns(20);
         TextAreaFörRas.setRows(5);
         jScrollPane1.setViewportView(TextAreaFörRas);
@@ -144,7 +144,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
                     String query = "select alien.Namn, alien.Alien_ID  from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
                     ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
                     TextAreaFörRas.setText(null);
-                    TextAreaFörRas.setEditable(false);
                     TextAreaFörRas.append(("Alien_ID") + "\t");
                     TextAreaFörRas.append(("Namn") + "\n");
 
@@ -152,7 +151,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
 
                         TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
                         TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-                        TextAreaFörRas.setEditable(false);
 
                     }
                     break;
@@ -161,7 +159,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
                     String query = "SELECT alien.Alien_ID, Namn FROM alien JOIN squid s on alien.Alien_ID = s.Alien_ID;";
                     ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
                     TextAreaFörRas.setText(null);
-                    TextAreaFörRas.setEditable(false);
                     TextAreaFörRas.append(("Alien_ID") + "\t");
                     TextAreaFörRas.append(("Namn") + "\n");
 
@@ -169,7 +166,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
 
                         TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
                         TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-                        TextAreaFörRas.setEditable(false);
+                       
 
                     }
                     break;
@@ -178,7 +175,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
                     String query = "select alien.Alien_ID, alien.Namn from alien join Worm on alien.Alien_ID = Worm.Alien_ID";
                     ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
                     TextAreaFörRas.setText(null);
-                    TextAreaFörRas.setEditable(false);
                     TextAreaFörRas.append(("Alien_ID") + "\t");
                     TextAreaFörRas.append(("Namn") + "\n");
 
@@ -186,7 +182,6 @@ public class ListaAliensRas extends javax.swing.JFrame {
 
                         TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
                         TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-                        TextAreaFörRas.setEditable(false);
                     }
                     break;
                 }

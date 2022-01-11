@@ -23,6 +23,7 @@ public class AgentInlogg extends javax.swing.JFrame {
     public AgentInlogg(InfDB idb) {
         initComponents();
         this.idb=idb;
+        TextFieldAnvändarnamn.requestFocus();
     }
 
     public static String getNamn(){

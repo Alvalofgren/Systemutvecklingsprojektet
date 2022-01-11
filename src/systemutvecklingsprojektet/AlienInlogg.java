@@ -22,6 +22,7 @@ public class AlienInlogg extends javax.swing.JFrame {
     public AlienInlogg(InfDB idb) {
         initComponents();
         this.idb=idb;
+        TextFieldAnvändarnamn.requestFocus();
     }
     
     public static String getNamn(){
