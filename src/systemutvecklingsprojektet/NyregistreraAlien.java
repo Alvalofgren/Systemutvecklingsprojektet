@@ -311,9 +311,14 @@ private void fyllIListaAgent(){
     
     
     
-    
+   //Kollar om agenten är administratör eller agent för att se till vilken sida tillbakaknappen ska leda. 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       if(HejAdministrator.getTillbakaKnapp() == true)
+       try
+       {
+        String fråga = "SELECT administrator from agent WHERE Namn ='" + AgentInlogg.getNamn() + "'";
+        String aStatus = idb.fetchSingle(fråga);
+       
+        if(aStatus.equals("J"))
        {
            new HejAdministrator(idb).setVisible(true);
        }
@@ -322,8 +327,12 @@ private void fyllIListaAgent(){
            new HejAgent(idb).setVisible(true);
        }
         dispose();
-                                           
-                                  
+       }
+       catch(InfException undantag)
+               {
+                   JOptionPane.showMessageDialog(null, "Något blev fel!");
+                   System.out.println("Error" + undantag.getMessage());
+               }                          
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

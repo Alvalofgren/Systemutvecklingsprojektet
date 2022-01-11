@@ -75,7 +75,7 @@ public class NyregistreraAgent extends javax.swing.JFrame {
         LabelDatum = new javax.swing.JLabel();
         TextRutaAnställningsdatum = new javax.swing.JFormattedTextField();
         LabelAgentRegistrerad = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        ButtonTillbaka = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,7 +124,12 @@ public class NyregistreraAgent extends javax.swing.JFrame {
         LabelAgentRegistrerad.setForeground(new java.awt.Color(0, 204, 51));
         LabelAgentRegistrerad.setText("Agenten är registrerad!");
 
-        jButton1.setText("jButton1");
+        ButtonTillbaka.setText("<--Tillbaka");
+        ButtonTillbaka.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTillbakaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -173,14 +178,14 @@ public class NyregistreraAgent extends javax.swing.JFrame {
                             .addComponent(LabelAgentRegistrerad)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1)))
+                        .addComponent(ButtonTillbaka)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(ButtonTillbaka)
                 .addGap(5, 5, 5)
                 .addComponent(RubrikNyregistreraAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -285,6 +290,11 @@ catch (InfException undantag)
             System.out.println("Error" + undantag.getMessage());
         }
     }
+    private void ButtonTillbakaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTillbakaActionPerformed
+        new HejAdministrator(idb).setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonTillbakaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -322,6 +332,7 @@ catch (InfException undantag)
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonTillbaka;
     private javax.swing.JComboBox<String> ComboBoxAdministratör;
     private javax.swing.JComboBox<String> ComboBoxOmråde;
     private javax.swing.JButton KnappFörRegistrering;
@@ -340,6 +351,5 @@ catch (InfException undantag)
     private javax.swing.JLabel UnderRubrikNamn;
     private javax.swing.JLabel UnderRubrikOmråde;
     private javax.swing.JLabel UnderRubrikTelefon;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
