@@ -166,13 +166,8 @@ public class RegistreraUtrustning extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonRegistreraActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (HejAgent.getTillbakaKnapp()) {
-            new RegistreraUtrustning(idb).setVisible(true);
-            dispose();
-        } else {
-            new HejAgent(idb).setVisible(true);
-            dispose();
-          }
+       new HejAgent(idb).setVisible(true);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
         
        
