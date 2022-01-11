@@ -151,6 +151,7 @@ public class AgentInlogg extends javax.swing.JFrame {
                     agentNamn = TextFieldAnvändarnamn.getText();
                     
                     new HejAdministrator(idb).setVisible(true);
+                    dispose();
                 }
                 else
                 {
