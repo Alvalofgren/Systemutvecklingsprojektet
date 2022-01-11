@@ -160,6 +160,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                         TextAreaFörRas.setEditable(false);
                         TextAreaFörRas.append(("Alien_ID") + "\t");
                         TextAreaFörRas.append(("Namn") + "\n");
+                        
                         for(HashMap<String, String> kolumn : rader){
                             
                             
@@ -178,6 +179,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                         TextAreaFörRas.setEditable(false);
                         TextAreaFörRas.append(("Alien_ID") + "\t");
                         TextAreaFörRas.append(("Namn") + "\n");
+                        
                         for(HashMap<String, String> kolumn : rader){
                             
                             
@@ -196,6 +198,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                         TextAreaFörRas.setEditable(false);
                         TextAreaFörRas.append(("Alien_ID") + "\t");
                         TextAreaFörRas.append(("Namn") + "\n");
+                        
                         for(HashMap<String, String> kolumn : rader){
                             
                             
