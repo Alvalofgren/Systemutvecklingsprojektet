@@ -13,7 +13,7 @@ import oru.inf.InfDB;
  */
 public class HejAlien extends javax.swing.JFrame {
 private InfDB idb;
-private static boolean arAdmin;
+
     /**
      * Creates new form HejAlien
      */
@@ -24,9 +24,7 @@ private static boolean arAdmin;
         
     }
     
-    public static boolean getTillbakaKnapp(){
-     return arAdmin;
- } 
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
