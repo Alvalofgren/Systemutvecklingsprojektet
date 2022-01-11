@@ -5,7 +5,9 @@
 package systemutvecklingsprojektet;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
+import oru.inf.InfException;
 
 /**
  *
@@ -51,6 +53,7 @@ public class HejAgent extends javax.swing.JFrame {
         ButtonRegistreraAlien = new javax.swing.JButton();
         ButtonVisaInfoOmrådeschef = new javax.swing.JButton();
         ButtonLoggaUt = new javax.swing.JButton();
+        ButtonBytTillAdmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -137,13 +140,22 @@ public class HejAgent extends javax.swing.JFrame {
             }
         });
 
+        ButtonBytTillAdmin.setText("Byt till administratörsida");
+        ButtonBytTillAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBytTillAdminActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(ButtonLoggaUt)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtonLoggaUt)
+                    .addComponent(ButtonBytTillAdmin))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LabelHejAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(482, 482, 482))
@@ -185,7 +197,9 @@ public class HejAgent extends javax.swing.JFrame {
                         .addComponent(LabelHejAgent))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(ButtonLoggaUt)))
+                        .addComponent(ButtonLoggaUt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ButtonBytTillAdmin)))
                 .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LabelInfoAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -273,6 +287,29 @@ public class HejAgent extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_ButtonLoggaUtActionPerformed
 
+    private void ButtonBytTillAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBytTillAdminActionPerformed
+        try
+       {
+        String fråga = "SELECT administrator from agent WHERE Namn ='" + AgentInlogg.getNamn() + "'";
+        String aStatus = idb.fetchSingle(fråga);
+       
+        if(aStatus.equals("J"))
+       {
+           new HejAdministrator(idb).setVisible(true); 
+       }
+       else 
+       {
+           JOptionPane.showMessageDialog(null, "Du är inte administratör!");
+       }
+        dispose();
+       }
+       catch(InfException undantag)
+               {
+                   JOptionPane.showMessageDialog(null, "Något blev fel!");
+                   System.out.println("Error" + undantag.getMessage());
+               } 
+    }//GEN-LAST:event_ButtonBytTillAdminActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -309,6 +346,7 @@ public class HejAgent extends javax.swing.JFrame {
    // }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonBytTillAdmin;
     private javax.swing.JButton ButtonDatum;
     private javax.swing.JButton ButtonLoggaUt;
     private javax.swing.JButton ButtonPlats;
