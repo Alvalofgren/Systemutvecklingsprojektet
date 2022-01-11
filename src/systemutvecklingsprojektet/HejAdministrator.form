@@ -35,7 +35,7 @@
                           </Group>
                           <Component id="ButtonÄndraRas" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="530" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="544" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -62,10 +62,10 @@
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="UnderRubrikChef" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="KnappÄndraOmrådeschef" pref="0" max="32767" attributes="0"/>
+                          <Component id="KnappÄndraOmrådeschef" pref="152" max="32767" attributes="0"/>
                           <Component id="KnappÄndraKontorschef" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="ButtonLoggaUt" min="-2" max="-2" attributes="0"/>
