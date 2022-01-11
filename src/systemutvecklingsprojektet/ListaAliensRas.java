@@ -209,9 +209,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                     }
                 default:
                     break;
-            }
-            
-            
+            }  
         }
 //            if(ListaVäljRas.getSelectedItem().equals("Boglodite")){
 //            String query = "select alien.alien_id, alien.namn from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";

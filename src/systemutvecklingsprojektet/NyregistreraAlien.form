@@ -51,7 +51,7 @@
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               <Component id="UnderRubrikAlienID" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="UnderRubrikTelefonFörAlien" min="-2" pref="252" max="-2" attributes="0"/>
+                          <Component id="UnderRubrikTelefonFörAlien" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -75,7 +75,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="102" max="32767" attributes="0"/>
+              <EmptySpace pref="104" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -190,7 +190,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="UnderRubrikTelefonF&#xf6;rAlien">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Telefon ( Endast siffror och bindestreck)"/>
+        <Property name="text" type="java.lang.String" value="Telefon ( Siffror och bindestreck)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="UnderRubrikPlats">

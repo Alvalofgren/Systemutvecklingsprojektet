@@ -104,25 +104,5 @@ public static boolean kontrollTextFältVärde (JTextField aktuellRuta)
         return giltig;
     }
    
-//    public static boolean namnFinns(JTextField aktuellRuta)
-//    {
-//        boolean finns = false;
-//        
-//        try{     
-//        String fraga = "select namn from agent";
-//        ArrayList<String> svarNamn = idb.fetchColumn(fraga);
-//                    
-//                for(String namn : svarNamn)
-//                {
-//                    if(aktuellRuta.getText().equals(namn)) 
-//                    finns = true;
-//                }    
-//        }
-//       catch(InfException undantaget)
-//        {
-//            JOptionPane.showMessageDialog(null, "Ange ett giltigt nytt värde");
-//                        System.out.println("Error" + undantaget.getMessage());              
-//        }
-//        return finns;
-//    }               
+              
 }
