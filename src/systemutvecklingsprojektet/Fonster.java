@@ -92,10 +92,12 @@ public class Fonster extends javax.swing.JFrame {
 
     private void ButtonAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgentActionPerformed
          new AgentInlogg(idb).setVisible(true);
+         dispose();
     }//GEN-LAST:event_ButtonAgentActionPerformed
 
     private void ButtonAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAlienActionPerformed
         new AlienInlogg(idb).setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonAlienActionPerformed
 
     /**
