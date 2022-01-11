@@ -161,7 +161,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                         ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
                         TextAreaFörRas.setText(null);
                         TextAreaFörRas.setEditable(false);
-                        TextAreaFörRas.aAgppend(("Alien_ID") + "\t");
+                        TextAreaFörRas.append(("Alien_ID") + "\t");
                         TextAreaFörRas.append(("Namn") + "\n");
                         for(HashMap kolumn : rader){
                             
