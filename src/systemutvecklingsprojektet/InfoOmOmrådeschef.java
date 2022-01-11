@@ -140,7 +140,7 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
         try
         {
                
-                String fråga = "Select Namn, Agent_ID, Benamning from Agent JOIN omrade o on o.Omrades_ID = agent.Omrade WHERE Benamning = '" + ComboBoxVäljOmrådeschef.getSelectedItem().toString() + "'";
+                String fråga = "select agent.Agent_ID, agent.Namn, omrade.benamning from agent join omradeschef on omradeschef.Agent_ID = agent.Agent_ID join omrade on omrade.Omrades_ID = omradeschef.Omrade where omrade.Benamning ='" + ComboBoxVäljOmrådeschef.getSelectedItem().toString() + "'";
                 ArrayList<HashMap<String,String>> lista = idb.fetchRows(fråga);
                 TextAreaResultat.setText(null);
                 
