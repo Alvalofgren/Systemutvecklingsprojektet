@@ -140,19 +140,17 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
         try
         {
                
-                String fråga = "select agent.Agent_ID, agent.Namn, omrade.benamning from agent join omradeschef on omradeschef.Agent_ID = agent.Agent_ID join omrade on omrade.Omrades_ID = omradeschef.Omrade where omrade.Benamning ='" + ComboBoxVäljOmrådeschef.getSelectedItem().toString() + "'";
+                String fråga = "select agent.Agent_ID, agent.Namn from agent join omradeschef on omradeschef.Agent_ID = agent.Agent_ID join omrade on omrade.Omrades_ID = omradeschef.Omrade where omrade.Benamning ='" + ComboBoxVäljOmrådeschef.getSelectedItem().toString() + "'";
                 ArrayList<HashMap<String,String>> lista = idb.fetchRows(fråga);
                 TextAreaResultat.setText(null);
                 
                 TextAreaResultat.append(("Namn") + "\t");
-                TextAreaResultat.append(("Agent_ID") + "\t");
-                TextAreaResultat.append(("Benamning") + "\n");
+                TextAreaResultat.append(("Agent_ID") + "\n");
             for(HashMap kolumn : lista)
             {
                 
                 TextAreaResultat.append(kolumn.get("Namn") + "\t");
-                TextAreaResultat.append(" " + kolumn.get("Agent_ID") + "\t");
-                TextAreaResultat.append(" " + kolumn.get("Benamning") + "\n");
+                TextAreaResultat.append(" " + kolumn.get("Agent_ID") + "\n");
             }
             }
         catch(InfException undantag)

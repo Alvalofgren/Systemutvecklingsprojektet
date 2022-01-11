@@ -39,6 +39,7 @@ public class AgentInlogg extends javax.swing.JFrame {
         LabelAnvändarnamn = new javax.swing.JLabel();
         LabelLösenord = new javax.swing.JLabel();
         PasswordFieldLösenord = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,6 +60,13 @@ public class AgentInlogg extends javax.swing.JFrame {
         LabelLösenord.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelLösenord.setText("Lösenord");
 
+        jButton1.setText("<-- Tillbaka");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -68,19 +76,26 @@ public class AgentInlogg extends javax.swing.JFrame {
                 .addComponent(RubrikAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(102, 102, 102))
             .addGroup(layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ButtonLoggain, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                    .addComponent(TextFieldAnvändarnamn)
-                    .addComponent(LabelLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PasswordFieldLösenord)
-                    .addComponent(LabelAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ButtonLoggain, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                            .addComponent(TextFieldAnvändarnamn)
+                            .addComponent(LabelLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PasswordFieldLösenord)
+                            .addComponent(LabelAnvändarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addGap(3, 3, 3)
                 .addComponent(RubrikAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
                 .addComponent(LabelAnvändarnamn)
@@ -167,6 +182,11 @@ public class AgentInlogg extends javax.swing.JFrame {
                         System.out.println("Error" + undantag.getMessage());
                     }
     }//GEN-LAST:event_ButtonLoggainActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new Fonster(idb).setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -211,6 +231,7 @@ public class AgentInlogg extends javax.swing.JFrame {
     private javax.swing.JPasswordField PasswordFieldLösenord;
     private javax.swing.JLabel RubrikAgent;
     private javax.swing.JTextField TextFieldAnvändarnamn;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 
 }

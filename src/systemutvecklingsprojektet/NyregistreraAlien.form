@@ -43,7 +43,6 @@
                                   <Component id="UnderRubrikAnsvarigAgent" min="-2" pref="94" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikPlats" min="-2" pref="37" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikNamnFörAlien" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="UnderRubrikTelefonFörAlien" min="-2" pref="53" max="-2" attributes="0"/>
                                   <Component id="UnderRubrikRegistreringsdatum" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
                                   <Component id="LabelDatum" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -52,6 +51,7 @@
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               <Component id="UnderRubrikAlienID" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="UnderRubrikTelefonFörAlien" min="-2" pref="252" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -75,7 +75,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="135" max="32767" attributes="0"/>
+              <EmptySpace pref="102" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -106,9 +106,9 @@
               <Component id="UnderRubrikLösenordFörAlien" min="-2" pref="15" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="TextRutaLösenordAlien" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="UnderRubrikTelefonFörAlien" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="7" max="32767" attributes="0"/>
+              <Component id="UnderRubrikTelefonFörAlien" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="TextRutaTelefonAlien" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="UnderRubrikNamnFörAlien" min="-2" max="-2" attributes="0"/>
@@ -190,7 +190,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="UnderRubrikTelefonF&#xf6;rAlien">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Telefon"/>
+        <Property name="text" type="java.lang.String" value="Telefon ( Endast siffror och bindestreck)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="UnderRubrikPlats">
