@@ -1,4 +1,3 @@
-
 package systemutvecklingsprojektet;
 
 import javax.swing.JOptionPane;
@@ -12,7 +11,9 @@ import java.util.HashMap;
  * @author alval
  */
 public class ListaAliensRas extends javax.swing.JFrame {
+
     private InfDB idb;
+
     /**
      * Creates new form ListaAliens
      */
@@ -21,23 +22,20 @@ public class ListaAliensRas extends javax.swing.JFrame {
         this.idb = idb;
         fyllILista();
         TextAreaFörRas.setEditable(false);
-}
-
+    }
 
 //Comboboxen fylls med dessa värden, de olika raser som finns.   
-     private void fyllILista() 
-    {
-        
+    private void fyllILista() {
 
         ListaVäljRas.removeAllItems();
         ListaVäljRas.addItem("Välj");
         ListaVäljRas.addItem("Boglodite");
         ListaVäljRas.addItem("Squid");
         ListaVäljRas.addItem("Worm");
-        
-     }
 
-     
+    }
+
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -133,163 +131,132 @@ public class ListaAliensRas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ListaVäljRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaVäljRasActionPerformed
-    
+
     }//GEN-LAST:event_ListaVäljRasActionPerformed
 
 //Denna metod hämtar ut information från tabellen alien beroende på vilken ras vi väljer i comboboxen.
 //Sedan skriver den ut informationen i textArean om de alien som finns i den valda rasen.
     private void ButtonVisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVisaActionPerformed
-        
-        try 
-        {
+
+        try {
             switch (ListaVäljRas.getSelectedIndex()) {
-                case 1:
-                    {
-                        String query = "select alien.alien_ID, alien.namn from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
-                        ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-                        TextAreaFörRas.setText(null);
+                case 1: {
+                    String query = "select alien.Namn, alien.Alien_ID  from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
+                    ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+                    TextAreaFörRas.setText(null);
+                    TextAreaFörRas.setEditable(false);
+                    TextAreaFörRas.append(("Alien_ID") + "\t");
+                    TextAreaFörRas.append(("Namn") + "\n");
+
+                    for (HashMap<String, String> kolumn : rader) {
+
+                        TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+                        TextAreaFörRas.append(kolumn.get("Namn") + "\n");
                         TextAreaFörRas.setEditable(false);
-                        TextAreaFörRas.append(("Alien_ID") + "\t");
-                        TextAreaFörRas.append(("Namn") + "\n");
-                       
-                        System.out.println(query);
-                        System.out.println(rader);
-                        
-                       for(HashMap<String, String> kolumn : rader){
-
-
-                            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-                            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-                            TextAreaFörRas.setEditable(false);
-                            
-                            String aa = kolumn.get("alien_ID");
-                        String bb = kolumn.get("namn");
-
-                        System.out.println(aa);
-                        System.out.println(bb);
-                            
-                            
-                        }           break;
-                    }
-                case 2:
-                    {
-                        String query = "select alien.alien_ID, alien.namn from alien join Squid on alien.Alien_ID = squid.Alien_ID";
-                        ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-                        TextAreaFörRas.setText(null);
-                        TextAreaFörRas.setEditable(false);
-                        TextAreaFörRas.append(("Alien_ID") + "\t");
-                        TextAreaFörRas.append(("Namn") + "\n");
-                        
-                        System.out.println(query);
-                        System.out.println(rader);
-                        
-                        for(HashMap<String, String> kolumn : rader){
-
-
-                            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-                            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-                            TextAreaFörRas.setEditable(false);
-                            
-                            String aa = kolumn.get("alien_ID");
-                        String bb = kolumn.get("namn");
-
-                        System.out.println(aa);
-                        System.out.println(bb);
-                            
-                            
-                        }           break;
-                    }
-                case 3:
-                    {
-                        String query = "select alien.alien_ID, alien.namn from alien join Worm on alien.Alien_ID = Worm.Alien_ID";
-                        ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-                        TextAreaFörRas.setText(null);
-                        TextAreaFörRas.setEditable(false);
-                        TextAreaFörRas.append(("Alien_ID") + "\t");
-                        TextAreaFörRas.append(("Namn") + "\n");
-                        
-                        System.out.println(query);
-                        System.out.println(rader);
-                       
-                        for(HashMap<String, String> kolumn : rader){
-
-
-                            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-                            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-                            TextAreaFörRas.setEditable(false);
-                            
-                            
-                        }           break;
 
                     }
+                    break;
+                }
+                case 2: {
+                    String query = "SELECT alien.Alien_ID, Namn FROM alien JOIN squid s on alien.Alien_ID = s.Alien_ID;";
+                    ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+                    TextAreaFörRas.setText(null);
+                    TextAreaFörRas.setEditable(false);
+                    TextAreaFörRas.append(("Alien_ID") + "\t");
+                    TextAreaFörRas.append(("Namn") + "\n");
+
+                    for (HashMap<String, String> kolumn : rader) {
+
+                        TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+                        TextAreaFörRas.append(kolumn.get("Namn") + "\n");
+                        TextAreaFörRas.setEditable(false);
+
+                    }
+                    break;
+                }
+                case 3: {
+                    String query = "select alien.Alien_ID, alien.Namn from alien join Worm on alien.Alien_ID = Worm.Alien_ID";
+                    ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+                    TextAreaFörRas.setText(null);
+                    TextAreaFörRas.setEditable(false);
+                    TextAreaFörRas.append(("Alien_ID") + "\t");
+                    TextAreaFörRas.append(("Namn") + "\n");
+
+                    for (HashMap<String, String> kolumn : rader) {
+
+                        TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+                        TextAreaFörRas.append(kolumn.get("Namn") + "\n");
+                        TextAreaFörRas.setEditable(false);
+                    }
+                    break;
+                }
                 default:
                     break;
-            }  
-        }
-//            if(ListaVäljRas.getSelectedItem().equals("Boglodite")){
-//            String query = "select alien.alien_id, alien.namn from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
-//            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-//            TextAreaFörRas.setText(null);
-//            TextAreaFörRas.setEditable(false);
-//            
-//            TextAreaFörRas.append(("Alien_ID") + "\t");
-//            TextAreaFörRas.append(("Namn") + "\n");
-//            
-//            for(HashMap<String, String> kolumn : rader){
-//           
-//
-//            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-//            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-//            TextAreaFörRas.setEditable(false);
-//           
-//            
-//            }
-//        }else if(ListaVäljRas.getSelectedItem().equals("Squid")){
-//            String query = "select alien.alien_id, alien.namn from alien join Squid on alien.Alien_ID = squid.Alien_ID";
-//            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-//            TextAreaFörRas.setText(null);
-//            TextAreaFörRas.setEditable(false);
-//            
-//            TextAreaFörRas.append(("Alien_ID") + "\t");
-//            TextAreaFörRas.append(("Namn") + "\n");
-//            
-//            for(HashMap<String, String> kolumn : rader){
-//                
-//            
-//            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-//            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-//            TextAreaFörRas.setEditable(false);
-//           
-//
-//            }
-//        }else if (ListaVäljRas.getSelectedItem().equals("Worm")){
-//            String query = "select alien.Alien_ID, alien.Namn from alien join Worm on alien.Alien_ID = Worm.Alien_ID";
-//            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-//            TextAreaFörRas.setText(null);
-//            TextAreaFörRas.setEditable(false);
-//            
-//            TextAreaFörRas.append(("Alien_ID") + "\t");
-//            TextAreaFörRas.append(("Namn") + "\n");
-//            
-//            for(HashMap<String, String> kolumn : rader){
-//             
-//            
-//            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-//            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-//            TextAreaFörRas.setEditable(false);
-//            }
-//        }
-//        } 
-        catch(InfException undantag){
+            }
+        } //            if(ListaVäljRas.getSelectedItem().equals("Boglodite")){
+        //            String query = "select alien.alien_id, alien.namn from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
+        //            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+        //            TextAreaFörRas.setText(null);
+        //            TextAreaFörRas.setEditable(false);
+        //            
+        //            TextAreaFörRas.append(("Alien_ID") + "\t");
+        //            TextAreaFörRas.append(("Namn") + "\n");
+        //            
+        //            for(HashMap<String, String> kolumn : rader){
+        //           
+        //
+        //            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+        //            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
+        //            TextAreaFörRas.setEditable(false);
+        //           
+        //            
+        //            }
+        //        }else if(ListaVäljRas.getSelectedItem().equals("Squid")){
+        //            String query = "select alien.alien_id, alien.namn from alien join Squid on alien.Alien_ID = squid.Alien_ID";
+        //            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+        //            TextAreaFörRas.setText(null);
+        //            TextAreaFörRas.setEditable(false);
+        //            
+        //            TextAreaFörRas.append(("Alien_ID") + "\t");
+        //            TextAreaFörRas.append(("Namn") + "\n");
+        //            
+        //            for(HashMap<String, String> kolumn : rader){
+        //                
+        //            
+        //            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+        //            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
+        //            TextAreaFörRas.setEditable(false);
+        //           
+        //
+        //            }
+        //        }else if (ListaVäljRas.getSelectedItem().equals("Worm")){
+        //            String query = "select alien.Alien_ID, alien.Namn from alien join Worm on alien.Alien_ID = Worm.Alien_ID";
+        //            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
+        //            TextAreaFörRas.setText(null);
+        //            TextAreaFörRas.setEditable(false);
+        //            
+        //            TextAreaFörRas.append(("Alien_ID") + "\t");
+        //            TextAreaFörRas.append(("Namn") + "\n");
+        //            
+        //            for(HashMap<String, String> kolumn : rader){
+        //             
+        //            
+        //            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+        //            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
+        //            TextAreaFörRas.setEditable(false);
+        //            }
+        //        }
+        //        } 
+        catch (InfException undantag) {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }//GEN-LAST:event_ButtonVisaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    new HejAgent(idb).setVisible(true);
-      dispose();
-     
-  
+        new HejAgent(idb).setVisible(true);
+        dispose();
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
