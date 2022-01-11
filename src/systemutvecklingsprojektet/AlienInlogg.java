@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package systemutvecklingsprojektet;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
@@ -71,6 +72,11 @@ public class AlienInlogg extends javax.swing.JFrame {
         PasswordFieldLösenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PasswordFieldLösenordActionPerformed(evt);
+            }
+        });
+        PasswordFieldLösenord.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                PasswordFieldLösenordKeyPressed(evt);
             }
         });
 
@@ -193,6 +199,13 @@ public class AlienInlogg extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void PasswordFieldLösenordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordFieldLösenordKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+
+            ButtonLoggaIn.doClick();
+        }
+    }//GEN-LAST:event_PasswordFieldLösenordKeyPressed
 
     /**
      * @param args the command line arguments

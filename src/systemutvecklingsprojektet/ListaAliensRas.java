@@ -151,13 +151,22 @@ public class ListaAliensRas extends javax.swing.JFrame {
                         TextAreaFörRas.setEditable(false);
                         TextAreaFörRas.append(("Alien_ID") + "\t");
                         TextAreaFörRas.append(("Namn") + "\n");
+                       
+                        System.out.println(query);
+                        System.out.println(rader);
                         
-                        for(HashMap<String, String> kolumn : rader){
-                            
-                            
-                            TextAreaFörRas.append(kolumn.get("alien_ID") + "\t");
-                            TextAreaFörRas.append(kolumn.get("namn") + "\n");
+                       for(HashMap<String, String> kolumn : rader){
+
+
+                            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+                            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
                             TextAreaFörRas.setEditable(false);
+                            
+                            String aa = kolumn.get("alien_ID");
+                        String bb = kolumn.get("namn");
+
+                        System.out.println(aa);
+                        System.out.println(bb);
                             
                             
                         }           break;
@@ -171,12 +180,21 @@ public class ListaAliensRas extends javax.swing.JFrame {
                         TextAreaFörRas.append(("Alien_ID") + "\t");
                         TextAreaFörRas.append(("Namn") + "\n");
                         
+                        System.out.println(query);
+                        System.out.println(rader);
+                        
                         for(HashMap<String, String> kolumn : rader){
-                            
-                            
-                            TextAreaFörRas.append(kolumn.get("alien_ID") + "\t");
-                            TextAreaFörRas.append(kolumn.get("namn") + "\n");
+
+
+                            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+                            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
                             TextAreaFörRas.setEditable(false);
+                            
+                            String aa = kolumn.get("alien_ID");
+                        String bb = kolumn.get("namn");
+
+                        System.out.println(aa);
+                        System.out.println(bb);
                             
                             
                         }           break;
@@ -190,13 +208,19 @@ public class ListaAliensRas extends javax.swing.JFrame {
                         TextAreaFörRas.append(("Alien_ID") + "\t");
                         TextAreaFörRas.append(("Namn") + "\n");
                         
+                        System.out.println(query);
+                        System.out.println(rader);
+                       
                         for(HashMap<String, String> kolumn : rader){
-                            
-                            
-                            TextAreaFörRas.append(kolumn.get("alien_ID") + "\t");
-                            TextAreaFörRas.append(kolumn.get("namn") + "\n");
+
+
+                            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
+                            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
                             TextAreaFörRas.setEditable(false);
+                            
+                            
                         }           break;
+
                     }
                 default:
                     break;

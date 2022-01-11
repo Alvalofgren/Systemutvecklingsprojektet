@@ -1,6 +1,7 @@
 package systemutvecklingsprojektet;
 
 
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
@@ -59,6 +60,12 @@ public class AgentInlogg extends javax.swing.JFrame {
 
         LabelLösenord.setFont(new java.awt.Font("Perpetua", 0, 14)); // NOI18N
         LabelLösenord.setText("Lösenord");
+
+        PasswordFieldLösenord.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                PasswordFieldLösenordKeyPressed(evt);
+            }
+        });
 
         jButton1.setText("<-- Tillbaka");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -189,6 +196,13 @@ public class AgentInlogg extends javax.swing.JFrame {
         new Fonster(idb).setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void PasswordFieldLösenordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordFieldLösenordKeyPressed
+         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+
+            ButtonLoggain.doClick();
+         }
+    }//GEN-LAST:event_PasswordFieldLösenordKeyPressed
     
     /**
      * @param args the command line arguments
