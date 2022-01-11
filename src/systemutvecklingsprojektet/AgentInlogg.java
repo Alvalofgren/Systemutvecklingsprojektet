@@ -114,15 +114,21 @@ public class AgentInlogg extends javax.swing.JFrame {
         String fråga = "SELECT administrator from agent WHERE Namn ='" + TextFieldAnvändarnamn.getText() + "'";
         String aStatus = idb.fetchSingle(fråga);
         
+        String fraga = "SELECT NAMN FROM AGENT WHERE NAMN ='" + TextFieldAnvändarnamn.getText() + "'";
+        String svar = idb.fetchSingle(fraga);
+        
+        
         if(!Validering.kontrollTextFältVärde(TextFieldAnvändarnamn)){
             
         }
-        else if(losen == null)
+        if(losen == null)
                 {
                     JOptionPane.showMessageDialog(null, "Användarnamnet finns inte");
                 }
         
-        else if (aStatus.equals("J"))
+        if(svar.equals(TextFieldAnvändarnamn.getText())){
+            
+            if (aStatus.equals("J"))
             {
                
                 if(losen.equals(PasswordFieldLösenord.getText()))
@@ -136,23 +142,26 @@ public class AgentInlogg extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Fel lösenord!");
                 }
             }
-        else
-        {
-            if(losen.equals(PasswordFieldLösenord.getText()))
-            {
-                new HejAgent(idb).setVisible(true);
-            }
             else
             {
+                if(losen.equals(PasswordFieldLösenord.getText()))
+                {
+                new HejAgent(idb).setVisible(true);
+                }
+                else
+                {
                 JOptionPane.showMessageDialog(null,"Fel Lösenord");
 
+                }
+            
             }
-            
-            
-        }
-        agentNamn = TextFieldAnvändarnamn.getText();
+            agentNamn = TextFieldAnvändarnamn.getText();
        }
-            
+        else 
+        {
+            JOptionPane.showMessageDialog(null, "Fel användarnamn!");
+        }
+       }    
        catch(InfException undantag){
                     JOptionPane.showMessageDialog(null, "Fel användarnamn eller lösenord");
                         System.out.println("Error" + undantag.getMessage());
