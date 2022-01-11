@@ -113,7 +113,7 @@ private void fyllIListaAgent(){
 
         UnderRubrikNamnFörAlien.setText("Namn");
 
-        UnderRubrikTelefonFörAlien.setText("Telefon ( Endast siffror och bindestreck)");
+        UnderRubrikTelefonFörAlien.setText("Telefon ( Siffror och bindestreck)");
 
         UnderRubrikPlats.setText("Plats");
 
@@ -165,7 +165,7 @@ private void fyllIListaAgent(){
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(8, 8, 8)
                                 .addComponent(UnderRubrikAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(UnderRubrikTelefonFörAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(UnderRubrikTelefonFörAlien)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(153, 153, 153)
                         .addComponent(UnderRubrikLösenordFörAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -181,7 +181,7 @@ private void fyllIListaAgent(){
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(11, 11, 11)
                                 .addComponent(RegistreringKnappAlien)))))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

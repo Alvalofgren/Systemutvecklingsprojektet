@@ -23,42 +23,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="ComboBoxOmråde" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
-                  <Component id="TextRutaLösenord" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
-                  <Component id="ComboBoxAdministratör" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
-                  <Component id="TextRutaNamn" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
-                  <Component id="TextRutaTelefon" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
-                  <Component id="TextRutaAgentID" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
-                  <Component id="TextRutaAnställningsdatum" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="UnderRubrikAgentID" min="-2" pref="52" max="-2" attributes="0"/>
-                              <Component id="UnderRubrikAdministratör" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
-                              <Component id="UnderRubrikTelefon" min="-2" pref="49" max="-2" attributes="0"/>
-                              <Component id="UnderRubrikNamn" min="-2" pref="52" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="UnderRubrikAnställningsdatum" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="LabelDatum" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
-                          <Component id="UnderRubrikOmråde" min="-2" pref="60" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                          <Component id="UnderRubrikLösenord" min="-2" pref="66" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="0" pref="117" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="RubrikNyregistreraAgent" min="-2" pref="252" max="-2" attributes="0"/>
@@ -81,6 +45,49 @@
                       <Component id="ButtonTillbaka" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="ComboBoxOmråde" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
+                  <Component id="TextRutaLösenord" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
+                  <Component id="ComboBoxAdministratör" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
+                  <Component id="TextRutaNamn" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
+                  <Component id="TextRutaTelefon" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
+                  <Component id="TextRutaAgentID" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
+                  <Component id="TextRutaAnställningsdatum" alignment="1" min="-2" pref="178" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="UnderRubrikAgentID" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikAdministratör" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                                  <Component id="UnderRubrikNamn" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="UnderRubrikAnställningsdatum" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="LabelDatum" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikOmråde" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                              <Component id="UnderRubrikLösenord" min="-2" pref="66" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="0" pref="98" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="UnderRubrikTelefon" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -177,7 +184,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="UnderRubrikTelefon">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Telefon"/>
+        <Property name="text" type="java.lang.String" value="Telefon (Siffror och bindesstreck)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="UnderRubrikAnst&#xe4;llningsdatum">
