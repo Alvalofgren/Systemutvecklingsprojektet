@@ -188,60 +188,7 @@ public class ListaAliensRas extends javax.swing.JFrame {
                 default:
                     break;
             }
-        } //            if(ListaVäljRas.getSelectedItem().equals("Boglodite")){
-        //            String query = "select alien.alien_id, alien.namn from alien join Boglodite on alien.alien_id = boglodite.Alien_ID";
-        //            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-        //            TextAreaFörRas.setText(null);
-        //            TextAreaFörRas.setEditable(false);
-        //            
-        //            TextAreaFörRas.append(("Alien_ID") + "\t");
-        //            TextAreaFörRas.append(("Namn") + "\n");
-        //            
-        //            for(HashMap<String, String> kolumn : rader){
-        //           
-        //
-        //            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-        //            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-        //            TextAreaFörRas.setEditable(false);
-        //           
-        //            
-        //            }
-        //        }else if(ListaVäljRas.getSelectedItem().equals("Squid")){
-        //            String query = "select alien.alien_id, alien.namn from alien join Squid on alien.Alien_ID = squid.Alien_ID";
-        //            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-        //            TextAreaFörRas.setText(null);
-        //            TextAreaFörRas.setEditable(false);
-        //            
-        //            TextAreaFörRas.append(("Alien_ID") + "\t");
-        //            TextAreaFörRas.append(("Namn") + "\n");
-        //            
-        //            for(HashMap<String, String> kolumn : rader){
-        //                
-        //            
-        //            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-        //            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-        //            TextAreaFörRas.setEditable(false);
-        //           
-        //
-        //            }
-        //        }else if (ListaVäljRas.getSelectedItem().equals("Worm")){
-        //            String query = "select alien.Alien_ID, alien.Namn from alien join Worm on alien.Alien_ID = Worm.Alien_ID";
-        //            ArrayList<HashMap<String, String>> rader = idb.fetchRows(query);
-        //            TextAreaFörRas.setText(null);
-        //            TextAreaFörRas.setEditable(false);
-        //            
-        //            TextAreaFörRas.append(("Alien_ID") + "\t");
-        //            TextAreaFörRas.append(("Namn") + "\n");
-        //            
-        //            for(HashMap<String, String> kolumn : rader){
-        //             
-        //            
-        //            TextAreaFörRas.append(kolumn.get("Alien_ID") + "\t");
-        //            TextAreaFörRas.append(kolumn.get("Namn") + "\n");
-        //            TextAreaFörRas.setEditable(false);
-        //            }
-        //        }
-        //        } 
+        } 
         catch (InfException undantag) {
             JOptionPane.showMessageDialog(null, "Error");
         }
