@@ -164,8 +164,17 @@ public class InfoOmOmrådeschef extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonVisaInfoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        if(AgentInlogg.getNamn() == null)
+        {
         new HejAlien(idb).setVisible(true);
         dispose();
+        }
+        
+        else{
+                new HejAgent(idb).setVisible(true);
+                dispose();
+                }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
